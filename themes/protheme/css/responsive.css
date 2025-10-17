@@ -1,0 +1,3745 @@
+@media only screen and  (min-width: 700px) {
+
+
+    .dashboardheaderMain .row{
+        padding: 20px 20px 0px 20px !important;
+    }
+    .bodyDiv .row{
+        padding: 20px 20px 20px 20px !important;
+    }
+    .bodyRightDiv .row {
+        padding: 0px 10px 0px 10px !important;
+    }
+    .bodyBottomRight .row{
+        padding: 0px 0px 0px 10px !important;
+    }
+    .footerText .row{
+        padding: 0px 20px 0px 20px !important;
+    }
+
+
+    /* login Page */
+
+    .loginBtnLeft {
+        position: inherit;
+        top: 0px;
+        width: 100%;
+        left: 0px;
+    } 
+    .loginLogo {
+        padding-top: 20% !important;
+        width: 100%;
+        margin-left: 0% !important;
+    }
+    .loginForm{
+        padding-top: 22% !important;
+        position: inherit;
+        width: 80%;
+        top: 0%;
+        left: 0%;
+    }
+    .loginForm input {
+        width: 80%;
+        font-size: 30px;
+        border-radius: 3px;
+        margin-bottom: 10px !important;
+        padding: 18px 10px 18px 18px !important;
+        background-color: rgb(255 255 255 / 30%);
+        border: 1px solid rgb(255 255 255 / 50%);
+    }
+    .loginForm input[type=Password] {
+        width: 70%;
+        font-size: 30px;
+        border-radius: 3px;
+        margin-bottom: 10px !important;
+        padding: 18px 10px 18px 18px !important;
+        background-color: rgb(255 255 255 / 30%);
+        border: 1px solid rgb(255 255 255 / 50%);
+    }
+    .loginForm label {
+        font-size: 32px;
+        border-radius: 3px;
+        margin-bottom: 10px !important;
+        padding: 23px 18px 23px 18px !important;
+        background-color: rgb(255 255 255 / 30%);
+        border: 1px solid rgb(255 255 255 / 50%);
+    }
+    .loginForm button {
+        width: 80%;
+        font-size: 30px;
+        border-radius: 3px;
+        font-weight: 700;
+        margin-bottom: 10px !important;
+        padding: 16px 10px 16px 10px !important;
+        background-color: rgb(255 255 255);
+        border: 1px solid rgb(255 255 255 / 50%);
+    }
+    .loginLogo .btnConVPN {
+        width: 30%;
+        font-size: 20px;
+        border-radius: 2px;
+        margin-right: 10px !important;
+        margin-bottom: 10px !important;
+        padding: 15px 10px 15px 10px !important;
+        background-color: rgb(255 255 255);
+        border: 3px solid rgb(255 255 255 / 50%);
+        box-shadow: 0px 5px 6px 2px #00000087;
+    }
+    .loginLogo .btnListUser {
+        width: 29%;
+        font-size: 20px;
+        border-radius: 2px;
+        margin-right: 10px !important;
+        margin-bottom: 10px !important;
+        padding: 15px 10px 15px 10px !important;
+        background-color: rgb(255 255 255);
+        border: 3px solid rgb(255 255 255 / 50%);
+        box-shadow: 0px 5px 6px 2px #00000087;
+    }
+    .btnConVPN:hover, .btnListUser:hover{
+        border: 3px solid; 
+        border-image-slice: 1;
+        border-image-source: linear-gradient(to left, #4e9cdf, #a63bae);
+    }
+
+    /* dashbaord{ */
+
+    .headerMain .row{
+        padding: 10px 0px 16px 0px !important;
+    }
+    .headerTime span{
+        font-size: 12px;
+        line-height: 41px;
+        font-weight: 600;
+    }
+    .headerLogo img{
+        width: 100%;
+        backdrop-filter: blur(1px);
+    }
+    .headerSearch span{
+        font-size: 12px;
+        line-height: 41px;
+        font-weight: 600;
+    }
+    .headerIcon{
+        padding-top: 8px !important;
+    }
+    .headerIcon div {
+        width: 25%;
+        float: left;
+    }
+    .headerIcon img {
+        width: 70%;
+    }
+    .section_img1 {
+        background: url(../images/live-tv-background.png);
+        background-size: auto 118%;
+        background-position-y: -15px;
+        height: 200px;
+        width: 100%;
+        border-radius: 8px;
+        position: relative;
+        transition: all .2s ease-in-out;
+    }
+    .section_img2 {
+        background: url(../images/movie-background.png);
+        background-size: 118% auto;
+        padding: 30px !important;
+        background-position-x: -15px;
+        height: 150px;
+        width: 100%;
+        /* margin-left: 28px !important; */
+        /* margin-bottom: 0px !important; */
+        position: relative;
+        transition: all .2s ease-in-out;
+        border-radius: 8px;
+    }
+    .section_img3 {
+        background: url(../images/series-background.png);
+        background-repeat: repeat-y;
+        background-size: 118% auto;
+        padding: 30px !important;
+        background-position-x: -15px;
+        height: 150px;
+        left: 8px;
+        margin-bottom: 8px !important;
+        width: 100%;
+        position: relative;
+        transition: all .2s ease-in-out;
+        border-radius: 8px;
+    }
+    .section-logoLive {
+        width: 30%;
+        position: absolute;
+        top: 20%;
+        right: 35%;
+    }
+    .section-logo {
+        width: 27%;
+        position: absolute;
+        top: 20%;
+        right: 36%;
+    }
+    .section-title-1 {
+        position: absolute;
+        top: 55%;
+        color: #f8f8f8;
+        left: 29%;
+        text-transform: uppercase;
+        font-size: 25px;
+        font-weight: 600;
+    }
+    .section-title-2 {
+        position: absolute;
+        top: 55%;
+        color: #f8f8f8;
+        left: 27%;
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: 600;
+    }
+    .section-title-3 {
+        position: absolute;
+        top: 60%;
+        color: #f8f8f8;
+        left: 30%;
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: 600;
+    }
+    .btn-cus-dash {
+        background: #73ad88;
+        width: 97%;
+        padding: 6px 3px !important;
+        color: #f8f8f8;
+        text-transform: uppercase;
+        /* margin-left: 20px !important; */
+        font-size: 13px;
+        font-weight: 600;
+        border: 4px solid transparent;
+    }
+    .btn-cus-dash img{
+        width: 17%;
+    }
+    .footerText span {
+        font-size: 30px;
+    }
+    .footerText span {
+        font-size: 16px;
+    }
+    /* .bodyBottomRight .row {
+        padding-top: 20px !important;
+    } */
+
+    /* Live  */
+
+    .liveInTime span {
+        font-size: 14px;
+        line-height: 40px;
+    }
+    .liveInName span {
+        font-size: 14px;
+        line-height: 40px;
+        padding: 5px 10px !important;
+        border-left: 2px solid white;
+    }
+    
+    .liveInBack img {
+        width: 35%;
+        margin-top: 12px !important;
+    }
+    .liveInLogo img{
+        width: 100%;
+    }
+    
+    .liveFrameMainscroll{   
+        overflow: auto;
+        width: 100%;
+        height: 272px;
+    }
+    .liveFrameBody, .liveFrameHeader{
+        background: black;
+        /* margin-left: 20px !important; */
+        border-bottom: 1px solid #383838;
+    }
+    .liveFrameHeader .row{
+        background-color: black;
+        padding: 20px 0px !important;
+    }
+    .liveFrameLeftAre img, .liveFrameRightAre img{
+        width: 40%;
+        cursor: pointer;
+    }
+    .liveFrameName span{
+        font-size: 28px;
+        font-weight: bold;
+    }
+    .liveFrameBody .row{
+        /* background-color: #000000c2; */
+        padding: 5px 0px !important;
+    }
+    .liveFrameCate span{
+        font-size: 26px;
+        line-height: 75px;
+    }
+    .liveFrameImg img{
+        width: 90%;
+        height: 29px;
+    }
+    .liveFrameChanName{
+        text-align: left;
+        line-height: 1.3;
+    }
+    .liveFrameChanName span{
+        padding-left: 8px !important;
+        font-size: 12px;
+        text-transform: uppercase;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-inline-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    .liveFrameChanName label{
+        padding-left: 8px !important;
+        font-size: 9px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-right: 10px !important;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    .progress {
+        display: flex;
+        height: 1px !important;
+        overflow: hidden;
+        font-size: 0.75rem;
+        background-color: #e9ecef;
+        border-radius: .25rem;
+    }
+    .livePlayerRightSide{
+        background-image: url(../images/forLiveplay.png);
+        background-size: 100%;
+    }
+    .livePlayer img{
+        width: 100%;
+    }
+    .liveInfo{
+        padding: 110px 0px 0px 0px !important;
+    }
+    .liveInfoSub .liveHeading{
+        padding-bottom: 20px !important;
+    }
+    .liveInfoSub .liveHeading span{   
+        padding: 10px 22px !important;
+        background: #31707e;
+        font-size: 28px;
+    }
+    .liveInfoSub .liveChannelName, .liveInfoSub .liveChannelProg{
+        padding-bottom: 8px !important;
+    }
+    .liveInfoSub .liveChannelName span{
+        font-size: 28px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .liveInfoSub .liveChannelProg span{
+        font-size: 30px;
+        color: #31707e;
+    }
+    .liveInfoSub .liveProgTime span{
+        font-size: 29px;
+    }
+    
+    .liveEPGMaindiv .row{
+        margin: 20px 20px 0px 0px !important;
+        text-align: initial;
+        background-color: black;
+    }
+    .liveEPGdiv{
+        overflow: auto;
+        width: 100%;
+        height: 110px;
+    }
+    .liveEpgTime span{
+        font-size: 25px;
+        color: #ffffff;
+        padding-left: 5px !important;
+    }
+    .liveEpgTime p{
+        font-size: 23px;
+        color: #6c6c6c;
+        margin-bottom: 10px !important;
+        padding-left: 7px !important;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    .cateSearch input {
+        width: 100%;
+        padding: 21px 10px 22px 60px !important;
+        font-size: 26px;
+        background: #292828;
+        outline: none;
+        border: 0;
+    }
+    .cateSearch i {
+        position: absolute;
+        left: 45px;
+        font-size: 24px;
+        top: 206px;
+    }
+    .livecateSearch input {
+        width: 100%;
+        padding: 21px 10px 22px 60px !important;
+        font-size: 26px;
+        background: #292828;
+        outline: none;
+        border: 0;
+    }
+    .livecateSearch i {
+        position: absolute;
+        font-size: 28px;
+        left: 50px !important;
+        top: 137px !important;
+    }
+    .liveCateList span {
+        padding-left: 10px !important;
+        font-size: 14px;
+    }
+    .totalcountare img{
+        width: 50% !important;
+        opacity: 1;
+        visibility: visible;
+    }
+    .cateNum div {
+        font-size: 14px;
+    }
+    .cateList{
+        width: 100%;
+        outline: none;
+        padding-top: 12px !important;
+        padding-bottom: 12px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+    }
+    .pop_cateScroll {
+        width: 100%;
+        height: 715px;
+    }
+
+    .linear-background-cate {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
+        background: #010106;
+        background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+        background-size: 1000px 104px;
+        height: 35px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .linear-background {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
+        background: #010106;
+        background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+        background-size: 1000px 104px;
+        height: 29px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .inter-crop {
+        background: #010106;
+        width: 10px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 35px;
+    }
+
+    .inter-right--top {
+        background: #010106;
+        width: 100%;
+        height: 7px;
+        position: absolute;
+        top: 11px;
+        left: 43px;
+    }
+
+    /* EPG */
+
+    .epgHeader .row{
+        padding: 10px 0px 16px 0px !important;
+    }
+    .epgBack{
+        text-align: center;
+        padding-left: 10px !important;
+    }
+    .epgBack img{
+        width: 30%;
+        margin-top: 20px !important;
+    }
+    .epgLogo img{
+        width: 80%;
+        backdrop-filter: opacity(0.5);
+    }
+    .epgLogo {
+        margin-top: 0px !important;
+    }
+    .epgName span{
+        font-size: 30px;
+        line-height: 90px;
+        font-weight: 500;
+    }
+    .epgTime span{
+        font-size: 30px;
+        line-height: 90px;
+        font-weight: 500;
+    }
+    .epgTime span label{
+        font-weight: 400;
+        font-size: 21px;
+    }
+    .epgLive img {
+        width: 88%;
+    }
+    .epgTopBody .rows {
+        height: 295px;
+        padding-right: 20px !important;
+    }
+    .epgProName {
+        text-align: initial;
+        padding: 80px 0px 10px 25px !important;
+    }
+    .epgProName span {
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .epgProTime {
+        text-align: center;
+        padding: 80px 0px 10px 0px !important;
+    }
+    .epgProTime span {
+        font-size: 30px;
+        /* font-weight: 500; */
+    }
+    .epgProInfo {
+        text-align: start;
+        padding: 0px 180px 10px 25px !important;
+    }
+    .epgProInfo span {
+        font-size: 21px;
+    }
+    .epgFrameLeftHeader {
+        padding: 12px !important;
+        background: #07101b;
+        border-bottom: 2px solid #111f33;
+    }
+    .epgFrameLeftHeader span {
+        font-size: 24px;
+    }
+    .epgFrameBodyScroll {
+        height: 410px;
+        overflow-y: scroll;
+    }
+    .epgFrameBody .row {
+        margin-bottom: 4px !important;
+        background-color: #080f1b;
+        cursor: pointer;
+    }
+    .epgChanLogo img {
+        width: 70%;
+        height: 63px;
+    }
+    .epgChannelNameList span {
+        font-size: 23px;
+        margin-top: 16px !important;
+        text-transform: uppercase;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-inline-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    .leftArrow {
+        width: 3%;
+        position: absolute;
+        display: none;
+        z-index: 111;
+    }
+    .leftArrow img, .rightArrow img {
+        width: 100%;
+    }
+    .rightArrow {
+        width: 3%;
+        position: absolute;
+        left: 97%;
+        z-index: 111;
+    }
+    .rightArrow img {
+        display: block;
+    }
+    .epgFrameRightBody, .epgRightFrameBody {
+        display: -webkit-inline-box;
+    }
+    .epgframeHeader {
+        padding: 12px !important;
+        background: #07101b;
+        width: 18%;
+        border-right: 2px solid #0c1422;
+        border-bottom: 2px solid #111f33;
+    }
+    .epgframeHeader span {
+        font-size: 24px;
+    }
+    .epgRightBottomScroll {
+        overflow-y: scroll;
+        height: 410px;
+    }
+    .epgFrameMainBOdy .row {
+        margin-bottom: 4px !important;
+        cursor: pointer;
+    }
+    .epgFrameRightBody, .epgRightFrameBody {
+        display: -webkit-inline-box;
+    }
+    .epgframeRightBody {
+        padding: 11.5px !important;
+        background: #07101b;
+        width: 18%;
+        border-right: 2px solid #0c1422;
+    }
+    .epgframeRightBody span {
+        font-size: 23px;
+        text-transform: uppercase;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-inline-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+
+    /* Movies */
+
+    .live_header{
+        z-index: 111111;
+        /* background: url(../images/background.jpg); */
+        /* background-size: 100%; */
+        text-transform: uppercase;
+    }
+    .pop_liveFullDiv{
+        position: fixed;
+        width: 25%;
+        background-color: black;
+    }
+    .pop_cateScroll{
+        background-color: black;
+        overflow-y: scroll;
+        width: 100%;
+        height: 230px;
+    }
+    .live_body{
+        padding: 10px 10px 0px 10px !important;
+        width: 100%;
+        overflow-y: scroll;
+        height: 835px;
+    }
+    .pop_live_header .row{
+        padding: 20px 0px 30px 0px !important;
+    }
+    .live_header .row{
+        padding: 20px 0px 15px 0px !important;
+    }
+    .live_body .col-lg-3 {
+        width: 20% !important;
+    }
+
+    .pop_live_header .row{
+        padding: 20px 10px 25px 0px !important;
+    }
+    .live_header .row{
+        padding: 20px 10px 25px 0px !important;
+    }
+    .liveback a[title=Menu] img, .liveback a[title=Back] img {
+        width: 70%;
+    }
+    .liveMenu a[title=Close] img{
+        width: 100%;
+    }
+    .liveSet a[title=Search] img, .liveSet a[title=Settings] img{
+        width: 85%;
+    }
+    .liveHead{
+        font-size: 24px;
+        font-weight: 500;
+    }
+    .liveHead{
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .liveShowImages img{
+        width: 100%;
+        height: 292px;
+        bottom: 57px;
+    }
+
+    /* .liveShowImages img{
+        width: 100%;
+        height: 292px;
+        bottom: 316px;
+    } */
+
+    .livebacks, .liveMenus{
+        margin-top: 14px !important;
+    }
+    .liveShowImages{  
+        border: 3px solid #ff020200;
+        margin-bottom: 20px !important;
+        width: 96%;
+        height: 300px;
+    }
+    .rightCategoryDiv{
+        background-color: black;
+    }
+    .cateSearch{
+        text-align: initial;
+    }
+    .cateSearch input{
+        width: 100%;
+        padding: 12px 0px 12px 28px !important;
+        background: #292828;
+        outline: none;
+        font-size: 12px;
+        border: 0;
+    }
+    /* .cateSearch i{    
+        position: absolute;
+        font-size: 16px;
+        left: 19px !important;
+        top: 78px !important;
+    } */
+    .livecateSearch i{    
+        position: absolute;
+        font-size: 16px;
+        left: 19px !important;
+        top: 78px !important;
+    }
+    .cateListNum{
+        width: 100%;
+        outline: none;
+        padding-top: 12px !IMPORTANT;
+        padding-bottom: 12px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+    }
+    
+    .cateList:hover, .cateList:hover .cateNum{
+        background-color: #21456b;
+    }
+    .hoverOver{
+        top: 80% !important;
+        position: relative;
+        left: 0px;
+        font-size: 24px;
+        color: transparent;
+        font-weight: 700;
+        z-index: 1111;
+    }
+    .hoverOvers{
+        font-size: 15px;
+        color: #ffffff;
+        position: relative;
+        top: 6px;
+        left: -80px;
+        background: #1b5bba;
+        border-radius: 4px;
+        padding: 4px 7px !important;
+        font-weight: 700;
+        z-index: 11111111;
+    }
+    .forcenterSearch{
+        position: relative;
+        left: -155px;
+    }
+
+    /* settings */
+
+    
+
+    .catchCate {
+        background-color: #0b1130;
+        width: 42%;
+        padding: 16px !important;
+        margin-left: 100px !important;
+        margin-bottom: 15px !important;
+        transition: 0.5s;
+    }
+    .catchScroll {
+        overflow: scroll;
+        height: 790px;
+    }
+    .liveInsearch{
+        text-align: end;
+    }
+    .liveInSet img {
+        width: 32%;
+        margin-top: 12px !important;
+    }
+    .liveInsearch img {
+        width: 32%;
+        margin-top: 12px !important;
+    }
+    .liveInTime{
+        text-align: end;
+    }
+    .livecenterSearch img[alt=searchBack]{
+        width: 6%;
+    }
+    .livecenterSearch img[alt=centerSearch]{
+        width: 4%;
+    }
+    .livecenterSearch input[type=search]{
+        padding: 25px !important;
+        font-size: 22px;
+        width: 89%;
+        background: transparent;
+        border: none;
+        color: white;
+    }
+    .livecenterSearch input[type=search]:focus{
+        outline: none;
+    }
+    .livecenterSearch input[type=search]:focus-visible{
+        outline: none;
+    }
+    .livecenterSearch input[type=search]::placeholder{
+        font-size: 22px;
+    }
+
+
+    .buttons-container{
+        margin: 20px 0px 20px 0px !important;
+    }
+    
+
+    .w-button{
+        width: 16%;
+        align-self: center;
+        border: 3px solid #ff4069;
+        background-color: transparent;
+        -webkit-transition: color .3s ease-out,background-color .3s ease-out;
+        transition: color .3s ease-out,background-color .3s ease-out;
+        color: #ff4069 !important;
+        height: 60px;
+        padding-right: 35px !important;
+        padding-left: 35px !important;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        border-radius: 50px;
+        font-size: 18px;
+        line-height: 1.5;
+        font-weight: 600;
+        text-transform: uppercase;
+        white-space: nowrap;
+        padding: 12px 20px !important;
+    }
+
+    /* movie info */
+
+    .movieInHeader .row {
+        padding: 10px 0px 10px 0px !important;
+    }
+    .movieInBack {
+        text-align: start;
+        padding-left: 10px !important;
+    }
+    .movieInBack img {
+        width: 30%;
+        margin-top: 20px !important;
+    }
+    .movieInLogo img {
+        width: 80%;
+        backdrop-filter: opacity(0.5);
+    }
+    .movieInName span {
+        font-size: 30px;
+        line-height: 90px;
+        font-weight: 500;
+    }
+    .movieInlSet img {
+        width: 32%;
+        margin-top: 20px !important;
+    }
+    .movieInBodyScroll {
+        width: 100%;
+        height: 860px;
+        overflow-y: scroll;
+    }
+    .movieInBody .row {
+        padding: 20px 15px 0px 15px !important;
+    }
+    .movieInPic img {
+        width: 90%;
+        backdrop-filter: brightness(0.5);
+    }
+    .movieInPic i {
+        margin-top: 15px !important;
+        font-size: 28px;
+        color: #ffff1fdb;
+    }
+    .movieInInformation .one {
+        padding: 0px 0px 20px 20px !important;
+        font-size: 30px;
+    }
+    .movieInInformation .two {
+        padding: 0px 0px 20px 0px !important;
+        font-size: 30px;
+    }
+    .movieInInformation .three button {
+        background: #b4b4b42e;
+        color: white;
+        width: 18%;
+        border: none;
+        border-radius: 6px;
+        font-size: 26px;
+        margin-right: 10px !important;
+        padding: 12px 0px !important;
+    }
+    .movieInFav .star img {
+        cursor: pointer;
+        width: 35%;
+    }
+    .movieInDescription {
+        text-align: left;
+        padding: 20px 22px 0px 25px !important;
+        font-size: 22px;
+        font-weight: 500;
+    }
+    .movieInStarCastScrolls {
+        width: 100%;
+        display: contents;
+    }
+    .movieInStarCast {
+        width: 222px;
+        flex: 0 0 auto;
+        margin-left: 12px !important;
+    }
+    .movieInStarCast .movieInActNam {
+        top: 90% !important;
+        position: relative;
+        font-size: 22px;
+        color: white;
+        background: rgb(0 0 0 / 20%);
+        font-weight: 700;
+        z-index: 1111;
+    }
+    .movieInStarCast img {
+        width: 100%;
+        height: 300px;
+    }
+
+}
+
+@media only screen and  (min-width: 1300px){
+
+    .dashboardheaderMain .row{
+        padding: 28px 85px 30px 85px !important;
+    }
+    .bodyDiv .row{
+        padding: 20px 85px 20px 85px !important;
+    }
+
+    .bodyBottomRight .row{
+        padding: 10px 6px 0px 0px !important;
+    }
+
+     /* login page */
+
+
+
+     /* Dashboard  */
+
+
+    .liveInTime{
+        text-align: end;
+    }
+    .livecenterSearch img[alt=searchBack]{
+        width: 6%;
+    }
+    .livecenterSearch img[alt=centerSearch]{
+        width: 4%;
+    }
+    .livecenterSearch input[type=search]{
+        padding: 10px !important;
+        font-size: 20px;
+        width: 88%;
+        background: transparent;
+        border: none;
+        color: white;
+    }
+    .livecenterSearch input[type=search]:focus{
+        outline: none;
+    }
+    .livecenterSearch input[type=search]:focus-visible{
+        outline: none;
+    }
+    .livecenterSearch input[type=search]::placeholder{
+        font-size: 20px;
+    }
+
+    .headerMain .row{
+        padding: 10px 0px 16px 0px !important;
+    }
+    .headerTime span{
+        font-size: 18px;
+        line-height: 69px;
+        font-weight: 600;
+        padding-left: 15px !important;
+    }
+    .headerLogo img{
+        width: 100%;
+        /* backdrop-filter: blur(1px); */
+    }
+    .headerSearch span{
+        font-size: 18px;
+        line-height: 3.5;
+        font-weight: 600;
+    }
+    .headerIcon{
+        padding-top: 18px !important;
+    }
+    .headerIcon div {
+        width: 25%;
+        float: left;
+    }
+    .headerIcon img {
+        width: 70%;
+    }
+
+    .bodyRightDiv .row{
+        padding: 0px !important;
+    }
+    .bodyBottomRight .row{
+        padding-top: 10px !important;
+    }
+    .bodyBottomRight .col-4{
+        padding-right: 5px !important;
+    }
+    .footerText .row{
+        padding: 30px 85px 0px 85px !important;
+    }
+    .footerText span{
+        font-size: 22px;
+    }
+    .section_img1{     
+        background: url(../images/live-tv-background.png);
+        background-size: auto 118%;
+        padding: 70px;
+        background-position-y: -15px;
+        height: 440px;
+        width: 100%;
+        border-radius: 8px;
+        position: relative;
+        transition: all .2s ease-in-out;
+    }
+    .section_img2{
+        background: url(../images/movie-background.png);
+        background-size: 118% auto;
+        padding: 30px !important;
+        background-position-x: -15px;
+        height: 340px;
+        width: 94%;
+        margin-left: 18px !important;
+        margin-bottom: 0px !important;
+        position: relative;
+        transition: all .2s ease-in-out;
+        border-radius: 8px;
+    }
+    .section_img3{
+        background: url(../images/series-background.png);
+        background-repeat: repeat-y;
+        background-size: 118% auto;
+        padding: 30px !important;
+        background-position-x: -15px;
+        height: 340px;
+        left: 8px;
+        margin-bottom: 9px !important;
+        width: 94%;
+        position: relative;
+        transition: all .2s ease-in-out;
+        border-radius: 8px;
+    }
+    .section-logo {
+        width: 30%;
+        position: absolute;
+        top: 20%;
+        right: 35%;
+    }
+    .section-logoLive {
+        width: 32%;
+        position: absolute;
+        top: 23%;
+        right: 35%;
+    }
+    .sectionstrip-logo {
+        width: 2rem;
+        margin-top: -9px !important;
+        transition: all .2s ease-in-out;
+    }
+    .section-title-1 {
+        position: absolute;
+        top: 54%;
+        color: #f8f8f8;
+        left: 32%;
+        text-transform: uppercase;
+        font-size: 40px;
+        font-weight: 600;
+    }
+    .section-title-2 {
+        position: absolute;
+        top: 55%;
+        color: #f8f8f8;
+        left: 31.8%;
+        text-transform: uppercase;
+        font-size: 36px;
+        font-weight: 600;
+    }
+    .section-title-3 {
+        position: absolute;
+        top: 57%;
+        color: #f8f8f8;
+        left: 35%;
+        text-transform: uppercase;
+        font-size: 36px;
+        font-weight: 600;
+    }
+    .btn-cus-dash {
+        background: #73ad88;
+        width: 93%;
+        padding: 18px !important;
+        color: #f8f8f8;
+        text-transform: uppercase;
+        margin-left: 20px !important;
+        font-size: 21px;
+        font-weight: 600;
+        border: 4px solid transparent;
+    }
+    .masterSearch{
+        text-align: end;
+        position: absolute;
+        top: 7.5%;
+        left: 36%
+    }
+    .masterSearch span {
+        font-size: 22px;
+        line-height: 1.5;
+    }
+    .timeZone{
+        text-align: inherit;
+        position: absolute;
+        top: 7%;
+        left: 27%;
+    }
+    .timeZone span{
+        font-size: 22px;
+    }
+    .headerRightDiv{
+        text-align: center;
+        position: absolute;
+        top: 48px;
+        right: 120px;
+    }
+
+    /* Live  */
+
+    .liveInHeader .row {
+        padding: 10px 0px 10px 0px !important;
+    }
+    .liveInBack {
+        text-align: start;
+        padding-left: 10px !important;
+    }
+    .liveInBack img {
+        width: 42%;
+        margin-top: 9px !important;
+    }
+    .liveInLogo img {
+        width: 80%;
+        backdrop-filter: blur(1px);
+    }
+    .liveInName{
+        text-align: start;
+    }
+    .liveInName span {
+        font-size: 18px;
+        line-height: 3;
+        padding: 5px 10px !important;
+        border-left: 2px solid white;
+    }
+    .liveInTime span{
+        font-size: 18px;
+        line-height: 2.6;
+    }
+    .liveInsearch{
+        text-align: end;
+    }
+    .liveInsearch img {
+        width: 32%;
+        margin-top: 5px !important;
+    }
+    .liveInSet{
+        text-align: center;
+    }
+    .liveInSet img {
+        width: 32%;
+        margin-top: 5px !important;
+    }
+
+    .liveFrameMainscroll{   
+        overflow: auto;
+        width: 100%;
+        height: 580px;
+    }
+    .liveFrameBody, .liveFrameHeader{
+        background: black;
+        /* margin-left: 20px !important; */
+        border-bottom: 1px solid #383838;
+    }
+    .liveFrameHeader .row{
+        background-color: black;
+        padding: 20px 0px !important;
+    }
+    .liveFrameLeftAre img, .liveFrameRightAre img{
+        width: 40%;
+        cursor: pointer;
+    }
+    .liveFrameName span{
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .liveFrameBody .row{
+        /* background-color: #000000c2; */
+        padding: 4px 0px !important;
+    }
+    .liveFrameCate span{
+        font-size: 24px;
+        line-height: 2;
+    }
+    .liveFrameImg img{
+        width: 84%;
+        height: 50px;
+    }
+    .liveFrameChanName{
+        text-align: left;
+        line-height: 1.3;
+    }
+    .liveFrameChanName span{
+        padding-left: 8px !important;
+        font-size: 20px;
+        text-transform: uppercase;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-inline-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    .liveFrameChanName label{
+        padding-left: 8px !important;
+        font-size: 16px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-right: 10px !important;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    .livePlayerRightSide{
+        background-image: url(../images/forLiveplay.png);
+        background-size: 100%;
+    }
+    .livePlayer img{
+        width: 100%;
+    }
+    .liveInfo{
+        padding: 62px 0px 61px 0px !important;
+    }
+    .liveInfoSub .liveHeading{
+        padding-bottom: 20px !important;
+    }
+    .liveInfoSub .liveHeading span{
+        padding: 8px 20px !important;
+        background: #31707e;
+        font-size: 22px;
+    }
+    .liveInfoSub .liveChannelName, .liveInfoSub .liveChannelProg{
+        padding-bottom: 8px !important;
+    }
+    .liveInfoSub .liveChannelName span{
+        font-size: 25px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .liveInfoSub .liveChannelProg span{
+        font-size: 27px;
+        color: #31707e;
+    }
+    .liveInfoSub .liveProgTime span{
+        font-size: 27px;
+    }
+    
+    .liveEPGMaindiv .row{
+        margin: 20px 20px 0px 0px !important;
+        text-align: initial;
+        background-color: black;
+    }
+    .liveEPGdiv{
+        overflow: auto;
+        width: 100%;
+        height: 272px;
+    }
+    .liveEpgTime span{
+        font-size: 20px;
+        color: #ffffff;
+        padding-left: 5px !important;
+    }
+    .liveEpgTime p{
+        font-size: 18px;
+        color: #6c6c6c;
+        margin-bottom: 10px !important;
+        padding-left: 7px !important;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    .pop_cateScroll {
+        width: 100%;
+        height: 500px;
+    }
+    .cateSearch input{
+        width: 100%;
+        padding: 14px 10px 14px 40px !important;
+        font-size: 20px;
+        background: #292828;
+        outline: none;
+        border: 0;
+    }
+    .cateSearch i{
+        position: absolute;
+        left: 34px;
+        font-size: 20px;
+        top: 122px;
+    }
+    .cateList{
+        width: 100%;
+        outline: none;
+        padding-top: 14px !IMPORTANT;
+        padding-bottom: 14px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+    }
+    .cateListNum{
+        width: 100%;
+        outline: none;
+        padding-top: 12px !IMPORTANT;
+        padding-bottom: 12px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+    }
+    .liveCateList span{
+        padding-left: 25px !important;
+        font-size: 20px;
+    }
+    
+    .cateList:hover, .cateList:hover .cateNum{
+        background-color: #21456b;
+    }
+    
+    .cateNum{
+        padding-right: 2% !important;
+    }
+    .cateNum div{
+        font-size: 20px;
+    }
+
+    .linear-background-cate {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
+        background: #010106;
+        background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+        background-size: 1000px 104px;
+        height: 50px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .linear-background {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
+        background: #010106;
+        background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+        background-size: 1000px 104px;
+        height: 50px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .inter-crop {
+        background: #010106;
+        width: 20px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 100px;
+    }
+
+    .inter-right--top {
+        background: #010106;
+        width: 100%;
+        height: 20px;
+        position: absolute;
+        top: 20px;
+        left: 100px;
+    }
+
+    .totalcountare img{
+        width: 30% !important;
+    }
+
+    .progress {
+        display: flex;
+        height: 2px !important;
+        overflow: hidden;
+        font-size: 0.75rem;
+        background-color: #e9ecef;
+        border-radius: .25rem;
+    }
+
+
+    /* EPG */
+
+    .epgHeader .row{
+        padding: 30px 10px 20px 0px !important;
+    }
+    .epgBack{
+        text-align: center;
+        padding-left: 10px !important;
+    }
+    .epgBack img{
+        width: 42%;
+        margin-top: 9px !important;
+    }
+    .epgLogo img{
+        width: 80%;
+        backdrop-filter: blur(1px);
+    }
+    .epgName span{
+        font-size: 20px;
+        line-height: 62px;
+        font-weight: 500;
+    }
+    .epgTime span{
+        font-size: 20px;
+        line-height: 62px;
+        font-weight: 500;
+    }
+    .epgTime span label{
+        font-weight: 400;
+        font-size: 21px;
+    }
+    .epgLive img {
+        width: 82%;
+    }
+    .epgTopBody .rows {
+        height: 188px;
+        padding-right: 20px !important;
+    }
+    .epgProName {
+        text-align: initial;
+        padding: 40px 0px 10px 25px !important;
+    }
+    .epgProName span {
+        font-size: 24px;
+        font-weight: 500;
+    }
+    .epgProTime {
+        text-align: center;
+        padding: 40px 0px 10px 0px !important;
+    }
+    .epgProTime span {
+        font-size: 24px;
+        /* font-weight: 500; */
+    }
+    .epgProInfo {
+        text-align: start;
+        padding: 0px 125px 10px 25px !important;
+    }
+    .epgProInfo span {
+        font-size: 16.9px;
+    }
+    .epgFrameLeftHeader {
+        padding: 10px !important;
+        background: #07101b;
+        border-bottom: 2px solid #111f33;
+    }
+    .epgFrameLeftHeader span {
+        font-size: 18px;
+    }
+    .epgFrameBodyScroll {
+        height: 290px;
+        overflow-y: scroll;
+    }
+    .epgFrameBody .row {
+        margin-bottom: 4px !important;
+        background-color: #080f1b;
+        cursor: pointer;
+    }
+    .epgChanLogo img {
+        width: 70%;
+        height: 47px;
+    }
+    .epgChannelNameList span {
+        font-size: 20px;
+        margin-top: 11px !important;
+        text-transform: uppercase;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-inline-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    .leftArrow {
+        width: 3%;
+        position: absolute;
+        display: none;
+        z-index: 111;
+    }
+    .leftArrow img, .rightArrow img {
+        width: 100%;
+    }
+    .rightArrow {
+        width: 3%;
+        position: absolute;
+        left: 97%;
+        z-index: 111;
+    }
+    .rightArrow img {
+        display: block;
+    }
+    .epgFrameRightBody, .epgRightFrameBody {
+        display: -webkit-inline-box;
+    }
+    .epgframeHeader {
+        padding: 10px !important;
+        background: #07101b;
+        width: 18%;
+        border-right: 2px solid #0c1422;
+        border-bottom: 2px solid #111f33;
+    }
+    .epgframeHeader span {
+        font-size: 18px;
+    }
+    .epgRightBottomScroll {
+        overflow-y: scroll;
+        height: 290px;
+    }
+    .epgFrameMainBOdy .row {
+        margin-bottom: 4px !important;
+        cursor: pointer;
+    }
+    .epgFrameRightBody, .epgRightFrameBody {
+        display: -webkit-inline-box;
+    }
+    .epgframeRightBody {
+        padding: 7px !important;
+        background: #07101b;
+        width: 18%;
+        border-right: 2px solid #0c1422;
+    }
+    .epgframeRightBody span {
+        font-size: 18px;
+        text-transform: uppercase;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-inline-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+
+    /* Movies */
+
+    .live_header{
+        z-index: 111111;
+        /* background: url(../images/background.jpg); */
+        /* background-size: 100%; */
+        text-transform: uppercase;
+    }
+    .pop_liveFullDiv{
+        width: 100%;
+        background-color: black;
+    }
+    .pop_cateScroll{
+        background-color: black;
+        width: 100%;
+        height: 522px;
+        overflow-y: scroll;
+    }
+    .pop_cateScroll::-webkit-scrollbar {
+        display: none;
+    }
+    .live_body{
+        padding: 5px 10px 0px 10px !important;
+        /* background: url(../images/background.jpg); */
+        /* background-size: 100%; */
+        width: 100%;
+        height: 665px;
+        overflow-y: scroll;
+    }
+    .live_body::-webkit-scrollbar {
+        display: none;
+    }
+    .live_body .col-lg-3 {
+        width: 20% !important;
+    }
+    .pop_live_header .row{
+        padding: 20px 0px 30px 0px !important;
+    }
+    .live_header .row{
+        padding: 15px 0px 15px 0px !important;
+    }
+    .liveback a[title=Menu] img, .liveback a[title=Back] img {
+        width: 70%;
+    }
+    .liveMenu a[title=Close] img{
+        width: 100%;
+    }
+    .liveLogos img{
+        width: 69%;
+        backdrop-filter: brightness(0.5);
+    } 
+    .liveHead{
+        font-size: 24px;
+        font-weight: 500;
+    }
+    .liveShowImages img{
+        width: 100%;
+        height: 250px;
+    }
+    .liveShowImages{  
+        border: 3px solid #ff020200;
+        margin-bottom: 20px !important;
+        width: 96%;
+        height: 258px;
+    }
+    .liveHead{
+        font-size: 22px;
+        font-weight: 500;
+    }
+    .rightCategoryDiv{
+        background-color: black;
+    }
+    .cateSearch{
+        text-align: initial;
+    }
+    .cateSearch input{
+        width: 100%;
+        padding: 14px 10px 14px 55px !important;
+        background: #292828;
+        color: #ffffff;
+        outline: none;
+        font-size: 20px;
+        border: 0;
+    }
+    .livecateSearch i {
+        position: absolute;
+        font-size: 28px;
+        left: 32px !important;
+        top: 99px !important;
+    }
+    .cateSearch i{
+        position: absolute;
+        left: 55px;
+        font-size: 20px;
+        top: 99px;
+    }
+    .cateList{
+        width: 100%;
+        outline: none;
+        padding-top: 16px !IMPORTANT;
+        padding-bottom: 16px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+    .cateListNum{
+        width: 100%;
+        outline: none;
+        padding-top: 12px !IMPORTANT;
+        padding-bottom: 12px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+    }
+    
+    .cateList:hover, .cateList:hover .cateNum{
+        background-color: #21456b;
+    }
+    .hoverOver{
+        top: 85% !important;
+        position: relative;
+        left: -11px;
+        font-size: 20px;
+        color: transparent;
+        font-weight: 700;
+        z-index: 1111;
+    }
+    .hoverOvers{
+        font-size: 14px;
+        color: #ffffff;
+        position: relative;
+        right: 0px;
+        background: #1b5bba;
+        border-radius: 4px;
+        padding: 3px 6px !important;
+        font-weight: 700;
+        z-index: 11111111;
+    }
+    .centerSearch input[type=search]{
+        width: 90%;
+        background: transparent;
+        border: 0px;
+        color: white;
+        /* padding-left: 12px !important; */
+    }
+    .centerSearch img[alt=searchBack]{
+        width: 3%;
+    }
+    .centerSearch img[alt=centerSearch]{
+        width: 2.5%;
+    }
+    .centerSearch input[type=search]::placeholder{
+        font-size: 19px;
+    }
+    .forcenterSearch{
+        position: relative;
+        left: -114px;
+    }
+
+    /* settings */
+
+    
+    
+    /* catch-up */
+
+    .catchSet{
+        margin-top: 16px !important;
+    }
+    .catchSet a{
+        float: right;
+    }
+    .catchSet img{
+        width: 70%;
+    }
+    .catchCate{
+        background-color: #0b1130;
+        width: 42%;
+        padding: 6px !important;
+        margin-left: 70px !important;
+        margin-bottom: 12px !important;
+        transition: 0.5s;
+    }
+    .catchCate i{
+        font-size: 26px;
+        line-height: 50px;
+    }
+    .catchCate span{
+        font-size: 20px;
+        line-height: 48px;
+    }
+    .makeCah{
+        position: relative;
+    }
+    .makeCah i{
+        position: absolute;
+        left: 10px;
+    }
+    .makeCah span{
+        position: absolute;
+        left: 70px;
+    }
+    .makeCah label{
+        padding-left: 85% !important;
+    }
+    .catchScroll{
+        overflow: scroll;
+        height: 550px;
+    }
+    .catchCate:hover {
+        transform: scale(1.05);
+        transition: 0.5s;
+    }
+
+    /* userInfo page */
+
+    .generalSettingMain{
+        background-color: #181e2e;
+        margin-bottom: 25px !important;
+        margin-top: 25px !important;
+        padding: 0px 0px 30px 0px !important;
+    }
+    .generalSettingMain span{
+        font-size: 29px;
+        font-weight: 300;
+    }
+    .leftDivInfo, .rightDivInfo{
+        text-align: left;
+    }
+
+    /* movie info */
+
+    .movieInHeader .row {
+        padding: 10px 0px 10px 0px !important;
+    }
+    .movieInBack {
+        text-align: start;
+        padding-left: 10px !important;
+    }
+    .movieInBack img {
+        width: 42%;
+        margin-top: 5px !important;
+    }
+    .movieInLogo img {
+        width: 71%;
+        backdrop-filter: blur(1px);
+    }
+    .movieInName span {
+        font-size: 22px;
+        line-height: 2.3;
+        font-weight: 500;
+    }
+    .movieInlSet img {
+        width: 32%;
+        margin-top: 11px !important;
+    }
+    .movieInBodyScroll {
+        width: 100%;
+        height: 585px;
+        overflow-y: scroll;
+    }
+    .movieInBody .row {
+        padding: 20px 15px 0px 15px !important;
+    }
+    .movieInPic img {
+        width: 90%;
+        backdrop-filter: brightness(0.5);
+    }
+    .movieInPic i {
+        margin-top: 10px !important;
+        font-size: 20px;
+        color: #ffff1fdb;
+    }
+    .movieInInformation .one {
+        padding: 0px 0px 20px 20px !important;
+        font-size: 20px;
+    }
+    .movieInInformation .two {
+        padding: 0px 0px 20px 0px !important;
+        font-size: 20px;
+    }
+    .movieInInformation .three button {
+        background: #b4b4b42e;
+        color: white;
+        width: 18%;
+        border: none;
+        border-radius: 6px;
+        font-size: 18px;
+        margin-right: 10px !important;
+        padding: 8px !important;
+    }
+    .movieInFav .star img {
+        cursor: pointer;
+        width: 35%;
+    }
+    .movieInDescription {
+        text-align: left;
+        padding: 20px 22px 0px 25px !important;
+        font-size: 17px;
+        font-weight: 500;
+    }   
+    .movieInStarCastScrolls {
+        width: 100%;
+        display: contents;
+    /* overflow-x: auto; */
+    }
+    .movieInStarCast {
+        width: 160px;
+        flex: 0 0 auto;
+        margin-left: 12px !important;
+    }
+    .movieInStarCast .movieInActNam {
+        top: 89% !important;
+        position: relative;
+        font-size: 18px;
+        color: white;
+        background: rgb(0 0 0 / 20%);
+        font-weight: 700;
+        z-index: 1111;
+    }
+    .movieInStarCast img {
+        width: 100%;
+        height: 222px;
+    }
+    
+}
+
+@media only screen and  (min-width: 1400px) {
+
+    .dashboardheaderMain .row{
+        padding: 28px 85px 30px 85px !important;
+    }
+
+    .bodyDiv .row{
+        padding: 20px 85px 20px 85px !important;
+    }
+
+    .bodyBottomRight .row{
+        padding: 10px 6px 0px 10px !important;
+    }
+
+    /* login page */
+
+    
+
+    /* Dashboard */
+
+    .headerMain .row{
+        padding: 10px 0px 16px 0px !important;
+    }
+    .headerTime span{
+        font-size: 19px;
+        line-height: 78px;
+        font-weight: 600;
+        padding-left: 15px !important;
+    }
+    .headerLogo img{
+        width: 100%;
+        /* backdrop-filter: blur(1px); */
+    }
+    .headerSearch span{
+        font-size: 19px;
+        line-height: 78px;
+        font-weight: 600;
+    }
+    .headerIcon{
+        padding-top: 20px !important;
+    }
+    .headerIcon div {
+        width: 25%;
+        float: left;
+    }
+    .headerIcon img {
+        width: 70%;
+    }
+
+    .bodyRightDiv .row{
+        padding: 0px !important;
+    }
+    .bodyBottomRight .row{
+        padding-top: 10px !important;
+    }
+    .bodyBottomRight .col-4{
+        padding-right: 5px !important;
+    }
+    .footerText .row{
+        padding: 30px 85px 0px 85px !important;
+    }
+    .footerText span{
+        font-size: 22px;
+    }
+    .section_img1{     
+        background: url(../images/live-tv-background.png);
+        background-size: auto 118%;
+        padding: 70px;
+        background-position-y: -15px;
+        height: 440px;
+        width: 100%;
+        border-radius: 8px;
+        position: relative;
+        transition: all .2s ease-in-out;
+    }
+    .section_img2{
+        background: url(../images/movie-background.png);
+        background-size: 118% auto;
+        padding: 30px !important;
+        background-position-x: -15px;
+        height: 340px;
+        width: 94%;
+        margin-left: 18px !important;
+        margin-bottom: 0px !important;
+        position: relative;
+        transition: all .2s ease-in-out;
+        border-radius: 8px;
+    }
+    .section_img3{
+        background: url(../images/series-background.png);
+        background-repeat: repeat-y;
+        background-size: 118% auto;
+        padding: 30px !important;
+        background-position-x: -15px;
+        height: 340px;
+        left: 8px;
+        margin-bottom: 9px !important;
+        width: 94%;
+        position: relative;
+        transition: all .2s ease-in-out;
+        border-radius: 8px;
+    }
+    .section-logo {
+        width: 30%;
+        position: absolute;
+        top: 20%;
+        right: 35%;
+    }
+    .section-logoLive {
+        width: 32%;
+        position: absolute;
+        top: 23%;
+        right: 35%;
+    }
+    .sectionstrip-logo {
+        width: 2rem;
+        margin-top: -9px !important;
+        transition: all .2s ease-in-out;
+    }
+    .section-title-1 {
+        position: absolute;
+        top: 57%;
+        color: #f8f8f8;
+        left: 33%;
+        text-transform: uppercase;
+        font-size: 40px;
+        font-weight: 600;
+    }
+    .section-title-2 {
+        position: absolute;
+        top: 58%;
+        color: #f8f8f8;
+        left: 35%;
+        text-transform: uppercase;
+        font-size: 36px;
+        font-weight: 600;
+    }
+    .section-title-3 {
+        position: absolute;
+        top: 60%;
+        color: #f8f8f8;
+        left: 37%;
+        text-transform: uppercase;
+        font-size: 36px;
+        font-weight: 600;
+    }
+    .btn-cus-dash {
+        background: #73ad88;
+        width: 93%;
+        padding: 18px !important;
+        color: #f8f8f8;
+        text-transform: uppercase;
+        margin-left: 20px !important;
+        font-size: 22px;
+        font-weight: 600;
+        border: 4px solid transparent;
+    }
+    .masterSearch{
+        text-align: end;
+        position: absolute;
+        top: 7.5%;
+        left: 36%
+    }
+    .masterSearch span {
+        font-size: 22px;
+        line-height: 1.5;
+    }
+    .timeZone{
+        text-align: inherit;
+        position: absolute;
+        top: 7%;
+        left: 27%;
+    }
+    .timeZone span{
+        font-size: 22px;
+    }
+    .headerRightDiv{
+        text-align: center;
+        position: absolute;
+        top: 48px;
+        right: 120px;
+    }
+
+    /* Live  */
+
+    .liveInHeader .row {
+        padding: 10px 0px 10px 0px !important;
+    }
+    .liveInBack {
+        text-align: start;
+        padding-left: 10px !important;
+    }
+    .liveInBack img {
+        width: 42%;
+        margin-top: 9px !important;
+    }
+    .liveInLogo img {
+        width: 80%;
+        backdrop-filter: blur(1px);
+    }
+    .liveInName{
+        text-align: start;
+    }
+    .liveInName span {
+        font-size: 22px;
+        line-height: 3;
+        padding: 5px 10px !important;
+        border-left: 2px solid white;
+    }
+    .liveInTime span{
+        font-size: 24px;
+        line-height: 2.6;
+    }
+    .liveInsearch{
+        text-align: end;
+    }
+    .liveInsearch img {
+        width: 32%;
+        margin-top: 11px !important;
+    }
+    .liveInSet{
+        text-align: center;
+    }
+    .liveInSet img {
+        width: 32%;
+        margin-top: 11px !important;
+    }
+
+    .liveFrameMainscroll{   
+        overflow: auto;
+        width: 100%;
+        height: 638px;
+    }
+    .liveFrameBody, .liveFrameHeader{
+        background: black;
+        /* margin-left: 20px !important; */
+        border-bottom: 1px solid #383838;
+    }
+    .liveFrameHeader .row{
+        background-color: black;
+        padding: 20px 0px !important;
+    }
+    .liveFrameLeftAre img, .liveFrameRightAre img{
+        width: 40%;
+        cursor: pointer;
+    }
+    .liveFrameName span{
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .liveFrameBody .row{
+        /* background-color: #000000c2; */
+        padding: 4px 0px !important;
+    }
+    .liveFrameCate span{
+        font-size: 24px;
+        line-height: 2;
+    }
+    .liveFrameImg img{
+        width: 84%;
+        height: 50px;
+    }
+    .liveFrameChanName{
+        text-align: left;
+        line-height: 1.3;
+    }
+    .liveFrameChanName span{
+        padding-left: 8px !important;
+        font-size: 20px;
+        text-transform: uppercase;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-inline-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    .liveFrameChanName label{
+        padding-left: 8px !important;
+        font-size: 16px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-right: 10px !important;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    .livePlayerRightSide{
+        background-image: url(../images/forLiveplay.png);
+        background-size: 100%;
+    }
+    .livePlayer img{
+        width: 100%;
+    }
+    .liveInfo{
+        padding: 62px 0px 61px 0px !important;
+    }
+    .liveInfoSub .liveHeading{
+        padding-bottom: 20px !important;
+    }
+    .liveInfoSub .liveHeading span{
+        padding: 8px 20px !important;
+        background: #31707e;
+        font-size: 22px;
+    }
+    .liveInfoSub .liveChannelName, .liveInfoSub .liveChannelProg{
+        padding-bottom: 8px !important;
+    }
+    .liveInfoSub .liveChannelName span{
+        font-size: 25px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .liveInfoSub .liveChannelProg span{
+        font-size: 27px;
+        color: #31707e;
+    }
+    .liveInfoSub .liveProgTime span{
+        font-size: 27px;
+    }
+    
+    .liveEPGMaindiv .row{
+        margin: 20px 20px 0px 0px !important;
+        text-align: initial;
+        background-color: black;
+    }
+    .liveEPGdiv{
+        overflow: auto;
+        width: 100%;
+        height: 318px;
+    }
+    .liveEpgTime span{
+        font-size: 25px;
+        color: #ffffff;
+        padding-left: 5px !important;
+    }
+    .liveEpgTime p{
+        font-size: 18px;
+        color: #6c6c6c;
+        margin-bottom: 10px !important;
+        padding-left: 7px !important;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    .pop_cateScroll {
+        width: 100%;
+        height: 548px;
+    }
+    .cateSearch input{
+        width: 100%;
+        padding: 14px 10px 14px 40px !important;
+        font-size: 20px;
+        background: #292828;
+        outline: none;
+        border: 0;
+    }
+    .cateSearch i{
+        position: absolute;
+        left: 32px;
+        font-size: 20px;
+        top: 142px;
+    }
+    .cateList{
+        width: 100%;
+        outline: none;
+        padding-top: 14px !IMPORTANT;
+        padding-bottom: 14px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+    }
+    .cateListNum{
+        width: 100%;
+        outline: none;
+        padding-top: 12px !IMPORTANT;
+        padding-bottom: 12px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+    }
+    .liveCateList span{
+        padding-left: 25px !important;
+        font-size: 20px;
+    }
+    
+    .cateList:hover, .cateList:hover .cateNum{
+        background-color: #21456b;
+    }
+    
+    .cateNum{
+        padding-right: 2% !important;
+    }
+    .cateNum div{
+        font-size: 20px;
+    }
+
+    .linear-background-cate {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
+        background: #010106;
+        background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+        background-size: 1000px 104px;
+        height: 50px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .linear-background {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
+        background: #010106;
+        background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+        background-size: 1000px 104px;
+        height: 50px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .inter-crop {
+        background: #010106;
+        width: 20px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 100px;
+    }
+
+    .inter-right--top {
+        background: #010106;
+        width: 100%;
+        height: 20px;
+        position: absolute;
+        top: 20px;
+        left: 100px;
+    }
+
+    .totalcountare img{
+        width: 30% !important;
+    }
+
+    .progress {
+        display: flex;
+        height: 2px !important;
+        overflow: hidden;
+        font-size: 0.75rem;
+        background-color: #e9ecef;
+        border-radius: .25rem;
+    }
+
+
+    /* EPG */
+
+    .epgHeader .row{
+        padding: 30px 10px 20px 0px !important;
+    }
+    .epgBack{
+        text-align: center;
+        padding-left: 10px !important;
+    }
+    .epgBack img{
+        width: 42%;
+        margin-top: 12.5px !important;
+    }
+    .epgLogo img{
+        width: 80%;
+        backdrop-filter: blur(1px);
+    }
+    .epgLogo{
+        margin-top: 3px !important;
+    }
+    .epgName span{
+        font-size: 22px;
+        line-height: 66px; 
+        font-weight: 600;
+    }
+    .epgTime span{
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 66px;
+    }
+    .epgTime span label{
+        font-weight: 400;
+        font-size: 21px;
+    }
+    .epgLive img {
+        width: 82%;
+    }
+    .epgTopBody .rows {
+        height: 206px;
+        padding-right: 20px !important;
+    }
+    .epgProName {
+        text-align: initial;
+        padding: 55px 0px 10px 25px !important;
+    }
+    .epgProName span {
+        font-size: 24px;
+        font-weight: 500;
+    }
+    .epgProTime {
+        text-align: center;
+        padding: 55px 0px 10px 0px !important;
+    }
+    .epgProTime span {
+        font-size: 24px;
+        /* font-weight: 500; */
+    }
+    .epgProInfo {
+        text-align: start;
+        padding: 0px 125px 10px 25px !important;
+    }
+    .epgProInfo span {
+        font-size: 16.9px;
+    }
+    .epgFrameLeftHeader {
+        padding: 10px !important;
+        background: #07101b;
+        border-bottom: 2px solid #111f33;
+    }
+    .epgFrameLeftHeader span {
+        font-size: 18px;
+    }
+    .epgFrameBodyScroll {
+        height: 322px;
+        overflow-y: scroll;
+    }
+    .epgFrameBody .row {
+        margin-bottom: 4px !important;
+        background-color: #080f1b;
+        cursor: pointer;
+    }
+    .epgChanLogo img {
+        width: 70%;
+        height: 47px;
+    }
+    .epgChannelNameList span {
+        font-size: 20px;
+        margin-top: 11px !important;
+        text-transform: uppercase;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-inline-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    .leftArrow {
+        width: 3%;
+        position: absolute;
+        display: none;
+        z-index: 111;
+    }
+    .leftArrow img, .rightArrow img {
+        width: 100%;
+    }
+    .rightArrow {
+        width: 3%;
+        position: absolute;
+        left: 97%;
+        z-index: 111;
+    }
+    .rightArrow img {
+        display: block;
+    }
+    .epgFrameRightBody, .epgRightFrameBody {
+        display: -webkit-inline-box;
+    }
+    .epgframeHeader {
+        padding: 10px !important;
+        background: #07101b;
+        width: 18%;
+        border-right: 2px solid #0c1422;
+        border-bottom: 2px solid #111f33;
+    }
+    .epgframeHeader span {
+        font-size: 18px;
+    }
+    .epgRightBottomScroll {
+        overflow-y: scroll;
+        height: 322px;
+    }
+    .epgFrameMainBOdy .row {
+        margin-bottom: 4px !important;
+        cursor: pointer;
+    }
+    .epgFrameRightBody, .epgRightFrameBody {
+        display: -webkit-inline-box;
+    }
+    .epgframeRightBody {
+        padding: 7px !important;
+        background: #07101b;
+        width: 18%;
+        border-right: 2px solid #0c1422;
+    }
+    .epgframeRightBody span {
+        font-size: 18px;
+        text-transform: uppercase;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-inline-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+
+    /* Movie */
+
+    .live_header{
+        z-index: 111111;
+        /* background: url(../images/background.jpg); */
+        text-transform: uppercase;
+        /* background-size: 100%; */
+    }
+    .pop_liveFullDiv{
+        width: 100%;
+        background-color: black;
+    }
+    .pop_cateScroll{
+        background-color: black;
+        width: 100%;
+        height: 580px;
+        overflow-y: scroll;
+    }
+    .pop_cateScroll::-webkit-scrollbar {
+        display: none;
+    }
+    .live_body{
+        padding: 5px 10px 0px 10px !important;
+        /* background: url(../images/background.jpg); */
+        background-size: 100%;
+        width: 100%;
+        height: 625px;
+        overflow-y: scroll;
+    }
+    .live_body::-webkit-scrollbar {
+        display: none;
+    }
+    .live_body .col-lg-3 {
+        width: 20% !important;
+    }
+    .live_body .col-lg-2 {
+        /* width: 14.2% !important; */
+    }
+    .pop_live_header .row{
+        padding: 30px 10px 18px 0px !important;
+    }
+    .live_header .row{
+        padding: 30px 10px 18px 0px !important;
+    }
+    .liveback a[title=Menu] img, .liveback a[title=Back] img {
+        width: 70%;
+    }
+    .liveMenu a[title=Close] img{
+        width: 100%;
+    }
+    .liveLogos img{
+        width: 73%;
+        backdrop-filter: brightness(0.5);
+    } 
+    .liveHead{
+        font-size: 24px;
+        font-weight: 500;
+    }
+    .liveShowImages img{
+        width: 100%;
+        height: 250px;
+        bottom: 57px;
+    }
+    .liveShowImages{  
+        border: 3px solid #ff020200;
+        margin-bottom: 20px !important;
+        width: 96%;
+        height: 258px;
+    }
+    .liveHead{
+        font-size: 20px;
+        line-height: 42px;
+        font-weight: 600;
+    }
+    .rightCategoryDiv{
+        background-color: black;
+    }
+    .cateSearch{
+        text-align: initial;
+    }
+    .cateSearch input{
+        width: 100%;
+        padding: 14px 10px 14px 55px !important;
+        background: #292828;
+        color: #ffffff;
+        outline: none;
+        font-size: 20px;
+        border: 0;
+    }
+    .livecateSearch i{
+        position: absolute;
+        left: 30px !important;
+        font-size: 20px;
+        top: 109px !important;
+    }
+    .cateSearch i{
+        position: absolute;
+        left: 30px;
+        font-size: 22px;
+        top: 118px;
+    }
+    .cateList{
+        width: 100%;
+        outline: none;
+        padding-top: 16px !IMPORTANT;
+        padding-bottom: 16px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+    .cateListNum{
+        width: 100%;
+        outline: none;
+        padding-top: 12px !IMPORTANT;
+        padding-bottom: 12px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+    }
+    
+    .cateList:hover, .cateList:hover .cateNum{
+        background-color: #21456b;
+    }
+    .hoverOver{
+        top: 77% !important;
+        position: relative;
+        left: 0px;
+        font-size: 24px;
+        color: transparent;
+        font-weight: 700;
+        z-index: 1111;
+    }
+    .hoverOvers{
+        font-size: 15px;
+        color: #ffffff;
+        position: relative;
+        top: 10px;
+        left: -62px;
+        background: #1b5bba;
+        border-radius: 4px;
+        padding: 4px 7px !important;
+        font-weight: 700;
+        z-index: 11111111;
+    }
+    .centerSearch input[type=search]{
+        width: 90%;
+        background: transparent;
+        border: 0px;
+        color: white;
+        /* padding-left: 12px !important; */
+    }
+    .centerSearch img[alt=searchBack]{
+        width: 3%;
+    }
+    .centerSearch img[alt=centerSearch]{
+        width: 2.5%;
+    }
+    .centerSearch input[type=search]::placeholder{
+        font-size: 19px;
+    }
+    .forcenterSearch{
+        position: relative;
+        left: -114px;
+    }
+
+    /* Settings */
+
+    
+
+    /* catch-up */
+
+    .catchSet{
+        margin-top: 16px !important;
+    }
+    .catchSet a{
+        float: right;
+    }
+    .catchSet img{
+        width: 70%;
+    }
+    .catchCate{
+        background-color: #0b1130;
+        width: 42%;
+        padding: 10px !important;
+        margin-left: 75px !important;
+        margin-bottom: 12px !important;
+        transition: 0.5s;
+    }
+    .catchCate i{
+        font-size: 30px;
+        line-height: 50px;
+    }
+    .catchCate span{
+        font-size: 20px;
+        line-height: 48px;
+    }
+    .makeCah{
+        position: relative;
+    }
+    .makeCah i{
+        position: absolute;
+        left: 0px;
+    }
+    .makeCah span{
+        position: absolute;
+        left: 70px;
+    }
+    .makeCah label{
+        padding-left: 85% !important;
+    }
+    .catchScroll{
+        overflow: scroll;
+        height: 610px;
+    }
+    .catchCate:hover {
+        transform: scale(1.05);
+        transition: 0.5s;
+    }
+
+    /* movie info */
+
+    .movieInHeader .row{
+        padding: 10px 0px 10px 0px !important;
+    }
+    .movieInBack{
+        text-align: start;
+        padding-left: 10px !important;
+    }
+    .movieInBack img{
+        width: 42%;
+        margin-top: 5px !important;
+    }
+    .movieInLogo img{
+        width: 71%;
+        backdrop-filter: blur(1px);
+    }
+    .movieInName span{
+        font-size: 22px;
+        line-height: 2.3;
+        font-weight: 600;
+    }
+    .movieInlSet{
+        text-align: end;
+    }
+    .movieInlSet img{
+        width: 32%;
+        margin-top: 11px !important;
+    }
+    .movieInBody .row{
+        padding: 20px 15px 0px 15px !important;
+    }
+    .movieInPic img{
+        width: 90%;
+        backdrop-filter: brightness(0.5);
+    }
+    .movieInPic i{
+        margin-top: 10px !important;
+        font-size: 20px;
+        color: #ffff1fdb;
+    }
+    .movieInInformation, .movieInFav{
+        text-align: initial;
+    }
+    .movieInInformation .one{
+        padding: 0px 0px 20px 20px !important;
+        font-size: 20px;
+    }
+    .movieInInformation .two{
+        padding: 0px 0px 20px 0px !important;
+        font-size: 20px;
+    }
+    .movieInInformation .two span{
+        background: #262525;
+        padding: 2px 8px !important;
+        border-radius: 6px;
+    }
+    .movieInInformation .three button{
+        background: #b4b4b42e;
+        color: white;
+        width: 18%;
+        border: none;
+        border-radius: 6px;
+        font-size: 18px;
+        margin-right: 10px !important;
+        padding: 8px !important;
+    }
+    .movieInFav .star img{
+        cursor: pointer;
+        width: 35%;
+    }
+    .movieInBodyScroll{
+        width: 100%;
+        height: 644px;
+        overflow-y: scroll;
+    }
+    .movieInDescription{
+        text-align: left;
+        padding: 20px 22px 0px 25px !important;
+        font-size: 17px;
+        font-weight: 500;
+    }
+    .movieInStarCastScrolls{
+        width: 100%;
+        display: contents;
+    }
+    .movieInStarCast{
+        width: 160px;
+        flex: 0 0 auto;
+        margin-left: 12px !important;
+    }   
+    .movieInStarCast img{
+        width: 100%;
+        height: 222px;
+    }
+    .movieInStarCast .movieInActNam{
+        top: 89% !important;
+        position: relative;
+        font-size: 18px;
+        color: white;
+        background: rgb(0 0 0 / 20%);
+        font-weight: 700;
+        z-index: 1111;
+    }
+
+}
+
+@media only screen and  (min-width: 1900px) {
+
+    .dashboardheaderMain .row{
+        padding: 28px 85px 30px 85px !important;
+    }
+    .bodyDiv .row{
+        padding: 20px 85px 20px 85px !important;
+    }
+    .bodyRightDiv .row {
+        padding: 0px !important;
+    }
+    .bodyBottomRight .row{
+        padding: 10px 6px 0px 10px !important;
+    }
+    .btn-cus-dash img {
+        width: 17%;
+    }
+
+    /* login Page */
+
+    
+
+    /* dashbaord{ */
+
+    .headerMain .row{
+        padding: 10px 0px 16px 0px !important;
+    }
+    .headerTime span{
+        font-size: 25px;
+        line-height: 106px;
+        font-weight: 600;
+    }
+    .headerLogo img{
+        width: 100%;
+        backdrop-filter: blur(1px);
+    }
+    .headerSearch span{
+        font-size: 25px;
+        line-height: 106px;
+        font-weight: 600;
+    }
+    .headerIcon{
+        padding-top: 25px !important;
+    }
+    .headerIcon div {
+        width: 25%;
+        float: left;
+    }
+    .headerIcon img {
+        width: 70%;
+    }
+    .section_img1 {
+        background: url(../images/live-tv-background.png);
+        background-size: auto 118%;
+        background-position-y: -15px;
+        height: 585px;
+        width: 100%;
+        border-radius: 8px;
+        position: relative;
+        transition: all .2s ease-in-out;
+    }
+    .section_img2 {
+        background: url(../images/movie-background.png);
+        background-size: 118% auto;
+        padding: 30px !important;
+        background-position-x: -15px;
+        height: 456px;
+        width: 94%;
+        margin-left: 28px !important;
+        margin-bottom: 0px !important;
+        position: relative;
+        transition: all .2s ease-in-out;
+        border-radius: 8px;
+    }
+    .section_img3 {
+        background: url(../images/series-background.png);
+        background-repeat: repeat-y;
+        background-size: 118% auto;
+        padding: 30px !important;
+        background-position-x: -15px;
+        height: 456px;
+        left: 8px;
+        margin-bottom: 9px !important;
+        width: 94%;
+        position: relative;
+        transition: all .2s ease-in-out;
+        border-radius: 8px;
+    }
+    .section-logoLive {
+        width: 32%;
+        position: absolute;
+        top: 23%;
+        right: 36%;
+    }
+    .section-logo {
+        width: 30%;
+        position: absolute;
+        top: 22%;
+        right: 34%;
+    }
+    .section-title-1 {
+        position: absolute;
+        top: 61%;
+        color: #f8f8f8;
+        left: 34.5%;
+        text-transform: uppercase;
+        font-size: 46px;
+        font-weight: 600;
+    }
+    .section-title-2 {
+        position: absolute;
+        top: 62%;
+        color: #f8f8f8;
+        left: 36%;
+        text-transform: uppercase;
+        font-size: 46px;
+        font-weight: 600;
+    }
+    .section-title-3 {
+        position: absolute;
+        top: 64%;
+        color: #f8f8f8;
+        left: 38.4%;
+        text-transform: uppercase;
+        font-size: 46px;
+        font-weight: 600;
+    }
+    .btn-cus-dash {
+        background: #73ad88;
+        width: 93%;
+        padding: 24px !important;
+        color: #f8f8f8;
+        text-transform: uppercase;
+        margin-left: 20px !important;
+        font-size: 29px;
+        font-weight: 600;
+        border: 4px solid transparent;
+    }
+    .footerText span {
+        font-size: 30px;
+    }
+    .footerText span {
+        font-size: 33px;
+    }
+    .bodyBottomRight .row {
+        padding-top: 20px !important;
+    }
+
+    /* Live  */
+
+    .liveInTime span {
+        font-size: 30px;
+        line-height: 2.6;
+    }
+    .liveInName span {
+        font-size: 30px;
+        line-height: 3;
+        padding: 5px 10px !important;
+        border-left: 2px solid white;
+    }
+    
+    .liveInBack img {
+        width: 30%;
+        margin-top: 20px !important;
+    }
+    
+    .liveFrameMainscroll{   
+        overflow: auto;
+        width: 100%;
+        height: 855px;
+    }
+    .liveFrameBody, .liveFrameHeader{
+        background: black;
+        /* margin-left: 20px !important; */
+        border-bottom: 1px solid #383838;
+    }
+    .liveFrameHeader .row{
+        background-color: black;
+        padding: 20px 0px !important;
+    }
+    .liveFrameLeftAre img, .liveFrameRightAre img{
+        width: 40%;
+        cursor: pointer;
+    }
+    .liveFrameName span{
+        font-size: 28px;
+        font-weight: bold;
+    }
+    .liveFrameBody .row{
+        /* background-color: #000000c2; */
+        padding: 7px 0px !important;
+    }
+    .liveFrameCate span{
+        font-size: 26px;
+        line-height: 75px;
+    }
+    .liveFrameImg img{
+        width: 84%;
+        height: 67px;
+    }
+    .liveFrameChanName{
+        text-align: left;
+        line-height: 1.3;
+    }
+    .liveFrameChanName span{
+        padding-left: 8px !important;
+        font-size: 26px;
+        text-transform: uppercase;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-inline-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    .liveFrameChanName label{
+        padding-left: 8px !important;
+        font-size: 22px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-right: 10px !important;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    .livePlayerRightSide{
+        background-image: url(../images/forLiveplay.png);
+        background-size: 100%;
+    }
+    .livePlayer img{
+        width: 100%;
+    }
+    .liveInfo{
+        padding: 110px 0px 0px 0px !important;
+    }
+    .liveInfoSub .liveHeading{
+        padding-bottom: 20px !important;
+    }
+    .liveInfoSub .liveHeading span{   
+        padding: 10px 22px !important;
+        background: #31707e;
+        font-size: 28px;
+    }
+    .liveInfoSub .liveChannelName, .liveInfoSub .liveChannelProg{
+        padding-bottom: 8px !important;
+    }
+    .liveInfoSub .liveChannelName span{
+        font-size: 28px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .liveInfoSub .liveChannelProg span{
+        font-size: 30px;
+        color: #31707e;
+    }
+    .liveInfoSub .liveProgTime span{
+        font-size: 29px;
+    }
+    
+    .liveEPGMaindiv .row{
+        margin: 20px 20px 0px 0px !important;
+        text-align: initial;
+        background-color: black;
+    }
+    .liveEPGdiv{
+        overflow: auto;
+        width: 100%;
+        height: 425px;
+    }
+    .liveEpgTime span{
+        font-size: 25px;
+        color: #ffffff;
+        padding-left: 5px !important;
+    }
+    .liveEpgTime p{
+        font-size: 23px;
+        color: #6c6c6c;
+        margin-bottom: 10px !important;
+        padding-left: 7px !important;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    .cateSearch input {
+        width: 100%;
+        padding: 21px 10px 22px 60px !important;
+        font-size: 26px;
+        background: #292828;
+        outline: none;
+        border: 0;
+    }
+    .cateSearch i {
+        position: absolute;
+        left: 45px;
+        font-size: 24px;
+        top: 206px;
+    }
+    .livecateSearch input {
+        width: 100%;
+        padding: 21px 10px 22px 60px !important;
+        font-size: 26px;
+        background: #292828;
+        outline: none;
+        border: 0;
+    }
+    .livecateSearch i {
+        position: absolute;
+        font-size: 28px;
+        left: 32px !important;
+        top: 137px !important;
+    }
+    .liveCateList span {
+        padding-left: 25px !important;
+        font-size: 26px;
+    }
+    .cateNum div {
+        font-size: 26px;
+    }
+    .cateList {
+        width: 100%;
+        outline: none;
+        padding-top: 21px !IMPORTANT;
+        padding-bottom: 21px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+    }
+    .pop_cateScroll {
+        width: 100%;
+        height: 715px;
+    }
+
+    .linear-background-cate {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
+        background: #010106;
+        background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+        background-size: 1000px 104px;
+        height: 70px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .linear-background {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
+        background: #010106;
+        background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+        background-size: 1000px 104px;
+        height: 70px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .inter-crop {
+        background: #010106;
+        width: 20px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 100px;
+    }
+
+    .inter-right--top {
+        background: #010106;
+        width: 100%;
+        height: 20px;
+        position: absolute;
+        top: 20px;
+        left: 100px;
+    }
+
+    .totalcountare img{
+        width: 30% !important;
+    }
+
+    .progress {
+        display: flex;
+        height: 2px !important;
+        overflow: hidden;
+        font-size: 0.75rem;
+        background-color: #e9ecef;
+        border-radius: .25rem;
+    }
+
+    /* EPG */
+
+    .epgHeader .row{
+        padding: 10px 0px 16px 0px !important;
+    }
+    .epgBack{
+        text-align: center;
+        padding-left: 10px !important;
+    }
+    .epgBack img{
+        width: 30%;
+        margin-top: 20px !important;
+    }
+    .epgLogo img{
+        width: 80%;
+        backdrop-filter: opacity(0.5);
+    }
+    .epgLogo {
+        margin-top: 0px !important;
+    }
+    .epgName span{
+        font-size: 30px;
+        line-height: 90px;
+        font-weight: 500;
+    }
+    .epgTime span{
+        font-size: 30px;
+        line-height: 90px;
+        font-weight: 500;
+    }
+    .epgTime span label{
+        font-weight: 400;
+        font-size: 21px;
+    }
+    .epgLive img {
+        width: 88%;
+    }
+    .epgTopBody .rows {
+        height: 295px;
+        padding-right: 20px !important;
+    }
+    .epgProName {
+        text-align: initial;
+        padding: 80px 0px 10px 25px !important;
+    }
+    .epgProName span {
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .epgProTime {
+        text-align: center;
+        padding: 80px 0px 10px 0px !important;
+    }
+    .epgProTime span {
+        font-size: 30px;
+        /* font-weight: 500; */
+    }
+    .epgProInfo {
+        text-align: start;
+        padding: 0px 180px 10px 25px !important;
+    }
+    .epgProInfo span {
+        font-size: 21px;
+    }
+    .epgFrameLeftHeader {
+        padding: 12px !important;
+        background: #07101b;
+        border-bottom: 2px solid #111f33;
+    }
+    .epgFrameLeftHeader span {
+        font-size: 24px;
+    }
+    .epgFrameBodyScroll {
+        height: 410px;
+        overflow-y: scroll;
+    }
+    .epgFrameBody .row {
+        margin-bottom: 4px !important;
+        background-color: #080f1b;
+        cursor: pointer;
+    }
+    .epgChanLogo img {
+        width: 70%;
+        height: 63px;
+    }
+    .epgChannelNameList span {
+        font-size: 23px;
+        margin-top: 16px !important;
+        text-transform: uppercase;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-inline-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    .leftArrow {
+        width: 3%;
+        position: absolute;
+        display: none;
+        z-index: 111;
+    }
+    .leftArrow img, .rightArrow img {
+        width: 100%;
+    }
+    .rightArrow {
+        width: 3%;
+        position: absolute;
+        left: 97%;
+        z-index: 111;
+    }
+    .rightArrow img {
+        display: block;
+    }
+    .epgFrameRightBody, .epgRightFrameBody {
+        display: -webkit-inline-box;
+    }
+    .epgframeHeader {
+        padding: 12px !important;
+        background: #07101b;
+        width: 18%;
+        border-right: 2px solid #0c1422;
+        border-bottom: 2px solid #111f33;
+    }
+    .epgframeHeader span {
+        font-size: 24px;
+    }
+    .epgRightBottomScroll {
+        overflow-y: scroll;
+        height: 410px;
+    }
+    .epgFrameMainBOdy .row {
+        margin-bottom: 4px !important;
+        cursor: pointer;
+    }
+    .epgFrameRightBody, .epgRightFrameBody {
+        display: -webkit-inline-box;
+    }
+    .epgframeRightBody {
+        padding: 11.5px !important;
+        background: #07101b;
+        width: 18%;
+        border-right: 2px solid #0c1422;
+    }
+    .epgframeRightBody span {
+        font-size: 23px;
+        text-transform: uppercase;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-inline-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+
+    /* Movies */
+
+    .live_header{
+        z-index: 111111;
+        /* background: url(../images/background.jpg); */
+        /* background-size: 100%; */
+        text-transform: uppercase;
+    }
+    .pop_liveFullDiv{
+        position: fixed;
+        width: 25%;
+        background-color: black;
+    }
+    .pop_cateScroll{
+        background-color: black;
+        overflow-y: scroll;
+        width: 100%;
+        height: 782px;
+    }
+    .live_body{
+        padding: 10px 10px 0px 10px !important;
+        width: 100%;
+        overflow-y: scroll;
+        height: 835px;
+    }
+    .pop_live_header .row{
+        padding: 20px 0px 30px 0px !important;
+    }
+    .live_header .row{
+        padding: 20px 0px 15px 0px !important;
+    }
+    .live_body .col-lg-3 {
+        width: 20% !important;
+    }
+
+    .pop_live_header .row{
+        padding: 20px 10px 25px 0px !important;
+    }
+    .live_header .row{
+        padding: 20px 10px 25px 0px !important;
+    }
+    .liveback a[title=Menu] img, .liveback a[title=Back] img {
+        width: 70%;
+    }
+    .liveMenu a[title=Close] img{
+        width: 100%;
+    }
+    .liveSet a[title=Search] img, .liveSet a[title=Settings] img{
+        width: 85%;
+    }
+    .liveHead{
+        font-size: 24px;
+        font-weight: 500;
+    }
+    .liveHead{
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .liveShowImages img{
+        width: 100%;
+        height: 292px;
+        bottom: 57px;
+    }
+
+    /* .liveShowImages img{
+        width: 100%;
+        height: 292px;
+        bottom: 316px;
+    } */
+
+    .livebacks, .liveMenus{
+        margin-top: 14px !important;
+    }
+    .liveShowImages{  
+        border: 3px solid #ff020200;
+        margin-bottom: 20px !important;
+        width: 96%;
+        height: 300px;
+    }
+    .rightCategoryDiv{
+        background-color: black;
+    }
+    .cateSearch{
+        text-align: initial;
+    }
+    .cateSearch input{
+        width: 100%;
+        padding: 18px 10px 18px 60px !important;
+        background: #292828;
+        outline: none;
+        font-size: 25px;
+        border: 0;
+    }
+    .cateSearch i{    
+        position: absolute;
+        font-size: 28px;
+        left: 20px;
+        top: 134px;
+    }
+    .cateList{
+        width: 100%;
+        font-size: 28px;
+        outline: none;
+        padding-top: 24px !IMPORTANT;
+        padding-bottom: 24px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+    }
+    .cateListNum{
+        width: 100%;
+        outline: none;
+        padding-top: 12px !IMPORTANT;
+        padding-bottom: 12px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+    }
+    
+    .cateList:hover, .cateList:hover .cateNum{
+        background-color: #21456b;
+    }
+    .hoverOver{
+        top: 80% !important;
+        position: relative;
+        left: 0px;
+        font-size: 24px;
+        color: transparent;
+        font-weight: 700;
+        z-index: 1111;
+    }
+
+    /* .hoverOver {
+        top: -24px !important;
+        position: relative;
+        left: 0px;
+        right: 0px;
+        height: 100%;
+        font-size: 24px;
+        padding: 20px 10px 0px 0px !important;
+        color: transparent;
+        font-weight: 700;
+        z-index: 1111;
+    } */
+
+    .hoverOvers{
+        font-size: 15px;
+        color: #ffffff;
+        position: relative;
+        top: 6px;
+        left: -80px;
+        background: #1b5bba;
+        border-radius: 4px;
+        padding: 4px 7px !important;
+        font-weight: 700;
+        z-index: 11111111;
+    }
+    .forcenterSearch{
+        position: relative;
+        left: -155px;
+    }
+
+    /* settings */
+
+    
+
+    .catchCate {
+        background-color: #0b1130;
+        width: 42%;
+        padding: 16px !important;
+        margin-left: 100px !important;
+        margin-bottom: 15px !important;
+        transition: 0.5s;
+    }
+    .catchScroll {
+        overflow: scroll;
+        height: 790px;
+    }
+    .liveInSet img {
+        width: 32%;
+        margin-top: 20px !important;
+    }
+    .liveInsearch img {
+        width: 32%;
+        margin-top: 20px !important;
+    }
+    .liveInTime{
+        text-align: end;
+    }
+    .livecenterSearch img[alt=searchBack]{
+        width: 6%;
+    }
+    .livecenterSearch img[alt=centerSearch]{
+        width: 4%;
+    }
+    .livecenterSearch input[type=search]{
+        padding: 25px !important;
+        font-size: 22px;
+        width: 89%;
+        background: transparent;
+        border: none;
+        color: white;
+    }
+    .livecenterSearch input[type=search]:focus{
+        outline: none;
+    }
+    .livecenterSearch input[type=search]:focus-visible{
+        outline: none;
+    }
+    .livecenterSearch input[type=search]::placeholder{
+        font-size: 22px;
+    }
+
+
+    .buttons-container{
+        margin: 20px 0px 20px 0px !important;
+    }
+    
+
+    .w-button{
+        width: 16%;
+        align-self: center;
+        border: 3px solid #ff4069;
+        background-color: transparent;
+        -webkit-transition: color .3s ease-out,background-color .3s ease-out;
+        transition: color .3s ease-out,background-color .3s ease-out;
+        color: #ff4069 !important;
+        height: 60px;
+        padding-right: 35px !important;
+        padding-left: 35px !important;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        border-radius: 50px;
+        font-size: 18px;
+        line-height: 1.5;
+        font-weight: 600;
+        text-transform: uppercase;
+        white-space: nowrap;
+        padding: 12px 20px !important;
+    }
+
+    /* movie info */
+
+    .movieInHeader .row {
+        padding: 10px 0px 10px 0px !important;
+    }
+    .movieInBack {
+        text-align: start;
+        padding-left: 10px !important;
+    }
+    .movieInBack img {
+        width: 30%;
+        margin-top: 20px !important;
+    }
+    .movieInLogo img {
+        width: 80%;
+        backdrop-filter: opacity(0.5);
+    }
+    .movieInName span {
+        font-size: 30px;
+        line-height: 90px;
+        font-weight: 500;
+    }
+    .movieInlSet img {
+        width: 32%;
+        margin-top: 20px !important;
+    }
+    .movieInBodyScroll {
+        width: 100%;
+        height: 860px;
+        overflow-y: scroll;
+    }
+    .movieInBody .row {
+        padding: 20px 15px 0px 15px !important;
+    }
+    .movieInPic img {
+        width: 90%;
+        backdrop-filter: brightness(0.5);
+    }
+    .movieInPic i {
+        margin-top: 15px !important;
+        font-size: 28px;
+        color: #ffff1fdb;
+    }
+    .movieInInformation .one {
+        padding: 0px 0px 20px 20px !important;
+        font-size: 30px;
+    }
+    .movieInInformation .two {
+        padding: 0px 0px 20px 0px !important;
+        font-size: 30px;
+    }
+    .movieInInformation .three button {
+        background: #b4b4b42e;
+        color: white;
+        width: 18%;
+        border: none;
+        border-radius: 6px;
+        font-size: 26px;
+        margin-right: 10px !important;
+        padding: 12px 0px !important;
+    }
+    .movieInFav .star img {
+        cursor: pointer;
+        width: 35%;
+    }
+    .movieInDescription {
+        text-align: left;
+        padding: 20px 22px 0px 25px !important;
+        font-size: 22px;
+        font-weight: 500;
+    }
+    .movieInStarCastScrolls {
+        width: 100%;
+        display: contents;
+    }
+    .movieInStarCast {
+        width: 222px;
+        flex: 0 0 auto;
+        margin-left: 12px !important;
+    }
+    .movieInStarCast .movieInActNam {
+        top: 90% !important;
+        position: relative;
+        font-size: 22px;
+        color: white;
+        background: rgb(0 0 0 / 20%);
+        font-weight: 700;
+        z-index: 1111;
+    }
+    .movieInStarCast img {
+        width: 100%;
+        height: 300px;
+    }
+
+} 
+
+/* for style.css  */

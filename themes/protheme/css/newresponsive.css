@@ -1,0 +1,427 @@
+/* =============== 700 Screen Resolution =============== */
+
+@media only screen and  (min-width: 700px) {
+    
+    .epgfullmaindiv{
+        height: calc(100% - 113px);
+    }
+    .epgTopBody .rows {
+        height: 295px;
+        padding-right: 20px !important;
+    } 
+    .epgProName {
+        text-align: initial;
+        padding: 80px 0px 10px 25px !important;
+    }
+    .epgProName span {
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .epgProInfo {
+        text-align: start;
+        padding: 0px 180px 10px 25px !important;
+    }
+    .epgProInfo span {
+        font-size: 21px;
+    }
+
+    /* epg div */
+
+    .epg .epg-timeline .list li {
+        font-size: 22px;
+        padding: 15px 0px 15px 8px;
+    }
+    .epg .epg-channels .list li span .liveChannel-title {
+        font-size: 22px;
+        margin-left: 12px;
+    }
+    .epg .epg-channels .list li span img {
+        height: 56px;
+    }
+    .epg .epg-channels .list li span {
+        padding-right: 4px;
+        line-height: 45px;
+        margin-top: 5px;
+        height: 56px;
+    }
+    .epg .epg-channels {
+        width: 400px;
+    }
+    .epg .epg-programmes .programme {
+        font-size: 22px;
+        height: 69px;
+        line-height: 70px;
+    }
+    .epg .epg-programmes .programme .title {
+        font-size: 22px;
+        line-height: 52px;
+        height: 56px;
+    }
+    .epg .epg-programmes .list li {
+        height: 69px;
+    }
+    .epg .epg-contents {
+        max-height: 435px;
+        min-height: 44px;
+    }
+    .go-left {
+        left: 14.5%;
+        font-size: 50px;
+        padding: 4px 22px 6px 16px;
+        width: 60px;
+        height: 60px;
+    }
+    .go-right {
+        left: 96%;
+        padding: 4px 16px 6px 22px;
+        font-size: 50px;
+        width: 60px;
+        height: 60px;
+    }
+    #backreload {
+        left: 0.3%;
+        padding: 15px 0px 0px 0px;
+        width: 60px;
+        height: 60px;
+        font-size: 30px;
+    }
+
+    /* Dropdown Start */
+
+    .dropdown-item {
+        padding: 8px 20px !important;
+        font-size: 20px;
+        border-bottom: 3px solid #171826;
+    }
+    .dropdown-menu {
+        min-width: 17% !important;
+        padding: 10px 0 !important;
+        width: 100%;
+        height: 400px; 
+        overflow: auto;
+    }
+        
+}
+
+
+    /* =============== 1300 Screen Resolution =============== */
+
+@media only screen and  (min-width: 1300px) {
+
+    .epgfullmaindiv{
+        height: calc(100% - 87.98px);
+    }
+    .epgTopBody .rows {
+        height: 232px;
+        padding-right: 20px !important;
+    }
+    .epgProName {
+        text-align: initial;
+        padding: 40px 0px 10px 25px !important;
+    }
+    .epgProName span {
+        font-size: 24px;
+        font-weight: 500;
+    }
+    .epgProInfo {
+        text-align: start;
+        padding: 0px 125px 10px 25px !important;
+    }
+    .epgProInfo span {
+        font-size: 16.9px;
+    }
+
+    /* epg div */
+
+    .epg .epg-timeline .list li {
+        font-size: 15px;
+        padding: 12px 0px 12px 8px;
+    }
+    .epg .epg-channels .list li span .liveChannel-title {
+        font-size: 18px;
+        margin-left: 12px;
+    }
+    .epg .epg-channels .list li span img {
+        height: 40px;
+    }
+    .epg .epg-channels .list li span {
+        padding-right: 4px;
+        line-height: 30px;
+        margin-top: 5px;
+        height: 40px;
+    }
+    .epg .epg-channels {
+        width: 400px;
+    }
+    .epg .epg-programmes .programme {
+        font-size: 18px;
+        height: 53px;
+        line-height: 53px;
+    }
+    .epg .epg-programmes .programme .title {
+        font-size: 17px;
+        line-height: 52px;
+        height: 42px;
+    }
+    .epg .epg-programmes .list li {
+        height: 53px;
+    }
+    .epg .epg-contents {
+        max-height: 275px;
+        min-height: 44px;
+    }
+    .go-left {
+        left: 14.5%;
+        font-size: 35px;
+        padding: 4px 16px 6px 11px;
+        width: 45px;
+        height: 45px;
+    }
+    .go-right {
+        left: 94%;
+        padding: 4px 11px 6px 16px;
+        font-size: 35px;
+        width: 45px;
+        height: 45px;
+    }
+    #backreload {
+        left: 0.3%;
+        padding: 12px 0px 0px 0px;
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+
+    /* Dropdown Start */
+
+    .dropdown-item {
+        padding: 8px 20px !important;
+        font-size: 20px;
+        border-bottom: 3px solid #171826;
+    }
+    .dropdown-menu {
+        min-width: 17% !important;
+        padding: 10px 0 !important;
+        width: 100%;
+        height: 400px; 
+        overflow: auto;
+    }
+        
+}
+
+    
+/* =============== 1400 Screen Resolution =============== */
+
+@media only screen and  (min-width: 1400px) {
+
+    .epgfullmaindiv{
+        height: calc(100% - 86px);
+    }
+    .epgTopBody .rows {
+        height: 257px;
+        padding-right: 20px !important;
+    }
+    .epgProName {
+        text-align: initial;
+        padding: 55px 0px 10px 25px !important;
+    }
+    .epgProName span {
+        font-size: 24px;
+        font-weight: 500;
+    }
+    .epgProInfo {
+        text-align: start;
+        padding: 0px 125px 10px 25px !important;
+    }
+    .epgProInfo span {
+        font-size: 16.9px;
+    }
+
+    /* epg div */
+
+    .epg .epg-timeline .list li {
+        font-size: 17px;
+        padding: 12px 0px 12px 8px;
+    }
+    .epg .epg-channels .list li span .liveChannel-title {
+        font-size: 18px;
+        margin-left: 12px;
+    }
+    .epg .epg-channels .list li span img {
+        height: 42px;
+    }
+    .epg .epg-channels .list li span {
+        padding-right: 4px;
+        line-height: 33px;
+        margin-top: 5px;
+        height: 42px;
+    }
+    .epg .epg-channels {
+        width: 400px;
+    }
+    .epg .epg-programmes .programme {
+        font-size: 18px;
+        height: 55px;
+        line-height: 55px;
+    }
+    .epg .epg-programmes .programme .title {
+        font-size: 18px;
+        line-height: 52px;
+        height: 55px;
+    }
+    .epg .epg-programmes .list li {
+        height: 55px;
+    }
+    .epg .epg-contents {
+        max-height: 367px;
+        min-height: 44px;
+    }
+    .go-left {
+        left: 14.5%;
+        font-size: 38px;
+        padding: 4px 22px 6px 16px;
+        width: 48px;
+        height: 48px;
+    }
+    .go-right {
+        left: 95%;
+        padding: 4px 16px 6px 22px;
+        font-size: 38px;
+        width: 48px;
+        height: 48px;
+    }
+    #backreload {
+        left: 0.3%;
+        padding: 15px 0px 0px 0px;
+        width: 48px;
+        height: 48px;
+        font-size: 22px;
+    }
+
+    /* Dropdown Start */
+
+    .dropdown-item {
+        padding: 8px 20px !important;
+        font-size: 20px;
+        border-bottom: 3px solid #171826;
+    }
+    .dropdown-menu {
+        min-width: 17% !important;
+        padding: 10px 0 !important;
+        width: 100%;
+        height: 400px; 
+        overflow: auto;
+    }
+}
+
+
+    /* =============== 1900 Screen Resolution =============== */
+
+@media only screen and  (min-width: 1900px) {
+
+    .epgfullmaindiv{
+        height: calc(100% - 113px);
+    }
+    .epgTopBody .rows {
+        height: 347px;
+        padding-right: 20px !important;
+    }
+    .epgProName {
+        text-align: initial;
+        padding: 80px 0px 10px 25px !important;
+    }
+    .epgProName span {
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .epgProInfo {
+        text-align: start;
+        padding: 0px 180px 10px 25px !important;
+    }
+    .epgProInfo span {
+        font-size: 21px;
+    }
+    .epgProTime {
+        text-align: center;
+        padding: 80px 0px 10px 25px !important;
+    }
+    .epgProTime span {
+        font-size: 30px;
+    }
+
+    /* epg div */
+
+    .epg .epg-timeline .list li {
+        font-size: 22px;
+        padding: 15px 0px 15px 8px;
+    }
+    .epg .epg-channels .list li span .liveChannel-title {
+        font-size: 22px;
+        margin-left: 12px;
+    }
+    .epg .epg-channels .list li span img {
+        height: 56px;
+    }
+    .epg .epg-channels .list li span {
+        padding-right: 4px;
+        line-height: 45px;
+        margin-top: 5px;
+        height: 56px;
+    }
+    .epg .epg-channels {
+        width: 400px;
+    }
+    .epg .epg-programmes .programme {
+        font-size: 22px;
+        height: 69px;
+        line-height: 70px;
+    }
+    .epg .epg-programmes .programme .title {
+        font-size: 22px;
+        line-height: 52px;
+        height: 56px;
+    }
+    .epg .epg-programmes .list li {
+        height: 69px;
+    }
+    .epg .epg-contents {
+        max-height: 480px;
+        min-height: 44px;
+    }
+    .go-left {
+        left: 14.5%;
+        font-size: 50px;
+        padding: 4px 22px 6px 16px;
+        width: 60px;
+        height: 60px;
+    }
+    .go-right {
+        left: 96%;
+        padding: 4px 16px 6px 22px;
+        font-size: 50px;
+        width: 60px;
+        height: 60px;
+    }
+    #backreload {
+        left: 0.3%;
+        padding: 15px 0px 0px 0px;
+        width: 60px;
+        height: 60px;
+        font-size: 30px;
+    }
+
+    /* Dropdown Start */
+
+    .dropdown-item {
+        padding: 8px 20px !important;
+        font-size: 20px;
+        border-bottom: 3px solid #171826;
+    }
+    .dropdown-menu {
+        min-width: 17% !important;
+        padding: 10px 0 !important;
+        width: 100%;
+        height: 400px; 
+        overflow: auto;
+    }
+}

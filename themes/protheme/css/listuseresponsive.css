@@ -1,0 +1,1092 @@
+/* =============== 700 Screen Resolution =============== */
+
+@media only screen and  (min-width: 700px) {
+
+    /* =============== List User Desgin Start =============== */
+
+   .listuserHeader .row{
+        padding: 10px 0px 16px 0px ;
+    }
+    .listuserBack{
+        text-align: center;
+        padding-left: 10px ;
+    }
+    .listuserBack img{
+        width: 37%;
+        margin-top: 6px ;
+    }
+    .listuserLogo img{
+        width: 80%;
+        backdrop-filter: opacity(0.5);
+    }
+    .listuserLogo {
+        margin-top: 0px ;
+    }
+    .listuserName span {
+        font-size: 18px;
+        line-height: 40px;
+        font-weight: 600;
+    }
+    .listuserTime span{
+        font-size: 10px;
+        line-height: 38px;
+        font-weight: 600;
+    }
+    .listuserTime span label{
+        font-weight: 400;
+        font-size: 12px;
+    }
+
+    .listBanner {
+        width: 90%;
+        background: white;
+        color: black;
+        padding: 7px 0px ;
+        border-radius: 6px;
+        text-align: left;
+        margin-bottom: 13px ;
+    }
+
+    .userlist img {
+        width: 66%;
+        background: #b8b8b8;
+        padding: 5px 7px ;
+    }
+
+    .userlistcardleft{
+        padding-left: 0px ;
+    }
+    .userlistcardleft .anyName{
+        font-weight: 700;
+        font-size: 10px;
+    }
+    .userlistshowname{
+        font-size: 8px;
+    }
+
+    .dropdown-content {
+        display: none;
+        width: 12%;
+        position: absolute;
+        text-align: initial;
+        margin-top: 5px ;
+        background-color: #f1f1f1;
+        box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+        z-index: 1;
+        color: black;
+        font-size: 22px;
+    }
+    .login_link_0, .delete_link_0 {
+        color: black;
+        font-size: 10px;
+        padding: 4px 6px;
+        display: block;
+        border-bottom: 1px solid #b8b8b8;
+    }
+
+    /* =============== List User Desgin End =============== */
+        
+}
+
+@media only screen and  (min-width: 800px) {
+
+    /* =============== List User Desgin Start =============== */
+
+   .listuserHeader .row{
+        padding: 10px 0px 16px 0px ;
+    }
+    .listuserBack{
+        text-align: center;
+        padding-left: 10px ;
+    }
+    .listuserBack img{
+        width: 37%;
+        margin-top: 6px ;
+    }
+    .listuserLogo img{
+        width: 80%;
+        backdrop-filter: opacity(0.5);
+    }
+    .listuserLogo {
+        margin-top: 0px ;
+    }
+    .listuserName span {
+        font-size: 18px;
+        line-height: 40px;
+        font-weight: 600;
+    }
+    .listuserTime span{
+        font-size: 10px;
+        line-height: 38px;
+        font-weight: 600;
+    }
+    .listuserTime span label{
+        font-weight: 400;
+        font-size: 12px;
+    }
+
+    .listBanner {
+        width: 90%;
+        background: white;
+        color: black;
+        padding: 7px 0px ;
+        border-radius: 8px;
+        text-align: left;
+        margin-bottom: 13px ;
+    }
+
+    .userlist img {
+        width: 66%;
+        background: #b8b8b8;
+        padding: 5px 7px ;
+    }
+
+    .userlistcardleft{
+        padding-left: 0px ;
+    }
+    .userlistcardleft .anyName{
+        font-weight: 700;
+        font-size: 12px;
+    }
+    .userlistshowname{
+        font-size: 10px;
+    }
+
+    .dropdown-content {
+        display: none;
+        width: 12%;
+        position: absolute;
+        text-align: initial;
+        margin-top: 5px ;
+        background-color: #f1f1f1;
+        box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+        z-index: 1;
+        color: black;
+        font-size: 22px;
+    }
+    .login_link_0, .delete_link_0 {
+        color: black;
+        font-size: 12px;
+        padding: 5px 10px;
+        display: block;
+        border-bottom: 1px solid #b8b8b8;
+    }
+
+    /* =============== List User Desgin End =============== */
+        
+}
+
+@media only screen and  (min-width: 900px) {
+
+    /* =============== List User Desgin Start =============== */
+
+   .listuserHeader .row{
+        padding: 10px 0px 16px 0px ;
+    }
+    .listuserBack{
+        text-align: center;
+        padding-left: 10px ;
+    }
+    .listuserBack img{
+        width: 37%;
+        margin-top: 6px ;
+    }
+    .listuserLogo img{
+        width: 80%;
+        backdrop-filter: opacity(0.5);
+    }
+    .listuserLogo {
+        margin-top: 0px ;
+    }
+    .listuserName span {
+        font-size: 18px;
+        line-height: 40px;
+        font-weight: 600;
+    }
+    .listuserTime span{
+        font-size: 10px;
+        line-height: 38px;
+        font-weight: 600;
+    }
+    .listuserTime span label{
+        font-weight: 400;
+        font-size: 12px;
+    }
+
+    .listBanner {
+        width: 90%;
+        background: white;
+        color: black;
+        padding: 10px 0px ;
+        border-radius: 12px;
+        text-align: left;
+        margin-bottom: 30px ;
+    }
+
+    .userlist img {
+        width: 65%;
+        background: #b8b8b8;
+        padding: 8px 10px ;
+    }
+
+    .userlistcardleft{
+        padding-left: 0px ;
+    }
+    .userlistcardleft .anyName{
+        font-weight: 700;
+        font-size: 14px;
+    }
+    .userlistshowname{
+        font-size: 12px;
+    }
+
+    .dropdown-content {
+        display: none;
+        width: 12%;
+        position: absolute;
+        text-align: initial;
+        margin-top: 10px ;
+        background-color: #f1f1f1;
+        box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+        z-index: 1;
+        color: black;
+        font-size: 22px;
+    }
+    .login_link_0, .delete_link_0 {
+        color: black;
+        font-size: 12px;
+        padding: 6px 16px ;
+        display: block;
+        border-bottom: 1px solid #b8b8b8;
+    }
+
+    /* =============== List User Desgin End =============== */
+        
+}
+
+@media only screen and  (min-width: 960px) {
+
+    /* =============== List User Desgin Start =============== */
+
+   .listuserHeader .row{
+        padding: 10px 0px 16px 0px ;
+    }
+    .listuserBack{
+        text-align: center;
+        padding-left: 10px ;
+    }
+    .listuserBack img{
+        width: 37%;
+        margin-top: 6px ;
+    }
+    .listuserLogo img{
+        width: 80%;
+        backdrop-filter: opacity(0.5);
+    }
+    .listuserLogo {
+        margin-top: 0px ;
+    }
+    .listuserName span {
+        font-size: 18px;
+        line-height: 40px;
+        font-weight: 600;
+    }
+    .listuserTime span{
+        font-size: 10px;
+        line-height: 38px;
+        font-weight: 600;
+    }
+    .listuserTime span label{
+        font-weight: 400;
+        font-size: 12px;
+    }
+
+    .listBanner {
+        width: 90%;
+        background: white;
+        color: black;
+        padding: 7px 0px ;
+        border-radius: 8px;
+        text-align: left;
+        margin-bottom: 13px ;
+    }
+
+    .userlist img {
+        width: 66%;
+        background: #b8b8b8;
+        padding: 5px 7px ;
+    }
+
+    .userlistcardleft{
+        padding-left: 0px ;
+    }
+    .userlistcardleft .anyName{
+        font-weight: 700;
+        font-size: 14px;
+    }
+    .userlistshowname{
+        font-size: 12px;
+    }
+
+    .dropdown-content {
+        display: none;
+        width: 12%;
+        position: absolute;
+        text-align: initial;
+        margin-top: 10px ;
+        background-color: #f1f1f1;
+        box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+        z-index: 1;
+        color: black;
+        font-size: 22px;
+    }
+    .login_link_0, .delete_link_0 {
+        color: black;
+        font-size: 12px;
+        padding: 6px 16px ;
+        display: block;
+        border-bottom: 1px solid #b8b8b8;
+    }
+
+    /* =============== List User Desgin End =============== */
+        
+}
+
+@media only screen and  (min-width: 1100px) {
+
+    /* =============== List User Desgin Start =============== */
+
+   .listuserHeader .row{
+        padding: 10px 0px 16px 0px ;
+    }
+    .listuserBack{
+        text-align: center;
+        padding-left: 10px ;
+    }
+    .listuserBack img{
+        width: 37%;
+        margin-top: 6px ;
+    }
+    .listuserLogo img{
+        width: 80%;
+        backdrop-filter: opacity(0.5);
+    }
+    .listuserLogo {
+        margin-top: 0px ;
+    }
+    .listuserName span {
+        font-size: 18px;
+        line-height: 40px;
+        font-weight: 600;
+    }
+    .listuserTime span{
+        font-size: 10px;
+        line-height: 38px;
+        font-weight: 600;
+    }
+    .listuserTime span label{
+        font-weight: 400;
+        font-size: 12px;
+    }
+
+    .listBanner {
+        width: 90%;
+        background: white;
+        color: black;
+        padding: 10px 0px ;
+        border-radius: 12px;
+        text-align: left;
+        margin-bottom: 30px ;
+    }
+
+    .userlist img {
+        width: 65%;
+        background: #b8b8b8;
+        padding: 8px 11px;
+    }
+
+    .userlistcardleft{
+        padding-left: 0px ;
+    }
+    .userlistcardleft .anyName{
+        font-weight: 700;
+        font-size: 15px;
+    }
+    .userlistshowname{
+        font-size: 13px;
+    }
+
+    .dropdown-content {
+        display: none;
+        width: 12%;
+        position: absolute;
+        text-align: initial;
+        margin-top: 10px ;
+        background-color: #f1f1f1;
+        box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+        z-index: 1;
+        color: black;
+        font-size: 22px;
+    }
+    .login_link_0, .delete_link_0 {
+        color: black;
+        font-size: 12px;
+        padding: 6px 16px ;
+        display: block;
+        border-bottom: 1px solid #b8b8b8;
+    }
+
+    /* =============== List User Desgin End =============== */
+        
+}
+
+    /* =============== 1300 Screen Resolution =============== */
+
+@media only screen and  (min-width: 1300px) {
+
+    /* =============== List User Desgin Start =============== */
+
+    .listuserHeader .row{
+        padding: 10px 0px 16px 0px ;
+    }
+    .listUserDIV{
+        padding: 10px 0px 0px 0px ;
+    }
+    .listuserBack{
+        text-align: center;
+        padding-left: 10px ;
+    }
+    .listuserBack img{
+        width: 30%;
+        margin-top: 15px ;
+    }
+    .listuserLogo img{
+        width: 80%;
+        backdrop-filter: opacity(0.5);
+    }
+    .listuserLogo {
+        margin-top: 0px ;
+    }
+    .listuserName span{
+        font-size: 19px;
+        line-height: 49px;
+        font-weight: 600;
+    }
+    .listuserTime span{
+        font-size: 20px;
+        line-height: 49px;
+        font-weight: 600;
+    }
+    .listuserTime span label{
+        font-weight: 400;
+        font-size: 19px;
+    }
+
+    .listBanner {
+        width: 80%;
+        background: white;
+        color: black;
+        padding: 10px 0px ;
+        border-radius: 12px;
+        text-align: left;
+        margin-bottom: 30px ;
+    }
+
+    .userlist img {
+        width: 72%;
+        background: #b8b8b8;
+        padding: 12px 14px ;
+    }
+
+    .userlistcardleft{
+        padding-left: 0px ;
+    }
+    .userlistcardleft .anyName{
+        font-weight: 700;
+        font-size: 18px;
+    }
+    .userlistshowname{
+        font-size: 15px;
+    }
+
+    .dropdown-content {
+        display: none;
+        width: 12%;
+        position: absolute;
+        text-align: initial;
+        margin-top: 10px ;
+        background-color: #f1f1f1;
+        box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+        z-index: 1;
+        color: black;
+        font-size: 22px;
+    }
+    .login_link_0, .delete_link_0 {
+        color: black;
+        font-size: 18px;
+        padding: 6px 16px ;
+        display: block;
+        border-bottom: 1px solid #b8b8b8;
+    }
+
+    /* =============== List User Desgin End =============== */
+        
+}
+
+    
+    /* =============== 1400 Screen Resolution =============== */
+
+@media only screen and  (min-width: 1400px) {
+
+   /* =============== List User Desgin Start =============== */
+
+   .listuserHeader .row{
+    padding: 10px 0px 16px 0px ;
+    }
+    .listuserBack{
+        text-align: center;
+        padding-left: 10px ;
+    }
+    .listuserBack img{
+        width: 30%;
+        margin-top: 15px ;
+    }
+    .listuserLogo img{
+        width: 80%;
+        backdrop-filter: opacity(0.5);
+    }
+    .listuserLogo {
+        margin-top: 0px ;
+    }
+    .listuserName span{
+        font-size: 22px;
+        line-height: 66px;
+        font-weight: 600;
+    }
+    .listuserTime span{
+        font-size: 22px;
+        line-height: 66px;
+        font-weight: 600;
+    }
+    .listuserTime span label{
+        font-weight: 400;
+        font-size: 21px;
+    }
+
+    .listBanner {
+        width: 80%;
+        background: white;
+        color: black;
+        padding: 10px 0px ;
+        border-radius: 12px;
+        text-align: left;
+        margin-bottom: 30px ;
+    }
+
+    .userlist img {
+        width: 72%;
+        background: #b8b8b8;
+        padding: 12px 14px ;
+    }
+
+    .userlistcardleft{
+        padding-left: 0px ;
+    }
+    .userlistcardleft .anyName{
+        font-weight: 700;
+        font-size: 20px;
+    }
+    .userlistshowname{
+        font-size: 16px;
+    }
+
+    .dropdown-content {
+        display: none;
+        width: 12%;
+        position: absolute;
+        text-align: initial;
+        margin-top: 10px ;
+        background-color: #f1f1f1;
+        box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+        z-index: 1;
+        color: black;
+        font-size: 22px;
+    }
+    .login_link_0, .delete_link_0 {
+        color: black;
+        font-size: 18px;
+        padding: 6px 16px ;
+        display: block;
+        border-bottom: 1px solid #b8b8b8;
+    }
+
+    /* =============== List User Desgin End =============== */
+        
+}
+
+
+    /* =============== 1600 Screen Resolution =============== */
+
+@media only screen and  (min-width: 1600px) {
+
+    /* =============== List User Desgin Start =============== */
+
+    .listuserHeader .row{
+        padding: 10px 0px 16px 0px ;
+    }
+    .listUserDIV{
+        padding: 15px 0px 0px 0px ;
+    }
+        
+    .listuserBack{
+        text-align: center;
+        padding-left: 10px ;
+    }
+    .listuserBack img{
+        width: 30%;
+        margin-top: 20px ;
+    }
+    .listuserLogo img{
+        width: 80%;
+        backdrop-filter: opacity(0.5);
+    }
+    .listuserLogo {
+        margin-top: 0px ;
+    }
+    .listuserName span{
+        font-size: 25px;
+        line-height: 63px;
+        font-weight: 600;
+    }
+    .listuserTime span{
+        font-size: 30px;
+        line-height: 62px;
+        font-weight: 500;
+    }
+    .listuserTime span label{
+        font-weight: 400;
+        font-size: 25px;
+    }
+
+    .listBanner {
+        width: 80%;
+        background: white;
+        color: black;
+        padding: 14px 0px ;
+        border-radius: 12px;
+        text-align: left;
+        margin-bottom: 30px ;
+    }
+
+    .userlist img {
+        background: #b8b8b8;
+        padding: 14px 20px ;
+    }
+
+    .userlistcardleft{
+        padding-left: 10px ;
+    }
+    .userlistcardleft .anyName{
+        font-weight: 700;
+        font-size: 20px;
+    }
+    .userlistshowname{
+        font-size: 17px;
+    }
+
+    .dropdown-content {
+        display: none;
+        width: 12%;
+        position: absolute;
+        text-align: initial;
+        margin-top: 15px ;
+        background-color: #f1f1f1;
+        box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+        z-index: 1;
+        color: black;
+        font-size: 22px;
+    }
+    .login_link_0, .delete_link_0 {
+        color: black;
+        font-size: 22px;
+        padding: 16px 16px ;
+        display: block;
+        border-bottom: 1px solid #b8b8b8;
+    }
+
+    /* =============== List User Desgin End =============== */
+    
+}
+
+
+    /* =============== 1800 Screen Resolution =============== */
+
+@media only screen and  (min-width: 1800px) {
+
+    /* =============== List User Desgin Start =============== */
+
+    .listuserHeader .row{
+        padding: 10px 0px 16px 0px ;
+    }
+    .listUserDIV{
+        padding: 15px ​0px 0px 0px ;
+    }
+    .listuserBack{
+        text-align: center;
+        padding-left: 10px ;
+    }
+    .listuserBack img{
+        width: 30%;
+        margin-top: 20px ;
+    }
+    .listuserLogo img{
+        width: 80%;
+        backdrop-filter: opacity(0.5);
+    }
+    .listuserLogo {
+        margin-top: 0px ;
+    }
+    .listuserName span{
+        font-size: 25px;
+        line-height: 90px;
+        font-weight: 600;
+    }
+    .listuserTime span{
+        font-size: 30px;
+        line-height: 90px;
+        font-weight: 500;
+    }
+    .listuserTime span label{
+        font-weight: 400;
+        font-size: 25px;
+    }
+
+    .listBanner {
+        width: 80%;
+        background: white;
+        color: black;
+        padding: 18px 0px ;
+        border-radius: 12px;
+        text-align: left;
+        margin-bottom: 30px ;
+    }
+
+    .userlist img {
+        background: #b8b8b8;
+        padding: 14px 20px ;
+    }
+
+    .userlistcardleft{
+        padding-left: 10px ;
+    }
+    .userlistcardleft .anyName{
+        font-weight: 700;
+        font-size: 23px;
+    }
+    .userlistshowname{
+        font-size: 20px;
+    }
+
+    .dropdown-content {
+        display: none;
+        width: 10%;
+        position: absolute;
+        text-align: initial;
+        margin-top: 15px ;
+        background-color: #f1f1f1;
+        box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+        z-index: 1;
+        color: black;
+        font-size: 22px;
+    }
+    .login_link_0, .delete_link_0 {
+        color: black;
+        font-size: 22px;
+        padding: 10px 16px ;
+        display: block;
+        border-bottom: 1px solid #b8b8b8;
+    }
+
+    /* =============== List User Desgin End =============== */
+    
+}
+
+
+    /* =============== 1900 Screen Resolution =============== */
+
+@media only screen and  (min-width: 1900px) {
+
+    /* =============== List User Desgin Start =============== */
+
+    .listuserHeader .row{
+        padding: 10px 0px 16px 0px ;
+    }
+    .listuserBack{
+        text-align: center;
+        padding-left: 10px ;
+    }
+    .listuserBack img{
+        width: 30%;
+        margin-top: 20px ;
+    }
+    .listuserLogo img{
+        width: 80%;
+        backdrop-filter: opacity(0.5);
+    }
+    .listuserLogo {
+        margin-top: 0px ;
+    }
+    .listuserName span{
+        font-size: 30px;
+        line-height: 90px;
+        font-weight: 500;
+    }
+    .listuserTime span{
+        font-size: 30px;
+        line-height: 90px;
+        font-weight: 500;
+    }
+    .listuserTime span label{
+        font-weight: 400;
+        font-size: 21px;
+    }
+
+    .listBanner {
+        width: 80%;
+        background: white;
+        color: black;
+        padding: 14px 0px ;
+        border-radius: 18px;
+        text-align: left;
+        margin-bottom: 30px ;
+    }
+
+    .userlist img {
+        background: #b8b8b8;
+        padding: 14px 20px ;
+    }
+
+    .userlistcardleft{
+        padding-left: 10px ;
+    }
+    .userlistcardleft .anyName{
+        font-weight: 700;
+        font-size: 24px;
+    }
+    .userlistshowname{
+        font-size: 20px;
+    }
+
+    .dropdown-content {
+        display: none;
+        width: 12%;
+        position: absolute;
+        text-align: initial;
+        margin-top: 15px ;
+        background-color: #f1f1f1;
+        box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+        z-index: 1;
+        color: black;
+        font-size: 22px;
+    }
+    .login_link_0, .delete_link_0 {
+        color: black;
+        font-size: 22px;
+        padding: 16px 16px ;
+        display: block;
+        border-bottom: 1px solid #b8b8b8;
+    }
+
+    /* =============== List User Desgin End =============== */
+    
+}
+
+
+    /* =============== 2100 Screen Resolution =============== */
+
+@media only screen and  (min-width: 2100px) {
+
+    /* =============== List User Desgin Start =============== */
+
+    .listuserHeader .row{
+        padding: 10px 0px 16px 0px ;
+    }
+    .listUserDIV{
+        padding: 45px 0px 0px 0px ;
+    }
+    .listuserBack{
+        text-align: center;
+        padding-left: 10px ;
+    }
+    .listuserBack img{
+        width: 30%;
+        margin-top: 20px ;
+    }
+    .listuserLogo img{
+        width: 80%;
+        backdrop-filter: opacity(0.5);
+    }
+    .listuserLogo {
+        margin-top: 0px ;
+    }
+    .listuserName span{
+        font-size: 30px;
+        line-height: 90px;
+        font-weight: 600;
+    }
+    .listuserTime span{
+        font-size: 30px;
+        line-height: 90px;
+        font-weight: 500;
+    }
+    .listuserTime span label{
+        font-weight: 400;
+        font-size: 30px;
+    }
+
+    .listBanner {
+        width: 80%;
+        background: white;
+        color: black;
+        padding: 18px 0px ;
+        border-radius: 20px;
+        text-align: left;
+        margin-bottom: 30px ;
+    }
+
+    .userlist img {
+        background: #b8b8b8;
+        padding: 14px 20px ;
+    }
+
+    .userlistcardleft{
+        padding-left: 10px ;
+    }
+    .userlistcardleft .anyName{
+        font-weight: 700;
+        font-size: 28px;
+    }
+    .userlistshowname{
+        font-size: 24px;
+    }
+
+    .dropdown-content {
+        display: none;
+        width: 12%;
+        position: absolute;
+        text-align: initial;
+        margin-top: 15px ;
+        background-color: #f1f1f1;
+        box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+        z-index: 1;
+        color: black;
+        font-size: 22px;
+    }
+    .login_link_0, .delete_link_0 {
+        color: black;
+        font-size: 22px;
+        padding: 16px 16px ;
+        display: block;
+        border-bottom: 1px solid #b8b8b8;
+    }
+
+    /* =============== List User Desgin End =============== */
+    
+}
+
+
+    /* =============== 2800 Screen Resolution =============== */
+
+@media only screen and  (min-width: 2800px) {
+
+    /* =============== List User Desgin Start =============== */
+
+    .listuserHeader .row{
+        padding: 10px 0px 16px 0px ;
+    }
+    .listUserDIV{
+        padding: 45px 0px 0px 0px ;
+    }
+    .listUserDIV label{
+        font-size: 40px;
+    }
+    .listuserBack{
+        text-align: center;
+        padding-left: 10px ;
+    }
+    .listuserBack img{
+        width: 30%;
+        margin-top: 20px ;
+    }
+    .listuserLogo img{
+        width: 80%;
+        backdrop-filter: opacity(0.5);
+    }
+    .listuserLogo {
+        margin-top: 0px ;
+    }
+    .listuserName span{
+        font-size: 40px;
+        line-height: 112px;
+        font-weight: 600;
+    }
+    .listuserTime span{
+        font-size: 30px;
+        line-height: 102px;
+        font-weight: 500;
+    }
+    .listuserTime span label{
+        font-weight: 400;
+        font-size: 40px;
+    }
+
+    .listBanner {
+        width: 80%;
+        background: white;
+        color: black;
+        padding: 18px 0px ;
+        border-radius: 20px;
+        text-align: left;
+        margin-bottom: 30px ;
+    }
+
+    .userlist img {
+        background: #b8b8b8;
+        padding: 17px 20px ;
+    }
+
+    .userlistcardleft{
+        padding-left: 0px ;
+    }
+    .userlistcardleft .anyName{
+        font-weight: 700;
+        font-size: 40px;
+    }
+    .userlistshowname{
+        font-size: 34px;
+    }
+
+    .dropdown-content {
+        display: none;
+        width: 12%;
+        position: absolute;
+        text-align: initial;
+        margin-top: 5px ;
+        background-color: #f1f1f1;
+        box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+        z-index: 1;
+        color: black;
+        font-size: 22px;
+    }
+    .login_link_0, .delete_link_0 {
+        color: black;
+        font-size: 30px;
+        font-weight: 500;
+        padding: 20px 16px;
+        display: block;
+        border-bottom: 1px solid #b8b8b8;
+    }
+
+    /* =============== List User Desgin End =============== */
+    
+}

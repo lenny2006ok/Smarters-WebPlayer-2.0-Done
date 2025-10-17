@@ -1,0 +1,637 @@
+/* =============== 700 Screen Resolution =============== */
+@media only screen and  (min-width: 700px) {
+
+    .masterSearchHeader{
+        border-bottom: 1px solid #616161;
+    }
+    .masterSearchHeader .row {
+        padding: 10px 0px 10px 0px !important;
+    }
+    .masterSearchBack {
+        text-align: start;
+        padding-left: 10px !important;
+    }
+    .masterSearchBack img {
+        width: 35%;
+        margin-top: 12px !important;
+    }
+    .masterSearchLogo img {
+        width: 100%;
+        backdrop-filter: blur(1px);
+    }
+    .masterSerchIcon{
+        margin-top: 3px !important;
+    }
+    .masterSerchIcon img{
+        background: white;
+        border-radius: 50px;
+        position: absolute;
+        z-index: 1;
+        padding: 7px 7px !important;
+        width: 30px;
+    }
+    .circle {
+        top: 11.2px;
+        left: 300.2px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        width: 34px;
+        height: 34px;
+        position: absolute;
+        opacity: 0;
+        animation: scaleIn 6s infinite cubic-bezier(0.99, 0.97, 0.02, -0.01);
+        /* animation: scaleIn 6s infinite cubic-bezier(.36, .11, .89, .32);*/
+      }
+      
+      @keyframes scaleIn {
+      from {
+        transform: scale(.5, .5);
+        opacity: .5;
+      }
+      to {
+        transform: scale(1.8, 1.8);
+        opacity: 0;
+      }
+      }
+    .masterSerchInput{
+        text-align: left;
+        margin-top: 3px !important;
+    }
+    .masterSerchInput input{
+        width: 94%;
+        padding: 6px 0px 6px 20px !important;
+        font-size: 12px;    
+        border: none;
+        border-radius: 3px;
+        color: #757575;
+    }
+
+}
+
+
+    /* =============== 800 Screen Resolution =============== */
+@media only screen and  (min-width: 800px) {
+
+    .masterSearchHeader{
+        border-bottom: 1px solid #616161;
+    }
+    .masterSearchHeader .row {
+        padding: 10px 0px 10px 0px !important;
+    }
+    .masterSearchBack {
+        text-align: start;
+        padding-left: 10px !important;
+    }
+    .masterSearchBack img {
+        width: 35%;
+        margin-top: 12px !important;
+    }
+    .masterSearchLogo img {
+        width: 100%;
+        backdrop-filter: blur(1px);
+    }
+    .masterSerchIcon{
+        margin-top: 3px !important;
+    }
+    .masterSerchIcon img{
+        background: white;
+        border-radius: 50px;
+        position: absolute;
+        z-index: 1;
+        padding: 7px 7px !important;
+        width: 35px;
+    }
+    .circle {
+        top: 11px;
+        left: 343px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        width: 39px;
+        height: 39px;
+        position: absolute;
+        opacity: 0;
+        animation: scaleIn 6s infinite cubic-bezier(0.99, 0.97, 0.02, -0.01);
+        /* animation: scaleIn 6s infinite cubic-bezier(.36, .11, .89, .32);*/
+      }
+      
+      @keyframes scaleIn {
+      from {
+        transform: scale(.5, .5);
+        opacity: .5;
+      }
+      to {
+        transform: scale(1.8, 1.8);
+        opacity: 0;
+      }
+      }
+    .masterSerchInput{
+        text-align: left;
+        margin-top: 3px !important;
+    }
+    .masterSerchInput input{
+        width: 94%;
+        padding: 7px 0px 7px 20px !important;
+        font-size: 15px;
+        border: none;
+        border-radius: 3px;
+        color: #757575;
+    }
+
+}
+
+
+    /* =============== 900 Screen Resolution =============== */
+@media only screen and  (min-width: 900px) {
+
+    .masterSearchHeader{
+        border-bottom: 1px solid #616161;
+    }
+    .masterSearchHeader .row {
+        padding: 10px 0px 10px 0px !important;
+    }
+    .masterSearchBack {
+        text-align: start;
+        padding-left: 10px !important;
+    }
+    .masterSearchBack img {
+        width: 35%;
+        margin-top: 12px !important;
+    }
+    .masterSearchLogo img {
+        width: 85%;
+        backdrop-filter: blur(1px);
+    }
+    .masterSerchIcon{
+        margin-top: 3px !important;
+    }
+    .masterSerchIcon img{
+        background: white;
+        border-radius: 50px;
+        position: absolute;
+        z-index: 1;
+        padding: 7px 7px !important;
+        width: 35px;
+    }
+    .circle {
+        top: 10.5px;
+        left: 399px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        opacity: 0;
+        animation: scaleIn 6s infinite cubic-bezier(0.99, 0.97, 0.02, -0.01);
+        /* animation: scaleIn 6s infinite cubic-bezier(.36, .11, .89, .32);*/
+      }
+      
+      @keyframes scaleIn {
+      from {
+        transform: scale(.5, .5);
+        opacity: .5;
+      }
+      to {
+        transform: scale(1.8, 1.8);
+        opacity: 0;
+      }
+      }
+    .masterSerchInput{
+        text-align: left;
+        margin-top: 3px !important;
+    }
+    .masterSerchInput input{
+        width: 94%;
+        padding: 7px 0px 7px 20px !important;
+        font-size: 15px;
+        border: none;
+        border-radius: 3px;
+        color: #757575;
+    }
+
+}
+
+
+    /* =============== 1100 Screen Resolution =============== */
+@media only screen and  (min-width: 1100px) {
+    
+    .masterSearchHeader{
+        border-bottom: 1px solid #616161;
+    }
+    .masterSearchHeader .row {
+        padding: 10px 0px 10px 0px !important;
+    }
+    .masterSearchBack {
+        text-align: start;
+        padding-left: 10px !important;
+    }
+    .masterSearchBack img {
+        width: 35%;
+        margin-top: 12px !important;
+    }
+    .masterSearchLogo img {
+        width: 100%;
+        backdrop-filter: blur(1px);
+    }
+    .masterSerchIcon{
+        margin-top: 3px !important;
+    }
+    .masterSerchIcon img{
+        background: white;
+        border-radius: 50px;
+        position: absolute;
+        z-index: 1;
+        padding: 10px 10px !important;
+        width: 50px;
+    }
+    .circle {
+        top: 9.9px;
+        left: 479px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        width: 56px;
+        height: 56px;
+        position: absolute;
+        opacity: 0;
+        animation: scaleIn 6s infinite cubic-bezier(0.99, 0.97, 0.02, -0.01);
+        /* animation: scaleIn 6s infinite cubic-bezier(.36, .11, .89, .32);*/
+      }
+      
+      @keyframes scaleIn {
+      from {
+        transform: scale(.5, .5);
+        opacity: .5;
+      }
+      to {
+        transform: scale(1.8, 1.8);
+        opacity: 0;
+      }
+      }
+    .masterSerchInput{
+        text-align: left;
+        margin-top: 3px !important;
+    }
+    .masterSerchInput input{
+        width: 94%;
+        padding: 12px 0px 11px 20px !important;
+        font-size: 20px;
+        border: none;
+        border-radius: 3px;
+        color: #757575;
+    }
+
+}
+
+
+    /* =============== 1300 Screen Resolution =============== */
+@media only screen and  (min-width: 1300px) {
+
+    .masterSearchHeader{
+        border-bottom: 1px solid #616161;
+    }
+    .masterSearchHeader .row {
+        padding: 10px 0px 16px 0px !important;
+    }
+    .masterSearchBack {
+        text-align: start;
+        padding-left: 10px !important;
+    }
+    .masterSearchBack img {
+        width: 30%;
+        margin-top: 12px !important;
+    }
+    .masterSearchLogo img {
+        width: 80%;
+        backdrop-filter: blur(1px);
+    }
+    .masterSerchIcon{
+        margin-top: 3px !important;
+    }
+    .masterSerchIcon img{
+        background: white;
+        border-radius: 50px;
+        position: absolute;
+        z-index: 1;
+        padding: 10px 10px !important;
+        width: 46px;
+    }
+    .circle {
+        top: 9px;
+        left: 544px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        width: 54px;
+        height: 54px;
+        position: absolute;
+        opacity: 0;
+        animation: scaleIn 6s infinite cubic-bezier(0.99, 0.97, 0.02, -0.01);
+        /* animation: scaleIn 6s infinite cubic-bezier(.36, .11, .89, .32);*/
+      }
+      
+      @keyframes scaleIn {
+      from {
+        transform: scale(.5, .5);
+        opacity: .5;
+      }
+      to {
+        transform: scale(1.8, 1.8);
+        opacity: 0;
+      }
+      }
+    .masterSerchInput{
+        text-align: left;
+        margin-top: 3px !important;
+    }
+    .masterSerchInput input{
+        width: 94%;
+        padding: 9px 0px 10px 20px !important;
+        font-size: 20px;
+        border: none;
+        border-radius: 3px;
+        color: #757575;
+    }
+
+}
+
+
+    /* =============== 1400 Screen Resolution =============== */
+@media only screen and  (min-width: 1400px) {
+
+    .masterSearchHeader{
+        border-bottom: 1px solid #616161;
+    }
+    .masterSearchHeader .row {
+        padding: 10px 0px 16px 0px !important;
+    }
+    .masterSearchBack {
+        text-align: start;
+        padding-left: 10px !important;
+    }
+    .masterSearchBack img {
+        width: 30%;
+        margin-top: 20px !important;
+    }
+    .masterSearchLogo img {
+        width: 80%;
+        backdrop-filter: blur(1px);
+    }
+    .masterSerchIcon{
+        margin-top: 5px !important;
+    }
+    .masterSerchIcon img{
+        background: white;
+        border-radius: 50px;
+        position: absolute;
+        z-index: 1;
+        padding: 10px 10px !important;
+        width: 50px;
+    }
+    .circle {    
+        top: 10px;
+        left: 597px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        opacity: 0;
+        animation: scaleIn 6s infinite cubic-bezier(0.99, 0.97, 0.02, -0.01);
+        /* animation: scaleIn 6s infinite cubic-bezier(.36, .11, .89, .32);*/
+      }
+      
+      @keyframes scaleIn {
+      from {
+        transform: scale(.5, .5);
+        opacity: .5;
+      }
+      to {
+        transform: scale(1.8, 1.8);
+        opacity: 0;
+      }
+      }
+    .masterSerchInput{
+        text-align: left;
+        margin-top: 3px !important;
+    }
+    .masterSerchInput input{
+        width: 94%;
+        padding: 10px 0px 10px 20px !important;
+        font-size: 22px;
+        border: none;
+        border-radius: 3px;
+        color: #757575;
+    }
+
+}
+
+
+    /* =============== 1600 Screen Resolution =============== */
+@media only screen and  (min-width: 1600px) {
+
+    .masterSearchHeader{
+        border-bottom: 1px solid #616161;
+    }
+    .masterSearchHeader .row {
+        padding: 10px 0px 16px 0px !important;
+    }
+    .masterSearchBack {
+        text-align: start;
+        padding-left: 10px !important;
+    }
+    .masterSearchBack img {
+        width: 30%;
+        margin-top: 20px !important;
+    }
+    .masterSearchLogo img {
+        width: 80%;
+        backdrop-filter: blur(1px);
+    }
+    .masterSerchIcon{
+        margin-top: 5px !important;
+    }
+    .masterSerchIcon img{
+        background: white;
+        border-radius: 50px;
+        position: absolute;
+        z-index: 1;
+        padding: 10px 10px !important;
+        width: 55px;
+    }
+    .circle {
+        top: 11px;
+        left: 664px;    
+        border-radius: 50%;
+        background-color: #ffffff;
+        width: 64px;
+        height: 64px;
+        position: absolute;
+        opacity: 0;
+        animation: scaleIn 6s infinite cubic-bezier(0.99, 0.97, 0.02, -0.01);
+        /* animation: scaleIn 6s infinite cubic-bezier(.36, .11, .89, .32);*/
+      }
+      
+      @keyframes scaleIn {
+      from {
+        transform: scale(.5, .5);
+        opacity: .5;
+      }
+      to {
+        transform: scale(1.8, 1.8);
+        opacity: 0;
+      }
+      }
+    .masterSerchInput{
+        text-align: left;
+        margin-top: 3px !important;
+    }
+    .masterSerchInput input{
+        width: 94%;
+        padding: 14px 0px 13px 20px !important;
+        font-size: 22px;
+        border: none;
+        border-radius: 3px;
+        color: #757575;
+    }
+
+}
+
+    
+    /* =============== 1800 Screen Resolution =============== */
+@media only screen and  (min-width: 1800px) {
+
+    .masterSearchHeader{
+        border-bottom: 1px solid #616161;
+    }
+    .masterSearchHeader .row {
+        padding: 10px 0px 16px 0px !important;
+    }
+    .masterSearchBack {
+        text-align: start;
+        padding-left: 10px !important;
+    }
+    .masterSearchBack img {
+        width: 30%;
+        margin-top: 20px !important;
+    }
+    .masterSearchLogo img {
+        width: 80%;
+        backdrop-filter: blur(1px);
+    }
+    .masterSerchIcon{
+        margin-top: 5px !important;
+    }
+    .masterSerchIcon img{
+        background: white;
+        border-radius: 50px;
+        position: absolute;
+        z-index: 1;
+        padding: 10px 10px !important; 
+        width: 63px;   
+    }
+    .circle {
+        top: 10px;
+        left: 747px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        width: 73px;
+        height: 73px;
+        position: absolute;
+        opacity: 0;
+        animation: scaleIn 6s infinite cubic-bezier(0.99, 0.97, 0.02, -0.01);
+        /* animation: scaleIn 6s infinite cubic-bezier(.36, .11, .89, .32);*/
+      }
+      
+      @keyframes scaleIn {
+      from {
+        transform: scale(.5, .5);
+        opacity: .5;
+      }
+      to {
+        transform: scale(1.8, 1.8);
+        opacity: 0;
+      }
+      }
+    .masterSerchInput{
+        text-align: left;
+        margin-top: 3px !important;
+    }
+    .masterSerchInput input{
+        width: 94%;
+        padding: 18px 0px 17px 20px !important;
+        font-size: 22px;
+        border: none;
+        border-radius: 3px;
+        color: #757575;
+    }
+
+}
+
+
+/* =============== 1900 Screen Resolution =============== */
+@media only screen and  (min-width: 1900px) {
+
+    .masterSearchHeader{
+        border-bottom: 1px solid #616161;
+    }
+    .masterSearchHeader .row {
+        padding: 10px 0px 16px 0px !important;
+    }
+    .masterSearchBack {
+        text-align: start;
+        padding-left: 10px !important;
+    }
+    .masterSearchBack img {
+        width: 30%;
+        margin-top: 20px !important;
+    }
+    .masterSearchLogo img {
+        width: 80%;
+        backdrop-filter: blur(1px);
+    }
+    .masterSerchIcon{
+        margin-top: 5px !important;
+    }
+    .masterSerchIcon img{
+        background: white;
+        border-radius: 50px;
+        position: absolute;
+        z-index: 1;
+        padding: 10px 10px !important;   
+        width: 68px; 
+    }
+    .circle {
+        top: 11px;
+        left: 799px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        width: 75px;
+        height: 75px;
+        position: absolute;
+        opacity: 0;
+        animation: scaleIn 6s infinite cubic-bezier(0.99, 0.97, 0.02, -0.01);
+        /* animation: scaleIn 6s infinite cubic-bezier(.36, .11, .89, .32);*/
+      }
+      
+      @keyframes scaleIn {
+      from {
+        transform: scale(.5, .5);
+        opacity: .5;
+      }
+      to {
+        transform: scale(1.8, 1.8);
+        opacity: 0;
+      }
+      }
+    .masterSerchInput{
+        text-align: left;
+        margin-top: 3px !important;
+    }
+    .masterSerchInput input{
+        width: 94%;
+        padding: 20px 0px 20px 20px !important;
+        font-size: 22px;
+        border: none;
+        border-radius: 3px;
+        color: #757575;
+    }
+
+}

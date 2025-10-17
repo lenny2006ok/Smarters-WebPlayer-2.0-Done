@@ -1,0 +1,4366 @@
+*:focus:not(.focus-visible) {
+    outline: none;
+}
+@media only screen and  (min-width: 700px) { 
+
+    /* =============== Live Screen Desgin Start =============== */
+ 
+    .headerMain .row{
+         padding: 10px 0px 4px 0px;
+     }
+     /* .liveInLogo img {
+         width: 28%;
+     } */
+     .liveInsearch {
+        text-align: end;
+        margin-top: 8px;
+     }
+     .liveInsearch img {
+        width: 42%;
+     }
+     .liveInSet {
+        text-align: center;
+        margin-top: 8px;
+     }
+     .liveInSet img {
+        width: 42%;
+     }
+     .livecenterSearch{
+        line-height: 38px;
+     }
+     .livecenterSearch img[alt=searchBack] {
+         width: 5%;
+     }
+     .livecenterSearch img[alt=centerSearch] {
+         width: 5%;
+     }
+     .livecenterSearch input[type=search] {
+        padding: 0px  ;
+        font-size: 14px;
+        width: 70%;
+        background: transparent;
+        border: none;
+        color: white;
+     }
+     .liveInTime span {
+         font-size: 14px;
+         line-height: 48px;
+     }
+     .liveInTime {
+         text-align: end;
+     }
+     .liveInName span {
+        font-size: 14px;
+        line-height: 47px;
+        margin-left: 5px;
+        padding: 5px 10px;
+        border-left: 2px solid white;
+     }
+     .liveInName {
+         text-align: start;
+     }
+     .liveInBack img {
+        width: 42%;
+        margin-left: 10px;
+     }
+     .liveInBack {
+        margin-top: 8px;
+     }
+     .liveFrameMainscroll{   
+        height: calc(100% - 62px);
+     }
+     .pop_cateScroll {
+        height: calc(100% - 104px);
+     }
+ 
+     .liveFrameBody, .liveFrameHeader{
+         background: black;
+         border-bottom: 1px solid #383838;
+     }
+     .liveFrameHeader .row{
+         background-color: black;
+         padding: 20px 0px  ;
+     }
+     .liveFrameLeftAre img, .liveFrameRightAre img{
+         width: 40%;
+         cursor: pointer;
+     }
+     .liveFrameName span{
+         font-size: 28px;
+         font-weight: bold;
+     }
+     .liveFrameBody .row{
+         padding: 5px 0px  ;
+     }
+     .liveFrameCate span{
+         font-size: 26px;
+         line-height: 75px;
+     }
+     .liveFrameImg img{
+         width: auto;
+         height: 32px;
+         /* margin-left: 18px; */
+     }
+     .liveFrameChanName{
+         text-align: left;
+         line-height: 1.3;
+     }
+     .liveFramedel{
+         
+    }
+     .liveFrameChanName span{
+        padding-left: 25px;
+        font-size: 12px;
+        text-transform: uppercase;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-inline-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+     }
+     .liveFrameChanName label{
+         padding-left: 8px  ;
+         font-size: 9px;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         white-space: nowrap;
+         padding-right: 10px  ;
+         -webkit-line-clamp: 1;
+         -webkit-box-orient: vertical;
+     }
+     .livePlayerRightSide{
+         background-image: url(../images/forLiveplay.png);
+         background-size: 100%;
+     }
+     .livePlayer img{
+         width: 100%;
+     }
+     .liveInfo{
+         padding: 110px 0px 0px 0px  ;
+     }
+     .liveInfoSub .liveHeading{
+         padding-bottom: 20px  ;
+     }
+     .liveInfoSub .liveHeading span{   
+         padding: 10px 22px  ;
+         background: #31707e;
+         font-size: 28px;
+     }
+     .liveInfoSub .liveChannelName, .liveInfoSub .liveChannelProg{
+         padding-bottom: 8px  ;
+     }
+     .liveInfoSub .liveChannelName span{
+         font-size: 28px;
+         font-weight: bold;
+         text-transform: uppercase;
+     }
+     .liveInfoSub .liveChannelProg span{
+         font-size: 30px;
+         color: #31707e;
+     }
+     .liveInfoSub .liveProgTime span{
+         font-size: 29px;
+     }
+ 
+     .liveEPGMaindiv .row{
+         margin: 12px 0px 0px 0px  ;
+         text-align: initial;
+         background-color: black;
+     }
+     .liveEPGdiv{
+        height: calc(100% - 237px );
+     }
+     .liveEPGdiv center{
+        width: 248px;
+    }
+     .liveEpgTime span{
+         font-size: 11px;
+         color: #ffffff;
+         padding-left: 5px  ;
+     }
+     .liveEpgTime p{
+        font-size: 8px;
+        color: #6c6c6c;
+        padding-left: 7px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        margin-bottom: 0px !important;
+     }
+     .livecateSearch input {
+         width: 100%;
+         padding: 12px 0px 12px 28px  ;
+         background: #292828;
+         outline: none;
+         font-size: 12px;
+         border: 0;
+     }
+     .livecateSearch i {
+         position: absolute;
+         font-size: 16px;
+         left: 19px  ;
+         top: 78px  ;
+     }
+     .liveCateList span {
+         padding-left: 4px  ;
+         font-size: 9px;
+     }
+     .cateNum div {
+         font-size: 9px;
+     }
+     .cateNum {
+         padding-right: 12px  ;
+     }
+     .cateList {
+         width: 100%;
+         font-size: 24px;
+         outline: none;
+         padding-top: 12px  ;
+         padding-bottom: 12px  ;
+         margin: 0px  ;
+         border-bottom: 1px solid #292828;
+         text-transform: uppercase;
+     }
+ 
+     .linear-background-cate {
+         animation-duration: 1s;
+         animation-fill-mode: forwards;
+         animation-iteration-count: infinite;
+         animation-name: placeHolderShimmer;
+         animation-timing-function: linear;
+         background: #010106;
+         background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+         background-size: 1000px 104px;
+         height: 35px;
+         position: relative;
+         overflow: hidden;
+         width: 100%;
+     }
+ 
+     .linear-background {
+         animation-duration: 1s;
+         animation-fill-mode: forwards;
+         animation-iteration-count: infinite;
+         animation-name: placeHolderShimmer;
+         animation-timing-function: linear;
+         background: #010106;
+         background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+         background-size: 1000px 104px;
+         height: 29px;
+         position: relative;
+         overflow: hidden;
+         width: 100%;
+     }
+ 
+     .inter-crop {
+         background: #010106;
+         width: 10px;
+         height: 100%;
+         position: absolute;
+         top: 0;
+         left: 35px;
+     }
+ 
+     .inter-right--top {
+         background: #010106;
+         width: 100%;
+         height: 7px;
+         position: absolute;
+         top: 11px;
+         left: 43px;
+     }
+ 
+     .totalcountare img{
+         width: 30%  ;
+     }
+ 
+     .progress {
+         display: flex;
+         height: 1px  ;
+         overflow: hidden;
+         font-size: 0.75rem;
+         background-color: #e9ecef;
+         border-radius: .25rem;
+     }
+     .no_epg_msg_mi{
+        display: table;
+        height: 100px;
+        width: 100%;
+        text-align: center;
+     }
+     .no_epg_msg_child{
+        display: table-cell;
+        vertical-align: middle;
+        font-size: 12px;
+     }
+     .notfoundcate{
+        font-size: 10px; 
+        font-weight: 600; 
+        padding-top: 50%  ;
+     }
+     .notfoundepg{
+        font-size: 10px;
+        font-weight: 600;
+        justify-content: center;
+        justify-items: center;
+        justify-self: center;
+        margin-top: 12%  ;
+     }
+     .liveInsearch a {
+        display: initial !important;
+     }
+     .epgName span{
+        font-size: 30px;
+        line-height: 90px;
+        font-weight: 500;
+    }
+     /* =============== Live Screen Desgin End =============== */
+         
+}
+
+@media only screen and  (min-width: 762px) { 
+
+    /* =============== Live Screen Desgin Start =============== */
+ 
+    .headerMain .row{
+         padding: 10px 0px 4px 0px;
+     }
+     /* .liveInLogo img {
+         width: 28%;
+     } */
+     .liveInsearch {
+        text-align: end;
+        margin-top: 8px;
+     }
+     .liveInsearch img {
+        width: 42%;
+     }
+     .liveInSet {
+        text-align: center;
+        margin-top: 8px;
+     }
+     .liveInSet img {
+        width: 42%;
+     }
+     .livecenterSearch{
+        line-height: 38px;
+     }
+     .livecenterSearch img[alt=searchBack] {
+         width: 5%;
+     }
+     .livecenterSearch img[alt=centerSearch] {
+         width: 5%;
+     }
+     .livecenterSearch input[type=search] {
+        padding: 0px  ;
+        font-size: 14px;
+        width: 70%;
+        background: transparent;
+        border: none;
+        color: white;
+     }
+     .liveInTime span {
+         font-size: 14px;
+         line-height: 48px;
+     }
+     .liveInTime {
+         text-align: end;
+     }
+     .liveInName span {
+        font-size: 14px;
+        line-height: 47px;
+        margin-left: 5px;
+        padding: 5px 10px;
+        border-left: 2px solid white;
+     }
+     .liveInName {
+         text-align: start;
+     }
+     .liveInBack img {
+        width: 42%;
+        margin-left: 10px;
+     }
+     .liveInBack {
+        margin-top: 8px;
+     }
+     .liveFrameMainscroll{   
+        height: calc(100% - 62px);
+     }
+     .pop_cateScroll {
+        height: calc(100% - 104px);
+     }
+ 
+     .liveFrameBody, .liveFrameHeader{
+         background: black;
+         border-bottom: 1px solid #383838;
+     }
+     .liveFrameHeader .row{
+         background-color: black;
+         padding: 20px 0px  ;
+     }
+     .liveFrameLeftAre img, .liveFrameRightAre img{
+         width: 40%;
+         cursor: pointer;
+     }
+     .liveFrameName span{
+         font-size: 28px;
+         font-weight: bold;
+     }
+     .liveFrameBody .row{
+         padding: 5px 0px  ;
+     }
+     .liveFrameCate span{
+         font-size: 26px;
+         line-height: 75px;
+     }
+     .liveFrameImg img{
+         width: auto;
+         height: 32px;
+         /* margin-left: 18px; */
+     }
+     .liveFrameChanName{
+         text-align: left;
+         line-height: 1.3;
+     }
+     .liveFramedel{
+         
+    }
+     .liveFrameChanName span{
+        padding-left: 25px;
+        font-size: 12px;
+        text-transform: uppercase;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-inline-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+     }
+     .liveFrameChanName label{
+         padding-left: 8px  ;
+         font-size: 9px;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         white-space: nowrap;
+         padding-right: 10px  ;
+         -webkit-line-clamp: 1;
+         -webkit-box-orient: vertical;
+     }
+     .livePlayerRightSide{
+         background-image: url(../images/forLiveplay.png);
+         background-size: 100%;
+     }
+     .livePlayer img{
+         width: 100%;
+     }
+     .liveInfo{
+         padding: 110px 0px 0px 0px  ;
+     }
+     .liveInfoSub .liveHeading{
+         padding-bottom: 20px  ;
+     }
+     .liveInfoSub .liveHeading span{   
+         padding: 10px 22px  ;
+         background: #31707e;
+         font-size: 28px;
+     }
+     .liveInfoSub .liveChannelName, .liveInfoSub .liveChannelProg{
+         padding-bottom: 8px  ;
+     }
+     .liveInfoSub .liveChannelName span{
+         font-size: 28px;
+         font-weight: bold;
+         text-transform: uppercase;
+     }
+     .liveInfoSub .liveChannelProg span{
+         font-size: 30px;
+         color: #31707e;
+     }
+     .liveInfoSub .liveProgTime span{
+         font-size: 29px;
+     }
+ 
+     .liveEPGMaindiv .row{
+         margin: 12px 0px 0px 0px  ;
+         text-align: initial;
+         background-color: black;
+     }
+     .liveEPGdiv{
+        height: calc(100% - 237px );
+     }
+     .liveEPGdiv center{
+        width: 248px;
+    }
+     .liveEpgTime span{
+         font-size: 11px;
+         color: #ffffff;
+         padding-left: 5px  ;
+     }
+     .liveEpgTime p{
+        font-size: 8px;
+        color: #6c6c6c;
+        padding-left: 7px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        margin-bottom: 0px !important;
+     }
+     .livecateSearch input {
+         width: 100%;
+         padding: 12px 0px 12px 28px  ;
+         background: #292828;
+         outline: none;
+         font-size: 12px;
+         border: 0;
+     }
+     .livecateSearch i {
+         position: absolute;
+         font-size: 16px;
+         left: 19px  ;
+         top: 78px  ;
+     }
+     .liveCateList span {
+         padding-left: 10px  ;
+         font-size: 10px;
+     }
+     .cateNum div {
+         font-size: 10px;
+     }
+     .cateNum {
+         padding-right: 12px  ;
+     }
+     .cateList {
+         width: 100%;
+         font-size: 24px;
+         outline: none;
+         padding-top: 12px  ;
+         padding-bottom: 12px  ;
+         margin: 0px  ;
+         border-bottom: 1px solid #292828;
+         text-transform: uppercase;
+     }
+ 
+     .linear-background-cate {
+         animation-duration: 1s;
+         animation-fill-mode: forwards;
+         animation-iteration-count: infinite;
+         animation-name: placeHolderShimmer;
+         animation-timing-function: linear;
+         background: #010106;
+         background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+         background-size: 1000px 104px;
+         height: 35px;
+         position: relative;
+         overflow: hidden;
+         width: 100%;
+     }
+ 
+     .linear-background {
+         animation-duration: 1s;
+         animation-fill-mode: forwards;
+         animation-iteration-count: infinite;
+         animation-name: placeHolderShimmer;
+         animation-timing-function: linear;
+         background: #010106;
+         background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+         background-size: 1000px 104px;
+         height: 29px;
+         position: relative;
+         overflow: hidden;
+         width: 100%;
+     }
+ 
+     .inter-crop {
+         background: #010106;
+         width: 10px;
+         height: 100%;
+         position: absolute;
+         top: 0;
+         left: 35px;
+     }
+ 
+     .inter-right--top {
+         background: #010106;
+         width: 100%;
+         height: 7px;
+         position: absolute;
+         top: 11px;
+         left: 43px;
+     }
+ 
+     .totalcountare img{
+         width: 30%  ;
+     }
+ 
+     .progress {
+         display: flex;
+         height: 1px  ;
+         overflow: hidden;
+         font-size: 0.75rem;
+         background-color: #e9ecef;
+         border-radius: .25rem;
+     }
+     .no_epg_msg_mi{
+        display: table;
+        height: 100px;
+        width: 100%;
+        text-align: center;
+     }
+     .no_epg_msg_child{
+        display: table-cell;
+        vertical-align: middle;
+        font-size: 12px;
+     }
+     .notfoundcate{
+        font-size: 10px; 
+        font-weight: 600; 
+        padding-top: 50%  ;
+     }
+     .notfoundepg{
+        font-size: 10px;
+        font-weight: 600;
+        justify-content: center;
+        justify-items: center;
+        justify-self: center;
+        margin-top: 12%  ;
+     }
+     .liveInsearch a {
+        display: initial !important;
+     }
+     /* =============== Live Screen Desgin End =============== */
+         
+}
+
+    /* =============== 800 Screen Resolution =============== Same as 700px */ 
+
+@media only screen and  (min-width: 800px) {
+
+    /* =============== Live Screen Desgin Start =============== */
+ 
+    .headerMain .row{
+         padding: 10px 0px 8px 0px  ;
+     }
+     /* .liveInLogo img {
+         width: 28%;
+         backdrop-filter: blur(1px);
+     } */
+     .liveInsearch {
+         text-align: end;
+     }
+     .liveInsearch img {
+         /* width: 32%;
+         margin-top: 12px  ; */
+     }
+     .liveInSet {
+         text-align: center;
+     }
+     .liveInSet img {
+         /* width: 32%;
+         margin-top: 12px  ; */
+     }
+     .livecenterSearch img[alt=searchBack] {
+         width: 6%;
+     }
+     .livecenterSearch img[alt=centerSearch] {
+         width: 4%;
+     }
+     .livecenterSearch input[type=search] {
+         padding: 25px  ;
+         font-size: 22px;
+         width: 89%;
+         background: transparent;
+         border: none;
+         color: white;
+     }
+     .liveInTime span {
+         font-size: 14px;
+         line-height: 48px;
+     }
+     .liveInTime {
+         text-align: end;
+     }
+     .liveInName span {
+         font-size: 14px;
+         line-height: 48px;
+         margin-left: 5px  ;
+         padding: 5px 10px  ;
+         border-left: 2px solid white;
+     }
+     .liveInName {
+         text-align: start;
+     }
+     .liveInBack img {
+         /* width: 35%;
+         margin-top: 12px  ; */
+     }
+     .liveInBack {
+         /* text-align: start;
+         padding-left: 10px  ; */
+     }
+     .liveFrameMainscroll{   
+        height: calc(100% - 62px);
+     }
+     .pop_cateScroll {
+        height: calc(100% - 103.71px);
+     }
+ 
+     .liveFrameBody, .liveFrameHeader{
+         background: black;
+         border-bottom: 1px solid #383838;
+     }
+     .liveFrameHeader .row{
+         background-color: black;
+         padding: 20px 0px  ;
+     }
+     .liveFrameLeftAre img, .liveFrameRightAre img{
+         width: 40%;
+         cursor: pointer;
+     }
+     .liveFrameName span{
+         font-size: 28px;
+         font-weight: bold;
+     }
+     .liveFrameBody .row{
+         /* background-color: #000000c2; */
+         padding: 5px 0px  ;
+     }
+     .liveFrameCate span{
+         font-size: 26px;
+         line-height: 75px;
+     }
+     .liveFrameImg img{
+         width: 90%;
+         height: 29px;
+     }
+     .liveFrameChanName{
+         text-align: left;
+         line-height: 1.3;
+     }
+     .liveFramedel{
+         
+    }
+     .liveFrameChanName span{
+         padding-left: 8px  ;
+         font-size: 12px;
+         text-transform: uppercase;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         display: -webkit-inline-box;
+         -webkit-line-clamp: 1;
+         -webkit-box-orient: vertical;
+     }
+     .liveFrameChanName label{
+         padding-left: 8px  ;
+         font-size: 9px;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         white-space: nowrap;
+         padding-right: 10px  ;
+         -webkit-line-clamp: 1;
+         -webkit-box-orient: vertical;
+     }
+     .livePlayerRightSide{
+         background-image: url(../images/forLiveplay.png);
+         background-size: 100%;
+     }
+     .livePlayer img{
+         width: 100%;
+     }
+     .liveInfo{
+         padding: 110px 0px 0px 0px  ;
+     }
+     .liveInfoSub .liveHeading{
+         padding-bottom: 20px  ;
+     }
+     .liveInfoSub .liveHeading span{   
+         padding: 10px 22px  ;
+         background: #31707e;
+         font-size: 28px;
+     }
+     .liveInfoSub .liveChannelName, .liveInfoSub .liveChannelProg{
+         padding-bottom: 8px  ;
+     }
+     .liveInfoSub .liveChannelName span{
+         font-size: 28px;
+         font-weight: bold;
+         text-transform: uppercase;
+     }
+     .liveInfoSub .liveChannelProg span{
+         font-size: 30px;
+         color: #31707e;
+     }
+     .liveInfoSub .liveProgTime span{
+         font-size: 29px;
+     }
+ 
+     .liveEPGMaindiv .row{
+         margin: 12px 0px 0px 0px  ;
+         text-align: initial;
+         background-color: black;
+     }
+     .liveEPGdiv{
+        height: calc(100% - 261.11px );
+     }
+     .liveEPGdiv center{
+        width: 292px;
+    }
+     .liveEpgTime span{
+         font-size: 11px;
+         color: #ffffff;
+         padding-left: 5px  ;
+     }
+     .liveEpgTime p{
+         font-size: 8px;
+         color: #6c6c6c;
+         /* margin-bottom: 10px  ; */
+         padding-left: 7px  ;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         display: -webkit-box;
+         -webkit-line-clamp: 2;
+         -webkit-box-orient: vertical;
+     }
+     .livecateSearch input {
+         width: 100%;
+         padding: 12px 0px 12px 28px  ;
+         background: #292828;
+         outline: none;
+         font-size: 12px;
+         border: 0;
+     }
+     .livecateSearch i {
+         position: absolute;
+         font-size: 16px;
+         left: 19px  ;
+         top: 78px  ;
+     }
+     .liveCateList span {
+         padding-left: 10px  ;
+         font-size: 11px;
+     }
+     .cateNum div {
+         font-size: 11px;
+     }
+     .cateNum {
+         padding-right: 2%  ;
+     }
+     .cateList {
+         width: 100%;
+         font-size: 24px;
+         outline: none;
+         padding-top: 12px  ;
+         padding-bottom: 12px  ;
+         margin: 0px  ;
+         border-bottom: 1px solid #292828;
+         text-transform: uppercase;
+     }
+ 
+     .linear-background-cate {
+         animation-duration: 1s;
+         animation-fill-mode: forwards;
+         animation-iteration-count: infinite;
+         animation-name: placeHolderShimmer;
+         animation-timing-function: linear;
+         background: #010106;
+         background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+         background-size: 1000px 104px;
+         height: 35px;
+         position: relative;
+         overflow: hidden;
+         width: 100%;
+     }
+ 
+     .linear-background {
+         animation-duration: 1s;
+         animation-fill-mode: forwards;
+         animation-iteration-count: infinite;
+         animation-name: placeHolderShimmer;
+         animation-timing-function: linear;
+         background: #010106;
+         background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+         background-size: 1000px 104px;
+         height: 29px;
+         position: relative;
+         overflow: hidden;
+         width: 100%;
+     }
+ 
+     .inter-crop {
+         background: #010106;
+         width: 10px;
+         height: 100%;
+         position: absolute;
+         top: 0;
+         left: 35px;
+     }
+ 
+     .inter-right--top {
+         background: #010106;
+         width: 100%;
+         height: 7px;
+         position: absolute;
+         top: 11px;
+         left: 43px;
+     }
+ 
+     .totalcountare img{
+         width: 30%  ;
+     }
+ 
+     .progress {
+         display: flex;
+         height: 1px  ;
+         overflow: hidden;
+         font-size: 0.75rem;
+         background-color: #e9ecef;
+         border-radius: .25rem;
+     }
+     .notfoundcate{
+        font-size: 10px; 
+        font-weight: 600; 
+        padding-top: 50%  ;
+     }
+     .notfoundepg{
+        font-size: 10px;
+        font-weight: 600;
+        justify-content: center;
+        justify-items: center;
+        justify-self: center;
+        margin-top: 25%  ;
+     }
+     
+     .liveInsearch a {
+        display: initial !important;
+     }
+     /* =============== Live Screen Desgin End =============== */
+         
+}
+
+
+    /* =============== 900 Screen Resolution =============== */ 
+
+@media only screen and  (min-width: 900px) {
+
+    /* =============== Live Screen Desgin Start =============== */
+ 
+    .headerMain .row{
+         padding: 8px 0px 3px 0px;
+     }
+     /* .liveInLogo img {
+         width: 28%;
+         backdrop-filter: blur(1px);
+     } */
+     .liveInsearch {
+         text-align: end;
+     }
+     .liveInsearch img {
+        width: 32%;
+        margin-top: 3px;
+     }
+     .liveInSet {
+         text-align: center;
+     }
+     .liveInSet img {
+        width: 32%;
+        margin-top: 3px;
+     }
+     .livecenterSearch img[alt=searchBack] {
+         width: 4%;
+     }
+     .livecenterSearch img[alt=centerSearch] {
+         width: 4%;
+     }
+     .livecenterSearch input[type=search] {
+        padding: 6px;
+        font-size: 16px;
+        width: 88%;
+        background: transparent;
+        border: none;
+        color: white;
+     }
+     .livecenterSearch {
+        line-height: 36px;
+    }
+     .liveInTime span {
+         font-size: 15px;
+         line-height: 48px;
+     }
+     .liveInTime {
+         text-align: end;
+     }
+     .liveInName span { 
+         font-size: 18px;
+         line-height: 45px;
+         margin-left: 5px  ;
+         padding: 5px 10px  ;
+         border-left: 2px solid white;
+     }
+     .liveInName {
+         text-align: start;
+     }
+     .liveInBack img {
+        width: 32px; 
+        margin-top: auto;
+     }
+     .liveInBack {
+         /* text-align: start;
+         padding-left: 10px  ; */
+     }
+     .liveFrameMainscroll{   
+        height: calc(100% - 61px);
+     }
+     .pop_cateScroll {
+        height: calc(100% - 103px);
+     }
+ 
+     .liveFrameBody, .liveFrameHeader{
+         background: black;
+         border-bottom: 1px solid #383838;
+     }
+     .liveFrameHeader .row{
+         background-color: black;
+         padding: 20px 0px  ;
+     }
+     .liveFrameLeftAre img, .liveFrameRightAre img{
+         width: 40%;
+         cursor: pointer;
+     }
+     .liveFrameName span{
+         font-size: 28px;
+         font-weight: bold;
+     }
+     .liveFrameBody .row{
+         /* background-color: #000000c2; */
+         padding: 5px 0px  ;
+     }
+     .liveFrameCate span{
+         font-size: 26px;
+         line-height: 75px;
+     }
+     .liveFrameImg img{
+         width: 90%;
+         height: 35px;
+     }
+     .liveFrameChanName{
+         text-align: left;
+         line-height: 1.3;
+     }
+     .liveFramedel{
+         
+    }
+     .liveFrameChanName span{
+         padding-left: 8px;
+         font-size: 13px;
+         text-transform: uppercase;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         display: -webkit-inline-box;
+         -webkit-line-clamp: 1;
+         -webkit-box-orient: vertical;
+     }
+     .liveFrameChanName label{
+         padding-left: 8px  ;
+         font-size: 10px;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         white-space: nowrap;
+         padding-right: 10px  ;
+         -webkit-line-clamp: 1;
+         -webkit-box-orient: vertical;
+     }
+     .livePlayerRightSide{
+         background-image: url(../images/forLiveplay.png);
+         background-size: 100%;
+     }
+     .livePlayer img{
+         width: 100%;
+     }
+     .liveInfo{
+         padding: 110px 0px 0px 0px  ;
+     }
+     .liveInfoSub .liveHeading{
+         padding-bottom: 20px  ;
+     }
+     .liveInfoSub .liveHeading span{   
+         padding: 10px 22px  ;
+         background: #31707e;
+         font-size: 28px;
+     }
+     .liveInfoSub .liveChannelName, .liveInfoSub .liveChannelProg{
+         padding-bottom: 8px  ;
+     }
+     .liveInfoSub .liveChannelName span{
+         font-size: 28px;
+         font-weight: bold;
+         text-transform: uppercase;
+     }
+     .liveInfoSub .liveChannelProg span{
+         font-size: 30px;
+         color: #31707e;
+     }
+     .liveInfoSub .liveProgTime span{
+         font-size: 29px;
+     }
+ 
+     .liveEPGMaindiv .row{
+         margin: 12px 0px 0px 0px  ;
+         text-align: initial;
+         background-color: black;
+     }
+     .liveEPGdiv{
+        height: calc(100% - 290.86px );
+     }
+     .liveEPGdiv center{
+        width: 350px;
+    }
+     .liveEpgTime span{
+         font-size: 12px;
+         color: #ffffff;
+         padding-left: 5px  ;
+     }
+     .liveEpgTime p{
+         font-size: 9px;
+         color: #6c6c6c;
+         /* margin-bottom: 10px  ; */
+         padding-left: 7px  ;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         display: -webkit-box;
+         -webkit-line-clamp: 2;
+         -webkit-box-orient: vertical;
+     }
+     .livecateSearch input {
+         width: 100%;
+         padding: 12px 0px 12px 28px  ;
+         background: #292828;
+         outline: none;
+         font-size: 12px;
+         border: 0;
+     }
+     .livecateSearch i {
+         position: absolute;
+         font-size: 16px;
+         left: 19px  ;
+         top: 86px  ;
+     }
+     .liveCateList span {
+         padding-left: 10px  ;
+         font-size: 14px;
+     }
+     .cateNum div {
+         font-size: 14px;
+     }
+     .cateNum {
+         padding-right: 2%  ;
+     }
+     .cateList {
+         width: 100%;
+         font-size: 24px;
+         outline: none;
+         padding-top: 12px  ;
+         padding-bottom: 12px  ;
+         margin: 0px  ;
+         border-bottom: 1px solid #292828;
+         text-transform: uppercase;
+     }
+ 
+     .linear-background-cate {
+         animation-duration: 1s;
+         animation-fill-mode: forwards;
+         animation-iteration-count: infinite;
+         animation-name: placeHolderShimmer;
+         animation-timing-function: linear;
+         background: #010106;
+         background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+         background-size: 1000px 104px;
+         height: 35px;
+         position: relative;
+         overflow: hidden;
+         width: 100%;
+     }
+ 
+     .linear-background {
+         animation-duration: 1s;
+         animation-fill-mode: forwards;
+         animation-iteration-count: infinite;
+         animation-name: placeHolderShimmer;
+         animation-timing-function: linear;
+         background: #010106;
+         background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+         background-size: 1000px 104px;
+         height: 29px;
+         position: relative;
+         overflow: hidden;
+         width: 100%;
+     }
+ 
+     .inter-crop {
+         background: #010106;
+         width: 10px;
+         height: 100%;
+         position: absolute;
+         top: 0;
+         left: 35px;
+     }
+ 
+     .inter-right--top {
+         background: #010106;
+         width: 100%;
+         height: 7px;
+         position: absolute;
+         top: 11px;
+         left: 43px;
+     }
+ 
+     .totalcountare img{
+         width: 30%  ;
+     }
+ 
+     .progress {
+         display: flex;
+         height: 2px  ;
+         overflow: hidden;
+         font-size: 0.75rem;
+         background-color: #e9ecef;
+         border-radius: .25rem;
+     }
+     .notfoundcate{
+        font-size: 13px; 
+        font-weight: 600; 
+        padding-top: 50%  ;
+     }
+     .notfoundepg{
+        font-size: 13px;
+        font-weight: 600;
+        justify-content: center;
+        justify-items: center;
+        justify-self: center;
+        margin-top: 25%  ;
+     }
+     .liveInsearch a {
+        display: initial !important;
+     }
+     /* =============== Live Screen Desgin End =============== */
+         
+}
+
+
+    /* =============== 1100 Screen Resolution =============== */ 
+
+@media only screen and  (min-width: 1100px) {
+
+    /* =============== Live Screen Desgin Start =============== */
+ 
+    .headerMain .row{
+         padding: 10px 0px 10px 0px  ;
+     }
+     /* .liveInLogo img {
+         width: 28%;
+         backdrop-filter: blur(1px);
+     } */
+     .liveInsearch {
+         text-align: end;
+     }
+     .liveInsearch img {
+        width: 32%;
+        margin-top: 6px;
+     }
+     .liveInSet {
+         text-align: center;
+     }
+     .liveInSet img {
+        width: 32%;
+        margin-top: 6px;
+     }
+     .livecenterSearch img[alt=searchBack] {
+         width: 6%;
+     }
+     .livecenterSearch img[alt=centerSearch] {
+         width: 4%;
+     }
+     .livecenterSearch input[type=search] {
+         padding: 25px  ;
+         font-size: 22px;
+         width: 89%;
+         background: transparent;
+         border: none;
+         color: white;
+     }
+     .liveInTime span {
+         font-size: 18px;
+         line-height: 52px;
+     }
+     .liveInTime {
+         text-align: end;
+     }
+     .liveInName span {
+         font-size: 20px;
+         line-height: 52px;
+         margin-left: 5px  ;
+         padding: 5px 10px  ;
+         border-left: 2px solid white;
+     }
+     .liveInName {
+         text-align: start;
+     }
+     .liveInBack img {
+        width: 32%;
+        margin-top: 4px;
+     }
+     .liveInBack {
+         /* text-align: start;
+         padding-left: 10px  ; */
+     }
+     .liveFrameMainscroll{   
+        height: calc(100% - 72px);
+     }
+     .pop_cateScroll {
+        height: calc(100% - 113.6px);
+     }
+ 
+     .liveFrameBody, .liveFrameHeader{
+         background: black;
+         border-bottom: 1px solid #383838;
+     }
+     .liveFrameHeader .row{
+         background-color: black;
+         padding: 20px 0px  ;
+     }
+     .liveFrameLeftAre img, .liveFrameRightAre img{
+         width: 40%;
+         cursor: pointer;
+     }
+     .liveFrameName span{
+         font-size: 28px;
+         font-weight: bold;
+     }
+     .liveFrameBody .row{
+         /* background-color: #000000c2; */
+         padding: 5px 0px  ;
+     }
+     .liveFrameCate span{
+         font-size: 26px;
+         line-height: 75px;
+     }
+     .liveFrameImg img{
+         width: 90%;
+         height: 42px;
+     }
+     .liveFrameChanName{
+         text-align: left;
+         line-height: 1.5;
+     }
+     .liveFramedel{
+
+     }
+     .liveFrameChanName span{
+         padding-left: 8px  ;
+         font-size: 14px;
+         text-transform: uppercase;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         display: -webkit-inline-box;
+         -webkit-line-clamp: 1;
+         -webkit-box-orient: vertical;
+     }
+     .liveFrameChanName label{
+         padding-left: 8px  ;
+         font-size: 11px;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         white-space: nowrap;
+         padding-right: 10px  ;
+         -webkit-line-clamp: 1;
+         -webkit-box-orient: vertical;
+     }
+     .livePlayerRightSide{
+         background-image: url(../images/forLiveplay.png);
+         background-size: 100%;
+     }
+     .livePlayer img{
+         width: 100%;
+     }
+     .liveInfo{
+         padding: 110px 0px 0px 0px  ;
+     }
+     .liveInfoSub .liveHeading{
+         padding-bottom: 20px  ;
+     }
+     .liveInfoSub .liveHeading span{   
+         padding: 10px 22px  ;
+         background: #31707e;
+         font-size: 28px;
+     }
+     .liveInfoSub .liveChannelName, .liveInfoSub .liveChannelProg{
+         padding-bottom: 8px  ;
+     }
+     .liveInfoSub .liveChannelName span{
+         font-size: 28px;
+         font-weight: bold;
+         text-transform: uppercase;
+     }
+     .liveInfoSub .liveChannelProg span{
+         font-size: 30px;
+         color: #31707e;
+     }
+     .liveInfoSub .liveProgTime span{
+         font-size: 29px;
+     }
+ 
+     .liveEPGMaindiv .row{
+         margin: 20px 0px 0px 0px  ;
+         text-align: initial;
+         background-color: black;
+     }
+     .liveEPGdiv{
+        height: calc(100% - 356.25px );
+     }
+     .liveEPGdiv center{
+        width: 430px;
+    }
+     .liveEpgTime span{
+         font-size: 13px;
+         color: #ffffff;
+         padding-left: 5px  ;
+     }
+     .liveEpgTime p{
+         font-size: 10px;
+         color: #6c6c6c;
+         /* margin-bottom: 10px  ; */
+         padding-left: 7px  ;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         display: -webkit-box;
+         -webkit-line-clamp: 2;
+         -webkit-box-orient: vertical;
+     }
+     .livecateSearch input {
+         width: 100%;
+         padding: 12px 0px 12px 28px  ;
+         background: #292828;
+         outline: none;
+         font-size: 12px;
+         border: 0;
+     }
+     .livecateSearch i {
+         position: absolute;
+         font-size: 16px;
+         left: 20px  ;
+         top: 97px  ;
+     }
+     .liveCateList span {
+         padding-left: 10px  ;
+         font-size: 16px;
+     }
+     .cateNum div {
+         font-size: 16px;
+     }
+     .cateNum {
+         padding-right: 2%  ;
+     }
+     .cateList {
+         width: 100%;
+         font-size: 24px;
+         outline: none;
+         padding-top: 12px  ;
+         padding-bottom: 12px  ;
+         margin: 0px  ;
+         border-bottom: 1px solid #292828;
+         text-transform: uppercase;
+     }
+ 
+     .linear-background-cate {
+         animation-duration: 1s;
+         animation-fill-mode: forwards;
+         animation-iteration-count: infinite;
+         animation-name: placeHolderShimmer;
+         animation-timing-function: linear;
+         background: #010106;
+         background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+         background-size: 1000px 104px;
+         height: 35px;
+         position: relative;
+         overflow: hidden;
+         width: 100%;
+     }
+ 
+     .linear-background {
+         animation-duration: 1s;
+         animation-fill-mode: forwards;
+         animation-iteration-count: infinite;
+         animation-name: placeHolderShimmer;
+         animation-timing-function: linear;
+         background: #010106;
+         background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+         background-size: 1000px 104px;
+         height: 29px;
+         position: relative;
+         overflow: hidden;
+         width: 100%;
+     }
+ 
+     .inter-crop {
+         background: #010106;
+         width: 10px;
+         height: 100%;
+         position: absolute;
+         top: 0;
+         left: 35px;
+     }
+ 
+     .inter-right--top {
+         background: #010106;
+         width: 100%;
+         height: 7px;
+         position: absolute;
+         top: 11px;
+         left: 43px;
+     }
+ 
+     .totalcountare img{
+         width: 30%  ;
+     }
+ 
+     .progress {
+         display: flex;
+         height: 2px  ;
+         overflow: hidden;
+         font-size: 0.75rem;
+         background-color: #e9ecef;
+         border-radius: .25rem;
+     }
+     .notfoundcate{
+        font-size: 16px; 
+        font-weight: 600; 
+        padding-top: 50%  ;
+     }
+     .notfoundepg{
+        font-size: 16px;
+        font-weight: 600;
+        justify-content: center;
+        justify-items: center;
+        justify-self: center;
+        margin-top: 25%  ;
+     }
+     .liveInsearch a {
+        display: initial !important;
+     }
+     /* =============== Live Screen Desgin End =============== */
+         
+}
+ 
+ 
+     /* =============== 1300 Screen Resolution =============== */
+ 
+ @media only screen and  (min-width: 1300px) {
+ 
+     /* =============== Live Screen Desgin Start =============== */
+ 
+     .headerMain .row{
+         padding: 10px 0px 4px 0px  ;
+     }
+     /* .liveInLogo img {
+         width: 28%;
+         backdrop-filter: blur(1px);
+     } */
+     .liveInsearch {
+         text-align: end;
+         margin-left: -40px;
+     }
+     .liveInsearch img {
+        width: 66%;
+        margin-top: 2px;
+     }
+     .liveInSet img {
+        width: 32%;
+        margin-top: 2px;
+     }
+     .livecenterSearch img[alt=searchBack] {
+         width: 4%;
+     }
+     .livecenterSearch img[alt=centerSearch] {
+         width: 4%;
+     }
+     .livecenterSearch input[type=search] {
+         padding: 3px 0px 0px 11px  ;
+         font-size: 22px;
+         width: 86%;
+         background: transparent;
+         border: none;
+         color: white;
+     }
+     .liveInSet {
+         text-align: center;
+     }
+     .liveInTime span {
+         font-size: 18px;
+         line-height: 54px;
+     }
+     .liveInTime {
+         text-align: end;
+         padding-right: 45px;
+     }
+     .liveInName span {
+        font-size: 18px;
+        line-height: 54px;
+        padding: 5px 10px;
+        border-left: 2px solid white;
+     }
+     .liveInName {
+         text-align: start;
+     }
+     .liveInBack img {
+        width: 34%;
+        margin-top: 1px;
+    }
+     .liveInBack {
+         /* text-align: start;
+         padding-left: 10px  ; */
+     }
+     .liveFrameMainscroll{   
+        height: calc(100% - 79.63px);
+     }
+     .pop_cateScroll {
+        height: calc(100% - 131.25px);
+     }
+ 
+     .liveFrameBody, .liveFrameHeader{
+         background: black;
+         border-bottom: 1px solid #383838;
+     }
+     .liveFrameHeader .row{
+         background-color: black;
+         padding: 20px 0px  ;
+     }
+     .liveFrameLeftAre img, .liveFrameRightAre img{
+         width: 40%;
+         cursor: pointer;
+     }
+     .liveFrameName span{
+         font-size: 24px;
+         font-weight: bold;
+     }
+     .liveFrameBody .row{
+         /* background-color: #000000c2; */
+         padding: 4px 0px  ;
+     }
+     .liveFrameCate span{
+         font-size: 24px;
+         line-height: 2;
+     }
+     .liveFrameImg img{
+         width: 84%;
+         height: 50px;
+     }
+     .liveFrameChanName{
+         text-align: left;
+         line-height: 1.3;
+     }
+     .liveFramedel{
+        text-align: left;
+        font-size: 18px;
+        padding-top: 16px;
+    }
+     .liveFrameChanName span{
+         padding-left: 8px  ;
+         font-size: 18px;
+         text-transform: uppercase;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         display: -webkit-inline-box;
+         -webkit-line-clamp: 1;
+         -webkit-box-orient: vertical;
+     }
+     .liveFrameChanName label{
+         padding-left: 8px  ;
+         font-size: 16px;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         white-space: nowrap;
+         padding-right: 10px  ;
+         -webkit-line-clamp: 1;
+         -webkit-box-orient: vertical;
+     }
+     .livePlayerRightSide{
+         background-image: url(../images/forLiveplay.png);
+         background-size: 100%;
+     }
+     .livePlayer img{
+         width: 100%;
+     }
+     .liveInfo{
+         padding: 62px 0px 61px 0px  ;
+     }
+     .liveInfoSub .liveHeading{
+         padding-bottom: 20px  ;
+     }
+     .liveInfoSub .liveHeading span{   
+         padding: 8px 20px  ;
+         background: #31707e;
+         font-size: 22px;
+     }
+     .liveInfoSub .liveChannelName, .liveInfoSub .liveChannelProg{
+         padding-bottom: 8px  ;
+     }
+     .liveInfoSub .liveChannelName span{
+         font-size: 25px;
+         font-weight: bold;
+         text-transform: uppercase;
+     }
+     .liveInfoSub .liveChannelProg span{
+         font-size: 27px;
+         color: #31707e;
+     }
+     .liveInfoSub .liveProgTime span{
+         font-size: 27px;
+     }
+     
+     .liveEPGMaindiv .row{
+         margin: 20px 0px 0px 0px;
+         text-align: initial;
+         background-color: black;
+     }
+     .liveEPGdiv{
+        height: calc(100% - 400.70px );
+     }
+     .liveEPGdiv center{
+        width: 495px;
+    }
+     .liveEpgTime span{
+         font-size: 18px;
+         color: #ffffff;
+         padding-left: 5px  ;
+     }
+     .liveEpgTime p{
+         font-size: 14px;
+         color: #6c6c6c;
+         margin-bottom: 10px  ;
+         padding-left: 7px  ;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         display: -webkit-box;
+         -webkit-line-clamp: 2;
+         -webkit-box-orient: vertical;
+     }
+     .livecateSearch input {
+         width: 100%;
+         padding: 14px 10px 14px 55px  ;
+         background: #292828;
+         outline: none;
+         font-size: 20px;
+         border: 0;
+     }
+     .livecateSearch i {
+         position: absolute;
+         font-size: 20px;
+         left: 32px  ;
+         top: 99px  ;
+     }
+     .liveCateList span {
+         padding-left: 15px;
+         font-size: 20px;
+     }
+     .cateNum div {
+         font-size: 20px;
+     }
+     .cateNum {
+         padding-right: 2%  ;
+     }
+     .cateList {
+         width: 100%;
+         font-size: 28px;
+         outline: none;
+         padding-top: 16px  ;
+         padding-bottom: 16px  ;
+         margin: 0px  ;
+         border-bottom: 1px solid #292828;
+         text-transform: uppercase;
+     }
+ 
+     .linear-background-cate {
+         animation-duration: 1s;
+         animation-fill-mode: forwards;
+         animation-iteration-count: infinite;
+         animation-name: placeHolderShimmer;
+         animation-timing-function: linear;
+         background: #010106;
+         background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+         background-size: 1000px 104px;
+         height: 50px;
+         position: relative;
+         overflow: hidden;
+         width: 100%;
+     }
+ 
+     .linear-background {
+         animation-duration: 1s;
+         animation-fill-mode: forwards;
+         animation-iteration-count: infinite;
+         animation-name: placeHolderShimmer;
+         animation-timing-function: linear;
+         background: #010106;
+         background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+         background-size: 1000px 104px;
+         height: 50px;
+         position: relative;
+         overflow: hidden;
+         width: 100%;
+     }
+ 
+     .inter-crop {
+         background: #010106;
+         width: 20px;
+         height: 100%;
+         position: absolute;
+         top: 0;
+         left: 100px;
+     }
+ 
+     .inter-right--top {
+         background: #010106;
+         width: 100%;
+         height: 20px;
+         position: absolute;
+         top: 20px;
+         left: 100px;
+     }
+ 
+     .totalcountare img{
+         width: 30%  ;
+     }
+ 
+     .progress {
+         display: flex;
+         height: 2px  ;
+         overflow: hidden;
+         font-size: 0.75rem;
+         background-color: #e9ecef;
+         border-radius: .25rem;
+     }
+     .notfoundcate{
+        font-size: 18px; 
+        font-weight: 600; 
+        padding-top: 50%  ;
+     }
+     .notfoundepg{
+        font-size: 18px;
+        font-weight: 600;
+        justify-content: center;
+        justify-items: center;
+        justify-self: center;
+        margin-top: 25%  ;
+     }
+     .liveInsearch a {
+        display: block !important;
+     }
+     .epgName span{
+        font-size: 20px;
+        line-height: 62px;
+        font-weight: 500;
+     }   
+     /* =============== Live Screen Desgin End =============== */
+         
+ }
+ 
+     
+ /* =============== 1400 Screen Resolution =============== */
+ 
+ @media only screen and  (min-width: 1400px) {
+ 
+     /* =============== Live Screen Desgin Start =============== */
+ 
+     .headerMain .row{
+         padding: 2px 0px 8px 0px;
+     }
+     /* .liveInLogo img {
+         width: 28%;
+         backdrop-filter: blur(1px);
+     } */
+     .liveInsearch {
+         text-align: end;
+         margin-left: 0px;
+     }
+    .liveInsearch img {
+        width: 74%;
+        margin-top: 6px;
+    }
+     .livecenterSearch {
+        line-height: 28px;
+     }
+     .livecenterSearch img[alt=searchBack] {
+         width: 5%;
+     }
+     .livecenterSearch img[alt=centerSearch] {
+         width: 5%;
+     }
+     .livecenterSearch input[type=search] {
+        padding: 18px  ;
+        font-size: 22px;
+        width: 88%;
+        background: transparent;
+        border: none;
+        color: white;
+     }
+     .liveInSet {
+         text-align: center;
+     }
+     .liveInSet img {
+        width: 35%; 
+        margin-top: 6px ;
+     }
+     .liveInTime span {
+        font-size: 20px;
+        line-height: 68px;
+     }
+     .liveInTime {
+         text-align: end;
+     }
+     .liveInName span {
+         font-size: 22px;
+         line-height: 68px;
+         padding: 5px 10px  ;
+         border-left: 2px solid white;
+     }
+     .liveInName {
+         text-align: start;
+     }
+     .liveInBack img {
+        width: 35%;
+        margin-top: 5px;
+    }
+     .liveInBack {
+         /* text-align: start;
+         padding-left: 10px  ; */
+     }
+     .liveFrameMainscroll{  
+        height: calc(100% - 86px);
+     }
+     .pop_cateScroll {
+        height: calc(100% - 136px);
+     }
+ 
+     .liveFrameBody, .liveFrameHeader{
+         background: black;
+         border-bottom: 1px solid #383838;
+     }
+     .liveFrameHeader .row{
+         background-color: black;
+         padding: 20px 0px  ;
+     }
+     .liveFrameLeftAre img, .liveFrameRightAre img{
+         width: 40%;
+         cursor: pointer;
+     }
+     .liveFrameName span{
+         font-size: 24px;
+         font-weight: bold;
+     }
+     .liveFrameBody .row{
+         /* background-color: #000000c2; */
+         padding: 4px 0px  ;
+     }
+     .liveFrameCate span{
+         font-size: 24px;
+         line-height: 2;
+     }
+     .liveFrameImg img{
+         width: 84%;
+         height: 50px;
+     }
+     .liveFrameChanName{
+         text-align: left;
+         line-height: 1.3;
+     }
+     .liveFramedel{
+         
+    }
+     .liveFrameChanName span{
+         padding-left: 8px  ;
+         font-size: 18px;
+         text-transform: uppercase;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         display: -webkit-inline-box;
+         -webkit-line-clamp: 1;
+         -webkit-box-orient: vertical;
+     }
+     .liveFrameChanName label{
+         padding-left: 8px  ;
+         font-size: 16px;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         white-space: nowrap;
+         padding-right: 10px  ;
+         -webkit-line-clamp: 1;
+         -webkit-box-orient: vertical;
+     }
+     .livePlayerRightSide{
+         background-image: url(../images/forLiveplay.png);
+         background-size: 100%;
+     }
+     .livePlayer img{
+         width: 100%;
+     }
+     .liveInfo{
+         padding: 62px 0px 61px 0px  ;
+     }
+     .liveInfoSub .liveHeading{
+         padding-bottom: 20px  ;
+     }
+     .liveInfoSub .liveHeading span{   
+         padding: 8px 20px  ;
+         background: #31707e;
+         font-size: 22px;
+     }
+     .liveInfoSub .liveChannelName, .liveInfoSub .liveChannelProg{
+         padding-bottom: 8px  ;
+     }
+     .liveInfoSub .liveChannelName span{
+         font-size: 25px;
+         font-weight: bold;
+         text-transform: uppercase;
+     }
+     .liveInfoSub .liveChannelProg span{
+         font-size: 27px;
+         color: #31707e;
+     }
+     .liveInfoSub .liveProgTime span{
+         font-size: 27px;
+     }
+     
+     .liveEPGMaindiv .row{
+         margin: 20px 0px 0px 0px;
+         text-align: initial;
+         background-color: black;
+     }
+     .liveEPGdiv{ 
+        height: calc(100% - 437.75px);
+     }
+     .liveEPGdiv center{
+         position: relative; 
+         width: 545px;
+     }
+     .liveEpgTime span{
+         font-size: 18px;
+         color: #ffffff;
+         padding-left: 5px  ;
+     }
+     .liveEpgTime p{
+         font-size: 14px;
+         color: #6c6c6c;
+         margin-bottom: 10px  ;
+         padding-left: 7px  ;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         display: -webkit-box;
+         -webkit-line-clamp: 2;
+         -webkit-box-orient: vertical;
+     }
+     .livecateSearch input {
+         width: 100%;
+         padding: 14px 10px 14px 55px  ;
+         background: #292828;
+         outline: none;
+         font-size: 20px;
+         border: 0;
+     }
+     .livecateSearch i {
+        position: absolute;
+        font-size: 24px;
+        left: 32px  ;
+        top: 108px  ;
+     }
+     .liveCateList span {
+         padding-left: 25px  ;
+         font-size: 20px;
+     }
+     .cateNum div {
+         font-size: 20px;
+     }
+     .cateNum {
+         padding-right: 2%  ;
+     }
+     .cateList {
+         width: 100%;
+         font-size: 28px;
+         outline: none;
+         padding-top: 15px  ;
+         padding-bottom: 15px  ;
+         margin: 0px  ;
+         border-bottom: 1px solid #292828;
+         text-transform: uppercase;
+     }
+ 
+     .linear-background-cate {
+         animation-duration: 1s;
+         animation-fill-mode: forwards;
+         animation-iteration-count: infinite;
+         animation-name: placeHolderShimmer;
+         animation-timing-function: linear;
+         background: #010106;
+         background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+         background-size: 1000px 104px;
+         height: 50px;
+         position: relative;
+         overflow: hidden;
+         width: 100%;
+     }
+ 
+     .linear-background {
+         animation-duration: 1s;
+         animation-fill-mode: forwards;
+         animation-iteration-count: infinite;
+         animation-name: placeHolderShimmer;
+         animation-timing-function: linear;
+         background: #010106;
+         background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+         background-size: 1000px 104px;
+         height: 50px;
+         position: relative;
+         overflow: hidden;
+         width: 100%;
+     }
+ 
+     .inter-crop {
+         background: #010106;
+         width: 20px;
+         height: 100%;
+         position: absolute;
+         top: 0;
+         left: 100px;
+     }
+ 
+     .inter-right--top {
+         background: #010106;
+         width: 100%;
+         height: 20px;
+         position: absolute;
+         top: 20px;
+         left: 100px;
+     }
+ 
+     .totalcountare img{
+         width: 30%  ;
+     }
+ 
+     .progress {
+         display: flex;
+         height: 3px  ;
+         overflow: hidden;
+         font-size: 0.75rem;
+         background-color: #e9ecef;
+         border-radius: .25rem;
+     }
+     .no_epg_msg_mi{
+        display: table;
+        height: 100px;
+        width: 100%;
+        text-align: center;
+     }
+     .no_epg_msg_child{
+        display: table-cell;
+        vertical-align: middle;
+        font-size: 12px;
+     }
+     .notfoundcate{
+        font-size: 21px; 
+        font-weight: 600; 
+        padding-top: 50%  ;
+     }
+     .notfoundepg{
+        font-size: 21px;
+        font-weight: 600;
+        justify-content: center;
+        justify-items: center;
+        justify-self: center;
+        margin-top: 25%  ;
+     }
+
+     .epgName span{
+        font-size: 22px;
+        line-height: 66px; 
+        font-weight: 600;
+    }
+    
+      /* Flowplayer CSS  */
+
+    /* .livePlayer{
+        background-color: black;
+        height: 309px;
+    } */
+
+     /* =============== Live Screen Desgin End =============== */
+         
+ }
+ 
+
+ /* =============== 1600 Screen Resolution =============== */
+ 
+@media only screen and  (min-width: 1600px) {
+
+    /* =============== Live Screen Desgin Start =============== */
+
+    .headerMain .row{
+        padding: 2px 0px 8px 0px;
+    }
+    /* .liveInLogo img {
+        width: 28%;
+        backdrop-filter: blur(1px);
+    } */
+    .liveInsearch {
+        text-align: end;
+        margin-left: 30px;
+    }
+    .liveInsearch img {
+        width: 80%;
+        margin-top: 8px;
+    }
+    .livecenterSearch {
+        line-height: 38px;
+    }
+    .livecenterSearch img[alt=searchBack] {
+        width: 4%;
+    }
+    .livecenterSearch img[alt=centerSearch] {
+        width: 4%;
+    }
+    .livecenterSearch input[type=search] {
+        padding: 18px  ;
+        font-size: 20px;
+        width: 87%;
+        background: transparent;
+        border: none;
+        color: white;
+    }
+    .liveInSet {
+        text-align: center;
+    }
+    .liveInSet img {
+        width: 32%;
+        margin-top: 8px;
+    }
+    .liveInTime span {
+        font-size: 24px;
+        line-height: 74px;
+    }
+    .liveInTime {
+        text-align: end;
+    }
+    .liveInName span {
+        font-size: 25px;
+        line-height: 74px;
+        padding: 5px 10px  ;
+        border-left: 2px solid white;
+    }
+    .liveInName {
+        text-align: start;
+    }
+    .liveInBack img {
+        width: 32%;
+        margin-top: 8px  ;
+    }
+    .liveInBack {
+        /* text-align: start;
+        padding-left: 10px  ; */
+    }
+    .liveFrameMainscroll{   
+        height: calc(100% - 91.32px);
+    }
+    .pop_cateScroll {
+        height: calc(100% - 153.96px);
+    }
+
+    .liveFrameBody, .liveFrameHeader{
+        background: black;
+        border-bottom: 1px solid #383838;
+    }
+    .liveFrameHeader .row{
+        background-color: black;
+        padding: 20px 0px  ;
+    }
+    .liveFrameLeftAre img, .liveFrameRightAre img{
+        width: 40%;
+        cursor: pointer;
+    }
+    .liveFrameName span{
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .liveFrameBody .row{
+        /* background-color: #000000c2; */
+        padding: 4px 0px  ;
+    }
+    .liveFrameCate span{
+        font-size: 24px;
+        line-height: 2;
+    }
+    .liveFrameImg img{
+        width: 84%;
+        height: 62px;
+    }
+    .liveFrameChanName{
+        text-align: left;
+        line-height: 1.3;
+    }
+    .liveFramedel{
+         
+    }
+    .liveFrameChanName span{
+        padding-left: 8px  ;
+        font-size: 24px;
+        text-transform: uppercase;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-inline-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    .liveFrameChanName label{
+        padding-left: 8px  ;
+        font-size: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-right: 10px  ;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    .livePlayerRightSide{
+        background-image: url(../images/forLiveplay.png);
+        background-size: 100%;
+    }
+    .livePlayer img{
+        width: 100%;
+    }
+    .liveInfo{
+        padding: 62px 0px 61px 0px  ;
+    }
+    .liveInfoSub .liveHeading{
+        padding-bottom: 20px  ;
+    }
+    .liveInfoSub .liveHeading span{   
+        padding: 8px 20px  ;
+        background: #31707e;
+        font-size: 22px;
+    }
+    .liveInfoSub .liveChannelName, .liveInfoSub .liveChannelProg{
+        padding-bottom: 8px  ;
+    }
+    .liveInfoSub .liveChannelName span{
+        font-size: 25px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .liveInfoSub .liveChannelProg span{
+        font-size: 27px;
+        color: #31707e;
+    }
+    .liveInfoSub .liveProgTime span{
+        font-size: 27px;
+    }
+    
+    .liveEPGMaindiv .row{
+        margin: 20px 0px 0px 0px;
+        text-align: initial;
+        background-color: black;
+    }
+    .liveEPGdiv{
+        height: calc(100% - 480.57px);
+    }
+    .liveEPGdiv center{
+        width: 610px;
+    }
+    .liveEpgTime span{
+        font-size: 22px;
+        color: #ffffff;
+        padding-left: 5px  ;
+    }
+    .liveEpgTime p{
+        font-size: 16px;
+        color: #6c6c6c;
+        margin-bottom: 10px  ;
+        padding-left: 7px  ;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    .livecateSearch input {
+        width: 100%;
+        padding: 14px 10px 14px 55px  ;
+        background: #292828;
+        outline: none;
+        font-size: 20px;
+        border: 0;
+    }
+    .livecateSearch i {
+       position: absolute;
+       font-size: 24px;
+       left: 33px  ;
+       top: 123px  ;
+    }
+    .liveCateList span {
+        padding-left: 25px  ;
+        font-size: 22px;
+    }
+    .cateNum div {
+        font-size: 22px;
+    }
+    .cateNum {
+        padding-right: 2%  ;
+    }
+    .cateList {
+        width: 100%;
+        font-size: 28px;
+        outline: none;
+        padding-top: 16px  ;
+        padding-bottom: 16px  ;
+        margin: 0px  ;
+        border-bottom: 1px solid #292828;
+        text-transform: uppercase;
+    }
+
+    .linear-background-cate {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
+        background: #010106;
+        background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+        background-size: 1000px 104px;
+        height: 50px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .linear-background {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
+        background: #010106;
+        background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+        background-size: 1000px 104px;
+        height: 50px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .inter-crop {
+        background: #010106;
+        width: 20px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 100px;
+    }
+
+    .inter-right--top {
+        background: #010106;
+        width: 100%;
+        height: 20px;
+        position: absolute;
+        top: 20px;
+        left: 100px;
+    }
+
+    .totalcountare img{
+        width: 30%  ;
+    }
+
+    .progress {
+        display: flex;
+        height: 3px  ;
+        overflow: hidden;
+        font-size: 0.75rem;
+        background-color: #e9ecef;
+        border-radius: .25rem;
+    }
+    .no_epg_msg_mi{
+        display: table;
+        height: 350px;
+        width: 100%;
+        text-align: center;
+    }
+    .no_epg_msg_child{
+       display: table-cell;
+       vertical-align: middle;
+       font-size: 25px;
+    }
+    .notfoundcate{
+        font-size: 25px; 
+        font-weight: 600; 
+        padding-top: 50%  ;
+     }
+     .notfoundepg{
+        font-size: 25px;
+        font-weight: 600;
+        justify-content: center;
+        justify-items: center;
+        justify-self: center;
+        margin-top: 25%  ;
+     }
+
+       /* Flowplayer CSS  */
+/* 
+    .livePlayer{
+        background-color: black;
+        height: 347px;
+    } */
+
+    /* =============== Live Screen Desgin End =============== */
+        
+}
+
+ /* =============== 1800 Screen Resolution =============== */
+ 
+ @media only screen and  (min-width: 1800px) {
+
+    /* =============== Live Screen Desgin Start =============== */
+
+    .headerMain .row{
+        padding: 0px 0px 5px 0px;
+    }
+    /* .liveInLogo img {
+        width: 28%;
+        backdrop-filter: blur(1px);
+    } */
+    .liveInsearch {
+        text-align: end;
+        margin-left: 50px;
+    }
+    .liveInsearch img {
+        width: 85%;
+        margin-top: 12px;
+    }
+    .livecenterSearch img[alt=searchBack] {
+        width: 4%;
+    }
+    .livecenterSearch img[alt=centerSearch] {
+        width: 4%;
+    }
+    .livecenterSearch input[type=search] {
+        padding: 20px;
+        font-size: 22px;
+        width: 89%;
+        background: transparent;
+        border: none;
+        color: white;
+    }
+    .liveInSet {
+        text-align: center;
+    }
+    .liveInSet img {
+        margin-top: 12px;
+        width: 32%;
+    }
+    .liveInTime span {
+        font-size: 24px;
+        line-height: 80px;
+    }
+    .liveInTime {
+        text-align: end;
+    }
+    .liveInName span {
+        font-size: 26px;
+        line-height: 80px;
+        padding: 5px 10px  ;
+        border-left: 2px solid white;
+    }
+    .liveInName {
+        text-align: start;
+    }
+    .liveInBack img {
+        width: 30%;
+        margin-top: 12px;
+    }
+    .liveInBack {
+        /* text-align: start;
+        padding-left: 10px  ; */
+    }
+    .liveFrameMainscroll{   
+        height: calc(100% - 97.99px);
+    }
+    .pop_cateScroll {
+        height: calc(100% - 160.22px);
+    }
+
+    .liveFrameBody, .liveFrameHeader{
+        background: black;
+        border-bottom: 1px solid #383838;
+    }
+    .liveFrameHeader .row{
+        background-color: black;
+        padding: 20px 0px  ;
+    }
+    .liveFrameLeftAre img, .liveFrameRightAre img{
+        width: 40%;
+        cursor: pointer;
+    }
+    .liveFrameName span{
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .liveFrameBody .row{
+        /* background-color: #000000c2; */
+        padding: 4px 0px  ;
+    }
+    .liveFrameCate span{
+        font-size: 24px;
+        line-height: 2;
+    }
+    .liveFrameImg img{
+        width: 84%;
+        height: 62px;
+    }
+    .liveFrameChanName{
+        text-align: left;
+        line-height: 1.3;
+    }.liveFramedel{
+         
+    }
+    .liveFrameChanName span{
+        padding-left: 8px  ;
+        font-size: 24px;
+        text-transform: uppercase;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-inline-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    .liveFrameChanName label{
+        padding-left: 8px  ;
+        font-size: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-right: 10px  ;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    .livePlayerRightSide{
+        background-image: url(../images/forLiveplay.png);
+        background-size: 100%;
+    }
+    .livePlayer img{
+        width: 100%;
+    }
+    .liveInfo{
+        padding: 62px 0px 61px 0px  ;
+    }
+    .liveInfoSub .liveHeading{
+        padding-bottom: 20px  ;
+    }
+    .liveInfoSub .liveHeading span{   
+        padding: 8px 20px  ;
+        background: #31707e;
+        font-size: 22px;
+    }
+    .liveInfoSub .liveChannelName, .liveInfoSub .liveChannelProg{
+        padding-bottom: 8px  ;
+    }
+    .liveInfoSub .liveChannelName span{
+        font-size: 25px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .liveInfoSub .liveChannelProg span{
+        font-size: 27px;
+        color: #31707e;
+    }
+    .liveInfoSub .liveProgTime span{
+        font-size: 27px;
+    }
+    
+    .liveEPGMaindiv .row{
+        margin: 20px 0px 0px 0px  ;
+        text-align: initial;
+        background-color: black;
+    }
+    .liveEPGdiv{
+        height: calc(100% - 534.12px );
+    }
+    .liveEPGdiv center{
+        width: 695px;
+    }
+    .liveEpgTime span{
+        font-size: 22px;
+        color: #ffffff;
+        padding-left: 5px  ;
+    }
+    .liveEpgTime p{
+        font-size: 16px;
+        color: #6c6c6c;
+        margin-bottom: 10px  ;
+        padding-left: 7px  ;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    .livecateSearch input {
+        width: 100%;
+        padding: 14px 10px 14px 55px  ;
+        background: #292828;
+        outline: none;
+        font-size: 20px;
+        border: 0;
+    }
+    .livecateSearch i {
+       position: absolute;
+       font-size: 24px;
+       left: 33px  ;
+       top: 123px  ;
+    }
+    .liveCateList span {
+        padding-left: 25px  ;
+        font-size: 26px;
+    }
+    .cateNum div {
+        font-size: 26px;
+    }
+    .cateNum {
+        padding-right: 2%  ;
+    }
+    .cateList {
+        width: 100%;
+        font-size: 28px;
+        outline: none;
+        padding-top: 16px  ;
+        padding-bottom: 16px  ;
+        margin: 0px  ;
+        border-bottom: 1px solid #292828;
+        text-transform: uppercase;
+    }
+
+    .linear-background-cate {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
+        background: #010106;
+        background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+        background-size: 1000px 104px;
+        height: 50px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .linear-background {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
+        background: #010106;
+        background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+        background-size: 1000px 104px;
+        height: 50px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .inter-crop {
+        background: #010106;
+        width: 20px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 100px;
+    }
+
+    .inter-right--top {
+        background: #010106;
+        width: 100%;
+        height: 20px;
+        position: absolute;
+        top: 20px;
+        left: 100px;
+    }
+
+    .totalcountare img{
+        width: 30%  ;
+    }
+
+    .progress {
+        display: flex;
+        height: 3px  ;
+        overflow: hidden;
+        font-size: 0.75rem;
+        background-color: #e9ecef;
+        border-radius: .25rem;
+    }
+    .notfoundcate{
+        font-size: 25px; 
+        font-weight: 600; 
+        padding-top: 50%  ;
+     }
+     .notfoundepg{
+        font-size: 25px;
+        font-weight: 600;
+        justify-content: center;
+        justify-items: center;
+        justify-self: center;
+        margin-top: 25%  ;
+     }
+
+       /* Flowplayer CSS  */
+/* 
+    .livePlayer{
+        background-color: black;
+        height: 394px;
+    } */
+
+    /* =============== Live Screen Desgin End =============== */
+        
+}
+ 
+     /* =============== 1900 Screen Resolution =============== */
+ 
+ @media only screen and  (min-width: 1900px) {
+ 
+     /* =============== Live Screen Desgin Start =============== */
+ 
+     .headerMain .row{
+         padding: 10px 0px 4px 0px !important;
+     }
+     /* .liveInLogo img {
+         width: 28%;
+         backdrop-filter: blur(1px);
+     } */
+     .liveInsearch {
+         text-align: end;
+     }
+     .liveInsearch img {
+        width: 90%;
+        margin-top: 12px;
+     }
+     .livecenterSearch img[alt=searchBack] {
+         width: 6%;
+     }
+     .livecenterSearch img[alt=centerSearch] {
+         width: 4%;
+     }
+     .livecenterSearch input[type=search] {
+         padding: 25px  ;
+         font-size: 22px;
+         width: 89%;
+         background: transparent;
+         border: none;
+         color: white;
+     }
+     .liveInSet {
+         text-align: center;
+     }
+     .liveInSet img {
+        width: 32%;
+        margin-top: 12px;
+     }
+     .liveInTime span {
+         font-size: 30px;
+         line-height: 90px;
+     }
+     .liveInTime {
+         text-align: end;
+     }
+     .liveInName span {
+         font-size: 30px;
+         line-height: 3;
+         padding: 5px 10px  ;
+         border-left: 2px solid white;
+     }
+     .liveInName {
+         text-align: start;
+     }
+     .liveInBack img {
+         width: 30%;
+         margin-top: 12px  ;
+     }
+     .liveInBack {
+         /* text-align: start;
+         padding-left: 10px  ; */
+     }
+     .liveFrameMainscroll{   
+        height: calc(100% - 115.33px);
+     }
+     .pop_cateScroll {
+        height: calc(100% - 188.66px);
+     }
+ 
+     .liveFrameBody, .liveFrameHeader{
+         background: black;
+         border-bottom: 1px solid #383838;
+     }
+     .liveFrameHeader .row{
+         background-color: black;
+         padding: 20px 0px  ;
+     }
+     .liveFrameLeftAre img, .liveFrameRightAre img{
+         width: 40%;
+         cursor: pointer;
+     }
+     .liveFrameName span{
+         font-size: 28px;
+         font-weight: bold;
+     }
+     .liveFrameBody .row{
+         /* background-color: #000000c2; */
+         padding: 7px 0px  ;
+     }
+     .liveFrameCate span{
+         font-size: 26px;
+         line-height: 75px;
+     }
+     .liveFrameImg img{
+         width: 84%;
+         height: 67px;
+     }
+     .liveFrameChanName{
+         text-align: left;
+         line-height: 1.3;
+     }
+     .liveFramedel{
+        text-align: left;
+        font-size: 24px;
+        padding-top: 21px;
+    }
+     .liveFrameChanName span{
+         padding-left: 8px  ;
+         font-size: 26px;
+         text-transform: uppercase;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         display: -webkit-inline-box;
+         -webkit-line-clamp: 1;
+         -webkit-box-orient: vertical;
+     }
+     .liveFrameChanName label{
+         padding-left: 8px  ;
+         font-size: 22px;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         white-space: nowrap;
+         padding-right: 10px  ;
+         -webkit-line-clamp: 1;
+         -webkit-box-orient: vertical;
+     }
+     .livePlayerRightSide{
+         background-image: url(../images/forLiveplay.png);
+         background-size: 100%;
+     }
+     .livePlayer img{
+         width: 100%;
+     }
+     .liveInfo{
+         padding: 110px 0px 0px 0px  ;
+     }
+     .liveInfoSub .liveHeading{
+         padding-bottom: 20px  ;
+     }
+     .liveInfoSub .liveHeading span{   
+         padding: 10px 22px  ;
+         background: #31707e;
+         font-size: 28px;
+     }
+     .liveInfoSub .liveChannelName, .liveInfoSub .liveChannelProg{
+         padding-bottom: 8px  ;
+     }
+     .liveInfoSub .liveChannelName span{
+         font-size: 28px;
+         font-weight: bold;
+         text-transform: uppercase;
+     }
+     .liveInfoSub .liveChannelProg span{
+         font-size: 30px;
+         color: #31707e;
+     }
+     .liveInfoSub .liveProgTime span{
+         font-size: 29px;
+     }
+     
+     .liveEPGMaindiv .row{
+         margin: 20px 0px 0px 0px;
+         text-align: initial;
+         background-color: black;
+     }
+     .liveEPGdiv{
+        height: calc(100% - 579.58px );
+     }
+     .liveEPGdiv center{
+        width: 740px;
+    }
+     .liveEpgTime span{
+         font-size: 25px;
+         color: #ffffff;
+         padding-left: 5px  ;
+     }
+     .liveEpgTime p{
+         font-size: 23px;
+         color: #6c6c6c;
+         margin-bottom: 10px  ;
+         padding-left: 7px  ;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         display: -webkit-box;
+         -webkit-line-clamp: 2;
+         -webkit-box-orient: vertical;
+     }
+     .livecateSearch input {
+         width: 100%;
+         padding: 18px 10px 18px 60px  ;
+         background: #292828;
+         outline: none;
+         font-size: 25px;
+         border: 0;
+     }
+     .livecateSearch i {
+         position: absolute;
+         font-size: 28px;
+         left: 32px  ;
+         top: 137px  ;
+     }
+     .liveCateList span {
+         padding-left: 25px  ;
+         font-size: 26px;
+     }
+     .cateNum div {
+         font-size: 26px;
+     }
+     .cateNum {
+         padding-right: 2%  ;
+     }
+     .cateList {
+         width: 100%;
+         font-size: 28px;
+         outline: none;
+         padding-top: 24px  ;
+         padding-bottom: 24px  ;
+         margin: 0px  ;
+         border-bottom: 1px solid #292828;
+         text-transform: uppercase;
+     }
+ 
+     .linear-background-cate {
+         animation-duration: 1s;
+         animation-fill-mode: forwards;
+         animation-iteration-count: infinite;
+         animation-name: placeHolderShimmer;
+         animation-timing-function: linear;
+         background: #010106;
+         background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+         background-size: 1000px 104px;
+         height: 70px;
+         position: relative;
+         overflow: hidden;
+         width: 100%;
+     }
+ 
+     .linear-background {
+         animation-duration: 1s;
+         animation-fill-mode: forwards;
+         animation-iteration-count: infinite;
+         animation-name: placeHolderShimmer;
+         animation-timing-function: linear;
+         background: #010106;
+         background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+         background-size: 1000px 104px;
+         height: 70px;
+         position: relative;
+         overflow: hidden;
+         width: 100%;
+     }
+ 
+     .inter-crop {
+         background: #010106;
+         width: 20px;
+         height: 100%;
+         position: absolute;
+         top: 0;
+         left: 100px;
+     }
+ 
+     .inter-right--top {
+         background: #010106;
+         width: 100%;
+         height: 20px;
+         position: absolute;
+         top: 20px;
+         left: 100px;
+     }
+ 
+     .totalcountare img{
+         width: 30%  ;
+     }
+ 
+     .progress {
+         display: flex;
+         height: 2px  ;
+         overflow: hidden;
+         font-size: 0.75rem;
+         background-color: #e9ecef;
+         border-radius: .25rem;
+     }
+     .notfoundcate{
+        font-size: 28px; 
+        font-weight: 600; 
+        padding-top: 50%  ;
+     }
+     .notfoundepg{
+        font-size: 28px;
+        font-weight: 600;
+        justify-content: center;
+        justify-items: center;
+        justify-self: center;
+        margin-top: 25%  ;
+     }
+
+     .liveInsearch{
+         margin-left: 18px;
+     }
+
+    .epgName span {
+        font-size: 30px;
+        line-height: 90px;
+        font-weight: 500;
+    }
+
+     /* =============== Live Screen Desgin End =============== */
+     
+ }
+
+
+    /* =============== 2100 Screen Resolution =============== */
+ 
+@media only screen and  (min-width: 2100px) {
+ 
+    /* =============== Live Screen Desgin Start =============== */
+
+    .headerMain .row{
+        padding: 2px 0px 3px 0px  ;
+    }
+    /* .liveInLogo img {
+        width: 28%;
+        backdrop-filter: blur(1px);
+    } */
+    .liveInsearch {
+        text-align: end;
+    }
+    .liveInsearch img {
+        /* width: 32%;
+        margin-top: 20px  ; */
+    }
+    .livecenterSearch img[alt=searchBack] {
+        width: 6%;
+    }
+    .livecenterSearch img[alt=centerSearch] {
+        width: 4%;
+    }
+    .livecenterSearch input[type=search] {
+        padding: 25px  ;
+        font-size: 22px;
+        width: 89%;
+        background: transparent;
+        border: none;
+        color: white;
+    }
+    .liveInSet {
+        text-align: center;
+    }
+    .liveInSet img {
+        /* width: 32%;
+        margin-top: 20px  ; */
+    }
+    .liveInTime span {
+        font-size: 30px;
+        line-height: 2.6;
+    }
+    .liveInTime {
+        text-align: end;
+    }
+    .liveInName span {
+        font-size: 30px;
+        line-height: 3;
+        padding: 5px 10px  ;
+        border-left: 2px solid white;
+    }
+    .liveInName {
+        text-align: start;
+    }
+    .liveInBack img {
+        /* width: 30%;
+        margin-top: 20px  ; */
+    }
+    .liveInBack {
+        /* text-align: start;
+        padding-left: 10px  ; */
+    }
+    .liveFrameMainscroll{   
+        height: calc(100% - 115.97px);
+    }
+    .pop_cateScroll {
+        height: calc(100% - 193.45px);
+    }
+
+    .liveFrameBody, .liveFrameHeader{
+        background: black;
+        border-bottom: 1px solid #383838;
+    }
+    .liveFrameHeader .row{
+        background-color: black;
+        padding: 20px 0px  ;
+    }
+    .liveFrameLeftAre img, .liveFrameRightAre img{
+        width: 40%;
+        cursor: pointer;
+    }
+    .liveFrameName span{
+        font-size: 28px;
+        font-weight: bold;
+    }
+    .liveFrameBody .row{
+        /* background-color: #000000c2; */
+        padding: 7px 0px  ;
+    }
+    .liveFrameCate span{
+        font-size: 26px;
+        line-height: 75px;
+    }
+    .liveFrameImg img{
+        width: 84%;
+        height: 67px;
+    }
+    .liveFrameChanName{
+        text-align: left;
+        line-height: 1.3;
+    }
+    .liveFramedel{
+         
+    }
+    .liveFrameChanName span{
+        padding-left: 8px  ;
+        font-size: 26px;
+        text-transform: uppercase;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-inline-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    .liveFrameChanName label{
+        padding-left: 8px  ;
+        font-size: 22px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-right: 10px  ;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    .livePlayerRightSide{
+        background-image: url(../images/forLiveplay.png);
+        background-size: 100%;
+    }
+    .livePlayer img{
+        width: 100%;
+    }
+    .liveInfo{
+        padding: 110px 0px 0px 0px  ;
+    }
+    .liveInfoSub .liveHeading{
+        padding-bottom: 20px  ;
+    }
+    .liveInfoSub .liveHeading span{   
+        padding: 10px 22px  ;
+        background: #31707e;
+        font-size: 28px;
+    }
+    .liveInfoSub .liveChannelName, .liveInfoSub .liveChannelProg{
+        padding-bottom: 8px  ;
+    }
+    .liveInfoSub .liveChannelName span{
+        font-size: 28px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .liveInfoSub .liveChannelProg span{
+        font-size: 30px;
+        color: #31707e;
+    }
+    .liveInfoSub .liveProgTime span{
+        font-size: 29px;
+    }
+    
+    .liveEPGMaindiv .row{
+        margin: 20px 20px 0px 0px  ;
+        text-align: initial;
+        background-color: black;
+    }
+    .liveEPGdiv{
+        height: calc(100% - 636.46px );
+     }
+     .liveEPGdiv center{
+        width: 850px;
+    }
+    .liveEpgTime span{
+        font-size: 25px;
+        color: #ffffff;
+        padding-left: 5px  ;
+    }
+    .liveEpgTime p{
+        font-size: 23px;
+        color: #6c6c6c;
+        margin-bottom: 10px  ;
+        padding-left: 7px  ;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    .livecateSearch input {
+        width: 100%;
+        padding: 18px 10px 18px 60px  ;
+        background: #292828;
+        outline: none;
+        font-size: 25px;
+        border: 0;
+    }
+    .livecateSearch i {
+        position: absolute;
+        font-size: 28px;
+        left: 32px  ;
+        top: 137px  ;
+    }
+    .liveCateList span {
+        padding-left: 25px  ;
+        font-size: 26px;
+    }
+    .cateNum div {
+        font-size: 26px;
+    }
+    .cateNum {
+        padding-right: 2%  ;
+    }
+    .cateList {
+        width: 100%;
+        font-size: 28px;
+        outline: none;
+        padding-top: 24px  ;
+        padding-bottom: 24px  ;
+        margin: 0px  ;
+        border-bottom: 1px solid #292828;
+        text-transform: uppercase;
+    }
+
+    .linear-background-cate {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
+        background: #010106;
+        background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+        background-size: 1000px 104px;
+        height: 70px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .linear-background {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
+        background: #010106;
+        background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+        background-size: 1000px 104px;
+        height: 70px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .inter-crop {
+        background: #010106;
+        width: 20px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 100px;
+    }
+
+    .inter-right--top {
+        background: #010106;
+        width: 100%;
+        height: 20px;
+        position: absolute;
+        top: 20px;
+        left: 100px;
+    }
+
+    .totalcountare img{
+        width: 30%  ;
+    }
+
+    .progress {
+        display: flex;
+        height: 2px  ;
+        overflow: hidden;
+        font-size: 0.75rem;
+        background-color: #e9ecef;
+        border-radius: .25rem;
+    }
+    .notfoundcate{
+        font-size: 32px; 
+        font-weight: 600; 
+        padding-top: 50%  ;
+     }
+     .notfoundepg{
+        font-size: 32px;
+        font-weight: 600;
+        justify-content: center;
+        justify-items: center;
+        justify-self: center;
+        margin-top: 25%  ;
+     }
+
+     /* flowplayer CSS  */
+
+    /* .livePlayer {
+        background-color: black;
+        height: 478px;
+    } */
+
+    /* =============== Live Screen Desgin End =============== */
+    
+}
+
+
+    /* =============== 2800 Screen Resolution =============== */
+ 
+@media only screen and  (min-width: 2800px) {
+
+    /* =============== Live Screen Desgin Start =============== */
+
+    .headerMain .row{
+        padding: 0px 0px 6px 0px  ;
+    }
+    /* .liveInLogo img {
+        width: 28%;
+        backdrop-filter: blur(1px);
+    } */
+    .liveInsearch {
+        text-align: end;
+        margin-left: 50px;
+    }
+    .liveInsearch img {
+        width: 100%;
+        margin-top: 30px;
+    }
+    .livecenterSearch img[alt=searchBack] {
+        width: 4%;
+    }
+    .livecenterSearch img[alt=centerSearch] {
+        width: 4%;
+    }
+    .livecenterSearch input[type=search] {
+        padding: 25px  ;
+        font-size: 40px;
+        width: 89%;
+        background: transparent;
+        border: none;
+        color: white;
+    }
+    .liveInSet {
+        text-align: center;
+    }
+    .liveInSet img {
+    }
+    .liveInTime span {
+        font-size: 44px;
+        line-height: 3;
+    }
+    .liveInTime {
+        text-align: end;
+        padding-right: 0px;
+    }
+    .liveInName span {
+        font-size: 50px;
+        line-height: 2.5;
+        padding: 5px 10px  ;
+        border-left: 2px solid white;
+    }
+    .liveInName {
+        text-align: start;
+    }
+    .liveInBack img {
+        width: 32%;
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+    .liveInBack {
+    }
+    .liveFrameMainscroll{   
+        height: calc(100% - 158px);
+    }
+    .pop_cateScroll {
+        height: calc(100% - 262px);
+    }
+
+    .liveFrameBody, .liveFrameHeader{
+        background: black;
+        border-bottom: 1px solid #383838;
+    }
+    .liveFrameHeader .row{
+        background-color: black;
+        padding: 20px 0px  ;
+    }
+    .liveFrameLeftAre img, .liveFrameRightAre img{
+        width: 40%;
+        cursor: pointer;
+    }
+    .liveFrameName span{
+        font-size: 28px;
+        font-weight: bold;
+    }
+    .liveFrameBody .row{
+        padding: 7px 0px  ;
+    }
+    .liveFrameCate span{
+        font-size: 26px;
+        line-height: 75px;
+    }
+    .liveFrameImg img{
+        width: 84%;
+        height: 99px;
+    }
+    .liveFrameChanName{
+        text-align: left;
+        line-height: 1.3;
+    }
+    .liveFramedel{
+         
+    }
+    .liveFrameChanName span{
+        padding-left: 8px  ;
+        font-size: 36px;
+        text-transform: uppercase;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-inline-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    .liveFrameChanName label{
+        padding-left: 8px  ;
+        font-size: 34px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-right: 10px  ;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    .livePlayerRightSide{
+        background-image: url(../images/forLiveplay.png);
+        background-size: 100%;
+    }
+    .livePlayer img{
+        width: 100%;
+    }
+    .liveInfo{
+        padding: 110px 0px 0px 0px  ;
+    }
+    .liveInfoSub .liveHeading{
+        padding-bottom: 20px  ;
+    }
+    .liveInfoSub .liveHeading span{   
+        padding: 10px 22px  ;
+        background: #31707e;
+        font-size: 28px;
+    }
+    .liveInfoSub .liveChannelName, .liveInfoSub .liveChannelProg{
+        padding-bottom: 8px  ;
+    }
+    .liveInfoSub .liveChannelName span{
+        font-size: 28px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .liveInfoSub .liveChannelProg span{
+        font-size: 30px;
+        color: #31707e;
+    }
+    .liveInfoSub .liveProgTime span{
+        font-size: 29px;
+    }
+    
+    .liveEPGMaindiv .row{
+        margin: 20px 20px 0px 0px  ;
+        text-align: initial;
+        background-color: black;
+    }
+    .liveEPGdiv{
+        height: calc(100% - 837.25px );
+     }
+     .liveEPGdiv center{
+        width: 1150px;
+    }
+    .liveEpgTime span{
+        font-size: 30px;
+        color: #ffffff;
+        padding-left: 5px  ;
+    }
+    .liveEpgTime p{
+        font-size: 26px;
+        color: #6c6c6c;
+        margin-bottom: 10px  ;
+        padding-left: 7px  ;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    .livecateSearch input {
+        width: 100%;
+        padding: 18px 10px 18px 60px  ;
+        background: #292828;
+        outline: none;
+        font-size: 25px;
+        border: 0;
+    }
+    .livecateSearch i {
+        position: absolute;
+        font-size: 38px;
+        left: 53px  ;
+        top: 196px  ;
+    }
+    .liveCateList span {
+        padding-left: 25px  ;
+        font-size: 36px;
+    }
+    .cateNum div {
+        font-size: 36px;
+    }
+    .cateNum {
+        padding-right: 2%  ;
+    }
+    .cateList {
+        width: 100%;
+        font-size: 28px;
+        outline: none;
+        padding-top: 24px  ;
+        padding-bottom: 24px  ;
+        margin: 0px  ;
+        border-bottom: 1px solid #292828;
+        text-transform: uppercase;
+    }
+
+    .linear-background-cate {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
+        background: #010106;
+        background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+        background-size: 1000px 104px;
+        height: 70px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .linear-background {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
+        background: #010106;
+        background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+        background-size: 1000px 104px;
+        height: 70px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .inter-crop {
+        background: #010106;
+        width: 20px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 100px;
+    }
+
+    .inter-right--top {
+        background: #010106;
+        width: 100%;
+        height: 20px;
+        position: absolute;
+        top: 20px;
+        left: 100px;
+    }
+
+    .totalcountare img{
+        width: 30%  ;
+    }
+
+    .progress {
+        display: flex;
+        height: 4px  ;
+        overflow: hidden;
+        font-size: 0.75rem;
+        background-color: #e9ecef;
+        border-radius: .25rem;
+    }
+    .notfoundcate{
+        font-size: 40px; 
+        font-weight: 600; 
+        padding-top: 50%  ;
+     }
+     .notfoundepg{
+        font-size: 40px;
+        font-weight: 600;
+        justify-content: center;
+        justify-items: center;
+        justify-self: center;
+        margin-top: 25%  ;
+     }
+     
+
+    /* =============== Live Screen Desgin End =============== */
+    
+}
+
+    /* =============== 4000 Screen Resolution =============== */
+ 
+@media only screen and  (min-width: 4000px) {
+
+    /* =============== Live Screen Desgin Start =============== */
+
+    .headerMain .row{
+        padding: 10px 0px 16px 0px  ;
+    }
+    /* .liveInLogo img {
+        width: 28%;
+        backdrop-filter: blur(1px);
+    } */
+    .liveInsearch {
+        text-align: end;
+    }
+    .liveInsearch img {
+    }
+    .livecenterSearch img[alt=searchBack] {
+        width: 6%;
+    }
+    .livecenterSearch img[alt=centerSearch] {
+        width: 4%;
+    }
+    .livecenterSearch input[type=search] {
+        padding: 25px  ;
+        font-size: 22px;
+        width: 89%;
+        background: transparent;
+        border: none;
+        color: white;
+    }
+    .liveInSet {
+        text-align: center;
+    }
+    .liveInSet img {
+        /* width: 28%;
+        margin-top: 30px  ; */
+    }
+    .liveInTime span {
+        font-size: 44px;
+        line-height: 3;
+    }
+    .liveInTime {
+        text-align: end;
+    }
+    .liveInName span {
+        font-size: 50px;
+        line-height: 2.5;
+        padding: 5px 10px  ;
+        border-left: 2px solid white;
+    }
+    .liveInName {
+        text-align: start;
+    }
+    .liveInBack img {
+        /* width: 32%;
+        margin-top: 27px  ; */
+    }
+    .liveInBack {
+        /* text-align: start;
+        padding-left: 10px  ; */ 
+    }
+    .liveFrameMainscroll{   
+        height: calc(100% - 158px);
+    }
+    .pop_cateScroll {
+        height: calc(100% - 262px);
+    }
+
+    .liveFrameBody, .liveFrameHeader{
+        background: black;
+        border-bottom: 1px solid #383838;
+    }
+    .liveFrameHeader .row{
+        background-color: black;
+        padding: 20px 0px  ;
+    }
+    .liveFrameLeftAre img, .liveFrameRightAre img{
+        width: 40%;
+        cursor: pointer;
+    }
+    .liveFrameName span{
+        font-size: 28px;
+        font-weight: bold;
+    }
+    .liveFrameBody .row{
+        /* background-color: #000000c2; */
+        padding: 7px 0px  ;
+    }
+    .liveFrameCate span{
+        font-size: 26px;
+        line-height: 75px;
+    }
+    .liveFrameImg img{
+        width: 84%;
+        height: 99px;
+    }
+    .liveFrameChanName{
+        text-align: left;
+        line-height: 1.3;
+    }
+    .liveFramedel{
+         
+    }
+    .liveFrameChanName span{
+        padding-left: 8px  ;
+        font-size: 36px;
+        text-transform: uppercase;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-inline-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    .liveFrameChanName label{
+        padding-left: 8px  ;
+        font-size: 34px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-right: 10px  ;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    .livePlayerRightSide{
+        background-image: url(../images/forLiveplay.png);
+        background-size: 100%;
+    }
+    .livePlayer img{
+        width: 100%;
+    }
+    .liveInfo{
+        padding: 110px 0px 0px 0px  ;
+    }
+    .liveInfoSub .liveHeading{
+        padding-bottom: 20px  ;
+    }
+    .liveInfoSub .liveHeading span{   
+        padding: 10px 22px  ;
+        background: #31707e;
+        font-size: 28px;
+    }
+    .liveInfoSub .liveChannelName, .liveInfoSub .liveChannelProg{
+        padding-bottom: 8px  ;
+    }
+    .liveInfoSub .liveChannelName span{
+        font-size: 28px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .liveInfoSub .liveChannelProg span{
+        font-size: 30px;
+        color: #31707e;
+    }
+    .liveInfoSub .liveProgTime span{
+        font-size: 29px;
+    }
+    
+    .liveEPGMaindiv .row{
+        margin: 20px 20px 0px 0px  ;
+        text-align: initial;
+        background-color: black;
+    }
+    .liveEPGdiv{
+        height: calc(100% - 837.25px );
+     }
+     .liveEPGdiv center{
+        width: 1150px;
+    }
+    .liveEpgTime span{
+        font-size: 30px;
+        color: #ffffff;
+        padding-left: 5px  ;
+    }
+    .liveEpgTime p{
+        font-size: 26px;
+        color: #6c6c6c;
+        margin-bottom: 10px  ;
+        padding-left: 7px  ;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    .livecateSearch input {
+        width: 100%;
+        padding: 18px 10px 18px 60px  ;
+        background: #292828;
+        outline: none;
+        font-size: 25px;
+        border: 0;
+    }
+    .livecateSearch i {
+        position: absolute;
+        font-size: 38px;
+        left: 53px  ;
+        top: 196px  ;
+    }
+    .liveCateList span {
+        padding-left: 25px  ;
+        font-size: 36px;
+    }
+    .cateNum div {
+        font-size: 36px;
+    }
+    .cateNum {
+        padding-right: 2%  ;
+    }
+    .cateList {
+        width: 100%;
+        font-size: 28px;
+        outline: none;
+        padding-top: 24px  ;
+        padding-bottom: 24px  ;
+        margin: 0px  ;
+        border-bottom: 1px solid #292828;
+        text-transform: uppercase;
+    }
+
+    .linear-background-cate {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
+        background: #010106;
+        background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+        background-size: 1000px 104px;
+        height: 70px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .linear-background {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
+        background: #010106;
+        background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+        background-size: 1000px 104px;
+        height: 70px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .inter-crop {
+        background: #010106;
+        width: 20px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 100px;
+    }
+
+    .inter-right--top {
+        background: #010106;
+        width: 100%;
+        height: 20px;
+        position: absolute;
+        top: 20px;
+        left: 100px;
+    }
+
+    .totalcountare img{
+        width: 30%  ;
+    }
+
+    .progress {
+        display: flex;
+        height: 4px  ;
+        overflow: hidden;
+        font-size: 0.75rem;
+        background-color: #e9ecef;
+        border-radius: .25rem;
+    }
+    .notfoundcate{
+        font-size: 40px; 
+        font-weight: 600; 
+        padding-top: 50%  ;
+     }
+     .notfoundepg{
+        font-size: 40px;
+        font-weight: 600;
+        justify-content: center;
+        justify-items: center;
+        justify-self: center;
+        margin-top: 25%  ;
+     }
+
+      /* flowplayer CSS  */
+
+    /* .livePlayer {
+        background-color: black;
+        height: 646px;
+    } */
+
+    /* =============== Live Screen Desgin End =============== */
+    
+}
+
+    /* =============== 5000 Screen Resolution =============== */
+ 
+@media only screen and  (min-width: 5000px) {
+
+    /* =============== Live Screen Desgin Start =============== */
+
+    .headerMain .row{
+        padding: 10px 0px 16px 0px  ;
+    }
+    /* .liveInLogo img {
+        width: 80%;
+        backdrop-filter: blur(1px);
+    } */
+    .liveInsearch {
+        text-align: end;
+    }
+    .liveInsearch img {
+        /* width: 28%;
+        margin-top: 30px  ; */
+    }
+    .livecenterSearch img[alt=searchBack] {
+        width: 6%;
+    }
+    .livecenterSearch img[alt=centerSearch] {
+        width: 4%;
+    }
+    .livecenterSearch input[type=search] {
+        padding: 25px  ;
+        font-size: 22px;
+        width: 89%;
+        background: transparent;
+        border: none;
+        color: white;
+    }
+    .liveInSet {
+        text-align: center;
+    }
+    .liveInSet img {
+        /* width: 28%;
+        margin-top: 30px  ; */
+    }
+    .liveInTime span {
+        font-size: 44px;
+        line-height: 3;
+    }
+    .liveInTime {
+        text-align: end;
+    }
+    .liveInName span {
+        font-size: 50px;
+        line-height: 2.5;
+        padding: 5px 10px  ;
+        border-left: 2px solid white;
+    }
+    .liveInName {
+        text-align: start;
+    }
+    .liveInBack img {
+        /* width: 32%;
+        margin-top: 27px  ; */
+    }
+    .liveInBack {
+        /* text-align: start;
+        padding-left: 10px  ; */ 
+    }
+    .liveFrameMainscroll{   
+        height: calc(100% - 158px);
+    }
+    .pop_cateScroll {
+        height: calc(100% - 262px);
+    }
+
+    .liveFrameBody, .liveFrameHeader{
+        background: black;
+        border-bottom: 1px solid #383838;
+    }
+    .liveFrameHeader .row{
+        background-color: black;
+        padding: 20px 0px  ;
+    }
+    .liveFrameLeftAre img, .liveFrameRightAre img{
+        width: 40%;
+        cursor: pointer;
+    }
+    .liveFrameName span{
+        font-size: 28px;
+        font-weight: bold;
+    }
+    .liveFrameBody .row{
+        /* background-color: #000000c2; */
+        padding: 7px 0px  ;
+    }
+    .liveFrameCate span{
+        font-size: 26px;
+        line-height: 75px;
+    }
+    .liveFrameImg img{
+        width: 84%;
+        height: 99px;
+    }
+    .liveFrameChanName{
+        text-align: left;
+        line-height: 1.3;
+    }
+    .liveFramedel{
+         
+    }
+    .liveFrameChanName span{
+        padding-left: 8px  ;
+        font-size: 36px;
+        text-transform: uppercase;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-inline-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    .liveFrameChanName label{
+        padding-left: 8px  ;
+        font-size: 34px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-right: 10px  ;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    .livePlayerRightSide{
+        background-image: url(../images/forLiveplay.png);
+        background-size: 100%;
+    }
+    .livePlayer img{
+        width: 100%;
+    }
+    .liveInfo{
+        padding: 110px 0px 0px 0px  ;
+    }
+    .liveInfoSub .liveHeading{
+        padding-bottom: 20px  ;
+    }
+    .liveInfoSub .liveHeading span{   
+        padding: 10px 22px  ;
+        background: #31707e;
+        font-size: 28px;
+    }
+    .liveInfoSub .liveChannelName, .liveInfoSub .liveChannelProg{
+        padding-bottom: 8px  ;
+    }
+    .liveInfoSub .liveChannelName span{
+        font-size: 28px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .liveInfoSub .liveChannelProg span{
+        font-size: 30px;
+        color: #31707e;
+    }
+    .liveInfoSub .liveProgTime span{
+        font-size: 29px;
+    }
+    
+    .liveEPGMaindiv .row{
+        margin: 20px 20px 0px 0px  ;
+        text-align: initial;
+        background-color: black;
+    }
+    .liveEPGdiv{
+        height: calc(100% - 837.25px );
+     }
+     .liveEPGdiv center{
+        width: 1150px;
+    }
+    .liveEpgTime span{
+        font-size: 30px;
+        color: #ffffff;
+        padding-left: 5px  ;
+    }
+    .liveEpgTime p{
+        font-size: 26px;
+        color: #6c6c6c;
+        margin-bottom: 10px  ;
+        padding-left: 7px  ;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    .livecateSearch input {
+        width: 100%;
+        padding: 18px 10px 18px 60px  ;
+        background: #292828;
+        outline: none;
+        font-size: 25px;
+        border: 0;
+    }
+    .livecateSearch i {
+        position: absolute;
+        font-size: 38px;
+        left: 53px  ;
+        top: 196px  ;
+    }
+    .liveCateList span {
+        padding-left: 25px  ;
+        font-size: 36px;
+    }
+    .cateNum div {
+        font-size: 36px;
+    }
+    .cateNum {
+        padding-right: 2%  ;
+    }
+    .cateList {
+        width: 100%;
+        font-size: 28px;
+        outline: none;
+        padding-top: 24px  ;
+        padding-bottom: 24px  ;
+        margin: 0px  ;
+        border-bottom: 1px solid #292828;
+        text-transform: uppercase;
+    }
+
+    .linear-background-cate {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
+        background: #010106;
+        background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+        background-size: 1000px 104px;
+        height: 70px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .linear-background {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
+        background: #010106;
+        background: linear-gradient(to right, rgb(30 35 77 / 70%) 8%, rgb(30 35 77 / 50%) 18%, rgb(30 35 77 / 50%) 33%);
+        background-size: 1000px 104px;
+        height: 70px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .inter-crop {
+        background: #010106;
+        width: 20px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 100px;
+    }
+
+    .inter-right--top {
+        background: #010106;
+        width: 100%;
+        height: 20px;
+        position: absolute;
+        top: 20px;
+        left: 100px;
+    }
+
+    .totalcountare img{
+        width: 30%  ;
+    }
+
+    .progress {
+        display: flex;
+        height: 4px  ;
+        overflow: hidden;
+        font-size: 0.75rem;
+        background-color: #e9ecef;
+        border-radius: .25rem;
+    }
+    .notfoundcate{
+        font-size: 40px; 
+        font-weight: 600; 
+        padding-top: 50%  ;
+     }
+     .notfoundepg{
+        font-size: 40px;
+        font-weight: 600;
+        justify-content: center;
+        justify-items: center;
+        justify-self: center;
+        margin-top: 25%  ;
+     }
+
+      /* flowplayer CSS  */
+
+    /* .livePlayer {
+        background-color: black;
+        height: 646px;
+    } */
+
+    /* =============== Live Screen Desgin End =============== */
+    
+}

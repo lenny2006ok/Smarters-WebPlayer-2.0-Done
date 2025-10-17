@@ -1,0 +1,2340 @@
+/* =============== 700 Screen Resolution =============== */
+
+@media only screen and  (min-width: 700px) {
+
+    /* =============== Movie Screen Desgin Start =============== */
+
+    .pop_live_header .row{
+        padding: 16px 10px 9px 0px !important;
+    }
+    .live_header .row{
+        padding: 17px 10px 14px 0px !important;
+    }
+    .liveSet {
+        margin-top: 2px !important;
+    }
+    .live_header{
+        z-index: 111111;
+        text-transform: uppercase;
+    }
+    /* .liveLogos img{
+        width: 82%;
+        backdrop-filter: brightness(0.5);    
+    } */
+    .liveMenus img{
+        width: 100%;
+    }
+    .pop_movieFullDiv{
+        position: fixed;
+        width: 25%;
+        background-color: black;
+    }
+    .pop_moviecateScroll{
+        height: calc(100% - 97.33px);
+    }
+    .centerSearch{
+        line-height: 24px;
+    }
+    .centerSearch img[alt=searchBack] {
+        width: 5%;
+    }
+    .centerSearch img[alt=centerSearch] {
+        width: 5%;
+    }
+    .centerSearch input[type=search] {
+        padding: 0px !important;
+        font-size: 14px;
+        width: 80%;
+        background: transparent;
+        border: none;
+        color: white;
+    }
+    .live_body{
+        padding: 5px 10px 0px 10px !important;
+        height: calc(100% - 57px);  
+    }
+    .live_body .col-lg-3 {
+        width: 20% !important;
+    }
+    .liveback a[title=Menu] img, .liveback a[title=Back] img {
+        width: 70%;
+    }
+    .liveMenu a[title=Close] img{
+        width: 100%;
+    }
+    .liveSet a[title=Search] img, .liveSet a[title=Settings] img{
+        width: 45%;
+    }
+    .liveHead{
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .liveShowImages img{
+        width: 100%;
+        height: 110px;
+        bottom: 35px;
+    }
+    .livebacks{
+        margin-top: 0px !important;
+    } 
+    .liveMenus{
+        margin-top: 0px !important;
+    }
+    .livebacks img{
+        width: 82%;
+        margin-top: 4px !important;
+    }
+    .liveShowImages{  
+        border: 3px solid #ff020200;
+        margin-bottom: 8px !important;
+        width: 96%;
+        height: 115px;
+    }
+    .rightCategoryDiv{
+        background-color: black;
+    }
+    .cateSearch{
+        text-align: initial;
+    }
+    .cateSearch input{
+        width: 100%;
+        padding: 10px 10px 10px 20px !important;
+        background: #292828;
+        outline: none;
+        font-size: 10px;
+        border: 0;
+    }
+    .cateSearch i{    
+        font-size: 12px;
+        position: absolute;
+        left: 5px;
+        top: 73px;
+    }
+    .cateList{
+        width: 100%;
+        font-size: 28px;
+        outline: none;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+    }
+    .cateListNum{
+        width: 100%;
+        outline: none;
+        padding-top: 12px !IMPORTANT;
+        padding-bottom: 12px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+    }
+    
+    .cateList:hover, .cateList:hover .cateNum{
+        background-color: #21456b;
+    }
+    .hoverOver{
+        top: 69% !important;
+        position: relative;
+        left: 0px;
+        font-size: 8px;
+        color: transparent;
+        font-weight: 700;
+        z-index: 1111;
+    }
+    .hoverOvers{
+        font-size: 5px;
+        color: #ffffff;
+        position: relative;
+        top: -9px;
+        left: -20px;
+        background: #1b5bba;
+        border-radius: 2px;
+        padding: 2px 3px !important;
+        font-weight: 700;
+        z-index: 11111111;
+    }
+    .contiwatcdel {
+        font-size: 5px;
+        color: #ffffff;
+        position: relative;
+        top: -9px;
+        left: 20px;
+        background: #1b5bba;
+        border-radius: 2px;
+        padding: 2px 3px !important;
+        font-weight: 700;
+        z-index: 11111111;
+        opacity: 0;
+        cursor: pointer;
+    }
+    .forcenterSearch{
+        position: relative;
+        left: -155px;
+    }
+
+    .linear-background-movie-cate {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
+        background: #010106;
+        background: linear-gradient(to right, rgb(28 37 54 / 70%) 8%, rgb(28 37 54 / 50%) 18%, rgb(28 37 54 / 50%) 33%);
+        /* background: linear-gradient(to right, rgb(255 255 255 / 50%) 8%, rgb(255 255 255 / 65%) 18%, rgb(255 255 255 / 50%) 33%); */
+        background-size: 1000px 104px;
+        height: 31px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .cwalldelbtn {
+        float: right;
+        margin-top: 0px;
+        margin-right: 0px;
+    }
+    .cwalldelbtn i {
+        font-size: 22px;
+        padding-top: 4px;
+        padding-right: 8px;
+    }
+    
+    /* =============== Movie Screen Desgin End =============== */
+        
+}
+
+/* =============== 762 Screen Resolution =============== */
+
+@media only screen and  (min-width: 762px) {
+
+    /* =============== Movie Screen Desgin Start =============== */
+
+    .pop_live_header .row{
+        padding: 16px 10px 9px 0px !important;
+    }
+    .live_header .row{
+        padding: 17px 10px 14px 0px !important;
+    }
+    .liveSet {
+        margin-top: 2px !important;
+    }
+    .live_header{
+        z-index: 111111;
+        text-transform: uppercase;
+    }
+    /* .liveLogos img{
+        width: 82%;
+        backdrop-filter: brightness(0.5);    
+    } */
+    .liveMenus img{
+        width: 100%;
+    }
+    .pop_movieFullDiv{
+        position: fixed;
+        width: 25%;
+        background-color: black;
+    }
+    .pop_moviecateScroll{
+        height: calc(100% - 97.33px);
+    }
+    .centerSearch{
+        line-height: 24px;
+    }
+    .centerSearch img[alt=searchBack] {
+        width: 5%;
+    }
+    .centerSearch img[alt=centerSearch] {
+        width: 5%;
+    }
+    .centerSearch input[type=search] {
+        padding: 0px !important;
+        font-size: 14px;
+        width: 80%;
+        background: transparent;
+        border: none;
+        color: white;
+    }
+    .live_body{
+        padding: 5px 10px 0px 10px !important;
+        height: calc(100% - 57px);  
+    }
+    .live_body .col-lg-3 {
+        width: 20% !important;
+    }
+    .liveback a[title=Menu] img, .liveback a[title=Back] img {
+        width: 70%;
+    }
+    .liveMenu a[title=Close] img{
+        width: 100%;
+    }
+    .liveSet a[title=Search] img, .liveSet a[title=Settings] img{
+        width: 45%;
+    }
+    .liveHead{
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .liveShowImages img{
+        width: 100%;
+        height: 110px;
+        bottom: 36px;
+    }
+    .livebacks{
+        margin-top: 0px !important;
+    } 
+    .liveMenus{
+        margin-top: 0px !important;
+    }
+    .livebacks img{
+        width: 82%;
+        margin-top: 4px !important;
+    }
+    .liveShowImages{  
+        border: 3px solid #ff020200;
+        margin-bottom: 8px !important;
+        width: 96%;
+        height: 116px;
+    }
+    .rightCategoryDiv{
+        background-color: black;
+    }
+    .cateSearch{
+        text-align: initial;
+    }
+    .cateSearch input{
+        width: 100%;
+        padding: 10px 10px 10px 25px !important;
+        background: #292828;
+        outline: none;
+        font-size: 10px;
+        border: 0;
+    }
+    .cateSearch i{    
+        font-size: 12px;
+        position: absolute;
+        left: 10px;
+        top: 75px;
+    }
+    .cateList{
+        width: 100%;
+        font-size: 28px;
+        outline: none;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+    }
+    .cateListNum{
+        width: 100%;
+        outline: none;
+        padding-top: 12px !IMPORTANT;
+        padding-bottom: 12px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+    }
+    
+    .cateList:hover, .cateList:hover .cateNum{
+        background-color: #21456b;
+    }
+    .hoverOver{
+        top: 67% !important;
+        position: relative;
+        left: 0px;
+        font-size: 8px;
+        color: transparent;
+        font-weight: 700;
+        z-index: 1111;
+    }
+    .hoverOvers{
+        font-size: 6px;
+        color: #ffffff;
+        position: relative;
+        top: -7px;
+        left: -24px;
+        background: #1b5bba;
+        border-radius: 2px;
+        padding: 2px 3px !important;
+        font-weight: 700;
+        z-index: 11111111;
+    }
+    .contiwatcdel {
+        font-size: 6px;
+        color: #ffffff;
+        position: relative;
+        top: -7px;
+        left: 24px;
+        background: #1b5bba;
+        border-radius: 2px;
+        padding: 2px 3px !important;
+        font-weight: 700;
+        z-index: 11111111;
+        opacity: 0;
+        cursor: pointer;
+    }
+    .forcenterSearch{
+        position: relative;
+        left: -155px;
+    }
+
+    .linear-background-movie-cate {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
+        background: #010106;
+        background: linear-gradient(to right, rgb(28 37 54 / 70%) 8%, rgb(28 37 54 / 50%) 18%, rgb(28 37 54 / 50%) 33%);
+        /* background: linear-gradient(to right, rgb(255 255 255 / 50%) 8%, rgb(255 255 255 / 65%) 18%, rgb(255 255 255 / 50%) 33%); */
+        background-size: 1000px 104px;
+        height: 31px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .cwalldelbtn {
+        float: right;
+        margin-top: 0px;
+        margin-right: 0px;
+    }
+    .cwalldelbtn i {
+        font-size: 22px;
+        padding-top: 4px;
+        padding-right: 8px;
+    }
+    
+    /* =============== Movie Screen Desgin End =============== */
+        
+}
+
+/* =============== 800 Screen Resolution =============== */
+
+@media only screen and  (min-width: 800px) {
+
+    /* =============== Movie Screen Desgin Start =============== */
+
+    .pop_live_header .row{
+        padding: 16px 10px 9px 0px !important;
+    }
+    .live_header .row{
+        padding: 17px 10px 14px 0px !important;
+    }
+    .liveSet {
+        margin-top: 2px !important;
+    }
+    .live_header{
+        z-index: 111111;
+        text-transform: uppercase;
+    }
+    /* .liveLogos img{
+        width: 82%;
+        backdrop-filter: brightness(0.5);    
+    } */
+    .liveMenus img{
+        width: 100%;
+    }
+    .pop_movieFullDiv{
+        position: fixed;
+        width: 25%;
+        background-color: black;
+    }
+    .pop_moviecateScroll{
+        height: calc(100% - 114.33px);
+    }
+    .centerSearch{
+        line-height: 24px;
+    }
+    .centerSearch img[alt=searchBack] {
+        width: 5%;
+    }
+    .centerSearch img[alt=centerSearch] {
+        width: 5%;
+    }
+    .centerSearch input[type=search] {
+        padding: 0px !important;
+        font-size: 14px;
+        width: 80%;
+        background: transparent;
+        border: none;
+        color: white;
+    }
+    .live_body{
+        padding: 10px 10px 0px 10px !important;
+        height: calc(100% - 58.03px);  
+    }
+    .live_body .col-lg-3 {
+        width: 20% !important;
+    }
+    .liveback a[title=Menu] img, .liveback a[title=Back] img {
+        width: 82%;
+    }
+    .liveMenu a[title=Close] img{
+        width: 100%;
+    }
+    .liveSet a[title=Search] img, .liveSet a[title=Settings] img{
+        width: 45%;
+    }
+    .liveHead{
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .liveShowImages img{
+        width: 100%;
+        height: 110px;
+        bottom: 37px;
+    }
+    .livebacks{
+        margin-top: 0px !important;
+    } 
+    .liveMenus{
+        margin-top: 0px !important;
+    }
+    .livebacks img{
+        width: 82%;
+        margin-top: 4px !important;
+    }
+    .liveShowImages{  
+        border: 3px solid #ff020200;
+        margin-bottom: 8px !important;
+        width: 96%;
+        height: 115px;
+    }
+    .rightCategoryDiv{
+        background-color: black;
+    }
+    .cateSearch{
+        text-align: initial;
+    }
+    .cateSearch input{
+        width: 100%;
+        padding: 12px 10px 12px 30px !important;
+        background: #292828;
+        outline: none;
+        font-size: 12px;
+        border: 0;
+    }
+    .cateSearch i{    
+        font-size: 16px;
+        position: absolute;
+        left: 9px;
+        top: 79px;
+    }
+    .cateList{
+        width: 100%;
+        font-size: 28px;
+        outline: none;
+        padding-top: 14px !IMPORTANT;
+        padding-bottom: 14px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+    }
+    .cateListNum{
+        width: 100%;
+        outline: none;
+        padding-top: 12px !IMPORTANT;
+        padding-bottom: 12px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+    }
+    
+    .cateList:hover, .cateList:hover .cateNum{
+        background-color: #21456b;
+    }
+    .hoverOver{
+        top: 67% !important;
+        position: relative;
+        left: 0px;
+        font-size: 8px;
+        color: transparent;
+        font-weight: 700;
+        z-index: 1111;
+    }
+    .hoverOvers{
+        font-size: 8px;
+        color: #ffffff;
+        position: relative;
+        top: -6px;
+        left: -24px;
+        background: #1b5bba;
+        border-radius: 4px;
+        padding: 2px 4px !important;
+        font-weight: 700;
+        z-index: 11111111;
+    }
+    .contiwatcdel {
+        font-size: 8px;
+        color: #ffffff;
+        position: relative;
+        top: -6px;
+        left: 24px;
+        background: #1b5bba;
+        border-radius: 4px;
+        padding: 2px 4px !important;
+        font-weight: 700;
+        z-index: 11111111;
+        opacity: 0;
+        cursor: pointer;
+    }
+    .forcenterSearch{
+        position: relative;
+        left: -90px;
+    }
+
+    .linear-background-movie-cate {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
+        background: #010106;
+        background: linear-gradient(to right, rgb(28 37 54 / 70%) 8%, rgb(28 37 54 / 50%) 18%, rgb(28 37 54 / 50%) 33%);
+        /* background: linear-gradient(to right, rgb(255 255 255 / 50%) 8%, rgb(255 255 255 / 65%) 18%, rgb(255 255 255 / 50%) 33%); */
+        background-size: 1000px 104px;
+        height: 31px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+    .liveback a{
+        width: 36px;
+    }
+    .cwalldelbtn {
+        float: right;
+        margin-top: 0px;
+        margin-right: 0px;
+    }
+    .cwalldelbtn i {
+        font-size: 22px;
+        padding-top: 4px;
+        padding-right: 8px;
+    }
+    
+    /* =============== Movie Screen Desgin End =============== */
+        
+}
+
+/* =============== 900 Screen Resolution =============== */
+
+@media only screen and  (min-width: 900px) {
+
+    /* =============== Movie Screen Desgin Start =============== */
+
+    .pop_live_header .row{
+        padding: 11px 10px 9px 0px !important;
+    }
+    .live_header .row{
+        padding: 10px 10px 10px 0px !important;
+    }
+    .liveSet {
+        margin-top: 5px !important;
+    }
+    .live_header{
+        z-index: 111111;
+        text-transform: uppercase;
+    }
+    /* .liveLogos img{
+        width: 82%;
+        backdrop-filter: brightness(0.5);    
+    } */
+    .liveMenus img{
+        width: 100%;
+    }
+    .pop_movieFullDiv{
+        position: fixed;
+        width: 25%;
+        background-color: black;
+    }
+    .pop_moviecateScroll{
+        height: calc(100% - 61.33px);
+    }
+    .centerSearch{
+        line-height: 24px;
+    }
+    .centerSearch img[alt=searchBack] {
+        width: 5%;
+    }
+    .centerSearch img[alt=centerSearch] {
+        width: 5%;
+    }
+    .centerSearch input[type=search] {
+        padding: 0px !important;
+        font-size: 14px;
+        width: 80%;
+        background: transparent;
+        border: none;
+        color: white;
+    }
+    .live_body{
+        padding: 10px 10px 0px 10px !important;
+        height: calc(100% - 52.25px);  
+    }
+    .live_body .col-lg-3 {
+        width: 20% !important;
+    }
+    .liveback a[title=Menu] img, .liveback a[title=Back] img {
+        width: 82%;
+    }
+    .liveMenu a[title=Close] img{
+        width: 100%;
+    }
+    .liveSet a[title=Search] img, .liveSet a[title=Settings] img{
+        width: 45%;
+    }
+    .liveHead{
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .liveShowImages img{
+        width: 100%;
+        height: 140px;
+        bottom: 39px;
+    }
+    .livebacks{
+        margin-top: 0px !important;
+    } 
+    .liveMenus{
+        margin-top: 0px !important;
+    }
+    .livebacks img{
+        width: 82%;
+        margin-top: 4px !important;
+    }
+    .liveShowImages{  
+        border: 3px solid #ff020200;
+        margin-bottom: 8px !important;
+        width: 96%;
+        height: 146px;
+    }
+    .rightCategoryDiv{
+        background-color: black;
+    }
+    .cateSearch{
+        text-align: initial;
+    }
+    .cateSearch input{
+        width: 100%;
+        padding: 12px 10px 12px 30px !important;
+        background: #292828;
+        outline: none;
+        font-size: 12px;
+        border: 0;
+    }
+    .cateSearch i{    
+        font-size: 16px;
+        position: absolute;
+        left: 9px;
+        top: 73px;
+    }
+    .cateList{
+        width: 100%;
+        font-size: 28px;
+        outline: none;
+        padding-top: 14px !IMPORTANT;
+        padding-bottom: 14px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+    }
+    .cateListNum{
+        width: 100%;
+        outline: none;
+        padding-top: 12px !IMPORTANT;
+        padding-bottom: 12px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+    }
+    
+    .cateList:hover, .cateList:hover .cateNum{
+        background-color: #21456b;
+    }
+    .hoverOver{
+        top: 72% !important;
+        position: relative;
+        left: 0px;
+        font-size: 10px;
+        color: transparent;
+        font-weight: 700;
+        z-index: 1111;
+    }
+    .hoverOvers{
+        font-size: 7px;
+        color: #ffffff;
+        position: relative;
+        top: -6px;
+        left: -32px;
+        background: #1b5bba;
+        border-radius: 4px;
+        padding: 3px 4px !important;
+        font-weight: 700;
+        z-index: 11111111;
+    }
+    .contiwatcdel {
+        font-size: 7px;
+        color: #ffffff;
+        position: relative;
+        top: -6px;
+        left: 32px;
+        background: #1b5bba;
+        border-radius: 4px;
+        padding: 3px 4px !important;
+        font-weight: 700;
+        z-index: 11111111;
+        opacity: 0;
+        cursor: pointer;
+    }
+    .cwalldelbtn{
+        float: right;
+        margin-top: 0px;
+        margin-right: 0px;
+    }
+    .cwalldelbtn i{
+        font-size: 25px;
+        padding-top: 6px;
+        padding-right: 8px;
+    }
+    .forcenterSearch{
+        position: relative;
+        left: -155px;
+    }
+
+    .linear-background-movie-cate {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
+        background: #010106;
+        background: linear-gradient(to right, rgb(28 37 54 / 70%) 8%, rgb(28 37 54 / 50%) 18%, rgb(28 37 54 / 50%) 33%);
+        /* background: linear-gradient(to right, rgb(255 255 255 / 50%) 8%, rgb(255 255 255 / 65%) 18%, rgb(255 255 255 / 50%) 33%); */
+        background-size: 1000px 104px;
+        height: 31px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+    .liveback a{
+        width: 36px;
+    }
+    
+    /* =============== Movie Screen Desgin End =============== */
+        
+}
+
+/* =============== 1100 Screen Resolution =============== */
+
+@media only screen and  (min-width: 1100px) {
+
+    /* =============== Movie Screen Desgin Start =============== */
+
+    .pop_live_header .row{
+        padding: 13px 10px 9px 0px !important;
+    }
+    .live_header .row{
+        padding: 17px 10px 14px 0px !important;
+    }
+    .liveSet {
+        margin-top: 5px !important;
+    }
+    .live_header{
+        z-index: 111111;
+        text-transform: uppercase;
+    }
+    /* .liveLogos img{
+        width: 82%;
+        backdrop-filter: brightness(0.5);    
+    } */
+    .liveMenus img{
+        width: 100%;
+    }
+    .pop_movieFullDiv{
+        position: fixed;
+        width: 25%;
+        background-color: black;
+    }
+    .pop_moviecateScroll{
+        height: calc(100% - 114.33px);
+    }
+    .centerSearch{
+        line-height: 24px;
+    }
+    .centerSearch img[alt=searchBack] {
+        width: 5%;
+    }
+    .centerSearch img[alt=centerSearch] {
+        width: 5%;
+    }
+    .centerSearch input[type=search] {
+        padding: 0px !important;
+        font-size: 14px;
+        width: 80%;
+        background: transparent;
+        border: none;
+        color: white;
+    }
+    .live_body{
+        padding: 10px 10px 0px 10px !important;
+        height: calc(100% - 70.94px);  
+    }
+    .live_body .col-lg-3 {
+        width: 20% !important;
+    }
+    .liveback a[title=Menu] img, .liveback a[title=Back] img {
+        width: 82%;
+    }
+    .liveMenu a[title=Close] img{
+        width: 100%;
+    }
+    .liveSet a[title=Search] img, .liveSet a[title=Settings] img{
+        width: 45%;
+    }
+    .liveHead{
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .liveShowImages img{
+        width: 100%;
+        height: 160px;
+        bottom: 42px;
+    }
+    .livebacks{
+        margin-top: 0px !important;
+    } 
+    .liveMenus{
+        margin-top: 0px !important;
+    }
+    .livebacks img{
+        width: 82%;
+        margin-top: 4px !important;
+    }
+    .liveShowImages{  
+        border: 3px solid #ff020200;
+        margin-bottom: 8px !important;
+        width: 96%;
+        height: 166px;
+    }
+    .rightCategoryDiv{
+        background-color: black;
+    }
+    .cateSearch{
+        text-align: initial;
+    }
+    .cateSearch input{
+        width: 100%;
+        padding: 12px 10px 12px 30px !important;
+        background: #292828;
+        outline: none;
+        font-size: 12px;
+        border: 0;
+    }
+    .cateSearch i{    
+        font-size: 16px;
+        position: absolute;
+        left: 9px;
+        top: 92px;
+    }
+    .cateList{
+        width: 100%;
+        font-size: 28px;
+        outline: none;
+        padding-top: 14px !IMPORTANT;
+        padding-bottom: 14px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+    }
+    .cateListNum{
+        width: 100%;
+        outline: none;
+        padding-top: 12px !IMPORTANT;
+        padding-bottom: 12px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+    }
+    
+    .cateList:hover, .cateList:hover .cateNum{
+        background-color: #21456b;
+    }
+    .hoverOver{
+        top: 74% !important;
+        position: relative;
+        left: 0px;
+        font-size: 12px;
+        color: transparent;
+        font-weight: 700;
+        z-index: 1111;
+    }
+    .hoverOvers{
+        font-size: 9px;
+        color: #ffffff;
+        position: relative;
+        top: -4px;
+        left: -44px;
+        background: #1b5bba;
+        border-radius: 4px;
+        padding: 3px 4px !important;
+        font-weight: 700;
+        z-index: 11111111;
+    }
+    .contiwatcdel {
+        font-size: 9px;
+        color: #ffffff;
+        position: relative;
+        top: -4px;
+        left: 44px;
+        background: #1b5bba;
+        border-radius: 4px;
+        padding: 3px 4px !important;
+        font-weight: 700;
+        z-index: 11111111;
+        opacity: 0;
+        cursor: pointer;
+    }
+    .cwalldelbtn{
+        float: right;
+        margin-top: 0px;
+        margin-right: 0px;
+    }
+    .cwalldelbtn i{
+        font-size: 28px;
+        padding-top: 6px;
+        padding-right: 8px;
+    }
+    .forcenterSearch{
+        position: relative;
+        left: -155px;
+    }
+
+    .linear-background-movie-cate {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
+        background: #010106;
+        background: linear-gradient(to right, rgb(28 37 54 / 70%) 8%, rgb(28 37 54 / 50%) 18%, rgb(28 37 54 / 50%) 33%);
+        /* background: linear-gradient(to right, rgb(255 255 255 / 50%) 8%, rgb(255 255 255 / 65%) 18%, rgb(255 255 255 / 50%) 33%); */
+        background-size: 1000px 104px;
+        height: 31px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+    .liveback a{
+        width: 36px;
+    }
+    
+    /* =============== Movie Screen Desgin End =============== */
+        
+}
+
+    /* =============== 1300 Screen Resolution =============== */
+
+@media only screen and  (min-width: 1300px) {
+
+    /* =============== Movie Screen Desgin Start =============== */
+
+    .pop_live_header .row{
+        padding: 9px 10px 8px 0px !important;
+    }
+    .live_header .row{
+        padding: 17px 10px 17px 0px !important;
+    }
+    .live_header{
+        z-index: 111111;
+        text-transform: uppercase;
+    }
+    /* .liveLogos img{
+        width: 82%;
+    } */
+    .pop_movieFullDiv{
+        position: fixed;
+        width: 25%;
+        background-color: black;
+    }
+    .pop_moviecateScroll{
+        height: calc(100% - 133.42px);
+    }
+    .live_body{
+        padding: 10px 10px 0px 10px !important;
+        height: calc(100% - 71.97px);  
+    }
+    .live_body .col-lg-3 {
+        width: 20% !important;
+    }
+    .liveback a[title=Menu] img, .liveback a[title=Back] img {
+        width: 70%;
+    }
+    .liveMenu a[title=Close] img{
+        width: 100%;
+    }
+    .liveSet a[title=Search] img, .liveSet a[title=Settings] img{
+        width: 66%;
+    }
+    .liveMenus img {
+        width: 86%;
+    }
+    .liveHead{
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .liveShowImages img{
+        width: 100%;
+        height: 185px;
+        bottom: 45px;
+    }
+    .livebacks{
+        margin-top: 14px !important;
+    } 
+    .liveMenus{
+        margin-top: 8px !important;
+    }
+    .livebacks img{
+        width: 58%;
+        margin-top: 0px !important;
+    }
+    .centerSearch {
+        line-height: 30px;
+    }
+    .centerSearch img[alt=centerSearch] {
+        width: 4%;
+    }
+    .centerSearch img[alt=searchBack] {
+        width: 4%;
+    }
+    .centerSearch input[type=search] {
+        padding: 0px !important;
+        font-size: 18px;
+        width: 80%;
+        background: transparent;
+        border: none;
+        color: white;
+    }
+    .liveShowImages{  
+        border: 3px solid #ff020200;
+        margin-bottom: 20px !important;
+        width: 96%;
+        height: 192px;
+    }
+    .rightCategoryDiv{
+        background-color: black;
+    }
+    .cateSearch{
+        text-align: initial;
+    }
+    .cateSearch input{
+        width: 100%;
+        padding: 14px 10px 14px 45px !important;
+        background: #292828;
+        outline: none;
+        font-size: 16px;
+        border: 0;
+    }
+    .cateSearch i{    
+        font-size: 18px;
+        position: absolute;
+        left: 19px;
+        top: 98px;
+    }
+    .cateList{
+        width: 100%;
+        font-size: 28px;
+        outline: none;
+        padding-top: 16px !important;
+        padding-bottom: 16px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+    }
+    .cateListNum{
+        width: 100%;
+        outline: none;
+        padding-top: 12px !IMPORTANT;
+        padding-bottom: 12px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+    }
+    
+    .cateList:hover, .cateList:hover .cateNum{
+        background-color: #21456b;
+    }
+    .hoverOver{
+        top: 76% !important;
+        position: relative;
+        left: 0px;
+        font-size: 14px;
+        color: transparent;
+        font-weight: 700;
+        z-index: 1111;
+    }
+    .hoverOvers{
+        font-size: 10px;
+        color: #ffffff;
+        position: relative;
+        top: 0px;
+        left: -46px;
+        background: #1b5bba;
+        border-radius: 4px;
+        padding: 4px 6px !important;
+        font-weight: 700;
+        z-index: 11111111;
+    }
+    .contiwatcdel {
+        font-size: 10px;
+        color: #ffffff;
+        position: relative;
+        top: 0px;
+        left: 46px;
+        background: #1b5bba;
+        border-radius: 4px;
+        padding: 4px 6px !important;
+        font-weight: 700;
+        z-index: 11111111;
+        opacity: 0;
+        cursor: pointer;
+    }
+    .forcenterSearch{
+        position: relative;
+        left: -155px;
+    }
+
+    .linear-background-movie-cate {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
+        background: #010106;
+        background: linear-gradient(to right, rgb(28 37 54 / 70%) 8%, rgb(28 37 54 / 50%) 18%, rgb(28 37 54 / 50%) 33%);
+        /* background: linear-gradient(to right, rgb(255 255 255 / 50%) 8%, rgb(255 255 255 / 65%) 18%, rgb(255 255 255 / 50%) 33%); */
+        background-size: 1000px 104px;
+        height: 31px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+    
+    .trailerWatcher #theVideo {
+        height: 350px;
+    }
+
+    /* =============== Movie Screen Desgin End =============== */
+        
+}
+
+    
+/* =============== 1400 Screen Resolution =============== */
+
+@media only screen and  (min-width: 1400px) {
+
+    /* =============== Movie Screen Desgin Start =============== */
+
+    .pop_live_header .row{
+        padding: 7px 10px 7px 0px !important;
+    }
+    .live_header .row{
+        padding: 17px 10px 17px 0px !important;
+    }
+    .live_header{
+        z-index: 111111;
+        text-transform: uppercase;
+    }
+    /* .liveLogos img{
+        width: 82%;
+    } */
+    .pop_movieFullDiv{
+        position: fixed;
+        width: 25%;
+        background-color: black;
+    }
+    .pop_moviecateScroll{
+        height: calc(100% - 136.08px);
+    }
+    .live_body{
+        padding: 10px 10px 0px 10px !important;
+        height: calc(100% - 76px);  
+    }
+    .live_body .col-lg-3 {
+        width: 20% !important;
+    }
+    .liveback a[title=Menu] img, .liveback a[title=Back] img {
+        width: 70%;
+    }
+    .liveMenu a[title=Close] img{
+        width: 100%;
+    }
+    .liveMenus img {
+        width: 85%;
+    }
+    .liveSet a[title=Search] img, .liveSet a[title=Settings] img{
+        width: 74%;
+    }
+    .liveHead{
+        font-size: 24px;
+        font-weight: 500;
+    }
+    .liveShowImages img{
+        width: 100%;
+        height: 200px;
+        bottom: 45px;
+    }
+    .centerSearch img[alt=centerSearch] {
+        width: 3.4%;
+    }
+    .centerSearch img[alt=searchBack] {
+        width: 3.4%;
+    }
+    .centerSearch input[type=search] {
+        padding: 0px !important;
+        font-size: 18px;
+        width: 80%;
+        background: transparent;
+        border: none;
+        color: white;
+    }
+    .centerSearch {
+        line-height: 32px;
+    }
+    .livebacks{
+        margin-top: 14px !important;
+    } 
+    .liveMenus{
+        margin-top: 8px !important;
+    }
+    .livebacks img{
+        width: 60%;
+        margin-top: 0px !important;
+    }
+    .liveShowImages{  
+        border: 4px solid #ff020200;
+        margin-bottom: 20px !important;
+        width: 96%;
+        height: 208px;
+    }
+    .liveShowImages:hover {
+        border: 4px solid white;
+    }
+    .rightCategoryDiv{
+        background-color: black;
+    }
+    .cateSearch{
+        text-align: initial;
+    }
+    .cateSearch input{
+        width: 100%;
+        padding: 14px 10px 14px 50px !important;
+        background: #292828;
+        outline: none;
+        font-size: 15px;
+        border: 0;
+    }
+    .cateSearch i{    
+        font-size: 20px;
+        position: absolute;
+        left: 20px;
+        top: 101px;
+    }
+    .cateList{
+        width: 100%;
+        font-size: 28px;
+        outline: none;
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+    }
+    .cateListNum{
+        width: 100%;
+        outline: none;
+        padding-top: 12px !IMPORTANT;
+        padding-bottom: 12px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+    }
+    
+    .cateList:hover, .cateList:hover .cateNum{
+        background-color: #21456b;
+    }
+    .hoverOver{
+        top: 77% !important;
+        position: relative;
+        left: 0px;
+        font-size: 14px;
+        color: transparent;
+        font-weight: 700;
+        z-index: 1111;
+    }
+    .hoverOvers{
+        font-size: 11px;
+        color: #ffffff;
+        position: relative;
+        top: 0px;
+        left: -52px;
+        background: #1b5bba;
+        border-radius: 4px;
+        padding: 4px 6px !important;
+        font-weight: 700;
+        z-index: 11111111;
+    }
+    .contiwatcdel {
+        font-size: 11px;
+        color: #ffffff;
+        position: relative;
+        top: 0px;
+        left: 52px;
+        background: #1b5bba;
+        border-radius: 4px;
+        padding: 4px 6px !important;
+        font-weight: 700;
+        z-index: 11111111;
+        opacity: 0;
+        cursor: pointer;
+    }
+    .forcenterSearch{
+        position: relative;
+        left: -155px;
+    }
+
+    .linear-background-movie-cate {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
+        background: #010106;
+        background: linear-gradient(to right, rgb(28 37 54 / 70%) 8%, rgb(28 37 54 / 50%) 18%, rgb(28 37 54 / 50%) 33%);
+        /* background: linear-gradient(to right, rgb(255 255 255 / 50%) 8%, rgb(255 255 255 / 65%) 18%, rgb(255 255 255 / 50%) 33%); */
+        background-size: 1000px 104px;
+        height: 31px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .trailerWatcher #theVideo {
+        height: 430px;
+    }
+    
+    /* =============== Movie Screen Desgin End =============== */
+        
+}
+
+    /* =============== 1600 Screen Resolution =============== */
+
+@media only screen and  (min-width: 1600px) {
+
+    /* =============== Movie Screen Desgin Start =============== */
+
+    .pop_live_header .row{
+        padding: 4px 10px 6px 0px !important;
+    }
+    .live_header .row{
+        padding: 17px 10px 17px 0px !important;
+    }
+    .live_header{
+        z-index: 111111;
+        text-transform: uppercase;
+    }
+    /* .liveLogos img{
+        width: 82%;
+    } */
+    .pop_movieFullDiv{
+        position: fixed;
+        width: 25%;
+        background-color: black;
+    }
+    .pop_moviecateScroll{
+        height: calc(100% - 154.50px);
+        
+    }
+    .live_body{
+        padding: 10px 10px 0px 10px !important;
+        height: calc(100% - 78.49px);  
+    }
+    .live_body .col-lg-3 {
+        width: 20% !important;
+    }
+    .liveback a[title=Menu] img, .liveback a[title=Back] img {
+        width: 70%;
+    }
+    .liveMenu a[title=Close] img{
+        width: 100%;
+    }
+    .liveSet a[title=Search] img, .liveSet a[title=Settings] img{
+        width: 80%;
+    }
+    .liveMenus img {
+        width: 86%;
+    }
+    .liveHead{
+        font-size: 25px;
+        font-weight: 500;
+    }
+    .liveShowImages img{
+        width: 100%;
+        height: 220px;
+        bottom: 48px;
+    }
+    .livebacks{
+        margin-top: 14px !important;
+    } 
+    .liveMenus{
+        margin-top: 8px !important;
+    }
+    .livebacks img{
+        width: 58%;
+        margin-top: 0px !important;
+    }
+    .liveShowImages{  
+        border: 4px solid #ff020200;
+        margin-bottom: 20px !important;
+        width: 96%;
+        height: 227px;
+    }
+    .rightCategoryDiv{
+        background-color: black;
+    }
+    .cateSearch{
+        text-align: initial;
+    }
+    .cateSearch input{
+        width: 100%;
+        padding: 18px 10px 18px 45px !important;
+        background: #292828;
+        outline: none;
+        font-size: 18px;
+        border: 0;
+    }
+    .cateSearch i{    
+        font-size: 20px;
+        position: absolute;
+        left: 19px;
+        top: 112px;        
+    }
+    .cateList{
+        width: 100%;
+        font-size: 28px;
+        outline: none;
+        padding-top: 16px !important;
+        padding-bottom: 16px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+    }
+    .cateListNum{
+        width: 100%;
+        outline: none;
+        padding-top: 12px !IMPORTANT;
+        padding-bottom: 12px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+    }
+    
+    .cateList:hover, .cateList:hover .cateNum{
+        background-color: #21456b;
+    }
+    .hoverOver{
+        top: 79% !important;
+        position: relative;
+        left: 0px;
+        font-size: 16px;
+        color: transparent;
+        font-weight: 700;
+        z-index: 1111;
+    }
+    .hoverOvers{
+        font-size: 11px;
+        color: #ffffff;
+        position: relative;
+        top: 0px;
+        left: -60px;
+        background: #1b5bba;
+        border-radius: 4px;
+        padding: 3px 6px 4px 6px !important;
+        font-weight: 700;
+        z-index: 11111111;
+    }
+    .contiwatcdel {
+        font-size: 11px;
+        color: #ffffff;
+        position: relative;
+        top: 0px;
+        left: 60px;
+        background: #1b5bba;
+        border-radius: 4px;
+        padding: 3px 6px 4px 6px !important;
+        font-weight: 700;
+        z-index: 11111111;
+        opacity: 0;
+        cursor: pointer;
+    }
+    .forcenterSearch{
+        position: relative;
+        left: -155px;
+    }
+
+    .linear-background-movie-cate {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
+        background: #010106;
+        background: linear-gradient(to right, rgb(28 37 54 / 70%) 8%, rgb(28 37 54 / 50%) 18%, rgb(28 37 54 / 50%) 33%);
+        /* background: linear-gradient(to right, rgb(255 255 255 / 50%) 8%, rgb(255 255 255 / 65%) 18%, rgb(255 255 255 / 50%) 33%); */
+        background-size: 1000px 104px;
+        height: 31px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .trailerWatcher #theVideo{
+        height: 500px;
+    }
+
+    /* =============== Movie Screen Desgin End =============== */
+    
+}
+
+
+    /* =============== 1800 Screen Resolution =============== */
+
+@media only screen and  (min-width: 1800px) {
+
+    /* =============== Movie Screen Desgin Start =============== */
+
+    .pop_live_header .row{
+        padding: 4px 10px 3px 0px !important;
+    }
+    .live_header .row{
+        padding: 17px 10px 17px 0px !important;
+    }
+    .live_header{
+        z-index: 111111;
+        text-transform: uppercase;
+    }
+    /* .liveLogos img{
+        width: 82%;
+    } */
+    .pop_movieFullDiv{
+        position: fixed;
+        width: 25%;
+        background-color: black;
+    }
+    .pop_moviecateScroll{
+        height: calc(100% - 162.11px);
+    }
+    .live_body{
+        padding: 10px 10px 0px 10px !important;
+        height: calc(100% - 81.48px);
+    }
+    .live_body .col-lg-3 {
+        width: 20% !important;
+    }
+    .liveback a[title=Menu] img, .liveback a[title=Back] img {
+        width: 70%;
+    }
+    .liveMenu a[title=Close] img{
+        width: 100%;
+    }
+    .liveSet a[title=Search] img, .liveSet a[title=Settings] img{
+        width: 85%;
+    }
+    .liveMenus img {
+        width: 86%;
+    }
+    .liveHead{
+        font-size: 25px;
+        font-weight: 500;
+    }
+    .liveShowImages img{
+        width: 100%;
+        height: 250px;
+        bottom: 52px;
+    }
+    .livebacks{
+        margin-top: 14px !important;
+    } 
+    .liveMenus{
+        margin-top: 8px !important;
+    }
+    .livebacks img{
+        width: 62%;
+        margin-top: 6px !important;
+        margin-left: 10px;
+    }
+    .liveShowImages{  
+        border: 4px solid #ff020200;
+        margin-bottom: 20px !important;
+        width: 96%;
+        height: 258px;
+    }
+    .rightCategoryDiv{
+        background-color: black;
+    }
+    .cateSearch{
+        text-align: initial;
+    }
+    .cateSearch input{
+        width: 100%;
+        padding: 18px 10px 18px 50px !important;
+        background: #292828;
+        outline: none;
+        font-size: 18px;
+        border: 0;
+    }
+    .cateSearch i{    
+        font-size: 22px;
+        position: absolute;
+        left: 19px;
+        top: 119px;        
+    }
+    .cateList{
+        width: 100%;
+        font-size: 28px;
+        outline: none;
+        padding-top: 16px !important;
+        padding-bottom: 16px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+    }
+    .cateListNum{
+        width: 100%;
+        outline: none;
+        padding-top: 12px !IMPORTANT;
+        padding-bottom: 12px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+    }
+    
+    .cateList:hover, .cateList:hover .cateNum{
+        background-color: #21456b;
+    }
+    .hoverOver{
+        top: 79% !important;
+        position: relative;
+        left: 0px;
+        font-size: 19px;
+        color: transparent;
+        font-weight: 700;
+        z-index: 1111;
+    }
+    .hoverOvers{
+        font-size: 14px;
+        color: #ffffff;
+        position: relative;
+        top: 3px;
+        left: -70px;
+        background: #1b5bba;
+        border-radius: 4px;
+        padding: 4px 6px !important;
+        font-weight: 700;
+        z-index: 11111111;
+    }
+    .contiwatcdel {
+        font-size: 14px;
+        color: #ffffff;
+        position: relative;
+        top: 3px;
+        left: 70px;
+        background: #1b5bba;
+        border-radius: 4px;
+        padding: 4px 6px !important;
+        font-weight: 700;
+        z-index: 11111111;
+        opacity: 0;
+        cursor: pointer;
+    }
+    .forcenterSearch{
+        position: relative;
+        left: -155px;
+    }
+
+    .linear-background-movie-cate {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
+        background: #010106;
+        background: linear-gradient(to right, rgb(28 37 54 / 70%) 8%, rgb(28 37 54 / 50%) 18%, rgb(28 37 54 / 50%) 33%);
+        /* background: linear-gradient(to right, rgb(255 255 255 / 50%) 8%, rgb(255 255 255 / 65%) 18%, rgb(255 255 255 / 50%) 33%); */
+        background-size: 1000px 104px;
+        height: 31px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .trailerWatcher #theVideo{
+        height: 550px;
+    }
+
+    /* =============== Movie Screen Desgin End =============== */
+    
+}
+
+
+    /* =============== 1900 Screen Resolution =============== */
+
+@media only screen and  (min-width: 1900px) {
+
+    /* =============== Movie Screen Desgin Start =============== */
+
+    .pop_live_header .row{
+        padding: 12px 10px 6px 0px !important;
+    }
+    .live_header .row{
+        padding: 20px 10px 25px 0px !important;
+    }
+    .live_header{
+        z-index: 111111;
+        text-transform: uppercase;
+    }
+    /* .liveLogos img{
+        width: 75%;
+    } */
+    .pop_movieFullDiv{
+        position: fixed;
+        width: 24.7%;
+        background-color: black;
+    }
+    .pop_moviecateScroll{
+        height: calc(100% - 187.02px);
+    }
+    .live_body{
+        padding: 10px 10px 0px 10px !important;    
+        height: calc(100% - 100px );  
+    }
+    .live_body .col-lg-3 {
+        width: 20% !important;
+    }
+    .liveback a[title=Menu] img, .liveback a[title=Back] img {
+        width:100%;
+    }
+    .centerSearch img[alt=searchBack] {
+        width: 4%;
+    }
+    .centerSearch img[alt=centerSearch] {
+        width: 4%;
+    }
+    .liveback, .liveMenu, .liveSearch, .liveSet{
+        display: -webkit-inline-box;
+        display: -moz-inline-box;
+        display: inline-box;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        margin-top: 10px !important;
+        margin-left: 27px !important;
+    }
+    .liveMenu a[title=Close] img{
+        width: 100%;
+    }
+    .liveSet a[title=Search] img, .liveSet a[title=Settings] img{
+        width: 90%;
+    }
+    .liveHead{
+        font-size: 30px;    
+        font-weight: 500;
+    }
+    .liveShowImages img{
+        width: 100%;
+        height: 292px;
+        bottom: 59px;
+    }
+    .livebacks{
+        padding-left: 0px !important;
+        margin-top: 0px !important;
+    }
+    .liveMenus{
+        margin-top: 0px !important;
+    }
+    .liveMenus img {
+        width: 72%;
+        margin-top: 8px !important;
+        margin-left: -2px;
+    }
+    .livebacks img {
+        width: 63%;
+        margin-top: 10px !important;
+        margin-left: 10px;
+    }
+    .liveShowImages{  
+        border: 4px solid #ff020200;
+        margin-bottom: 20px !important;
+        width: 96%;
+        height: 300px;
+    }
+    .rightCategoryDiv{
+        background-color: black;
+    }
+    .cateSearch{
+        text-align: initial;
+    }
+    .centerSearch input[type=search] {
+        padding: 0px !important;
+        font-size: 24px;
+        width: 80%;
+        background: transparent;
+        border: none;
+        color: white;
+    }
+    .cateSearch input{
+        width: 100%;
+        padding: 17px 10px 18px 60px !important;
+        background: #292828;
+        outline: none;
+        font-size: 25px;
+        border: 0;
+    }
+    .cateSearch i{    
+        position: absolute;
+        font-size: 28px;
+        left: 20px;
+        top: 135px;
+    }
+    .cateList{
+        width: 100%;
+        font-size: 28px;
+        outline: none;
+        padding-top: 24px !IMPORTANT;
+        padding-bottom: 24px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+    }
+    .cateListNum{
+        width: 100%;
+        outline: none;
+        padding-top: 12px !IMPORTANT;
+        padding-bottom: 12px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+    }
+    
+    .cateList:hover, .cateList:hover .cateNum{
+        background-color: #21456b;
+    }
+    .hoverOver{
+        top: 79% !important;
+        position: relative;
+        left: 0px;
+        font-size: 24px;
+        color: transparent;
+        font-weight: 700;
+        z-index: 1111;
+    }
+    .hoverOvers{
+        font-size: 15px;
+        color: #ffffff;
+        position: relative;
+        top: 6px;
+        left: -74px;
+        background: #1b5bba;
+        border-radius: 4px;
+        padding: 4px 7px !important;
+        font-weight: 700;
+        z-index: 11111111;
+    }
+    .contiwatcdel{
+        font-size: 15px; 
+        color: #ffffff; 
+        position: relative; 
+        top: 6px; 
+        left: 74px; 
+        background: #1b5bba; 
+        border-radius: 4px; 
+        padding: 4px 7px !important; 
+        font-weight: 700; 
+        z-index: 11111111; 
+        opacity: 0;
+        cursor: pointer;
+    }
+    .forcenterSearch{
+        position: relative;
+        left: -155px;
+    }
+
+    .linear-background-movie-cate {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
+        background: #010106;
+        background: linear-gradient(to right, rgb(28 37 54 / 70%) 8%, rgb(28 37 54 / 50%) 18%, rgb(28 37 54 / 50%) 33%);
+        /* background: linear-gradient(to right, rgb(255 255 255 / 50%) 8%, rgb(255 255 255 / 65%) 18%, rgb(255 255 255 / 50%) 33%); */
+        background-size: 1000px 104px;
+        height: 70px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .trailerWatcher #theVideo{
+        height: 590px;
+    }
+
+    /* =============== Movie Screen Desgin End =============== */
+    
+}
+
+
+/* =============== 2800 Screen Resolution =============== */
+
+@media only screen and  (min-width: 2100px) {
+
+    /* =============== Movie Screen Desgin Start =============== */
+
+    .pop_live_header .row{
+        padding: 0px 10px 9px 0px !important;
+    }
+    .live_header .row{
+        padding: 20px 10px 25px 0px !important;
+    }
+    .live_header{
+        z-index: 111111;
+        text-transform: uppercase;
+    }
+    /* .liveLogos img{
+        width: 73%;
+    } */
+    .pop_movieFullDiv{
+        position: fixed;
+        width: 25%;
+        background-color: black;
+    }
+    .pop_moviecateScroll{
+        height: calc(100% - 205.52px);
+    }
+    .live_body{
+        padding: 10px 10px 0px 10px !important;
+        height: calc(100% - 104.95px);
+    }
+    .live_body .col-lg-3 {
+        width: 20% !important;
+    }
+    .liveback a[title=Menu] img, .liveback a[title=Back] img {
+        width: 70%;
+    }
+    .liveMenu a[title=Close] img{
+        width: 100%;
+    }
+    .liveSet a[title=Search] img, .liveSet a[title=Settings] img{
+        width: 100%;
+    }
+    .liveHead{
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .liveShowImages img{
+        width: 100%;
+        height: 292px;
+        bottom: 57px;
+    }
+    .livebacks{
+        margin-top: 0px !important;
+    }
+    .liveMenus{
+        margin-top: 0px !important;
+    }
+    .liveMenus img {
+        width: 85%;
+    }
+    .livebacks img {
+        width: 62%;
+        margin-top: 12px !important;
+    }
+    .liveShowImages{  
+        border: 4px solid #ff020200;
+        margin-bottom: 20px !important;
+        width: 96%;
+        height: 300px;
+    }
+    .rightCategoryDiv{
+        background-color: black;
+    }
+    .cateSearch{
+        text-align: initial;
+    }
+    .cateSearch input{
+        width: 100%;
+        padding: 20px 10px 20px 70px !important;
+        background: #292828;
+        outline: none;
+        font-size: 26px;
+        border: 0;
+    }
+    .cateSearch i{    
+        position: absolute;
+        font-size: 30px;
+        left: 26px;
+        top: 140px;
+    }
+    .cateList{
+        width: 100%;
+        font-size: 28px;
+        outline: none;
+        padding-top: 35px !important;
+        padding-bottom: 35px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+    }
+    .cateListNum{
+        width: 100%;
+        outline: none;
+        padding-top: 12px !IMPORTANT;
+        padding-bottom: 12px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+    }
+    
+    .cateList:hover, .cateList:hover .cateNum{
+        background-color: #21456b;
+    }
+    .hoverOver{
+        top: 80% !important;
+        position: relative;
+        left: 0px;
+        font-size: 24px;
+        color: transparent;
+        font-weight: 700;
+        z-index: 1111;
+    }
+    .hoverOvers{
+        font-size: 15px;
+        color: #ffffff;
+        position: relative;
+        top: 6px;
+        left: -92px;
+        background: #1b5bba;
+        border-radius: 4px;
+        padding: 4px 7px !important;
+        font-weight: 700;
+        z-index: 11111111;
+    }
+    .contiwatcdel{
+        font-size: 15px;
+        color: #ffffff;
+        position: relative;
+        top: 6px;
+        left: 92px;
+        background: #1b5bba;
+        border-radius: 4px;
+        padding: 4px 7px !important;
+        font-weight: 700;
+        z-index: 11111111;
+        opacity: 0;
+        cursor: pointer;
+    }
+    .forcenterSearch{
+        position: relative;
+        left: -155px;
+    }
+
+    .linear-background-movie-cate {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
+        background: #010106;
+        background: linear-gradient(to right, rgb(28 37 54 / 70%) 8%, rgb(28 37 54 / 50%) 18%, rgb(28 37 54 / 50%) 33%);
+        /* background: linear-gradient(to right, rgb(255 255 255 / 50%) 8%, rgb(255 255 255 / 65%) 18%, rgb(255 255 255 / 50%) 33%); */
+        background-size: 1000px 104px;
+        height: 70px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    /* =============== Movie Screen Desgin End =============== */
+    
+}
+
+
+    /* =============== 2800 Screen Resolution =============== */
+
+@media only screen and  (min-width: 2800px) {
+
+    /* =============== Movie Screen Desgin Start =============== */
+
+    .pop_live_header .row{
+        padding: 0px 10px 9px 0px !important;
+    }
+    .live_header .row{
+        padding: 20px 10px 25px 0px !important;
+    }
+    .liveSet {
+        margin-top: 15px !important;
+    }
+    .live_header{
+        z-index: 111111;
+        text-transform: uppercase;
+    }
+    /* .liveLogos img{
+        width: 73%;
+    } */
+    .pop_movieFullDiv{
+        position: fixed;
+        width: 25%;
+        background-color: black;
+    }
+    .pop_moviecateScroll{
+        height: calc(100% - 257.56px);
+    }
+    .live_body{
+        padding: 10px 10px 0px 10px !important;
+        height: calc(100% - 126px);  
+
+    }
+    .live_body .col-lg-3 {
+        width: 20% !important;
+    }
+    .liveback a[title=Menu] img, .liveback a[title=Back] img {
+        width: 100%;
+    }
+    .liveMenu a[title=Close] img{
+        width: 100%;
+    }
+    .liveSet a[title=Search] img, .liveSet a[title=Settings] img{
+       width: 100%;
+       margin-left: 16px;
+    }
+    .liveHead{
+        font-size: 45px;;
+        font-weight: 500;
+    }
+    .liveShowImages img{
+        width: 100%;
+        height: 420px;
+        bottom: 83px;
+    }
+    .livebacks{
+        margin-top: 12px !important;
+    }
+    .liveMenus{
+        margin-top: 0px !important;
+    }
+    .liveMenus img {
+        width: 85%;
+    }
+    .livebacks img {
+        width: 62%;
+        margin-top: 12px !important;
+    }
+    .liveShowImages{  
+        border: 6px solid #ff020200;
+        margin-bottom: 20px !important;
+        width: 96%;
+        height: 433px;
+    }
+    .liveShowImages:hover {
+        border: 6px solid white;
+    }
+    .rightCategoryDiv{
+        background-color: black;
+    }
+    .centerSearch input[type=search] {
+        padding: 0px !important;
+        font-size: 36px;
+        width: 80%;
+        background: transparent;
+        border: none;
+        color: white;
+    }
+    .cateSearch{
+        text-align: initial;
+    }
+    .cateSearch input{
+        width: 100%;
+        padding: 30px 10px 30px 75px !important;
+        background: #292828;
+        outline: none;
+        font-size: 30px;
+        border: 0;
+    }
+    .cateSearch i{    
+        position: absolute;
+        font-size: 36px;
+        left: 28px;
+        top: 188px;
+    }
+    .cateList{
+        width: 100%;
+        font-size: 28px;
+        outline: none;
+        padding-top: 35px !important;
+        padding-bottom: 35px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+    }
+    .cateListNum{
+        width: 100%;
+        outline: none;
+        padding-top: 12px !IMPORTANT;
+        padding-bottom: 12px !important;
+        margin: 0px !important;
+        border-bottom: 1px solid #292828;
+    }
+    
+    .cateList:hover, .cateList:hover .cateNum{
+        background-color: #21456b;
+    }
+    .hoverOver{
+        top: 80% !important;
+        position: relative;
+        left: 0px;
+        font-size: 32px;
+        color: transparent;
+        font-weight: 700;
+        z-index: 1111;
+    }
+    .hoverOvers{
+        font-size: 24px;
+        color: #ffffff;
+        position: relative;
+        top: 8px;
+        left: -116px;
+        background: #1b5bba;
+        border-radius: 4px;
+        padding: 4px 9px !important;
+        font-weight: 700;
+        z-index: 11111111;
+    }
+    .contiwatcdel{
+        font-size: 24px;
+        color: #ffffff;
+        position: relative;
+        top: 8px;
+        left: 116px;
+        background: #1b5bba;
+        border-radius: 4px;
+        padding: 4px 9px !important;
+        font-weight: 700;
+        z-index: 11111111;
+        opacity: 0;
+        cursor: pointer;
+    }
+    .forcenterSearch{
+        position: relative;
+        left: -155px;
+    }
+
+    .linear-background-movie-cate {
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
+        background: #010106;
+        background: linear-gradient(to right, rgb(28 37 54 / 70%) 8%, rgb(28 37 54 / 50%) 18%, rgb(28 37 54 / 50%) 33%);
+        /* background: linear-gradient(to right, rgb(255 255 255 / 50%) 8%, rgb(255 255 255 / 65%) 18%, rgb(255 255 255 / 50%) 33%); */
+        background-size: 1000px 104px;
+        height: 70px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    /* =============== Movie Screen Desgin End =============== */
+    
+}
+

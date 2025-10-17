@@ -1,0 +1,250 @@
+@media only screen and  (min-width: 1300px) {
+    .masterSearchHeader{
+        border-bottom: 1px solid #616161;
+    }
+    .masterSearchHeader .row {
+        padding: 16px 0px 24px 0px !important;
+    }
+    .masterSearchBack {
+        text-align: start;
+        padding-left: 10px !important;
+    }
+    .masterSearchBack img {
+        width: 60%;
+        margin-top: 5px !important;
+    }
+    .masterSearchLogo img {
+        width: 98%;
+        backdrop-filter: blur(1px);
+    }
+    .masterSerchIcon{
+        margin-top: 10px !important;
+    }
+    .masterSerchIcon img{
+        background: white;
+        border-radius: 50px;
+        position: absolute;
+        z-index: 1;
+        padding: 8px 8px !important;    
+    }
+    .circle {
+        top: 18px;
+        left: 537px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        opacity: 0;
+        animation: scaleIn 6s infinite cubic-bezier(0.99, 0.97, 0.02, -0.01);
+        /* animation: scaleIn 6s infinite cubic-bezier(.36, .11, .89, .32);*/
+      }
+      
+      @keyframes scaleIn {
+      from {
+        transform: scale(.5, .5);
+        opacity: .5;
+      }
+      to {
+        transform: scale(1.8, 1.8);
+        opacity: 0;
+      }
+      }
+    .masterSerchInput{
+        text-align: left;
+        margin-top: 8px !important;
+    }
+    .masterSerchInput input{
+        width: 94%;
+        padding: 15px 0px 15px 20px !important;
+        font-size: 22px;
+        border: none;
+        border-radius: 3px;
+        color: #757575;
+    }
+    .msearchscroll{
+        height: calc(100% - 202.33px);
+    }
+    .msearchscroll .row{
+        padding: 12px 15px 10px 15px;
+    }
+    .mseacrchheadering h3{
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    .hiloader {
+        background-color: #000000db;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 11;
+    }
+    .msearchtbn{
+        font-size: 21px; 
+        padding: 15px; 
+        width: 100%; 
+        margin-top: 7px !important;
+    }
+}
+@media only screen and  (min-width: 1400px) {
+    .masterSearchHeader{
+        border-bottom: 1px solid #616161;
+    }
+    .masterSearchHeader .row {
+        padding: 16px 0px 24px 0px !important;
+    }
+    .masterSearchBack {
+        text-align: start;
+        padding-left: 10px !important;
+    }
+    .masterSearchBack img {
+        width: 60%;
+        margin-top: 5px !important;
+    }
+    .masterSearchLogo img {
+        width: 98%;
+        backdrop-filter: blur(1px);
+    }
+    .masterSerchIcon{
+        margin-top: 10px !important;
+    }
+    .masterSerchIcon img{
+        background: white;
+        border-radius: 50px;
+        position: absolute;
+        z-index: 1;
+        padding: 8px 8px !important;    
+    }
+    .circle {
+        top: 18px;
+        left: 592px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        opacity: 0;
+        animation: scaleIn 6s infinite cubic-bezier(0.99, 0.97, 0.02, -0.01);
+        /* animation: scaleIn 6s infinite cubic-bezier(.36, .11, .89, .32);*/
+      }
+      
+      @keyframes scaleIn {
+      from {
+        transform: scale(.5, .5);
+        opacity: .5;
+      }
+      to {
+        transform: scale(1.8, 1.8);
+        opacity: 0;
+      }
+      }
+    .masterSerchInput{
+        text-align: left;
+        margin-top: 8px !important;
+    }
+    .masterSerchInput input{
+        width: 94%;
+        padding: 15px 0px 15px 20px !important;
+        font-size: 22px;
+        border: none;
+        border-radius: 3px;
+        color: #757575;
+    }
+    .msearchscroll{
+        height: calc(100% - 202.33px);
+    }
+    .msearchscroll .row{
+        padding: 12px 15px 10px 15px;
+    }
+    .mseacrchheadering h3{
+        font-size: 20px;
+        margin-top: 22px;
+    }
+    .msearchtbn{
+        font-size: 22px; 
+        padding: 14px; 
+        width: 100%; 
+        margin-top: 7px !important;
+    }
+}
+@media only screen and  (min-width: 1900px) {
+    .masterSearchHeader{
+        border-bottom: 1px solid #616161;
+    }
+    .masterSearchHeader .row {
+        padding: 10px 0px 16px 0px !important;
+    }
+    .masterSearchBack {
+        text-align: start;
+        padding-left: 10px !important;
+    }
+    .masterSearchBack img {
+        width: 60%;
+        margin-top: 5px !important;
+    }
+    .masterSearchLogo img {
+        width: 98%;
+        backdrop-filter: blur(1px);
+    }
+    .masterSerchIcon{
+        margin-top: 10px !important;
+    }
+    .masterSerchIcon img{
+        background: white;
+        border-radius: 50px;
+        position: absolute;
+        z-index: 1;
+        padding: 18px 18px !important;    
+    }
+    .circle {
+        top: 28px;
+        left: 803px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        opacity: 0;
+        animation: scaleIn 6s infinite cubic-bezier(0.99, 0.97, 0.02, -0.01);
+        /* animation: scaleIn 6s infinite cubic-bezier(.36, .11, .89, .32);*/
+      }
+      
+      @keyframes scaleIn {
+      from {
+        transform: scale(.5, .5);
+        opacity: .5;
+      }
+      to {
+        transform: scale(1.8, 1.8);
+        opacity: 0;
+      }
+      }
+    .masterSerchInput{
+        text-align: left;
+        margin-top: 8px !important;
+    }
+    .masterSerchInput input{
+        width: 94%;
+        padding: 24px 0px 24px 20px !important;
+        font-size: 22px;
+        border: none;
+        border-radius: 3px;
+        color: #757575;
+    }
+    .msearchscroll{
+        height: calc(100% - 202.33px);
+    }
+    .msearchscroll .row{
+        padding: 12px 15px 10px 15px;
+    }
+    .mseacrchheadering h3{
+        font-size: 28px;
+        margin-top: 30px;
+    }
+    .msearchtbn{
+        font-size: 29px; 
+        padding: 17px; 
+        width: 100%; 
+        margin-top: 7px !important;
+    }
+}

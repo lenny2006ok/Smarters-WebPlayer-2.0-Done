@@ -1,0 +1,2589 @@
+<?php
+session_start();
+define( 'AJAXCONROLERDIRPATH', dirname(dirname(__FILE__)) . '/' );
+if(file_exists(AJAXCONROLERDIRPATH."connection.php"))
+{
+	include_once(AJAXCONROLERDIRPATH."connection.php");
+}
+if(file_exists(AJAXCONROLERDIRPATH."lib/Common/CommonController.php"))
+{
+	include_once(AJAXCONROLERDIRPATH."lib/Common/CommonController.php");
+}
+
+if(file_exists(AJAXCONROLERDIRPATH."admin/includes/functions.php"))
+{
+	include_once(AJAXCONROLERDIRPATH."admin/includes/functions.php");
+}
+if(file_exists(AJAXCONROLERDIRPATH."includes/functions.php"))
+{
+	include_once(AJAXCONROLERDIRPATH."includes/functions.php");
+}
+
+$funconn = new clientcontrolfunctions();
+
+if(isset($_POST["action"]) && $_POST["action"] == "webtvlogin")
+{
+	$Runtime = $_POST["runtime"];
+	$username = $_POST["uname"];
+	$password = $_POST["upass"];
+	$rememberMe = $_POST["rememberMe"];
+	$returnData = array('result' => 'error' , 'message' => 'Invalid Details');
+	$DatabaseObj = new DBConnect();
+	$conn = $DatabaseObj->makeconnection();
+	if(!empty($conn)){
+		$CommonController = new CommonController();
+		$controlfunctions = new controlfunctions();
+		$ConfigDetails = $CommonController->getconfigurationoption($conn,"1");
+		if(isset($ConfigDetails["portallinks"]) && !empty($ConfigDetails["portallinks"]))
+		{
+			$PortalLinks = unserialize($ConfigDetails["portallinks"]);
+			$Fportallink = (isset($PortalLinks[$Runtime]) && $PortalLinks[$Runtime] != "")?$PortalLinks[$Runtime]:"";
+			if(!empty($Fportallink))
+			{
+				$bar = "/";
+				if(substr($Fportallink, -1) == "/")
+				{
+					$bar =  "";
+				}
+				$Fportallink = $Fportallink.$bar;
+				$ApiLink = $Fportallink."player_api.php?username=".$username."&password=".$password;
+				$APIRequest = $CommonController->CallApiRequest($ApiLink);
+				$Result = $APIRequest;
+				if($Result['result'] == "success")
+				{
+					if(isset($Result['data']->user_info->auth))
+					{
+					    if($Result['data']->user_info->auth != 0)
+					    {
+					        if($Result['data']->user_info->status == 'Active')
+					        {
+					        	$clientIP = $CommonController->client_ipaddress();
+					        	$datetime = date('Y-m-d h:i:s');
+					        	$UserStatus = "Active";
+					        	$userdetailsid = "";
+					        	$EncPassword = $controlfunctions->webtvtheme_encrypt($password);
+					        	$QueryData = array("request"=> "Get","table"=> "webtvtheme_userdetails", "data" => array("username" => $username,"password" => $EncPassword,"portallink" => $Fportallink));  
+								$UserData = $controlfunctions->webtvtheme_ExecuteQuery($QueryData,$conn);
+								if(empty($UserData))
+								{
+									$QueryData = array("request"=> "Insert","table"=> "webtvtheme_userdetails", "data" => array("username" => $username,"password" => $EncPassword,"portallink" => $Fportallink,"status" => $UserStatus));  
+									$InsertData = $controlfunctions->webtvtheme_ExecuteQuery($QueryData,$conn);
+									if($InsertData["result"] == "success")
+									{
+										$userdetailsid = (isset($InsertData["insert_id"]))?$InsertData["insert_id"]:"";
+									}
+								}
+								else
+								{
+									$userdetailsid = (isset($UserData[0]["id"]))?$UserData[0]["id"]:"";
+									$userstatus= (isset($UserData[0]["status"]))?$UserData[0]["status"]:"";
+									if($userstatus != "Active"){
+										$returnData = array('result' => 'error' , 'message' => 'Your account is blocked for WebTv Player - Please contact the owner!');
+										echo json_encode($returnData);
+										die();
+									}
+								}
+								if($userdetailsid != "")
+								{
+									$QueryData = array("request"=> "Insert","table"=> "webtvtheme_log", "data" => array("user_id" => $userdetailsid,"login_time" => $datetime,"dns" => $Fportallink,"ip_address" => $clientIP));  
+									$InsertData = $controlfunctions->webtvtheme_ExecuteQuery($QueryData,$conn);
+								}
+					        
+					            if($rememberMe == 'on')
+					            {
+
+					                //$expire = time() + 3600 * 24 * 30;
+					                
+					                 //Remeber dynamic static path
+					                setcookie('username', $username ,time() + 2*7*24*60*60,'/',$_SERVER['SERVER_NAME'], false);
+					                setcookie('userpassword',$EncPassword ,time() + 2*7*24*60*60,'/',$_SERVER['SERVER_NAME'], false);
+					      
+					            }
+					            $SessionArray = array(
+					                                'username' => $Result['data']->user_info->username,
+					                                'password' => $Result['data']->user_info->password,
+					                                'portallink' => $Fportallink,
+					                                'auth' => $Result['data']->user_info->auth,
+					                                'status' => $Result['data']->user_info->status,
+					                                'exp_date' => $Result['data']->user_info->exp_date,
+					                                'active_cons' => $Result['data']->user_info->active_cons,
+					                                'is_trial' => $Result['data']->user_info->is_trial,
+					                                'max_connections' => $Result['data']->user_info->max_connections,
+					                                'created_at' => $Result['data']->user_info->created_at,
+					                                'allowed_output_formats' => $Result['data']->user_info->allowed_output_formats,
+					                                'url' => $Result['data']->server_info->url,
+					                                'port' => $Result['data']->server_info->port,
+					                                'rtmp_port' => $Result['data']->server_info->rtmp_port,
+					                                'timezone' => $Result['data']->server_info->timezone
+					                                );
+					            $_SESSION["webTvplayer"] = $SessionArray;
+					            if(substr($XCStreamHostUrl, -1) == "/")
+					            {
+					                $bar =  "";
+					                $XCStreamHostUrl = substr($XCStreamHostUrl, 0, -1);
+					            }
+
+					            $_SESSION["selectedhost"] = $XCStreamHostUrl;
+					            $returnData = array('result' => 'success' , 'message' => $SessionArray);
+					        }
+					        else
+					        {
+					            $returnData = array('result' => 'error' , 'message' => 'Status is '.$Result['data']->user_info->status);
+					        }
+					    }
+					    else
+					    {
+					        $returnData = array('result' => 'error' , 'message' => 'Invalid Details');
+					    }
+					}
+					else
+					{
+					    $returnData = array('result' => 'error' , 'message' => 'Invalid Details');
+					}
+				}
+				else
+				{
+					$returnData = array('result' => 'error' , 'message' => 'Invalid Details');
+				}
+			}
+			
+		}
+	}
+	echo json_encode($returnData);
+	die();
+}
+
+
+
+if(isset($_POST["action"]) && $_POST["action"] == "logoutProcess")
+{
+	unset($_SESSION['webTvplayer']);// will delete just the name data
+  	session_destroy();
+  	echo "1";
+	die();
+}
+
+
+if(isset($_POST["action"]) && $_POST["action"] == "getmoviedatalimit")
+{
+	$SortingType = $_POST["sorting"];
+	$categoryID = $_POST["category"];
+	$sliderfor = $_POST["sliderfor"];
+	$streamid = $_POST["streamid"];
+	$cateID = $_POST["cateID"];
+	$dataoffset = $_POST["dataoffset"];
+	$datalimit = $_POST["datalimit"];
+	$majoraction = $_POST["majoraction"];
+	$coverup = "";
+	$rating = "";
+	$DatabaseObj = new DBConnect();
+	$conn = $DatabaseObj->makeconnection();
+	$CommonController = new CommonController();
+	$clientcontrolfunctions = new clientcontrolfunctions();
+	$SessionStroedportallink = $_SESSION['webTvplayer']['portallink'];
+    $getActivePortalID = $CommonController->getActivePortal($conn,$SessionStroedportallink);	
+    $getBlockedStreamsIts = $CommonController->getBlockedStreamsIts($conn,$getActivePortalID,'movies',$categoryID);
+	$Arrayforsorting = array();
+	if($categoryID == 'favorite')
+	{
+		$webtvpanel_getFavforCategories = $clientcontrolfunctions->webtvpanel_getFavforCategories('movies',$conn);
+		if(!empty($webtvpanel_getFavforCategories))
+		{		
+			foreach($webtvpanel_getFavforCategories as $Favkey)
+      		{
+      			$StreamKeyIS = unserialize($Favkey['favdata']);
+        		$Arrayforsorting[$StreamKeyIS->added] = (object)[
+                                            "num" => $StreamKeyIS->num,
+											"name" => $StreamKeyIS->name,
+											"stream_type" => $StreamKeyIS->stream_type,
+											"stream_id" => $StreamKeyIS->stream_id,
+											"stream_icon" => $StreamKeyIS->stream_icon,
+											"rating" => $StreamKeyIS->rating,
+											"rating_5based" => $StreamKeyIS->rating_5based,
+											"added" => $StreamKeyIS->added,
+											"category_id" => $StreamKeyIS->category_id,
+											"container_extension" => $StreamKeyIS->container_extension,
+											"selectedfavmovie" => 'selectedfavmovie',
+											"direct_source" => $StreamKeyIS->direct_source
+                ];
+      		}
+      		
+		}else{
+			echo "<div class='noresult'>No Result Found!!</div>";die();
+		}
+
+	}
+	else
+	{
+		$MoviesResult = $CommonController->getMoviesByCateGoryID($categoryID);
+		if($MoviesResult["result"] == "success" && !empty($MoviesResult["data"]))
+		{
+			foreach($MoviesResult["data"] as $StreamData)
+			{
+				$specialArray = array("!","@","#","$","%","&","*");
+				shuffle($specialArray);
+				$customKey = $StreamData->name;  
+				if($SortingType == "topadded")
+				{
+					$customKey = $StreamData->added;  
+					if(array_key_exists($StreamData->added, $Arrayforsorting))
+					{
+					  $randonstringis = "";
+					  foreach($specialArray as $sprcialsData)
+					  {
+					    $randonstringis.= $sprcialsData;
+					  }
+					  $customKey = $StreamData->added.$randonstringis;
+					}
+				}
+				if($SortingType == "toprated")
+				{
+					$customKey = $StreamData->rating."-".$StreamData->name;
+				}
+				if(!in_array($StreamData->stream_id, $getBlockedStreamsIts)){
+					$Arrayforsorting[$customKey] = (object)[
+	                                                    "num" => $StreamData->num,
+	                                                    "name" => $StreamData->name,
+	                                                    "stream_type" => $StreamData->stream_type,
+	                                                    "stream_id" => $StreamData->stream_id,
+	                                                    "stream_icon" => $StreamData->stream_icon,
+	                                                    "rating" => $StreamData->rating,
+	                                                    "rating_5based" => $StreamData->rating_5based,
+	                                                    "added" => $StreamData->added,
+	                                                    "category_id" => $StreamData->category_id,
+	                                                    "container_extension" => $StreamData->container_extension,
+	                                                    "custom_sid" => $StreamData->custom_sid,
+	                                                    "direct_source" => $StreamData->direct_source
+	                                                    ];
+				}
+				
+			}
+			if($SortingType == "topadded")
+	        {
+	           ksort($Arrayforsorting);
+	           $Arrayforsorting = array_reverse($Arrayforsorting, true);
+	        }   
+			if($SortingType == "toprated")
+	        {
+	           ksort($Arrayforsorting);
+	           $Arrayforsorting = array_reverse($Arrayforsorting, true);
+	        }     
+	        if($SortingType == "asc")
+	        {
+	          array_multisort(array_keys($Arrayforsorting), SORT_NATURAL| SORT_FLAG_CASE, $Arrayforsorting);
+	        }
+	        if($SortingType == "desc")
+	        {
+	          array_multisort(array_keys($Arrayforsorting), SORT_NATURAL| SORT_FLAG_CASE, $Arrayforsorting);
+	          $Arrayforsorting = array_reverse($Arrayforsorting, true);
+	        }
+	    }
+	}
+	
+        if(!empty($Arrayforsorting))
+        {
+        	if($sliderfor != "" && $sliderfor == "viewinfoslide")
+        	{
+        		$Counter = 0;
+	        	foreach($Arrayforsorting as $data)
+	        	{
+	        		if($Counter < 11)
+	        		{
+	        			 $Icon = $data->stream_icon;
+	        			 
+					    if($Icon == '')
+					    {
+					      $Icon = 'images/no_poster.png';
+					      $coverup = "noposter";
+					    }
+					    if($streamid != $data->stream_id)
+					    {
+					    	?>
+					    	<div class="sliderimage-div <?php echo $Counter; ?>">
+		                        <img src="<?php echo $Icon; ?>" alt="" onerror="this.src='images/no_poster.png';" class="sec-images"/>
+		                        <div class="img-title" onclick='viewdetails("<?php echo $data->stream_id;?>","<?php echo $SortingType;?>")'>		                        	
+		                            <span class="movies-title"><?php echo $data->name;?></span>
+		                            <div class="rating"><?php echo  $clientcontrolfunctions->WebTVClient_starRating($data->rating_5based);?></div>
+		                        </div>
+		                    </div>
+					    	<?php
+					    }
+	        			?>	  
+	        			<?php
+	        		}	
+	        		++$Counter;
+	        	}
+	        	if($Counter == 1){
+	        		?>	
+        			<div class="sliderimage-div" >
+                        <img src="images/no_poster.png" alt="" onerror="this.src='images/no_poster.png';" class="sec-images"/>
+                        <div class="img-title">	                        	
+                            <span class="movies-title">No Related Slider!!</span>
+                        </div>
+                    </div>
+	        		<?php
+	        	}
+	        	if($Counter > 8){ ?>
+	        		<div class="prev">
+	                    <img src="images/left-arrow-white.png" alt="" class="prev-icon d-none" id="rightArrow_default"/>
+	                </div>
+	                <div class="next">
+	                    <img src="images/right-arrow-white.png" alt="" class="next-icon" id="leftArrow_default">
+	                </div>
+	        		<?php
+	        	}
+	        	?>
+                <?php
+        	}
+        	elseif($majoraction != "" && $majoraction == "default")
+        	{
+        		$Counter = 0;
+
+	        	foreach($Arrayforsorting as $data)
+	        	{
+	        		if ($Counter >= $dataoffset && $Counter <= $datalimit)  
+        			{
+	        			 $Icon = $data->stream_icon;
+					    if($Icon == '')
+					    {
+					      $Icon = 'images/no_poster.png';
+					    }
+	        			?>
+	        			<div class="sliderimage-view un-<?php echo $Counter; ?> <?php echo $data->selectedfavmovie; ?>" data-streamID="<?php echo $data->stream_id;?>">
+	                        <img src="<?php echo $Icon; ?>" onerror="this.src='images/no_poster.png';" alt="" class="view-images"/>
+	                        <div class="img-title" onclick='viewdetails("<?php echo $data->stream_id;?>","<?php echo $SortingType;?>")'>
+	                            <span class="movies-title"><?php echo $data->name;?></span>
+	                            <div class="rating"><?php echo $clientcontrolfunctions->WebTVClient_starRating($data->rating_5based);?></div>
+	                        </div>
+	                    </div>
+	        			<?php
+	        		}	
+	        		++$Counter;	        		
+			  	}
+			  	?>
+			  	<?php 
+			  	if($Counter > $datalimit)
+		      	{
+		        ?>		        
+			        <center class="loading-loadBtn">
+			          <button type="button" class="LoadMoreBtn btn btn-success rippler rippler-default" data-dataoffset="<?php echo $datalimit; ?>" data-categoryID="<?php echo $categoryID; ?>">Load More <i class="LoadingMoreFa fa fa-spin fa-spinner d-none"></i></button>
+			        </center>
+		        <?php
+
+		      	}
+
+        	}else{
+        		$Counter = 0;
+	        	foreach($Arrayforsorting as $data)
+	        	{	
+	        		if($Counter < 11)
+	        		{
+	        			 $Icon = $data->stream_icon;
+					    if($Icon == '')
+					    {
+					      $Icon = 'images/no_poster.png';
+					    }
+	        			?>
+	        			<div class="sliderimage-div <?php echo $Counter; ?>">
+	                        <img src="<?php echo $Icon; ?>" alt="" onerror="this.src='images/no_poster.png';" class="sec-images"/>
+	                        <div class="img-title" onclick='viewdetails("<?php echo $data->stream_id;?>","<?php echo $SortingType;?>")'>
+	                            <span class="movies-title"><?php echo $data->name;?></span>
+	                            <div class="rating"><?php echo $clientcontrolfunctions->WebTVClient_starRating($data->rating_5based);?></div>
+	                        </div>
+	                    </div>
+	        			<?php
+	        		}	
+	        		++$Counter;
+	        	}
+	        	if($Counter == 1){
+	        		?>	
+        			<div class="sliderimage-div" >
+                        <img src="images/no_poster.png" alt="" onerror="this.src='images/no_poster.png';" class="sec-images"/>
+                        <div class="img-title">	                        	
+                            <span class="movies-title">No Related Slider!!</span>
+                        </div>
+                    </div>
+	        		<?php
+	        	}
+
+	        	?>
+	        		<div class="viewall-div">
+		                <a href="movies-view.php?sort=<?php echo $SortingType;?>&cate=<?php echo $cateID;?>" class="viewall-title">View all</a>
+		            </div>
+	        	<?php
+        	}
+        	
+        	
+        }else{
+        	?>
+        	<a href="#" class="noresult-slideView">
+	        		<div class="viewall-div">
+		                <div class="viewall-title">
+		                No Result Found !!
+		            	</div>
+		            </div>
+	        	</a>
+        	<?php
+        }
+	//}
+	die();
+}
+
+
+if(isset($_POST["action"]) && $_POST["action"] == "getseriesdatalimit")
+{
+	
+	$SortingType = $_POST["sorting"];
+	$categoryID = $_POST["category"];
+	$majoraction = $_POST["majoraction"];
+	$cateID = $_POST["cateID"];
+	$dataoffset = $_POST["dataoffset"];
+	$datalimit = $_POST["datalimit"];
+	$coverup = "";
+	$CommonController = new CommonController();
+	$DatabaseObj = new DBConnect();
+	$conn = $DatabaseObj->makeconnection();
+	$BackdropArray = array();
+	$Arrayforsorting = array();
+	$clientcontrolfunctions = new clientcontrolfunctions();
+
+	$SessionStroedportallink = $_SESSION['webTvplayer']['portallink'];
+    $getActivePortalID = $CommonController->getActivePortal($conn,$SessionStroedportallink);
+
+    $getBlockedStreamsIts = $CommonController->getBlockedStreamsIts($conn,$getActivePortalID,'series',$categoryID);
+	if($categoryID == 'favorite')
+	{
+		$webtvpanel_getFavforCategories = $clientcontrolfunctions->webtvpanel_getFavforCategories('series',$conn);
+		if(!empty($webtvpanel_getFavforCategories))
+		{			
+			foreach($webtvpanel_getFavforCategories as $Favkey)
+			{
+				$StreamKeyIS = unserialize($Favkey['favdata']);
+				
+				$Arrayforsorting[$StreamKeyIS->name] = (object)[
+								  "num" => $StreamKeyIS->num,
+                                  "name" => $StreamKeyIS->name,
+                                  "stream_type" => $StreamKeyIS->stream_type,
+                                  "series_id" => $StreamKeyIS->series_id,
+                                  "cover" => $StreamKeyIS->cover,
+                                  "plot" => $StreamKeyIS->plot,
+                                  "cast" => $StreamKeyIS->cast,
+                                  "director" => $StreamKeyIS->director,
+                                  "genre" => $StreamKeyIS->genre,
+                                  "releaseDate" => $StreamKeyIS->releaseDate,
+                                  "last_modified" => $StreamKeyIS->last_modified,
+                                  "rating" => $StreamKeyIS->rating,
+                                  "rating_5based" => $StreamKeyIS->rating_5based,
+                                  "youtube_trailer" => $StreamKeyIS->youtube_trailer,
+                                  "episode_run_time" => $StreamKeyIS->episode_run_time,
+                                  "selectedfavmovie" => 'selectedfavmovie',
+                                  "category_id" => $StreamKeyIS->category_id
+                ];
+			}
+		}
+		else
+		{
+			echo "<div class='noresult'>No Result Found!!</div>";die();
+		}
+	}
+	else
+	{
+		$MoviesResult = $CommonController->getSeriesByCateGoryID($categoryID);
+		if($MoviesResult["result"] == "success" && !empty($MoviesResult["data"]))
+		{
+			foreach($MoviesResult["data"] as $StreamData)
+			{
+				$specialArray = array("!","@","#","$","%","&","*");
+				shuffle($specialArray);
+				$customKey = $StreamData->name;  
+
+				if($SortingType == "topadded")
+				{
+					$customKey = $StreamData->last_modified;  
+					if(array_key_exists($StreamData->last_modified, $Arrayforsorting))
+					{
+					  $randonstringis = "";
+					  foreach($specialArray as $sprcialsData)
+					  {
+					    $randonstringis.= $sprcialsData;
+					  }
+					  $customKey = $StreamData->last_modified.$randonstringis;
+					}
+				}
+				if($SortingType == "toprated")
+				{
+					$customKey = $StreamData->rating."-".$StreamData->name;
+				}
+				if(!in_array($StreamData->series_id, $getBlockedStreamsIts)){
+					$Arrayforsorting[$customKey] = (object)[
+									  "num" => $StreamData->num,
+                                      "name" => $StreamData->name,
+                                      "stream_type" => 'series',
+                                      "series_id" => $StreamData->series_id,
+                                      "cover" => $StreamData->cover,
+                                      "plot" => $StreamData->plot,
+                                      "cast" => $StreamData->cast,
+                                      "director" => $StreamData->director,
+                                      "genre" => $StreamData->genre,
+                                      "releaseDate" => $StreamData->releaseDate,
+                                      "last_modified" => $StreamData->last_modified,
+                                      "rating" => $StreamData->rating,
+                                      "rating_5based" => $StreamData->rating_5based,
+                                      "youtube_trailer" => $StreamData->youtube_trailer,
+                                      "episode_run_time" => $StreamData->episode_run_time,
+                                      "category_id" => $StreamData->category_id,
+                                      "rating" => $StreamData->rating
+                                    ];
+				}
+				
+			}
+			if($SortingType == "topadded")
+	        {
+	           ksort($Arrayforsorting);
+	           $Arrayforsorting = array_reverse($Arrayforsorting, true);
+	        }   
+			if($SortingType == "toprated")
+	        {
+	           ksort($Arrayforsorting);
+	           $Arrayforsorting = array_reverse($Arrayforsorting, true);
+	        }     
+	        if($SortingType == "asc")
+	        {
+	          array_multisort(array_keys($Arrayforsorting), SORT_NATURAL| SORT_FLAG_CASE, $Arrayforsorting);
+	        }
+	        if($SortingType == "desc")
+	        {
+	          array_multisort(array_keys($Arrayforsorting), SORT_NATURAL| SORT_FLAG_CASE, $Arrayforsorting);
+	          $Arrayforsorting = array_reverse($Arrayforsorting, true);
+	        }
+	    }else{
+	    	if($majoraction != "" && $majoraction == "default")
+        	{
+        	?>
+        	<a href="#" class="grid-noresult">
+	        		<div class="viewall-div">
+		                <div class="viewall-title">
+		                No Result Found !!
+		            	</div>
+		            </div>
+	        	</a>
+        	<?php
+
+        	}else{        		
+        	?>
+        	<div class="noresult-slideView">
+        		<div class="viewall-div">
+	                <div class="viewall-title">
+	                No Result Found !!
+	            	</div>
+	            </div>
+        	</div>
+        	<?php
+        	}
+        	die();
+	    }
+	}
+	
+        if(!empty($Arrayforsorting))
+        {
+        	if($majoraction != "" && $majoraction == "default")
+        	{
+        		$Counter = 0;        		
+	        	foreach($Arrayforsorting as $data)
+	        	{	
+	        		if($Counter >= $dataoffset && $Counter <= $datalimit)  
+        			{
+	        			 $Icon = $data->cover;
+					    if($Icon == '')
+					    {
+					      $Icon = 'images/no_poster.png';
+					      $coverup = "noposter";
+					    }
+					    $QuersyData = "moviename=".$data->name."&StreamId=".$data->series_id."&CateGoryId=".$data->category_id."&posterImage=".$Icon."&extension=".$data->container_extension."&rating5=".$data->rating_5based."&movienum=".$data->num;
+	        			?>
+
+	        			<div class="sliderimage-view un-<?php echo $Counter; ?> <?php echo $data->selectedfavmovie; ?>" data-streamID="<?php echo $data->series_id;?>">
+	                        <img src="<?php echo $Icon; ?>" alt="" onerror="this.src='images/no_poster.png';" class="view-images"/>
+	                        <div class="img-title" onclick='viewdetails("<?php echo $data->series_id;?>","<?php echo $SortingType;?>")'>
+	                            <span class="movies-title"><?php echo $data->name;?></span>
+	                            <div class="rating"><?php echo $clientcontrolfunctions->WebTVClient_starRating($data->rating_5based);?></div>
+	                        </div>
+	                    </div>
+	        			<?php
+	        		}	
+	        		++$Counter;
+
+			  	}
+			  	if($Counter > $datalimit)
+		      	{
+		        ?>
+			        <center class="loading-loadBtn">
+			          <button type="button" class="LoadMoreBtn btn btn-success rippler rippler-default" data-dataoffset="<?php echo $datalimit; ?>" data-categoryID="<?php echo $categoryID; ?>">Load More <i class="LoadingMoreFa fa fa-spin fa-spinner d-none"></i></button>
+			        </center>
+		        <?php
+
+		      	}       	
+
+        	}
+        	else
+        	{
+        		$Counter = 0;
+	        	foreach($Arrayforsorting as $data)
+	        	{
+	        		if($Counter < 11)
+	        		{
+	        			 $Icon = $data->cover;
+					    if($Icon == '')
+					    {
+					      $Icon = 'images/no_poster.png';
+					      $coverup = "noposter";
+					    }
+					    $QuersyData = "moviename=".$data->name."&StreamId=".$data->series_id."&CateGoryId=".$data->category_id."&posterImage=".$Icon."&extension=".$data->container_extension."&rating5=".$data->rating_5based."&movienum=".$data->num;
+	        			?>
+	        			<div class="sliderimage-div <?php echo $Counter; ?>">
+	                        <img src="<?php echo $Icon; ?>" alt="" onerror="this.src='images/no_poster.png';" class="sec-images"/>
+	                        <div class="img-title" onclick='viewdetails("<?php echo $data->series_id;?>","<?php echo $SortingType;?>")'>
+	                            <span class="movies-title"><?php echo $data->name;?></span>
+	                            <div class="rating"><?php echo $clientcontrolfunctions->WebTVClient_starRating($data->rating_5based);?></div>
+	                        </div>
+	                    </div>
+	        			<?php
+	        		}	
+	        		++$Counter;
+	        	}
+	        	if(Counter > 7)
+	        	{
+	        	?>
+	        		<div class="viewall-div">
+		                <a href="series-view.php?sort=<?php echo $SortingType;?>&cate=<?php echo $cateID;?>" class="viewall-title">View all</a>
+		            </div>
+        		<?php
+	        	}
+        		
+        	}        	
+        }
+        else
+        {
+        	?>
+        	<div href="#" class="noresult-slideView">
+        		<div class="viewall-div">
+	                <div class="viewall-title">
+	                No Result Found !!
+	            	</div>
+	            </div>
+	        </div>
+        	<?php
+        }
+	//}
+	die();
+}
+if(isset($_POST["action"]) && $_POST["action"] == "getmoviedetailsbyid")
+{
+	$streamid = $_POST["streamid"];
+	$categoryID = $_POST["category"];
+	$SessionStroedportallink = $_SESSION['webTvplayer']['portallink'];
+	$CommonController = new CommonController();
+	$clientcontrolfunctions = new clientcontrolfunctions();	
+	$controlfunctions = new controlfunctions();
+	$movieData = $CommonController->getMoviesInfo($categoryID,$streamid);	
+  	$StreamIDIS = (isset($StreamId) && !empty($StreamId))?$StreamId:$streamid;
+	$MainStreamName = (isset($moviename) && !empty($moviename))?$moviename:"n/A";
+	$MainStreamNum = (isset($movienum) && !empty($movienum))?$movienum:"n/A";
+	$Mainextension = (isset($extension) && !empty($extension))?$extension:"n/A";
+	$rating5 = (isset($rating5) && !empty($rating5))?$rating5:"";
+	$posterImage = "";
+	$DatabaseObj = new DBConnect();
+	$conn = $DatabaseObj->makeconnection();
+	$checkifExists = $clientcontrolfunctions->webtvpanel_getFavExists('movies',$SessionStroedportallink,$streamid,$conn);
+	$GetExternalLinkdetails = $controlfunctions->webtvtheme_getExternalLinkdetails($conn,'movies',$streamid,$SessionStroedportallink);
+	
+	if($movieData["result"] == "success" && !empty($movieData["data"]))
+	{
+
+		if(isset($movieData['data']->movie_data))
+		{
+			$MainStreamName = ($movieData['data']->movie_data->name != "")?$movieData['data']->movie_data->name:"n/A";
+			$Mainextension = ($movieData['data']->movie_data->container_extension != "")?$movieData['data']->movie_data->container_extension:"n/A";
+		}
+		$MovieTrailer = "";
+	    if(isset($movieData['data']->info->youtube_trailer) && !empty($movieData['data']->info->youtube_trailer))
+	    {
+	      $MovieTrailer = $movieData['data']->info->youtube_trailer;
+	    }
+
+		if(!empty($movieData['data']->info->cover_big))
+		{
+			$posterImage = $movieData['data']->info->cover_big;
+		}else{
+			$posterImage = $movieData['data']->info->movie_image;
+		}
+		$BackGroundImageCover = $movieData['data']->info->movie_image;
+	    if(!empty($movieData['data']->info->backdrop_path))
+	    {
+	      $backdropData = $movieData['data']->info->backdrop_path;
+	      $randkey = array_rand($backdropData);
+	      $BackGroundImageCover = $backdropData[$randkey];
+	    }
+	    
+	    $movieDescription = ($movieData['data']->info->description != '')?$movieData['data']->info->description:$movieData['data']->info->plot;
+		$MovieCast = ($movieData['data']->info->cast != '')?$movieData['data']->info->cast:'n/A';
+		$rate5 = $rating5;
+        if($rating5 == "")
+        {
+          $rate10 = explode('/',$movieData['data']->info->rating);  
+          $rate5 = intval($rate10['0'])/2;
+        }
+        if (strpos($rate5,'.') !== false) 
+        {
+           $rate5 = floatval($rate5);
+        }else {
+           $rate5 = intval($rate5);
+        }
+		?>
+
+		<!-- new code here -->
+		<div class="modal-content viewinfo-content" style="
+				background: url('<?php echo $BackGroundImageCover; ?>');
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-color: #233035;
+    			background-blend-mode: overlay;
+    			width:100vw;
+				">
+			<div class="detailsexploresection">	
+			<div class="player_changeIssue alert alert-info" style="position: fixed; top: -300px;left: 35%;">
+	      		Unable to play this format in Jw player trying with aj player.
+	        </div>
+	        <div class="modal-header viewinfo-header">
+	          <button type="button" class="close view-close" data-dismiss="modal" aria-label="Close">
+	            <span aria-hidden="true">&times;</span>
+	          </button>
+	        </div>
+	        <div class="modal-body viewinfo-body text-light">	
+	       		<div class="row player_row d-none">
+	       			<div class="col-md-2 watchPoster">
+	       				<div class="stream-icon">
+		                  <img src="<?php echo (!empty($posterImage))?$posterImage:'images/no_poster.png';?>" class="stream-image">
+		                </div>
+		                <div class="rating-movies"><?php echo $clientcontrolfunctions->WebTVClient_starRating($rate5);?></div>
+		                <button class="btn btn-info btn-backtoinfo mt-2">Back to Info</button>
+	       			</div>
+	       			
+	       			<div class="col-md-10">
+	       				<div class="PlayerHolder" data-ajplayer="" data-flowplayer="" data-jwplayer="">
+				            <div id="player-holder" class="d-none"></div>
+				        </div>
+			          	<div id="YoutubePLayerHolder-<?php echo $StreamIDIS;?>" class="d-none youtubeholderCommon">
+			          	</div>
+	       			</div>
+	       		</div>       	
+	          <div class="row streamview">
+	              <div class="col-md-2 info-poster">
+	                <div class="stream-icon">
+	                  <img src="<?php echo (!empty($posterImage))?$posterImage:'images/no_poster.png';?>" class="stream-image">
+	                </div>
+	                <div class="text-center stream-rating"><?php echo $clientcontrolfunctions->WebTVClient_starRating($rate5);?></div>
+	              </div>
+	              <div class="col-md-8 offset-md-1">
+	                <div class="stream-details">
+	                  <div class="stream-title">
+	                    <h1>
+
+	                    	<?php echo $MainStreamName;?>
+	                    	<i  class="fa fa-heart makeFav <?php echo (!empty($checkifExists))?'activefav':''; ?>"
+			                    aria-hidden="true" 
+			                    data-favstreamid="<?php echo $StreamIDIS; ?>" 
+			                    data-favstreamtype="<?php echo "movies"; ?>" 
+			                    data-cateid='<?php echo $categoryID; ?>' 
+			                    data-favis="<?php echo (!empty($checkifExists))?'no':'yes'; ?>"  
+			                    style="float: right;z-index:999999;margin-right:10px;">             
+			                </i>
+	                    </h1>
+	                  </div>
+	                  
+	                </div>
+	                <div class="stream-persona">
+	                  <span class="direct-persona"><i class="fas fa-bullhorn"></i> Director</span>
+	                  <span class="direct-persona"><i class="far fa-calendar-alt"></i> Release Date</span>
+	                  <span class="direct-persona"><i class="far fa-clock"></i> Duration</span>
+	                  <span class="direct-persona"><i class="fas fa-users"></i> Cast</span>
+	                </div>
+	                <div class="stream-persona-info">
+	                  <span class="direct-persona-info"> <?php echo ($movieData['data']->info->director != '')?$movieData['data']->info->director:'n/A';?></span>
+	                  <span class="direct-persona-info"> <?php echo ($movieData['data']->info->releasedate != '')?date("l, d F Y", strtotime($movieData['data']->info->releasedate)):'n/A';?></span>
+	                  <span class="direct-persona-info"> <?php echo ($movieData['data']->info->duration != '')?$movieData['data']->info->duration:'n/A';?></span>
+	                  <span class="direct-persona-info cast">
+ <?php echo substr($MovieCast, 0, 40); ?><span class="badge badge-info showCast" data-toggle="yes">Show Full Cast</span></span>
+	                  <span class="direct-persona-info fullcast d-none"> <?php echo $MovieCast; ?><span class="badge badge-danger showCast" data-toggle="no">Hide</span></span>
+	                </div>
+	                <div class="stream-description">
+	                    <p><?php echo ($movieDescription != "")?$movieDescription:'n/A';?></p>
+	                  </div>
+	              </div>
+	              <div class="col-md-12">
+	                <div class="view-button">
+	                	<?php 
+		                if($MovieTrailer != "")
+		                {
+		                  ?>
+	                    <button class="btn watchTrailer-custom" onclick="watchTrailer('<?php echo $MovieTrailer;?>','<?php echo $StreamIDIS;?>')">Watch Trailer</button>
+	                    	<?php
+		                }
+		               ?>
+	                    <button class="btn watchNow-custom" data-external="<?php echo (!empty($GetExternalLinkdetails))?$GetExternalLinkdetails[0]['externallink']:'';?>" data-streamID="<?php echo $StreamIDIS;?>" data-ext="<?php echo $Mainextension; ?>" onclick="watchMovie('<?php echo $StreamIDIS;?>.<?php echo $Mainextension; ?>')">Watch Now</button>
+	                </div>
+	              </div>
+	          	</div>
+	          	<?php 
+				if(!empty($MovieCast) && $MovieCast != "n/A")
+				{
+					$explodedCast = explode(",", $MovieCast);
+					if(!empty($explodedCast))
+					{
+					?>
+		          	<div class="row slider-row castslidersection">
+						<div class="col-md-12">
+							<h3 class="related-slide">Cast & Crew</h3>
+							<div class="view-slide" id="viewSliderCast">
+								<?php 
+								$counterIs = 0;
+								foreach($explodedCast as $castName)
+								{
+									$castName = trim($castName);
+									?>
+									<div class="viewslide-banner commomapicastpicture castselectorby-<?php echo $counterIs; ?>" data-castnameis="<?php echo $castName; ?>"  data-counteris="<?php echo $counterIs; ?>">
+										<img src="images/loading.jpg" class="viewsilderImage">
+									</div>
+									<?php
+									++$counterIs;
+								}
+								if(count($explodedCast) > 6)
+								{
+									?>
+					        		<div class="prev">
+					                    <img src="images/left-arrow-white.png" alt="" class="prev-icon d-none" id="rightArrow_Cast"/>
+					                </div>
+					                <div class="next">
+					                    <img src="images/right-arrow-white.png" alt="" class="next-icon" id="leftArrow_Cast">
+					                </div>
+					        		<?php
+								}
+								?>
+							</div>
+						</div>
+		          	</div>
+	          		<?php
+	          		}
+				}
+				?>
+	          	<div class="row slider-row">
+					<div class="col-md-12">
+						<h3 class="related-slide">Related Movies</h3>
+						<div class="view-slide" id="viewSlider">
+							<div class="viewslide-banner">
+								<img src="images/loading.jpg" class="viewsilderImage">
+							</div>
+							<div class="viewslide-banner">
+								<img src="images/loading.jpg" class="viewsilderImage">
+							</div>
+							<div class="viewslide-banner">
+								<img src="images/loading.jpg" class="viewsilderImage">
+							</div>
+							<div class="viewslide-banner">
+								<img src="images/loading.jpg" class="viewsilderImage">
+							</div>
+							<div class="viewslide-banner">
+								<img src="images/loading.jpg" class="viewsilderImage">
+							</div>
+							<div class="viewslide-banner">
+								<img src="images/loading.jpg" class="viewsilderImage">
+							</div>
+							<div class="viewslide-banner">
+								<img src="images/loading.jpg" class="viewsilderImage">
+							</div>
+							<div class="viewslide-banner">
+								<img src="images/loading.jpg" class="viewsilderImage">
+							</div>
+							<div class="viewslide-banner">
+								<img src="images/loading.jpg" class="viewsilderImage">
+							</div>
+							<div class="viewslide-banner">
+								<img src="images/loading.jpg" class="viewsilderImage">
+							</div>
+							<div class="viewslide-banner">
+								<img src="images/loading.jpg" class="viewsilderImage">
+							</div>
+						</div>
+					</div>
+	          </div>
+	        </div>
+	        </div>
+	        <div class="castsectionexplorehere d-none" style="min-height: 635px;">
+	        	<div class="modal-header viewinfo-header">
+		          <button type="button" class="close view-close" data-dismiss="modal" aria-label="Close">
+		            <span aria-hidden="true">&times;</span>
+		          </button>
+		        </div>
+		        <div class="modal-body text-light bodycontentforcastinfo">	
+		       		
+		       	</div>
+	        </div>
+	        <!---------->
+	    </div>
+		<?php 
+	}
+	else
+	{
+		echo "0";die();
+	} 
+	die();
+}
+
+
+if(isset($_POST["action"]) && $_POST["action"] == "getseriesdetailsbyid")
+{	
+	$streamid = $_POST["streamid"];
+	$categoryID = $_POST["category"];
+	$SessionStroedportallink = $_SESSION['webTvplayer']['portallink'];
+	$CommonController = new CommonController();
+	$controlfunctions = new controlfunctions();
+	$clientcontrolfunctions = new clientcontrolfunctions();
+	$SeriesData = $CommonController->getSeriesInfo($categoryID,$streamid);	
+	$DatabaseObj = new DBConnect();
+	$conn = $DatabaseObj->makeconnection();
+	$GetExternalLinkdetails = $controlfunctions->webtvtheme_getExternalLinkdetails($conn,'series',$streamid,$SessionStroedportallink);
+		
+    $getActivePortalID = $CommonController->getActivePortal($conn,$SessionStroedportallink);	
+	$StreamIDIS = (isset($StreamId) && !empty($StreamId))?$StreamId:"n/A";
+  	$MainStreamName = (isset($moviename) && !empty($moviename))?$moviename:"n/A";
+  	$MainStreamCategoryID = (isset($CateGoryId) && !empty($CateGoryId))?$CateGoryId:"n/A";
+  	$MainStreamCover = (isset($posterImage) && !empty($posterImage))?$posterImage:"images/no_poster.png";
+  	$MainStreamPlot = (isset($plot) && !empty($plot))?$plot:"n/A";
+  	$MainStreamCast = (isset($cast) && !empty($cast))?$cast:"n/A";
+  	$MainStreamGenre = (isset($genre) && !empty($genre))?$genre:"n/A";
+  	$MainStreamDirector = (isset($director) && !empty($director))?$director:"n/A";
+  	$MainStreamRating = (isset($rating) && !empty($rating))?$rating:"0";
+  	$MainStreamReleaseDate = (isset($releaseDate) && !empty($releaseDate))?$releaseDate:"n/A";
+	$posterImage = "";
+	if($SeriesData["result"] == "success" && !empty($SeriesData["data"]))
+	{
+		$SeriesTrailer = "";
+	    if(isset($SeriesData['data']->info->youtube_trailer) && !empty($SeriesData['data']->info->youtube_trailer))
+	    {
+	      $SeriesTrailer = $SeriesData['data']->info->youtube_trailer;
+	    }
+	    if(isset($SeriesData['data']->episodes) && !empty($SeriesData['data']->episodes))
+    	{
+    		$AllSeasonData = (isset($SeriesData['data']->seasons) && !empty($SeriesData['data']->seasons))?$SeriesData['data']->seasons:"";
+			$SeasonCoverImage = array();
+			if($AllSeasonData != "")
+			{
+				foreach($AllSeasonData as $SeasonDataKey)
+				{
+				  $SeasonCoverImage[$SeasonDataKey->season_number] = (!empty($SeasonDataKey->cover_big))?$SeasonDataKey->cover_big:$SeasonDataKey->cover;
+				}
+			}
+			$OnloadAvtiveEpisode = 0;   
+       		$SeasonsIdData = array();
+       		$Appepisodes = array();
+       		$MainposterImage = $MainStreamCover;
+			$MainMovieName = $MainStreamName;
+			$MainMovieDesc = $MainStreamPlot;
+			$MainMoviegenre = $MainStreamGenre;
+			$MainMoviereleaseDate = $MainStreamReleaseDate;
+			$MainMovierrating_5based = ($MainStreamRating != 0)?$MainStreamRating/2:"0";
+			$MainMovierdirector= $MainStreamDirector;
+			$MainMoviercast = $MainStreamCast;
+			if(!empty($SeriesData['data']->info))
+			{
+				$SeriesDetails = $SeriesData['data']->info; 
+				if($SeriesDetails->cover != "")
+				{
+					$MainposterImage = $SeriesDetails->cover;
+				}
+				$MainMovieName = ($SeriesDetails->name != "")?$SeriesDetails->name:"n/A";
+				$MainMovieDesc = ($SeriesDetails->plot != "")?$SeriesDetails->plot:"n/A";
+				$MainMoviegenre = ($SeriesDetails->genre != "")?$SeriesDetails->genre:"n/A";
+				$MainMoviereleaseDate = ($SeriesDetails->releaseDate != "")?$SeriesDetails->releaseDate:"n/A";
+				$MainMovierrating_5based = ($SeriesDetails->rating_5based != "")?$SeriesDetails->rating_5based:"n/A";
+				$MainMovierdirector = ($SeriesDetails->director != "")?$SeriesDetails->director:"n/A";
+				$MainMoviercast = ($SeriesDetails->cast != "")?$SeriesDetails->cast:"n/A";
+			}
+			if(!empty($SeriesData['data']->episodes))
+			{
+				$Appepisodes = $SeriesData['data']->episodes;
+				foreach($SeriesData['data']->episodes as $episodes)
+				{ 
+				  foreach($episodes as $episodesData)
+				   {
+				      $SeasonsIdData[$episodesData->season] = "season";
+				   }
+				}   
+			}
+			//echo "<pre>";print_r($SeriesData);die();
+			$checkFavExists = $clientcontrolfunctions->webtvpanel_getFavExists("series",$SessionStroedportallink,$streamid,$conn);
+			$BackGroundImageCover = $MainposterImage;
+			if(!empty($SeriesData['data']->info->backdrop_path))
+			{
+				$backdropData = $SeriesData['data']->info->backdrop_path;
+				$randkey = array_rand($backdropData);
+				$BackGroundImageCover = $backdropData[$randkey];
+			}
+			?>
+				<div class="modal-content viewinfo-content custome-modelcontent1" style="
+                  background-image: url('<?php echo $BackGroundImageCover; ?>');
+                 background-repeat: no-repeat;
+                  background-size: cover;
+                  background-position: center;
+                  background-color: #233035;
+                  background-blend-mode: exclusion;
+                  width:100vw;
+                  max-height: unset;
+                  height: 103%;
+              ">
+              <div class="detailsexploresection">	
+				<div class="player_changeIssue alert alert-info" style="position: fixed; top: -300px;left: 35%;">
+				Unable to play this format in Jw player trying with aj player.
+				</div>
+				<div class="modal-header" style="border:0;"> 
+				<button type="button" class="close view-close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+				</button>
+				</div>
+				<div class="modal-body body-content">
+				<div class="popup-content">
+				<div class="row">
+				<div class="col-md-2 col-sm-6 col-xs-6">
+				<div class="poster">
+				  <div class="poster-img series-posterimage">
+				  	<img src="<?php echo $MainposterImage; ?>" alt="" onerror="this.src='images/no_poster.png';" class="img-responsive">
+				  	
+				  </div>
+				</div>
+
+				<div class="list-group seasons mt-3" id="myList" role="tablist">
+				  <?php 
+				  if(!empty($SeasonsIdData))
+				  {
+				    
+				      $ConditionCounter = 1;
+				      foreach($SeasonsIdData as $SeasonNumber => $val)
+				      {
+				        ?>
+				        <a class="list-group-item list-group-item-action <?php echo ($ConditionCounter == 1)?"active":""; ?>" data-toggle="list" href="#s-<?php echo $SeasonNumber; ?>" role="tab">Season <?php echo $SeasonNumber; ?></a>
+				        <?php
+				        ++$ConditionCounter;
+				      } 
+				      
+				  } 
+				  ?>  
+				</div>
+
+				</div>        
+				<div class="col-md-4 col-sm-6 col-xs-6">
+				<div class="poster-details1">
+				    <ul class="list-unstyled row text-light">      
+				      <div class="col-sm-6 col-xs-6">
+				        <li class="mb-2"><i class="fas fa-film"></i>&nbsp; <?php echo $MainMoviegenre; ?></li>
+				        <li class="mb-2"><i class="fas fa-calendar-alt"></i>&nbsp;<?php echo date("d,F Y", strtotime($MainMoviereleaseDate)); ?></li>
+				        <li>
+				        	<div class="rating-series"><?php echo  $clientcontrolfunctions->WebTVClient_starRating($MainMovierrating_5based);?>&nbsp; <span><?php echo $MainMovierrating_5based." Stars";?></span>                                		
+				        	</div>
+				        	 
+				        </li>
+				      </div>        
+				      <div class="col-sm-6 col-xs-6">
+				        <li class="mb-2"><i class="fas fa-directions"></i>&nbsp; <?php echo $MainMovierdirector; ?></li>
+				        <?php 
+				        if(!empty($MainMoviercast) && $MainMoviercast != "n/A")
+						{	
+				            ?>
+				            <li class="mb-2 cast"><i class="fas fa-users"></i> &nbsp;<?php echo substr($MainMoviercast,0,40) ; ?> <span class="badge badge-info showCast" data-toggle="yes">Show Full Cast</span></li>
+				            <li class="mb-2 fullcast d-none"><i class="fas fa-users"></i> &nbsp;<?php echo $MainMoviercast ; ?> <span class="badge badge-danger showCast" data-toggle="no">Hide</span></li>
+				            <?php 
+				        }
+				        ?>
+				         
+				      </div>                   
+				        
+				    </ul>
+				</div>
+				<div class="card bg-trans p-2">
+				    <h2 class="stream-title text-light" data-toggle="tooltip" title="<?php echo $MainMovieName; ?>">
+				      <?php echo $MainMovieName;?> 
+
+				    </h2>
+				    <i class="fa fa-heart seriesheart makeFav <?php echo (!empty($checkFavExists))?'activefav':''; ?>"
+				              aria-hidden="true"
+				              data-favstreamid="<?php echo $streamid; ?>" 
+				              data-cateid="<?php echo $categoryID; ?>"
+				              data-favstreamtype="<?php echo "series"; ?>" 
+				              data-favis="<?php echo (!empty($checkFavExists))?'no':'yes'; ?>"  
+				              style="z-index:999999;font-size: 22px;"
+				            > </i>
+				    <div class="column episodes text-light scrollbar"  id="style-1">
+				      <div class="tab-content">
+				      <?php 
+				      if(!empty($SeasonsIdData))
+				      {
+				        $ConditionCounter2 = 1;
+				        foreach($SeasonsIdData as $SeasonNumber => $val)
+				        {
+				          ?>
+				          <div class="tab-pane <?php echo ($ConditionCounter2 == 1)?"active":""; ?>" id="s-<?php echo $SeasonNumber; ?>" role="tabpanel">
+				              <div class="list-group bg-trans" id="myList2" role="tablist">
+				           <?php 
+				                $CounterCon2 = 1; 
+				            foreach($Appepisodes as $episodes)
+				          	{ 
+				          		
+				                foreach($episodes as $episodesData)
+				                {
+				                	$BlockedCateGoriesIDs = $CommonController->getBlockedSeriesEpisode($conn,$getActivePortalID,$streamid,$categoryID,$episodesData->id);
+				                  if($episodesData->season == $SeasonNumber)
+				                  {
+				                    
+				                    if(!in_array($episodesData->id, $BlockedCateGoriesIDs))
+				                    {
+				                    	if($CounterCon2 == 1)
+				                        {
+				                          $OnloadAvtiveEpisode = $episodesData->id;
+				                        }
+				                    	?>
+				                    <a class="list-group-item list-group-item-action <?php echo ($CounterCon2 == 1)?"active":""; ?>" data-episid="<?php echo $episodesData->id; ?>" data-toggle="list" href="#epis-<?php echo $episodesData->id; ?>" data-toggle="tooltip" title="<?php echo urldecode($episodesData->title); ?>" role="tab"><b><?php echo $CounterCon2; ?> </b><?php echo urldecode($episodesData->title); ?></a>
+				                    <?php
+				                    ++$CounterCon2;
+				                    }	                                        
+				                  }
+				                }
+				            }
+				              ?>
+				              </div>
+				             </div>
+				            <?php 
+				            ++$ConditionCounter2;
+				          }
+				        } 
+				        ?>
+				      </div>
+				    </div>
+				</div> 
+				</div>
+
+				<div class="col-md-6 col-sm-12 col-xs-12">
+				<div class="tab-content">
+				    <div class="PlayerHolder" data-ajplayer="" data-flowplayer="" data-jwplayer="">
+				        <div id="player-holder" class="d-none"  style="border:solid 2px #fff; height: auto !important;"  >
+				        </div>
+				    </div>
+				<?php 
+				$CounterCon3 = 1; 
+				foreach($Appepisodes as $episodes)
+				{ 
+					
+				    foreach($episodes as $episodesData)
+				    {
+				    	$externlLinkValue = '';
+				    	if(!empty($GetExternalLinkdetails))
+						{
+							foreach ($GetExternalLinkdetails as $externlLinkseries) 
+							{
+								if($externlLinkseries['season_no'] == $episodesData->season && $externlLinkseries['episode_id'] == $episodesData->id)
+								{ 
+									$externlLinkValue = $externlLinkseries['externallink'];
+									/* change this link with watch now*/
+								}
+								
+							}
+						}
+				    	$BlockedCateGoriesIDs = $CommonController->getBlockedSeriesEpisode($conn,$getActivePortalID,$streamid,$categoryID,$episodesData->id);
+				    	if(!in_array($episodesData->id, $BlockedCateGoriesIDs))
+				        {
+				    ?>
+				        <div id="YoutubePLayerHolder-<?php echo $episodesData->id;?>" class="d-none youtubeholderCommon">
+				        </div>
+				        <button id="backToInfo-<?php echo $episodesData->id; ?>" data-episid="<?php echo $episodesData->id; ?>" class="btn-backtoinfo btn btn-info d-none mt-3">Back to Info</button>
+				        <div id="epis-<?php echo $episodesData->id; ?>" class="tab-pane fade in <?php echo ($CounterCon3 == 1)?"active":""; ?> <?php echo ($CounterCon3 == 1)?"show":""; ?>"> 
+				            <h2 class="text-light">
+				              <?php echo urldecode($episodesData->title); 
+				              ?>                                    
+				            </h2> 
+				            <h5 class="text-light">Episode <?php echo $episodesData->episode_num; ?></h5>
+				            
+				            <div class="row">
+				                <div class="col-md-3 seasonIfb<?php echo $episodesData->season; ?> p-0">
+				                    <?php 
+				                    $EpisodesCover = $MainposterImage;
+				                    if(!empty($SeasonCoverImage[$episodesData->season]))
+				                    {
+				                      $EpisodesCover = $SeasonCoverImage[$episodesData->season];
+				                    }
+				                    ?>
+				                    <div class="card bg-trans series-epi-poster">
+				                        <img src="<?php echo (!empty($EpisodesCover)?$EpisodesCover:'images/no_poster.png'); ?>" alt="" class="img-responsive">
+				                    </div>
+				                        
+				                </div>
+				                <div class="col-md-9">
+				                <p class="card bg-trans p-2 text-light"><?php echo ($episodesData->info->plot != "")?$episodesData->info->plot:"n/A"; ?></p>
+				                </div>
+				            </div>
+				            <div class="row mt-3">
+				              <?php 
+				              if($SeriesTrailer != "")
+				              {
+				                ?>
+				                <div class="col-md-6 col-sm-12">
+				                    <button onclick="watchTrailer('<?php echo $SeriesTrailer;?>','<?php echo $episodesData->id;?>')" class="btn btn-cus-watchTrailer btn-block m-2">Watch Trailer</button>
+				                </div>
+				                
+				                
+				                <?php
+				              }
+				              ?>
+				              <div class="col-md-6 col-sm-12">
+				                  <button onclick="watchnow('<?php echo $episodesData->id;?>','<?php echo $episodesData->container_extension; ?>')" class="btn btn-cus-watchNow btn-block m-2" data-extlink="<?php echo (!empty($externlLinkValue))?$externlLinkValue:'';?>">watch it now</button>
+				              </div>
+				              <div class="col-md-12">
+				                  <h3 class="descHeading text-light">Description</h3>
+				                  <p class="decription text-light" id="scroll-dec"><?php echo $MainMovieDesc; ?></p>
+				              </div>
+				            </div>
+				        </div>
+				    	<?php
+				    	++$CounterCon3;
+						}
+						
+				    }
+				}
+				?>
+				</div>
+				</div>
+				</div>
+
+
+				<?php 
+				if(!empty($MainMoviercast) && $MainMoviercast != "n/A")
+				{
+				$explodedCast = explode(",", $MainMoviercast);
+				if(!empty($explodedCast))
+				{
+				?>
+					<div class="row slider-row castslidersection">
+					<div class="col-md-12">
+						<h3 class="related-slide text-light">Cast & Crew</h3>
+						<div class="view-slide" id="viewSliderCast">
+							<?php 
+							$counterIs = 0;
+							foreach($explodedCast as $castName)
+							{
+								$castName = trim($castName);
+								?>
+								<div class="viewslide-banner commomapicastpicture castselectorby-<?php echo $counterIs; ?>" data-castnameis="<?php echo $castName; ?>"  data-counteris="<?php echo $counterIs; ?>">
+									<img src="images/loading.jpg" class="viewsilderImage">
+								</div>
+								<?php
+								++$counterIs;
+							}
+							if(count($explodedCast) > 6)
+							{
+								?>
+				        		<div class="prev">
+				                    <img src="images/left-arrow-white.png" alt="" class="prev-icon d-none" id="rightArrow_Cast"/>
+				                </div>
+				                <div class="next">
+				                    <img src="images/right-arrow-white.png" alt="" class="next-icon" id="leftArrow_Cast">
+				                </div>
+				        		<?php
+							}
+							?>
+						</div>
+					</div>
+					</div>
+					<?php
+					}
+				}
+				?>
+				</div>
+
+
+				<!-- <div class="clearfix"></div> -->
+				<div class="ts-content">
+
+
+				<div class="clearfix"></div>
+
+				</div>
+
+				</div>
+           	</div>
+           	<div class="castsectionexplorehere d-none" style="min-height: 635px;">
+	        	<div class="modal-header viewinfo-header">
+		          <button type="button" class="close view-close" data-dismiss="modal" aria-label="Close">
+		            <span aria-hidden="true">&times;</span>
+		          </button>
+		        </div>
+		        <div class="modal-body text-light bodycontentforcastinfo">	
+		       		
+		       	</div>
+	        </div>
+	        <!---------->	
+          </div>
+			<?php
+    	}
+    	else
+		{
+			echo "0";die();
+		}
+	}
+	else
+	{
+		echo "0";die();
+	} 
+	die();
+}
+
+/* live channel view */
+
+if(isset($_POST["action"]) && $_POST["action"] == "getLivestreamFromID")
+{
+	
+	$view = $_POST["view"];
+	$categoryID = $_POST["categoryID"];
+	$DatabaseObj = new DBConnect();
+	$conn = $DatabaseObj->makeconnection();
+	$CommonController = new CommonController();
+	$clientcontrolfunctions = new clientcontrolfunctions();
+
+	$SessionStroedportallink = $_SESSION['webTvplayer']['portallink'];
+    $getActivePortalID = $CommonController->getActivePortal($conn,$SessionStroedportallink);	
+    $getBlockedStreamsIts = $CommonController->getBlockedStreamsIts($conn,$getActivePortalID,'live',$categoryID);
+	$webtvpanel_getFavforCategories = $clientcontrolfunctions->webtvpanel_getFavforCategories('live',$conn);
+	$Arrayforsorting = array();
+		if($categoryID == 'favorite')
+		{
+			if(!empty($webtvpanel_getFavforCategories))
+			{
+				
+				foreach($webtvpanel_getFavforCategories as $Favkey)
+	  			{
+	  				$StreamKeyIS = unserialize($Favkey['favdata']);
+	  				$Arrayforsorting[($SortingType == "topadded")?$StreamKeyIS->added:$StreamKeyIS->name] = (object)[
+	                                                        "num" => $StreamKeyIS->num,
+	                                                        "name" => $StreamKeyIS->name,
+	                                                        "stream_type" => $StreamKeyIS->stream_type,
+	                                                        "stream_id" => $StreamKeyIS->stream_id,
+	                                                        "stream_icon" => $StreamKeyIS->stream_icon,
+	                                                        "epg_channel_id" => $StreamKeyIS->epg_channel_id,
+	                                                        "added" => $StreamKeyIS->added,
+	                                                        "category_id" => $StreamKeyIS->category_id,
+	                                                        "custom_sid" => $StreamKeyIS->custom_sid,
+	                                                        "tv_archive" => $StreamKeyIS->tv_archive,
+	                                                        "direct_source" => $StreamKeyIS->direct_source,
+	                                                        "tv_archive_duration" => $StreamKeyIS->tv_archive_duration
+	                                                        
+	                                                      ];
+	  			}
+	  			if($SortingType == "topadded")
+		        {
+		           ksort($Arrayforsorting);
+		           $Arrayforsorting = array_reverse($Arrayforsorting, false);
+		        }     
+		        if($SortingType == "asc")
+		        {
+		          array_multisort(array_keys($Arrayforsorting), SORT_NATURAL| SORT_FLAG_CASE, $Arrayforsorting);
+		        }
+		        if($SortingType == "desc")
+		        {
+		          array_multisort(array_keys($Arrayforsorting), SORT_NATURAL| SORT_FLAG_CASE, $Arrayforsorting);
+		          $Arrayforsorting = array_reverse($Arrayforsorting, false);
+		        }
+		        $StreamData['data'] = $Arrayforsorting;	  			
+			}
+			else
+			{
+				echo '<div class="text-center">No Result Found!!</div>';die();
+			}
+		}
+		else
+		{
+			$StreamData = $CommonController->getliveStream($categoryID);
+			if($StreamData['result'] == 'success')
+		    {
+		      /*if($SortingType != "default")
+		      {*/
+		        $Arrayforsorting = array();
+		        foreach($StreamData['data'] as $StreamKeyIS)
+		        {
+		            $BackdropArray = array();
+		            if(!empty($StreamKeyIS->backdrop_path))
+		            {
+		                foreach($StreamKeyIS->backdrop_path as $backVal)
+		                {
+		                  $BackdropArray[] = $backVal;
+		                }
+		            }
+		            if(!in_array($StreamKeyIS->stream_id, $getBlockedStreamsIts)){
+		            	$Arrayforsorting[($SortingType == "topadded")?$StreamKeyIS->added:$StreamKeyIS->name] = (object)[
+                                                    "num" => $StreamKeyIS->num,
+                                                    "name" => $StreamKeyIS->name,
+                                                    "stream_type" => $StreamKeyIS->stream_type,
+                                                    "stream_id" => $StreamKeyIS->stream_id,
+                                                    "stream_icon" => $StreamKeyIS->stream_icon,
+                                                    "epg_channel_id" => $StreamKeyIS->epg_channel_id,
+                                                    "added" => $StreamKeyIS->added,
+                                                    "category_id" => $StreamKeyIS->category_id,
+                                                    "custom_sid" => $StreamKeyIS->custom_sid,
+                                                    "tv_archive" => $StreamKeyIS->tv_archive,
+                                                    "direct_source" => $StreamKeyIS->direct_source,
+                                                    "tv_archive_duration" => $StreamKeyIS->tv_archive_duration
+                        ];
+		            }
+		            
+		        }
+		    }
+		
+	        if($SortingType == "topadded")
+	        {
+	           ksort($Arrayforsorting);
+	           $Arrayforsorting = array_reverse($Arrayforsorting, false);
+	        }     
+	        if($SortingType == "asc")
+	        {
+	          array_multisort(array_keys($Arrayforsorting), SORT_NATURAL| SORT_FLAG_CASE, $Arrayforsorting);
+	        }
+	        if($SortingType == "desc")
+	        {
+	          array_multisort(array_keys($Arrayforsorting), SORT_NATURAL| SORT_FLAG_CASE, $Arrayforsorting);
+	          $Arrayforsorting = array_reverse($Arrayforsorting, false);
+	        }
+	        $StreamData['data'] = $Arrayforsorting;
+	  	} 
+	      foreach($StreamData['data'] as $chanel)
+	      {
+	          $chanelIcon = $chanel->stream_icon;
+	          if($chanelIcon == '')
+	          {
+	          	$chanelIcon = 'images/no_logo.jpg';
+	          }
+	          
+	          if($_POST['view'] == "epgview")
+	          {
+	             $checkFavExists = $clientcontrolfunctions->webtvpanel_getFavExists("live",$SessionStroedportallink,$chanel->stream_id,$conn); 
+	             
+	            ?>
+	            <li class="channellistcontainer chlist-<?php echo $chanel->stream_id; ?> " data-datastreamid="<?php echo $chanel->stream_id; ?>" data-channelname="<?php echo $chanel->name; ?>" data-channellogois="<?php echo $chanelIcon; ?>">
+	              <input type="hidden" class="serch_key" value="<?php echo $chanel->name; ?>" data-parentliclass="chlist-<?php echo $chanel->stream_id; ?>" data-epgdataclass="epg-sec<?php echo $chanel->stream_id; ?>">	             
+	              <input type="hidden" value='<?php echo (!empty($checkFavExists))?'no':'yes'; ?>' class="checkepgfav-<?php echo $chanel->stream_id; ?>">
+	              <a href="<?php echo $chanel->stream_id; ?>"  data-toggle="tooltip" title="<?php echo $chanel->name; ?>" class="paychannelbtn">
+	              <img src="<?php echo $chanelIcon; ?>" alt="Channel Logo" class="channel-logo" onerror="this.src='images/no-image-available.png';" />
+	              <span class="liveChannel-title"><?php echo $chanel->name; ?></span>
+	              </a>
+	            </li> 
+	            <?php
+	          }
+	          else if($_POST['view'] == "tabview")
+	          {
+	            ?>
+	            <li id="video<?php echo $counter; ?>" class="streamList commomplayclick sectionNo<?php echo $chanel->stream_id; ?>">
+	                <input type="hidden" class="streamId" data-streamtype="live" value="<?php echo $chanel->stream_id; ?>">
+	                <span class="serial-no"><?php echo $chanel->num; ?></span>
+	                <span class="number">
+	                  <img src="<?php echo $chanelIcon; ?>" class="live-channel-logo" onerror="this.src='images/no-image-available.png';">
+	                </span>
+	                <!-- <i class="fa fa-television" aria-hidden="true"></i> -->   
+	                <input type="hidden" class="serch_key" value="<?php echo $chanel->name; ?>" data-parentliclass="sectionNo<?php echo $chanel->stream_id; ?>">
+	                <label>
+	                  <div class="name-sec">
+	                    <?php
+	                      if(strlen($chanel->name) <= 20)
+	                      {
+	                          echo $chanel->name; //$chanel->name; 
+	                      }
+	                      else
+	                      {
+	                        echo substr($chanel->name,0,20)."<span class='showfullname' title='".$chanel->name."'>...</span>";
+	                      }
+	                      
+	                     ?>
+	                  </div>
+	                </label>
+	                <?php
+	                $focuscounter = $focuscounter+1;
+	                $focuscountersub = $focuscounter-1;
+	                ?>
+	                <a href="#" class="Playclick clickablebtn clicksec-<?php echo $focuscounter; ?>"  data-streamidon="<?php echo $chanel->stream_id; ?>">
+	                   <i class="fa fa-play-circle playstyle-live" aria-hidden="true"></i>
+	                </a>
+	                <?php
+	                if(!empty($conn)){
+	                  $checkFavExists = $clientcontrolfunctions->webtvpanel_getFavExists("live",$SessionStroedportallink,$chanel->stream_id,$conn);
+	                  ?>
+	                    <i 
+	                        class="fa fa-heart makeFav <?php echo (!empty($checkFavExists))?'activefav':''; ?> selectedfav" 
+	                        aria-hidden="true" 
+	                        data-favstreamid='<?php echo $chanel->stream_id; ?>'  
+	                        data-cateid='<?php echo $chanel->category_id; ?>'  
+	                        data-favstreamtype='<?php echo $chanel->stream_type; ?>'  
+	                        data-favis='<?php echo (!empty($checkFavExists))?'no':'yes'; ?>'
+	                        style='float: right;z-index:999999;margin: 5px 10px;'
+	                    >                 
+	                    </i>
+	                  <?php
+	                }
+	                ?>
+	                
+	            </li>
+	            <?php
+	          }
+	          $counter++;
+	          $focuscounter++;
+	      }
+	      die();
+	    //}
+	//}
+	
+	die();
+}
+
+
+
+if(isset($_POST['action']) && $_POST['action'] == 'GetCaptchaByStreamid')
+{	
+	$view = $_POST["view"];
+	$categoryID = $_POST["categoryID"];
+	$DatabaseObj = new DBConnect();
+	$conn = $DatabaseObj->makeconnection();
+	$CommonController = new CommonController();
+	$clientcontrolfunctions = new clientcontrolfunctions();
+
+	$SessionStroedportallink = $_SESSION['webTvplayer']['portallink'];
+    $getActivePortalID = $CommonController->getActivePortal($conn,$SessionStroedportallink);	
+    $getBlockedStreamsIts = $CommonController->getBlockedStreamsIts($conn,$getActivePortalID,'catchup',$categoryID);
+	
+	if($categoryID == 'favorite')
+	{
+		$GetFavforCategories = $clientcontrolfunctions->webtvpanel_getFavforCategories("catchup",$conn);
+		if(!empty($GetFavforCategories))
+		{		
+			foreach($GetFavforCategories as $Favkey)
+      		{
+      			$StreamKeyIS = unserialize($Favkey['favdata']);
+        		$Arrayforsorting[$StreamKeyIS->name] = (object)[
+                                            "num" => $StreamKeyIS->num,
+                                            "name" => $StreamKeyIS->name,
+                                            "stream_type" => $StreamKeyIS->stream_type,
+                                            "stream_id" => $StreamKeyIS->stream_id,
+                                            "stream_icon" => $StreamKeyIS->stream_icon,
+                                            "epg_channel_id" => $StreamKeyIS->epg_channel_id,
+                                            "added" => $StreamKeyIS->added,
+                                            "category_id" => $StreamKeyIS->category_id,
+                                            "custom_sid" => $StreamKeyIS->custom_sid,
+                                            "tv_archive" => $StreamKeyIS->tv_archive,
+                                            "direct_source" => $StreamKeyIS->direct_source,
+                                            "tv_archive_duration" => $StreamKeyIS->tv_archive_duration
+                ];
+	        }
+      	
+      		
+		}else{
+			echo "<div class='noresult'>No Result Found!!</div>";die();
+		}
+	}else{
+		$StreamData = $CommonController->getcatchupStream($categoryID);
+		if($StreamData['result'] == 'success')
+	    {
+	        $Arrayforsorting = array();
+	        foreach($StreamData['data'] as $StreamKeyIS)
+	        {
+	            $BackdropArray = array();
+	            if(!empty($StreamKeyIS->backdrop_path))
+	            {
+	                foreach($StreamKeyIS->backdrop_path as $backVal)
+	                {
+	                  $BackdropArray[] = $backVal;
+	                }
+	            }
+	            if(!in_array($StreamKeyIS->stream_id, $getBlockedStreamsIts))
+	            {
+	            	$Arrayforsorting[($SortingType == "topadded")?$StreamKeyIS->added:$StreamKeyIS->name] = (object)[
+                                           	"num" => $StreamKeyIS->num,
+                                            "name" => $StreamKeyIS->name,
+                                            "stream_type" => $StreamKeyIS->stream_type,
+                                            "stream_id" => $StreamKeyIS->stream_id,
+                                            "stream_icon" => $StreamKeyIS->stream_icon,
+                                            "epg_channel_id" => $StreamKeyIS->epg_channel_id,
+                                            "added" => $StreamKeyIS->added,
+                                            "category_id" => $StreamKeyIS->category_id,
+                                            "custom_sid" => $StreamKeyIS->custom_sid,
+                                            "tv_archive" => $StreamKeyIS->tv_archive,
+                                            "direct_source" => $StreamKeyIS->direct_source,
+                                            "tv_archive_duration" => $StreamKeyIS->tv_archive_duration
+                    ]; 
+	            }
+	            
+	        }
+	        if($SortingType == "topadded")
+	        {
+	           ksort($Arrayforsorting);
+	           $Arrayforsorting = array_reverse($Arrayforsorting, false);
+	        }     
+	        if($SortingType == "asc")
+	        {
+	          array_multisort(array_keys($Arrayforsorting), SORT_NATURAL| SORT_FLAG_CASE, $Arrayforsorting);
+	        }
+	        if($SortingType == "desc")
+	        {
+	          array_multisort(array_keys($Arrayforsorting), SORT_NATURAL| SORT_FLAG_CASE, $Arrayforsorting);
+	          $Arrayforsorting = array_reverse($Arrayforsorting, false);
+	        }
+	        
+	     }
+	}
+	
+     if(!empty($Arrayforsorting))
+     {
+     	$StreamData['data'] = $Arrayforsorting;
+      	foreach($StreamData['data'] as $chanel)
+      	{
+	        if($chanel->tv_archive == 1)
+	        {
+	          $chanelIcon = $chanel->stream_icon;
+	          if($chanelIcon == '')
+	          {
+	          	$chanelIcon = 'images/no_logo.jpg';
+	          }
+	          	$checkFavExists = $clientcontrolfunctions->webtvpanel_getFavExists("catchup",$SessionStroedportallink,$chanel->stream_id,$conn);
+	            ?>
+	            <li id="video<?php echo $counter; ?>" class="streamList commomplayclick sectionNo<?php echo $chanel->stream_id; ?>">
+	                <input type="hidden" class="streamId" data-streamtype="catchup" value="<?php echo $chanel->stream_id; ?>">
+	                <span class="serial-no"><?php echo $chanel->num; ?></span>
+	                <span class="number">
+	                  <img src="<?php echo $chanelIcon; ?>" class="live-channel-logo" onerror="this.src='images/no-image-available.png';">
+	                </span>
+	                <!-- <i class="fa fa-television" aria-hidden="true"></i> -->   
+	                <input type="hidden" class="serch_key" value="<?php echo $chanel->name; ?>" data-parentliclass="sectionNo<?php echo $chanel->stream_id; ?>">
+	                <label>
+	                  <div class="name-sec">
+	                    <?php
+	                      if(strlen($chanel->name) <= 20)
+	                      {
+	                          echo $chanel->name; //$chanel->name; 
+	                      }
+	                      else
+	                      {
+	                        echo substr($chanel->name,0,20)."<span class='showfullname' title='".$chanel->name."'>...</span>";
+	                      }
+	                      
+	                     ?>
+	                  </div>
+	                </label>
+	                <?php
+	                $focuscounter = $focuscounter+1;
+	                $focuscountersub = $focuscounter-1;
+	                ?>
+	                <a href="#" class="Playclick clickablebtn clicksec-<?php echo $focuscounter; ?>"  data-streamidon="<?php echo $chanel->stream_id; ?>">
+	                   <i class="fa fa-play-circle playstyle-live" aria-hidden="true"></i>
+	                   <i  class="fa fa-heart makeFav <?php echo (!empty($checkFavExists))?'activefav':''; ?>"
+		                    aria-hidden="true" 
+		                    data-favstreamid="<?php echo $chanel->stream_id; ?>" 
+		                    data-favstreamtype="<?php echo "catchup"; ?>" 
+		                    data-cateid='<?php echo $categoryID; ?>' 
+		                    data-favis="<?php echo (!empty($checkFavExists))?'no':'yes'; ?>"  
+		                    style="float: right;z-index:999999;margin-right:10px;margin-top: 5px;">             
+		                </i>
+	                </a>
+	                               
+	            </li>
+	            <?php
+	          
+	          $counter++;
+	          $focuscounter++;
+	        }
+      	}
+     }else{
+     	echo '0';die();
+     }     
+    
+    //}
+    die();
+}
+
+//Save Settings
+if(isset($_POST['action']) && $_POST['action'] == "saveliveviewsettings")
+{ 	
+	$DatabaseObj = new DBConnect();
+	$return = array();
+	$conn = $DatabaseObj->makeconnection();
+	if(!empty($conn))
+	{
+	  	unset($_POST['action']);
+		$return = $funconn->webtvpanel_saveliveviewsettings($_POST,$conn);
+	  
+	}
+	echo json_encode($return);
+  die();
+}
+
+//player Settings
+if(isset($_POST['action']) && $_POST['action'] == "saveliveplayersettings")
+{ 	
+	$DatabaseObj = new DBConnect();
+	$return = "";
+	$conn = $DatabaseObj->makeconnection();
+
+	if(!empty($conn))
+	{
+	  	unset($_POST['action']);
+		$return = $funconn->webtvpanel_saveliveplayersettings($_POST,$conn);
+	  
+	}
+	echo $return;
+  die();
+}
+
+
+if(isset($_POST['action']) && $_POST['action'] == 'saveepgtimeshiftsettings')
+{ 
+	$DatabaseObj = new DBConnect();
+	$return = array();
+	$conn = $DatabaseObj->makeconnection();
+	if(!empty($conn))
+	{
+	  	unset($_POST['action']);
+	  	$return = $funconn->webtvpanel_saveepgtimeshiftsettings($_POST,$conn);
+
+	}
+  	echo json_encode($return);
+  	die();
+}
+if(isset($_POST['action']) && $_POST['action'] == 'savetimeformatsettings')
+{ 
+	$DatabaseObj = new DBConnect();
+	$return = array();
+	$conn = $DatabaseObj->makeconnection();
+	if(!empty($conn))
+	{
+		unset($_POST['action']);
+		$return = $funconn->webtvpanel_savetimeformatsettings($_POST,$conn);
+
+	}
+  	echo json_encode($return);
+  	die();
+}
+//Save Settings
+if(isset($_POST['action']) && $_POST['action'] == "saveparentPin")
+{ 
+	$DatabaseObj = new DBConnect();
+	$return = array();
+	$conn = $DatabaseObj->makeconnection();
+	if(!empty($conn))
+	{
+	  	unset($_POST['action']);
+	  	$return = $funconn->webtvpanel_saveparentpin($_POST,$conn);
+
+	}
+  	echo json_encode($return);
+  	die();
+}
+
+//delete pin
+if(isset($_POST['action']) && $_POST['action'] == "confirmandpindelete")
+{ 
+	$DatabaseObj = new DBConnect();
+	$return = array();
+	$conn = $DatabaseObj->makeconnection();
+	if(!empty($conn))
+	{
+	  	unset($_POST['action']);
+	  	$return = $funconn->webtvpanel_confirmandpindelete($_POST,$conn);
+
+	}
+  echo json_encode($return);
+  die();
+}
+
+//Save Settings
+if(isset($_POST['action']) && $_POST['action'] == "checkoldandupdatepin")
+{ 
+	$DatabaseObj = new DBConnect();
+	$return = array();
+	$conn = $DatabaseObj->makeconnection();
+	if(!empty($conn))
+	{
+	  	unset($_POST['action']);
+	  	$return = $funconn->webtvpanel_checkoldandupdatepin($_POST,$conn);
+
+	}
+  echo json_encode($return);
+  die();
+}
+//Save Settings
+if(isset($_POST['action']) && $_POST['action'] == "savefavdata")
+{ 	 
+	$return = array();
+	$favtype = $_POST['favtype'];
+	$favview = $_POST['favview'];
+	$favcateid = $_POST['favcateid'];
+	$favstreamId = $_POST['favstreamId'];
+	$SessionStroedportallink = $_SESSION['webTvplayer']['portallink'];
+	$favis = $_POST['favis'];
+	$DatabaseObj = new DBConnect();
+	$CommonController = new CommonController();
+	$conn = $DatabaseObj->makeconnection();
+	$fullFavData = array();
+	$Arrayforsorting = array();
+	if($favtype == 'live')
+	{
+		$fullFavData = array('');
+		$faveDataType  = $CommonController->getliveStream($favcateid);	
+
+        foreach($faveDataType['data'] as $StreamKeyIS)
+        {
+            if($favstreamId == $StreamKeyIS->stream_id){
+            	$fullFavData = serialize($StreamKeyIS);            	
+            }            
+        }	
+        if($favis == "yes"){	
+
+			$return = $funconn->webtvpanel_saveFavdata($SessionStroedportallink,$favtype,$favstreamId,$fullFavData,$conn);
+		}else{
+			$return = $funconn->webtvpanel_delFavdata($_POST,$conn);
+		}
+		echo json_encode($return);
+		die();	
+	}
+	if($favtype == 'movies')
+	{
+		$fullFavData = array('');
+		$faveDataType  = $CommonController->getMoviesByCateGoryID($favcateid);			
+		foreach($faveDataType['data'] as $StreamData)
+        {	
+	        if($favstreamId == $StreamData->stream_id)
+	        {
+	        	$Arrayforsorting[$StreamData->name] = (object)[
+		                            "num" => $StreamData->num,
+		                            "name" => $StreamData->name,
+		                            "stream_type" => $StreamData->stream_type,
+		                            "stream_id" => $StreamData->stream_id,
+		                            "stream_icon" => $StreamData->stream_icon,
+		                            "rating" => $StreamData->rating,
+		                            "rating_5based" => $StreamData->rating_5based,
+		                            "category_id" => $StreamData->category_id,
+		                            "added" => $StreamData->added,
+		                            "container_extension" => $StreamData->container_extension,
+		                            "direct_source" => $StreamData->direct_source
+		        ];    	
+	        }
+        }  
+        foreach ($Arrayforsorting as $Data) {
+        	$fullFavData = serialize($Data);
+        }
+
+        if($favis == "yes"){	
+
+			$return = $funconn->webtvpanel_saveFavdata($SessionStroedportallink,$favtype,$favstreamId,$fullFavData,$conn);
+		}else{
+			$return = $funconn->webtvpanel_delFavdata($_POST,$conn);
+		}
+		echo json_encode($return);
+		die();
+	}
+	if($favtype == 'series'){
+		$fullFavData = array('');
+		$faveDataType  = $CommonController->getSeriesByCateGoryID($favcateid);
+		
+		foreach($faveDataType['data'] as $StreamData)
+        {	
+	        if($favstreamId == $StreamData->series_id)
+	        {
+	        	$Arrayforsorting[$StreamData->name] = (object)[
+		                            "num" => $StreamData->num,
+									"name" => $StreamData->name,
+									"stream_type" => 'series',
+									"series_id" => $StreamData->series_id,
+									"cover" => $StreamData->cover,
+									"plot" => $StreamData->plot,
+									"cast" => $StreamData->cast,
+									"director" => $StreamData->director,
+									"genre" => $StreamData->genre,
+									"releaseDate" => $StreamData->releaseDate,
+									"last_modified" => $StreamData->last_modified,
+									"rating" => $StreamData->rating,
+									"rating_5based" => $StreamData->rating_5based,
+									"youtube_trailer" => $StreamData->youtube_trailer,
+									"episode_run_time" => $StreamData->episode_run_time,
+									"category_id" => $StreamData->category_id,
+									"rating" => $StreamData->rating
+		        ];    	
+	        }
+        }
+        foreach ($Arrayforsorting as $Data) {
+        	$fullFavData = serialize($Data);
+        }
+        if($favis == "yes"){	
+
+			$return = $funconn->webtvpanel_saveFavdata($SessionStroedportallink,$favtype,$favstreamId,$fullFavData,$conn);
+		}else{
+			$return = $funconn->webtvpanel_delFavdata($_POST,$conn);
+		}
+		echo json_encode($return);
+		die();
+	}
+	if($favtype == 'radio')
+	{
+		$faveDataType  = $CommonController->getliveStream($favcateid);
+		foreach($faveDataType['data'] as $StreamData)
+        {		        
+			if($favstreamId == $StreamData->stream_id){
+				$Arrayforsorting[($SortingType == "topadded")?$StreamData->added:$StreamData->name] = (object)[
+                                      "num" => $StreamData->num,
+                                      "name" => $StreamData->name,
+                                      "stream_type" => $StreamData->stream_type,
+                                      "stream_id" => $StreamData->stream_id,
+                                      "stream_icon" => $StreamData->stream_icon,
+                                      "epg_channel_id" => $StreamData->epg_channel_id,
+                                      "added" => $StreamData->added,
+                                      "category_id" => $StreamData->category_id,
+                                      "custom_sid" => $StreamData->custom_sid,
+                                      "tv_archive" => $StreamData->tv_archive,
+                                      "direct_source" => $StreamData->direct_source,
+                                      "tv_archive_duration" => $StreamData->tv_archive_duration
+             	];
+			}
+		}
+		 foreach ($Arrayforsorting as $Data) {
+        	$fullFavData = serialize($Data);
+        }
+        if($favis == "yes"){	
+
+			$return = $funconn->webtvpanel_saveFavdata($SessionStroedportallink,$favtype,$favstreamId,$fullFavData,$conn);
+		}else{
+			$return = $funconn->webtvpanel_delFavdata($_POST,$conn);
+		}
+		echo json_encode($return);
+		die();
+	}
+	if($favtype == 'catchup'){
+		$faveDataType  = $CommonController->getcatchupStream($favcateid);
+		foreach($faveDataType['data'] as $StreamData)
+        {		        
+			if($favstreamId == $StreamData->stream_id){
+				$Arrayforsorting[$StreamData->name] = (object)[
+                                            "num" => $StreamData->num,
+                                            "name" => $StreamData->name,
+                                            "stream_type" => $StreamData->stream_type,
+                                            "stream_id" => $StreamData->stream_id,
+                                            "stream_icon" => $StreamData->stream_icon,
+                                            "epg_channel_id" => $StreamData->epg_channel_id,
+                                            "added" => $StreamData->added,
+                                            "category_id" => $StreamData->category_id,
+                                            "custom_sid" => $StreamData->custom_sid,
+                                            "tv_archive" => $StreamData->tv_archive,
+                                            "direct_source" => $StreamData->direct_source,
+                                            "tv_archive_duration" => $StreamData->tv_archive_duration
+                ];
+			}
+		}
+		 foreach ($Arrayforsorting as $Data) {
+        	$fullFavData = serialize($Data);
+        }
+        if($favis == "yes"){	
+
+			$return = $funconn->webtvpanel_saveFavdata($SessionStroedportallink,$favtype,$favstreamId,$fullFavData,$conn);
+		}else{
+			$return = $funconn->webtvpanel_delFavdata($_POST,$conn);
+		}
+		echo json_encode($return);
+		die();
+	}
+	
+	
+  	die();
+}
+
+if(isset($_POST['action']) && $_POST['action'] == 'getRadioStreamsFromID')
+{
+	$counter = 0;
+	$categoryID = $_POST["categoryID"];
+	if($categoryID == 'radio_streams'){
+		$categoryID = 'all';
+	}
+	$DatabaseObj = new DBConnect();
+	$conn = $DatabaseObj->makeconnection();
+	$CommonController = new CommonController();
+	$clientcontrolfunctions = new clientcontrolfunctions();
+
+	$SessionStroedportallink = $_SESSION['webTvplayer']['portallink'];
+    $getActivePortalID = $CommonController->getActivePortal($conn,$SessionStroedportallink);	
+    $getBlockedStreamsIts = $CommonController->getBlockedStreamsIts($conn,$getActivePortalID,'radio',$categoryID);
+	if($categoryID == 'favorite')
+	{
+		$GetFavforCategories = $clientcontrolfunctions->webtvpanel_getFavforCategories("radio",$conn);
+
+		if(!empty($GetFavforCategories))
+		{		
+			foreach($GetFavforCategories as $Favkey)
+      		{
+      			$StreamKeyIS = unserialize($Favkey['favdata']);
+        		$Arrayforsorting[$StreamKeyIS->name] = (object)[
+	                                              "num" => $StreamKeyIS->num,
+	                                              "name" => $StreamKeyIS->name,
+	                                              "stream_type" => $StreamKeyIS->stream_type,
+	                                              "stream_id" => $StreamKeyIS->stream_id,
+	                                              "stream_icon" => $StreamKeyIS->stream_icon,
+	                                              "epg_channel_id" => $StreamKeyIS->epg_channel_id,
+	                                              "added" => $StreamKeyIS->added,
+	                                              "category_id" => $StreamKeyIS->category_id,
+	                                              "custom_sid" => $StreamKeyIS->custom_sid,
+	                                              "tv_archive" => $StreamKeyIS->tv_archive,
+	                                              "direct_source" => $StreamKeyIS->direct_source,
+	                                              "tv_archive_duration" => $StreamKeyIS->tv_archive_duration
+              	];
+      		}
+      		
+		}else{
+			echo "<div class='noresult'>No Result Found!!</div>";die();
+		}
+	}
+	else
+	{
+		$StreamData = $CommonController->getliveStream($categoryID);
+		if($StreamData['result'] == 'success')
+	    {
+	    	$Arrayforsorting = array();
+			foreach($StreamData['data'] as $StreamKeyIS)
+			{
+				if($StreamKeyIS->stream_type == "radio_streams")
+			   	{
+			   		if(!in_array($StreamKeyIS->stream_id, $getBlockedStreamsIts))
+			   		{
+			   			$Arrayforsorting[($SortingType == "topadded")?$StreamKeyIS->added:$StreamKeyIS->name] = (object)[
+                                  "num" => $StreamKeyIS->num,
+                                  "name" => $StreamKeyIS->name,
+                                  "stream_type" => $StreamKeyIS->stream_type,
+                                  "stream_id" => $StreamKeyIS->stream_id,
+                                  "stream_icon" => $StreamKeyIS->stream_icon,
+                                  "epg_channel_id" => $StreamKeyIS->epg_channel_id,
+                                  "added" => $StreamKeyIS->added,
+                                  "category_id" => $StreamKeyIS->category_id,
+                                  "custom_sid" => $StreamKeyIS->custom_sid,
+                                  "tv_archive" => $StreamKeyIS->tv_archive,
+                                  "direct_source" => $StreamKeyIS->direct_source,
+                                  "tv_archive_duration" => $StreamKeyIS->tv_archive_duration
+                    	];
+			   		}
+			  		
+				}                                              
+			}
+		}
+	}
+			if(!empty($Arrayforsorting))
+			{
+					$StreamData['data'] = $Arrayforsorting; 
+
+				 foreach($StreamData['data'] as $chanel)
+		         {
+		              $chanelIcon = $chanel->stream_icon;
+		              if($chanelIcon == '')
+		              {
+		                $chanelIcon = 'images/no_logo.jpg';
+		              }
+		              $checkFavExists = $clientcontrolfunctions->webtvpanel_getFavExists("radio",$SessionStroedportallink,$chanel->stream_id,$conn);
+		            $counter++;
+		            ?>
+		            <li id="video<?php echo $counter;?>" class="streamList rippler rippler-inverse sectionNo<?php echo $chanel->stream_id;  ?>" data-streamidon="<?php echo $chanel->stream_id; ?>">
+		              <input type="hidden" class="streamId" data-streamtype="<?php echo $chanel->stream_type; ?>" value="<?php echo $chanel->stream_id; ?>">
+		              <span style="font-weight: bold;width: 50px;text-align: center;padding-top: 8px;"><?php echo $chanel->num; ?></span>
+		                        <span class="number"><img src="<?php echo $chanel->stream_icon; ?>" height="30px" onerror="this.src='images/no_logo.jpg'"></span>                
+		                        <input type="hidden" class="serch_key" value="<?php echo $chanel->name;?>" data-parentliclass="sectionNo<?php echo $chanel->stream_id;  ?>">
+		                        <label>
+		                          <?php 
+		                            echo $chanel->name;		                            	                            
+		                          ?>                          
+		                        </label>
+		                        <a href="#" class="Playclick clickablebtn clicksec-<?php echo $counter; ?>"  data-streamidon="<?php echo $chanel->stream_id; ?>">
+		                        	<i class="fa fa-play-circle" aria-hidden="true" style="float: right;"></i>
+	                    		</a>
+		                		<i  class="fa fa-heart makeFav <?php echo (!empty($checkFavExists))?'activefav':''; ?>"
+				                    aria-hidden="true" 
+				                    data-favstreamid="<?php echo $chanel->stream_id; ?>" 
+				                    data-favstreamtype="<?php echo "radio"; ?>" 
+				                    data-cateid='<?php echo $categoryID; ?>' 
+				                    data-favis="<?php echo (!empty($checkFavExists))?'no':'yes'; ?>"  
+				                    style="float: right;z-index:999999;margin-right:10px;">             
+				                </i>
+		                
+		            </li>       
+		            <?php 
+		        }
+			}
+			else{
+				echo "<div class=''>No Radio channel Available !!</div>";die();
+			}
+			
+	die();
+}
+
+if(isset($_POST['action']) && $_POST['action'] == 'searchQueryWithCatgoryId')
+{ 	
+	$activepage  = $_POST['activepage'];
+	$searchCate  = $_POST['searchCate'];
+	$searchCate  = base64_decode($searchCate);
+	$SearchData  = $_POST['SearchData'];
+	$DatabaseObj = new DBConnect();
+	$conn = $DatabaseObj->makeconnection();
+	$CommonController = new CommonController();
+	$clientcontrolfunctions = new clientcontrolfunctions();	
+	$SessionStroedportallink = $_SESSION['webTvplayer']['portallink'];
+    $getActivePortalID = $CommonController->getActivePortal($conn,$SessionStroedportallink);
+
+    
+	if($activepage == "movies")
+	{
+		$getBlockedStreamsIts = $CommonController->getBlockedStreamsIts($conn,$getActivePortalID,'movies',$searchCate);
+		$MoviesResult = $CommonController->getMoviesByCateGoryID($searchCate);
+		
+		if($MoviesResult['result'] == 'success')
+		{
+			foreach($MoviesResult['data'] as $StreamData)
+      		{
+      			if(!in_array($StreamData->stream_id, $getBlockedStreamsIts)){
+	      			if(preg_match(strtoupper('/'.$SearchData.'/'), strtoupper($StreamData->name)))
+	        		{	
+	        			$Arrayforsorting[$StreamData->added] = (object)[
+				                    "num" => $StreamData->num,
+				                    "name" => $StreamData->name,
+				                    "stream_type" => $StreamData->stream_type,
+				                    "stream_id" => $StreamData->stream_id,
+				                    "stream_icon" => $StreamData->stream_icon,
+				                    "rating" => $StreamData->rating,
+				                    "rating_5based" => $StreamData->rating_5based,
+				                    "added" => $StreamData->added,
+				                    "category_id" => $StreamData->category_id,
+				                    "container_extension" => $StreamData->container_extension,
+				                    "direct_source" => $StreamData->direct_source
+				        ];
+
+	        		}
+        		}
+      		}
+
+      		if(!empty($Arrayforsorting))
+      		{
+      			ksort($Arrayforsorting);
+	        	$Arrayforsorting = array_reverse($Arrayforsorting, true);
+	        	?>
+	        	<div class="view-stream">
+	        	<?php
+	        	$Counter = 0;  
+	        	foreach($Arrayforsorting as $data)
+	        	{	        		
+        			$Icon = $data->stream_icon;
+				    if($Icon == '')
+				    {
+				      $Icon = 'images/no_poster.png';
+				    }
+        			?>
+        			<div class="sliderimage-view <?php echo $Counter; ?>" >
+                        <img src="<?php echo $Icon; ?>" onerror="this.src='images/no_poster.png';" alt="" class="view-images"/>
+                        <div class="img-title" onclick='viewdetails("<?php echo $data->stream_id;?>","<?php echo $SortingType;?>")'>
+                            <span class="movies-title"><?php echo $data->name;?></span>
+                            <div class="rating"><?php echo $clientcontrolfunctions->WebTVClient_starRating($data->rating_5based);?></div>
+                        </div>
+                    </div>
+        			<?php
+        			++$Counter;	       		
+	        			        		
+			  	}
+			  	?>
+				</div>
+			  	<?php        	
+      		}else{
+      			echo "0";die();
+      		}
+		}
+		else
+		{
+  			echo "0";die();
+  		}
+		die();
+	}
+	if($activepage == "series"){
+		$SeriesResult = $CommonController->getSeriesByCateGoryID($searchCate);
+		$getBlockedStreamsIts = $CommonController->getBlockedStreamsIts($conn,$getActivePortalID,'series',$searchCate);
+		if($SeriesResult['result'] == 'success')
+		{
+			foreach($SeriesResult['data'] as $StreamData)
+      		{
+      			if(!in_array($StreamData->stream_id, $getBlockedStreamsIts)){
+	      			if(preg_match(strtoupper('/'.$SearchData.'/'), strtoupper($StreamData->name)))
+	        		{	
+	        			$Arrayforsorting[$StreamData->last_modified] = (object)[
+										  "num" => $StreamData->num,
+					                      "name" => $StreamData->name,
+					                      "stream_type" => 'series',
+					                      "series_id" => $StreamData->series_id,
+					                      "cover" => $StreamData->cover,
+					                      "plot" => $StreamData->plot,
+					                      "cast" => $StreamData->cast,
+					                      "director" => $StreamData->director,
+					                      "genre" => $StreamData->genre,
+					                      "releaseDate" => $StreamData->releaseDate,
+					                      "last_modified" => $StreamData->last_modified,
+					                      "rating" => $StreamData->rating,
+					                      "rating_5based" => $StreamData->rating_5based,
+					                      "youtube_trailer" => $StreamData->youtube_trailer,
+					                      "episode_run_time" => $StreamData->episode_run_time,
+					                      "category_id" => $StreamData->category_id,
+					                      "rating" => $StreamData->rating
+					    ];
+	        		}
+        		}
+      		}
+      		if(!empty($Arrayforsorting))
+      		{
+      			ksort($Arrayforsorting);
+	        	$Arrayforsorting = array_reverse($Arrayforsorting, true);
+	        	?>
+	        	<div class="view-stream">
+	        	<?php
+        		$Counter = 0;        		
+	        	foreach($Arrayforsorting as $data)
+	        	{		        		
+					$Icon = $data->cover;
+					if($Icon == '')
+					{
+						$Icon = 'images/no_poster.png';
+						$coverup = "noposter";
+					}					
+					?>
+
+					<div class="sliderimage-view <?php echo $Counter; ?>" >
+						<img src="<?php echo $Icon; ?>" alt="" onerror="this.src='images/no_poster.png';" class="view-images"/>
+						<div class="img-title" onclick='viewdetails("<?php echo $data->series_id;?>","<?php echo $SortingType;?>")'>
+						    <span class="movies-title"><?php echo $data->name;?></span>
+						    <div class="rating"><?php echo $clientcontrolfunctions->WebTVClient_starRating($data->rating_5based);?></div>
+						</div>
+					</div>
+					<?php	        			
+	        		++$Counter;
+			  	}      	
+			  	?>
+				</div>
+			  	<?php
+        	
+      		}else{
+      			echo '0';die();
+      		}
+		}else{
+			echo '0';die();
+		}
+		
+	}
+	die();
+}
+
+if(isset($_POST['action']) && $_POST['action'] == 'getCategorieslist')
+{
+    $categoryActive = ($_POST['categoryID'])?$_POST['categoryID']:"";
+    $sectionPage = ($_POST['section'])?$_POST['section']:"";
+    $hostURL = ($_POST['hostURL'])?$_POST['hostURL']:"";
+    $username = $_SESSION['webTvplayer']['username'];
+    $password = $_SESSION['webTvplayer']['password'];
+    $FinalCategoriesArray = array();
+    $bar = "/";
+    $cate = "";
+    if(substr($hostURL, -1) == "/")
+    {
+      $bar =  "";
+    }
+    if($hostURL != "" && $sectionPage != "" ){
+      if($sectionPage == "live")
+    	{
+    		$cate  = 'live';
+    	}
+    	elseif($sectionPage == "movies")
+    	{
+    		$cate  = 'vod';
+    	}
+    	elseif($sectionPage == "series")
+    	{
+    		$cate  = 'series';
+    	}
+    	elseif($sectionPage == "radio")
+    	{
+    		$cate  = 'live';
+    	
+    	}
+    	elseif($sectionPage == "catchup")
+    	{
+    		$cate  = 'live';
+    		$pagelink = "";
+    	}
+        
+        $getCategories_by_page = webtvpanel_CallApiRequest($hostURL.$bar."player_api.php?username=".$username."&password=".$password."&action=get_".$cate."_categories");
+        $FinalCategoriesArray = $getCategories_by_page;
+        ?>
+        
+        <div class="row" id="channel_list">
+			<?php 
+			if($cate != "live")
+			{
+				?>
+				<div class="col-md-6 col-sm-6 col-xs-12">					
+					<a href="<?php echo $pagelink;?>?cate=<?php echo 'all';?>" class="showChannel midfocus topmidleftfocus leftstop" data-channelid="1">
+						<div class="cate-title bg-cat-custom p-3 m-2 <?php echo ($categoryActive == "all")?"active-Class" : "";?>">					
+							<span class="channel-icon"><img src="img/player_video_play.png" style="height: 2rem"></span>
+							<h4>All <span class="float-right"><img src="img/right_icon_cat.png" style="height:2rem;"></span></h4>					
+						</div>
+					</a>				
+				</div>
+				<?php
+			}
+      if(!empty($conn)){
+        ?>
+      <div class="col-md-6 col-sm-6 col-xs-12">         
+        <a href="<?php echo $pagelink;?>?cate=<?php echo 'FAVOURITES';?>" class="showChannel midfocus topmidrightfocus <?php echo ($cate != "live")?"rightstop":"leftstop"; ?>" data-channelid="1">
+          <div class="cate-title bg-cat-custom p-3 m-2 <?php echo ($categoryActive == "FAVOURITES")?"active-Class" : "";?>">          
+            <span class="channel-icon"><img src="img/player_video_play.png" style="height: 2rem"></span>
+            <h4>Favourites <span class="float-right"><img src="img/right_icon_cat.png" style="height:2rem;"></span></h4>          
+          </div>
+        </a>        
+      </div>
+      <?php 
+      }
+			
+			if(!empty($FinalCategoriesArray['data']) && $FinalCategoriesArray['result'] == "success")
+			{
+				
+				$upperConditionofOdd = ($cate != "live")?"leftstop":"rightstop";
+				$innerConditionofOdd = ($cate != "live")?"rightstop":"leftstop";
+
+
+				$oddevencounter = 1;
+				foreach($FinalCategoriesArray['data'] as $catkey)
+				{
+					$sectionis = $upperConditionofOdd;
+					if($oddevencounter%2 == 0)
+					{
+						$sectionis = $innerConditionofOdd;	
+					}
+					?>
+					<div class="col-md-6 col-sm-6 col-xs-12" data-test="<?php echo $oddevencounter; ?>">					
+						<a href="<?php echo $pagelink;?>?cate=<?php echo $catkey->category_id;?>" class="showChannel midfocus <?php echo $sectionis; ?>" data-channelid="1">
+							<div class="cate-title bg-cat-custom p-3 m-2 <?php echo ($catkey->category_id == $categoryActive)?"active-Class" : "";?>">					
+								<span class="channel-icon"><img src="img/player_video_play.png" style="height: 2rem"></span>
+								<h4><?php echo $catkey->category_name; ?> <span class="float-right"><img src="img/right_icon_cat.png" style="height:2rem;"></span></h4>					
+							</div>
+						</a>				
+					</div>
+					<?php
+					++$oddevencounter;
+				}	
+			}			
+			?>
+		</div>
+		<?php
+    }
+    else{
+        echo "0";die();
+    }
+    die();
+}
+
+if(isset($_POST['action']) && $_POST['action'] == 'CheckparentControl')
+{
+	
+	$return = array('result' => 'error','message'=>'Pin Not Matched','golink' => 'live.php');
+	$ParentPin = $_POST['ParentPin'];
+	$golink = $_POST['golink'];
+	$startlink = $_POST['startlink'];
+	$startlink = base64_decode($startlink);
+	$Fullurl = $startlink.$golink;
+	$DatabaseObj = new DBConnect();		
+	$clientcontrolfunctions = new clientcontrolfunctions();
+	$conn = $DatabaseObj->makeconnection();
+	$Getparentpinformart = $clientcontrolfunctions->webtvpanel_getparentpinformart($conn);
+	//echo $Getparentpinformart;die();
+	if($Getparentpinformart === $ParentPin){
+		$return = array('result' => 'success','message'=>'Pin matched','golink' => $Fullurl);
+	}
+	echo json_encode($return);die();
+}
+
+if(isset($_POST["action"]) && $_POST["action"] == "getcastpictureanddata")
+{
+	$DatabaseObj = new DBConnect();
+	$conn = $DatabaseObj->makeconnection();
+	$CommonController = new CommonController();
+	$clientcontrolfunctions = new clientcontrolfunctions();	
+	$controlfunctions = new controlfunctions();
+	$firstOrignal = $_POST["castname"];
+	$castname = $orignalName = strtoupper($firstOrignal);
+	$castname = str_replace(" ", "%20", $castname);
+	$type = $_POST["typeis"];
+	$QueryData = array("request"=> "Get","table"=> "webtvtheme_cast_container", "data" => array("cast_name" => $orignalName,"type" => $type));  
+	$ShowCastImageIS = "images/no_poster.png";
+	$newactiveclass = "defaultactivecustom";
+	$CastTmbdID = "";
+	$CastData = $controlfunctions->webtvtheme_ExecuteQuery($QueryData,$conn);
+	if(!empty($CastData))
+	{
+		$ShowCastImageIS = (isset($CastData[0]["image_path"]) && !empty($CastData[0]["image_path"]))?$CastData[0]["image_path"]:$ShowCastImageIS;
+		$CastTmbdID = (isset($CastData[0]["tmbd_cast_id"]) && !empty($CastData[0]["tmbd_cast_id"]))?$CastData[0]["tmbd_cast_id"]:$ShowCastImageIS;
+	}
+	else
+	{		
+		$checkCastData = $CommonController->CallApiRequest("https://api.themoviedb.org/3/search/person?include_adult=false&page=1&query=".$castname."&language=en-US&api_key=f584f73e8848d9ace559deee1e5a849f");
+		if(isset($checkCastData["data"]->results[0]->profile_path))
+	  	{
+	  		$CastTmbdID = (isset($checkCastData["data"]->results[0]->id) && !empty($checkCastData["data"]->results[0]->id))?$checkCastData["data"]->results[0]->id:"";
+	  		$popularity = (isset($checkCastData["data"]->results[0]->popularity) && !empty($checkCastData["data"]->results[0]->popularity))?$checkCastData["data"]->results[0]->popularity:"";
+	  		if(!empty($popularity))
+	  		{
+	  			$popularity = round($popularity);
+	  		}
+
+	  		$newactiveclass = "";
+	  		$ShowCastImageIS = "https://image.tmdb.org/t/p/original".$checkCastData["data"]->results[0]->profile_path;	  		
+	  		$QueryData = array("request"=> "Insert","table"=> "webtvtheme_cast_container", "data" => array("cast_name" => $orignalName,"tmbd_cast_id" => $CastTmbdID,"popularity" => $popularity,"type" => $type,"image_path" => $ShowCastImageIS));  
+			$InsertData = $controlfunctions->webtvtheme_ExecuteQuery($QueryData,$conn);
+	  	}
+	}
+  	?>
+	<div class="sliderimage-div <?php echo $_POST["index"]; ?>" onclick="explorecastdata('<?php echo $CastTmbdID; ?>')">
+	<img src="<?php echo $ShowCastImageIS; ?>" alt="" onerror="this.src='images/no_poster.png';" class="sec-images cast-image <?php echo $newactiveclass; ?>">
+	<div class="img-title">
+	  <span class="movies-title"><?php echo $firstOrignal; ?></span>
+	</div>
+	</div>
+	<?php
+}
+
+if(isset($_POST["action"]) && $_POST["action"] == "getcastinformation")
+{
+	$DatabaseObj = new DBConnect();
+	$conn = $DatabaseObj->makeconnection();
+	$CommonController = new CommonController();
+	$clientcontrolfunctions = new clientcontrolfunctions();	
+	$controlfunctions = new controlfunctions();
+	$mainImageIS = "images/no_poster.png";
+	$galleryphotos = array();
+	$CastIMBDid = $_POST["CastIMBDid"];
+	if($CastIMBDid != "")
+	{
+		$checkCastData = $CommonController->CallApiRequest("https://api.themoviedb.org/3/person/".$CastIMBDid."?api_key=f584f73e8848d9ace559deee1e5a849f&language=en-US");
+		if($checkCastData["result"] == "success")
+		{
+			$birthday = (isset($checkCastData["data"]->birthday) && !empty($checkCastData["data"]->birthday))?$checkCastData["data"]->birthday:"n/A";
+			$known_for_department = (isset($checkCastData["data"]->known_for_department) && !empty($checkCastData["data"]->known_for_department))?$checkCastData["data"]->known_for_department:"n/A";
+			$name = (isset($checkCastData["data"]->name) && !empty($checkCastData["data"]->name))?$checkCastData["data"]->name:"n/A";
+			$gender = (isset($checkCastData["data"]->gender) && !empty($checkCastData["data"]->gender))?$checkCastData["data"]->gender:"n/A";
+			$biography = (isset($checkCastData["data"]->biography) && !empty($checkCastData["data"]->biography))?$checkCastData["data"]->biography:"n/A";
+			$place_of_birth = (isset($checkCastData["data"]->place_of_birth) && !empty($checkCastData["data"]->place_of_birth))?$checkCastData["data"]->place_of_birth:"n/A";
+			$profile_path = (isset($checkCastData["data"]->profile_path) && !empty($checkCastData["data"]->profile_path))?$checkCastData["data"]->profile_path:"";
+			if($profile_path != "")
+			{
+				$mainImageIS = "https://image.tmdb.org/t/p/original".$profile_path;
+			}
+			$GetCastGallaryData = $CommonController->CallApiRequest("https://api.themoviedb.org/3/person/".$CastIMBDid."/images?api_key=f584f73e8848d9ace559deee1e5a849f");
+			if($GetCastGallaryData["result"] == "success" && !empty($GetCastGallaryData["data"]->profiles))
+			{
+				$GallCondition = 1;
+				foreach($GetCastGallaryData["data"]->profiles as $galData)
+				{
+					if($GallCondition < 6)
+					{
+						if($galData->file_path != "")
+						{
+							$fgalpath = "https://image.tmdb.org/t/p/original".$galData->file_path ;
+							$galleryphotos[] = $fgalpath;
+							++$GallCondition;
+						}
+					}
+					
+				}
+			}
+			?>
+			<div class="row">
+				<div class="col-md-2 watchPoster">
+					<div class="stream-icon">
+	              <img src="<?php echo $mainImageIS; ?>" class="stream-image">
+	            </div>
+	            <button class="btn btn-info" onclick="backtoinformationstats()">Back to Info</button>
+				</div>
+					<div class="col-md-10">
+						<div class="row">
+							<div class="col-md-6">
+								Name
+							</div>
+							<div class="col-md-6">	
+								<?php echo $name; ?>
+							</div>
+							<div class="col-md-6">
+								Date of birth
+							</div>
+							<div class="col-md-6">	
+								<?php
+								if($birthday != "n/A")
+								{
+									echo date("d F Y", strtotime($birthday));
+								}
+								else
+								{
+									echo $birthday; 
+								}								
+								?>
+							</div>
+							<div class="col-md-6">
+								Profession
+							</div>
+							<div class="col-md-6">	
+								<?php echo $known_for_department; ?>
+							</div>
+							<div class="col-md-6">
+								Place of birth
+							</div>
+							<div class="col-md-6">	
+								<?php echo $place_of_birth; ?>
+							</div>
+							<div class="col-md-12">
+								<?php echo $biography; ?>
+							</div>
+						</div>
+					</div>
+				</div>
+				<?php 
+				if(!empty($galleryphotos))
+				{
+					?>
+					<div class="row slider-row castslidersection">
+			   			<div class="col-md-12">
+			      			<h3 class="related-slide">Photos</h3>
+			      			<div class="view-slide" id="viewSliderCast">
+			      			<?php
+			      			foreach($galleryphotos as $galphotos)
+							{
+			      			?>	
+			      				<div class="viewslide-banner commomapicastpicture">
+						            <div class="sliderimage-div 0">
+						               <img src="<?php echo $galphotos; ?>" alt="" onerror="this.src='images/no_poster.png';" class="sec-images cast-image defaultactivecustom">
+						            </div>
+						         </div>
+			         		<?php
+			         		}
+			         		?>
+			      			</div>
+			      		</div>
+			      	</div>		
+					<?php 
+					
+				}
+				?>
+			<?php
+		}
+	}
+}
+?>

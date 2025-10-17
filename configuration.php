@@ -1,0 +1,18 @@
+<?php
+/*
+ * @ https://EasyToYou.eu - IonCube v11 Decoder Online
+ * @ PHP 7.2
+ * @ Decoder version: 1.0.4
+ * @ Release: 01/09/2021
+ */
+
+$XCStreamHostUrl = "http://cheapflix.us:25461";
+$XClogoLinkval = "images/yourlogo-white.png";
+$XCcopyrighttextval = "";
+$XCcontactUslinkval = "";
+$XChelpLinkval = "";
+$XClicenseIsval = "";
+$XClocalKey = "==Qf7IyM1gTNwEjNxMDMwIDMyIiO0EjOztjIlRXYkt2Ylh2YioTO6M3OikzY2MzYwgzNjJjY0MWZ0EmM\r\nxQ2M5UDZhBjMwEzY2I2YiojMzozc7ICazFGa1QWbiozN6M3Oi0zL2RHcp1icvZWL2RXLiV2dv02bj5yc\r\nyVGdyFWbzN3Yth2duc3d39yL6MHc0RHag0CIz52bpRXak52bjBCZuFGIz1mclRHI0BXZjNWYgkEf9ASL\r\ngIXZ5FGbwBSeiBCZlRncvBHc1NHIzVGZvN2LvlGZ1FGIlhGdgQWYlJHIlZXYoBSSgQHclN2YhBSS81TZ\r\ntFmb5xGZuVWayZmI6QTNxozc7IyckxWZpZWbvR3c1NmI6ITM6M3OiMXZkVHbj5WavIWZ39FdzVGdvwWb\r\n0h2XjlGbiVHcvMXZ0Vmdvx2Ll12bo9iI6MDN6M3OikncvR3YlJXakRWasFmdioDNxozc7IiMwEjLwETM\r\nugzMy4CNwEjI6UTM6M3OiAXaklGbhZnI6cjOztjIt92YuMnclRnch12czNWbodnLu9Wa0VHbvNnd0BXa\r\nuc3d3xSbvNmLzJXZ0JXYtN3cj1Ga35ibvlGd1x2bzZHdwlmI6UjN6M3Oi4Wah12bkRWasFmdioTMxozc\r\n7ISZtlGVgUmbPJiO4ozc7ISZsNWejdmbpxGbpJmI6ITM6M3OiADMtADMtADMwAjI6ATM6M3OiUGdhRWZ\r\n1RGd4VmbioTMxozc7ICMwoDMwoDMwAiNx0yMw0CMyAjMioTOxozc7ISZ0FGZnVmciozN6M3OiIXZ5FGb\r\nQBiVUBiYldFItAycyVGdyFWbTBiVUBVSioTOyozc7ISZtFmb0NWdk9mcwJiOxEjOztjI3ITMiozM6M3O\r\niQWa0NWdk9mcwJiO5ozc7ICNyYTO1IiO1ozc7ICZpV2YpZnclNnI6kjOztjIt92YuwWah12ZAh2YlR3a\r\nyFGczdXZu5CdlVmcw5WYtFmI6IzM6M3OiwWah1WZioTN6M3Oik3Zvx2buh2YlRFIrJXYwNFI3VmTioDM\r\nyozc7ISZtFmb55WYw12bjJiOxEjOztjIodmbpNFI0VWZyBnbh1WQioTNxozc7ISZtFmbkVmclR3cpdWZ\r\nyJiO0EjOztjIlZXa0NWQiojN6M3OiMXd0FGdzJiO2ozc7pjNxoTY9a53fe2cac7b543262c8787ae1cb\r\n81f859843eaa99b604fa19dbe05f200a0666";
+$XCsitetitleval = "WebTV Player";
+
+?>

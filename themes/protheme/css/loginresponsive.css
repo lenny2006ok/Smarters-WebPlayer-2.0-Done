@@ -1,0 +1,1488 @@
+    /* =============== 700 Screen Resolution =============== */
+
+@media only screen and  (min-width: 700px) {
+
+    /* =============== Login Screen Desgin Start =============== */
+    
+    .loginForm h1{
+        font-size: 18px;
+    }
+
+    .loginBtnLeft {
+        position: inherit;
+        top: 0px;
+        width: 100%;
+        left: 0px;
+    } 
+    .loginLogo {
+        padding-top: 17% !important;
+        width: 100%;
+        margin-left: 0% !important;
+    }
+    .loginForm{
+        padding-top: 5% !important;
+        position: inherit;
+        width: 80%;
+        top: 0%;
+        left: 0%;
+    }
+    #input-portal{
+        width: 100%;
+        font-size: 17px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 4px 10px 4px 10px !important;
+        background-color: transparent;
+        color: #dfdde2;
+        border: none;
+    }
+    .loginForm input {
+        width: 100%;
+        font-size: 17px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 4px 10px 4px 10px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm input[type=Password] {
+        width: 80.8%;
+        font-size: 17px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 4px 10px 4px 10px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm input[type=texts] {
+        width: 80.8%;
+        font-size: 17px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 4px 10px 4px 10px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm label {
+        font-size: 21px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 6px 0px 6px 26px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm button {
+        width: 100%;
+        font-size: 17px;
+        border-radius: 3px;
+        font-weight: 700;
+        margin-bottom: 10px !important;
+        padding: 6px 10px 6px 10px !important;
+        background-color: rgb(255 255 255);
+        border: 1px solid rgb(255 255 255 / 50%);
+    }
+    .loginLogo .btnConVPN {
+        width: 40%;
+        font-size: 12px;
+        font-weight: 700;
+        border-radius: 2px;
+        margin-right: 10px !important;
+        margin-bottom: 10px !important;
+        padding: 10px 0px 10px 0px !important;
+        background-color: rgb(255 255 255);
+        border: 1px solid rgb(255 255 255 / 50%);
+        box-shadow: 0px 5px 6px 2px #00000087;
+    }
+    .loginLogo .btnListUser {
+        width: 40%;
+        font-size: 12px;
+        font-weight: 700;
+        border-radius: 2px;
+        margin-right: 0px !important;
+        padding: 10px 0px 10px 5px !important;
+        background-color: rgb(255 255 255);
+        border: 1px solid rgb(255 255 255 / 50%);
+        box-shadow: 0px 5px 6px 2px #00000087;
+    }
+    .input-group{
+        margin-bottom: 5px !important;
+        border: 3px solid rgb(255 255 255 / 20%);
+        border-radius: 3px;
+    }
+    .btnConVPN:hover, .btnListUser:hover{
+        border: 3px solid; 
+        /* border-image-slice: 1;
+        border-image-source: linear-gradient(to left, #4e9cdf, #a63bae); */
+    }
+
+    /* =============== Login Screen Desgin End =============== */
+        
+}
+
+@media only screen and  (min-width: 762px) {
+
+    /* =============== Login Screen Desgin Start =============== */
+    
+    .loginForm h1{
+        font-size: 18px;
+    }
+
+    .loginBtnLeft {
+        position: inherit;
+        top: 0px;
+        width: 100%;
+        left: 0px;
+    } 
+    .loginLogo {
+        padding-top: 17% !important;
+        width: 100%;
+        margin-left: 0% !important;
+    }
+    .loginForm{
+        padding-top: 5% !important;
+        position: inherit;
+        width: 80%;
+        top: 0%;
+        left: 0%;
+    }
+    #input-portal{
+        width: 100%;
+        font-size: 17px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 4px 10px 4px 10px !important;
+        background-color: transparent;
+        color: #dfdde2;
+        border: none;
+    }
+    .loginForm input {
+        width: 100%;
+        font-size: 17px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 4px 10px 4px 10px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm input[type=Password] {
+        width: 80.8%;
+        font-size: 17px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 4px 10px 4px 10px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm input[type=texts] {
+        width: 80.8%;
+        font-size: 17px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 4px 10px 4px 10px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm label {
+        font-size: 21px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 6px 0px 6px 26px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm button {
+        width: 100%;
+        font-size: 17px;
+        border-radius: 3px;
+        font-weight: 700;
+        margin-bottom: 10px !important;
+        padding: 6px 10px 6px 10px !important;
+        background-color: rgb(255 255 255);
+        border: 1px solid rgb(255 255 255 / 50%);
+    }
+    .loginLogo .btnConVPN {
+        width: 40%;
+        font-size: 12px;
+        font-weight: 700;
+        border-radius: 2px;
+        margin-right: 10px !important;
+        margin-bottom: 10px !important;
+        padding: 10px 0px 10px 0px !important;
+        background-color: rgb(255 255 255);
+        border: 1px solid rgb(255 255 255 / 50%);
+        box-shadow: 0px 5px 6px 2px #00000087;
+    }
+    .loginLogo .btnListUser {
+        width: 40%;
+        font-size: 12px;
+        font-weight: 700;
+        border-radius: 2px;
+        margin-right: 0px !important;
+        padding: 10px 0px 10px 5px !important;
+        background-color: rgb(255 255 255);
+        border: 1px solid rgb(255 255 255 / 50%);
+        box-shadow: 0px 5px 6px 2px #00000087;
+    }
+    .input-group{
+        margin-bottom: 5px !important;
+        border: 3px solid rgb(255 255 255 / 20%);
+        border-radius: 3px;
+    }
+    .btnConVPN:hover, .btnListUser:hover{
+        border: 3px solid; 
+        /* border-image-slice: 1;
+        border-image-source: linear-gradient(to left, #4e9cdf, #a63bae); */
+    }
+
+    /* =============== Login Screen Desgin End =============== */
+        
+}
+
+    /* =============== 800 Screen Resolution =============== */
+
+@media only screen and  (min-width: 800px) {
+
+    /* =============== Login Screen Desgin Start =============== */
+    
+    .loginForm h1{
+        font-size: 20px;
+    }
+
+    .loginBtnLeft {
+        position: inherit;
+        top: 0px;
+        width: 100%;
+        left: 0px;
+    } 
+    .loginLogo {
+        padding-top: 15% !important;
+        width: 100%;
+        margin-left: 0% !important;
+    }
+    .loginForm{
+        padding-top: 5% !important;
+        position: inherit;
+        width: 80%;
+        top: 0%;
+        left: 0%;
+    }
+    #input-portal{
+        width: 100%;
+        font-size: 17px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 4px 10px 4px 10px !important;
+        background-color: transparent;
+        color: #dfdde2;
+        border: none;
+    }
+    .loginForm input {
+        width: 100%;
+        font-size: 17px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 4px 10px 4px 10px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm input[type=Password] {
+        width: 80.8%;
+        font-size: 17px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 4px 10px 4px 10px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm input[type=texts] {
+        width: 80.8%;
+        font-size: 17px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 4px 10px 4px 10px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm label {
+        font-size: 21px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 6px 0px 6px 30px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm button {
+        width: 100%;
+        font-size: 17px;
+        border-radius: 3px;
+        font-weight: 700;
+        margin-bottom: 10px !important;
+        padding: 6px 10px 6px 10px !important;
+        background-color: rgb(255 255 255);
+        border: 1px solid rgb(255 255 255 / 50%);
+    }
+    .loginLogo .btnConVPN {
+        width: 40%;
+        font-size: 12px;
+        font-weight: 700;
+        border-radius: 2px;
+        margin-right: 10px !important;
+        margin-bottom: 10px !important;
+        padding: 10px 0px 10px 0px !important;
+        background-color: rgb(255 255 255);
+        border: 1px solid rgb(255 255 255 / 50%);
+        box-shadow: 0px 5px 6px 2px #00000087;
+    }
+    .loginLogo .btnListUser {
+        width: 30%;
+        font-size: 11px;
+        font-weight: 700;
+        border-radius: 2px;
+        margin-right: 0px !important;
+        padding: 8px 0px 8px 5px !important;
+        background-color: rgb(255 255 255);
+        border: 2px solid rgb(255 255 255 / 50%);
+        box-shadow: 0px 5px 6px 2px #00000087;
+    }
+    .input-group{
+        margin-bottom: 6px !important;
+        border: 3px solid rgb(255 255 255 / 20%);
+        border-radius: 3px;
+    }
+    .btnConVPN:hover, .btnListUser:hover{
+        border: 2px solid; 
+        /* border-image-slice: 1;
+        border-image-source: linear-gradient(to left, #4e9cdf, #a63bae); */
+    }
+
+    /* =============== Login Screen Desgin End =============== */
+        
+}
+
+    /* =============== 700 Screen Resolution =============== */
+
+@media only screen and  (min-width: 900px) {
+
+        /* =============== Login Screen Desgin Start =============== */
+        
+        .loginForm h1{
+            font-size: 25px;
+        }
+    
+        .loginBtnLeft {
+            position: inherit;
+            top: 0px;
+            width: 100%;
+            left: 0px;
+        } 
+        .loginLogo {
+            padding-top: 15% !important;
+            width: 100%;
+            margin-left: 0% !important;
+        }
+        .loginbody .row{
+            margin-top: 6% !important;
+        }
+
+        .loginForm{
+            padding-top: 5% !important;
+            position: inherit;
+            width: 80%;
+            top: 0%;
+            left: 0%;
+        }
+        #input-portal{
+            width: 100%;
+            font-size: 17px;
+            border-radius: 3px;
+            margin-bottom: 0px !important;
+            padding: 4px 10px 4px 10px !important;
+            background-color: transparent;
+            color: #dfdde2;
+            border: none;
+        }
+        .loginForm input {
+            width: 100%;
+            font-size: 17px;
+            border-radius: 3px;
+            margin-bottom: 0px !important;
+            padding: 4px 10px 4px 10px !important;
+            background-color: transparent;
+            border: none;
+        }
+        .loginForm input[type=Password] {
+            width: 80.8%;
+            font-size: 17px;
+            border-radius: 3px;
+            margin-bottom: 0px !important;
+            padding: 4px 10px 4px 10px !important;
+            background-color: transparent;
+            border: none;
+        }
+        .loginForm input[type=texts] {
+            width: 80.8%;
+            font-size: 17px;
+            border-radius: 3px;
+            margin-bottom: 0px !important;
+            padding: 4px 10px 4px 10px !important;
+            background-color: transparent;
+            border: none;
+        }
+        .loginForm label {
+            font-size: 21px;
+            border-radius: 3px;
+            margin-bottom: 0px !important;
+            padding: 6px 0px 7px 35px !important;
+            background-color: transparent;
+            border: none;
+        }
+        .loginForm button {
+            width: 100%;
+            font-size: 17px;
+            border-radius: 3px;
+            font-weight: 700;
+            margin-bottom: 10px !important;
+            padding: 6px 10px 6px 10px !important;
+            background-color: rgb(255 255 255);
+            border: 1px solid rgb(255 255 255 / 50%);
+        }
+        .loginLogo .btnConVPN {
+            width: 35%;
+            font-size: 12px;
+            font-weight: 700;
+            border-radius: 2px;
+            margin-right: 10px !important;
+            margin-bottom: 10px !important;
+            padding: 10px 0px 10px 0px !important;
+            background-color: rgb(255 255 255);
+            border: 1px solid rgb(255 255 255 / 50%);
+            box-shadow: 0px 5px 6px 2px #00000087;
+        }
+        .loginLogo .btnListUser {
+            width: 28%;
+            font-size: 12px;
+            font-weight: 700;
+            border-radius: 2px;
+            margin-right: 0px !important;
+            padding: 10px 0px 10px 5px !important;
+            background-color: rgb(255 255 255);
+            border: 1px solid rgb(255 255 255 / 50%);
+            box-shadow: 0px 5px 6px 2px #00000087;
+        }
+        .input-group{
+            margin-bottom: 10px !important;
+            border-radius: 5px; 
+            border: 6px solid rgb(255 255 255 / 20%);
+        }
+        .btnConVPN:hover, .btnListUser:hover{
+            border: 3px solid; 
+            /* border-image-slice: 1;
+            border-image-source: linear-gradient(to left, #4e9cdf, #a63bae); */
+        }
+    
+        /* =============== Login Screen Desgin End =============== */
+            
+}
+
+
+    /* =============== 1100 Screen Resolution =============== */
+
+@media only screen and  (min-width: 1100px) {
+
+    /* =============== Login Screen Desgin Start =============== */
+
+    .loginForm h1{
+        font-size: 28px;
+    }
+    
+    .loginBtnLeft {
+        position: inherit;
+        top: 0px;
+        width: 100%;
+        left: 0px;
+    } 
+    .loginLogo {
+        padding-top: 12% !important;
+        width: 100%;
+        margin-left: 0% !important;
+    }
+    .loginForm{
+        padding-top: 0% !important;
+        position: inherit;
+        width: 80%;
+        top: 0%;
+        left: 0%;
+    }
+    .loginbody .row {
+        margin-top: 10% !important;
+    }
+    #input-portal{
+        width: 100%;
+        font-size: 23px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 8px 10px 8px 10px !important;
+        background-color: transparent;
+        color: #dfdde2;
+        border: none;
+    }
+    .loginForm input {
+        width: 100%;
+        font-size: 18px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 8px 10px 8px 10px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm input[type=Password] {
+        width: 89%;
+        font-size: 18px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 8px 10px 8px 10px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm input[type=texts] {
+        width: 89%;
+        font-size: 18px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 8px 10px 8px 10px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm label {
+        font-size: 20px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 12px 0px 7px 14px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm button {
+        width: 100%;
+        font-size: 23px;
+        border-radius: 3px;
+        font-weight: 700;
+        margin-bottom: 10px !important;
+        padding: 10px 10px 10px 10px !important;
+        background-color: rgb(255 255 255);
+        border: 1px solid rgb(255 255 255 / 50%);
+    }
+    .loginLogo .btnConVPN {
+        width: 26%;
+        font-size: 13px;
+        border-radius: 2px;
+        margin-right: 10px !important;
+        margin-bottom: 10px !important;
+        padding: 10px 0px 10px 0px !important;
+        background-color: rgb(255 255 255);
+        border: 3px solid rgb(255 255 255 / 50%);
+        box-shadow: 0px 5px 6px 2px #00000087;
+    }
+    .loginLogo .btnListUser {
+        width: 26%;
+        font-size: 13px;
+        border-radius: 2px;
+        margin-right: 0px !important;
+        padding: 10px 0px 10px 0px !important;
+        margin-bottom: 30px !important;
+        background-color: rgb(255 255 255);
+        border: 3px solid rgb(255 255 255 / 50%);
+        box-shadow: 0px 5px 6px 2px #00000087;
+    }
+    .input-group{
+        margin-bottom: 10px !important;
+        border-radius: 5px; 
+        border: 6px solid rgb(255 255 255 / 20%);
+    }
+    .btnConVPN:hover, .btnListUser:hover{
+        border: 3px solid; 
+        /* border-image-slice: 1;
+        border-image-source: linear-gradient(to left, #4e9cdf, #a63bae); */
+    }
+
+    /* =============== Login Screen Desgin End =============== */
+        
+}
+
+
+    /* =============== 1300 Screen Resolution =============== */
+
+@media only screen and  (min-width: 1300px) {
+
+    /* =============== Login Screen Desgin Start =============== */
+
+    .loginForm h1{
+        font-size: 32px;
+    }
+    
+    .loginBtnLeft {
+        position: inherit;
+        top: 0px;
+        width: 100%;
+        left: 0px;
+    } 
+    .loginLogo {
+        padding-top: 9% !important;
+        width: 100%;
+        margin-left: 0% !important;
+    }
+    .loginForm{
+        padding-top: 0% !important;
+        position: inherit;
+        width: 80%;
+        top: 0%;
+        left: 0%;
+    }
+    .loginbody .row {
+        margin-top: 8% !important;
+    }
+    #input-portal{
+        width: 100%;
+        font-size: 25px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 8px 10px 8px 10px !important;
+        background-color: transparent;
+        color: #dfdde2;
+        border: none;
+    }
+    .loginForm input {
+        width: 100%;
+        font-size: 23px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 8px 10px 8px 10px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm input[type=Password] {
+        width: 89%;
+        font-size: 23px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 8px 10px 8px 10px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm input[type=texts] {
+        width: 89%;
+        font-size: 23px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 8px 10px 8px 10px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm label {
+        font-size: 25px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 13px 0px 7px 14px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm button {
+        width: 100%;
+        font-size: 23px;
+        border-radius: 3px;
+        font-weight: 700;
+        margin-bottom: 10px !important;
+        padding: 10px 10px 10px 10px !important;
+        background-color: rgb(255 255 255);
+        border: 1px solid rgb(255 255 255 / 50%);
+    }
+    .loginLogo .btnConVPN {
+        width: 29%;
+        font-size: 15px;
+        border-radius: 2px;
+        margin-right: 10px !important;
+        margin-bottom: 10px !important;
+        padding: 10px 10px 10px 10px !important;
+        background-color: rgb(255 255 255);
+        border: 3px solid rgb(255 255 255 / 50%);
+        box-shadow: 0px 5px 6px 2px #00000087;
+    }
+    .loginLogo .btnListUser {
+        width: 29%;
+        font-size: 15px;
+        border-radius: 2px;
+        margin-right: 0px !important;
+        padding: 10px 10px 10px 10px !important;
+        margin-bottom: 30px !important;
+        background-color: rgb(255 255 255);
+        border: 3px solid rgb(255 255 255 / 50%);
+        box-shadow: 0px 5px 6px 2px #00000087;
+    }
+    
+    .input-group{
+        margin-bottom: 10px !important;
+        border-radius: 5px; 
+        border: 6px solid rgb(255 255 255 / 20%);
+    }
+    .btnConVPN:hover, .btnListUser:hover{
+        border: 3px solid; 
+        /* border-image-slice: 1;
+        border-image-source: linear-gradient(to left, #4e9cdf, #a63bae); */
+    }
+
+    /* =============== Login Screen Desgin End =============== */
+        
+}
+
+    
+    /* =============== 1400 Screen Resolution =============== */
+
+@media only screen and  (min-width: 1400px) {
+
+    /* =============== Login Screen Desgin Start =============== */
+
+    .loginForm h1{
+        font-size: 34px;
+    }
+
+    .loginBtnLeft {
+        position: inherit;
+        top: 0px;
+        width: 100%;
+        left: 0px;
+    } 
+    .loginLogo {
+        padding-top: 8% !important;
+        width: 100%;
+        margin-left: 0% !important;
+    }
+    .loginForm{
+        padding-top: 0% !important;
+        position: inherit;
+        width: 80%;
+        top: 0%;
+        left: 0%;
+    }
+    .loginbody .row {
+        margin-top: 10% !important;
+    }
+    .loginForm input {
+        width: 100%;
+        font-size: 25px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 10px 10px 10px 10px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm input[type=Password] {
+        width: 90%;
+        font-size: 25px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 10px 10px 10px 10px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm input[type=texts] {
+        width: 90%;
+        font-size: 25px;
+        border-radius: 3px;
+        margin-bottom: 10px !important;
+        padding: 10px 10px 10px 10px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm label {
+        font-size: 25px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 17px 0px 14px 14px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm button {
+        width: 100%;
+        font-size: 25px;
+        border-radius: 3px;
+        font-weight: 700;
+        margin-bottom: 10px !important;
+        padding: 11px 10px 11px 10px !important;
+        background-color: rgb(255 255 255);
+        border: 1px solid rgb(255 255 255 / 50%);
+    }
+    #input-portal{
+        width: 100%;
+        font-size: 25px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 10px 10px 10px 10px !important;
+        background-color: transparent;
+        color: #dfdde2;
+        border: none;
+    }
+    .loginLogo .btnConVPN {
+        width: 29%;
+        font-size: 15px;
+        border-radius: 2px;
+        margin-right: 10px !important;
+        margin-bottom: 10px !important;
+        padding: 10px 10px 10px 10px !important;
+        background-color: rgb(255 255 255);
+        border: 3px solid rgb(255 255 255 / 50%);
+        box-shadow: 0px 5px 6px 2px #00000087;
+    }
+    .loginLogo .btnListUser {
+        width: 28%;
+        font-size: 15px;
+        border-radius: 2px;
+        margin-right: 0px !important;
+        padding: 10px 10px 10px 10px !important;
+        margin-bottom: 30px !important;
+        background-color: rgb(255 255 255);
+        border: 3px solid rgb(255 255 255 / 50%);
+        box-shadow: 0px 5px 6px 2px #00000087;
+    }
+    .input-group{
+        margin-bottom: 10px !important;
+        border-radius: 5px; 
+        border: 6px solid rgb(255 255 255 / 20%);
+    }
+    .btnConVPN:hover, .btnListUser:hover{
+        border: 3px solid; 
+        /* border-image-slice: 1;
+        border-image-source: linear-gradient(to left, #4e9cdf, #a63bae); */
+    }
+
+    /* =============== Login Screen Desgin End =============== */
+        
+}
+
+    /* =============== 1600 Screen Resolution =============== */
+
+@media only screen and  (min-width: 1600px) {
+
+    /* =============== Login Screen Desgin Start =============== */
+
+    .loginForm h1{
+        font-size: 34px;
+    }
+
+    .loginBtnLeft {
+        position: inherit;
+        top: 0px;
+        width: 100%;
+        left: 0px;
+    } 
+    .loginLogo {
+        padding-top: 6% !important;
+        width: 100%;
+        margin-left: 0% !important;
+    }
+    .loginForm{
+        padding-top: 0% !important;
+        position: inherit;
+        width: 80%;
+        top: 0%;
+        left: 0%;
+    }
+    .loginbody .row {
+        margin-top: 11% !important;
+    }
+    #input-portal{
+        width: 100%;
+        font-size: 25px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 13px 10px 13px 10px !important;
+        background-color: transparent;
+        color: #dfdde2;
+        border: none;
+    }
+    .loginForm input {
+        width: 100%;
+        font-size: 25px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 13px 10px 13px 10px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm input[type=Password] {
+        width: 90%;
+        font-size: 25px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 13px 10px 13px 10px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm input[type=texts] {
+        width: 90%;
+        font-size: 25px;
+        border-radius: 3px;
+        margin-bottom: 10px !important;
+        padding: 13px 10px 13px 10px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm label {
+        font-size: 25px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 17px 0px 14px 14px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm button {
+        width: 100%;
+        font-size: 25px;
+        border-radius: 3px;
+        font-weight: 700;
+        margin-bottom: 10px !important;
+        padding: 11px 10px 11px 10px !important;
+        background-color: rgb(255 255 255);
+        border: 1px solid rgb(255 255 255 / 50%);
+    }
+    
+    .loginLogo .btnConVPN {
+        width: 29%;
+        font-size: 18px;
+        border-radius: 2px;
+        margin-right: 10px !important;
+        margin-bottom: 10px !important;
+        padding: 12px 10px 12px 10px !important;
+        background-color: rgb(255 255 255);
+        border: 3px solid rgb(255 255 255 / 50%);
+        box-shadow: 0px 5px 6px 2px #00000087;
+    }
+    .loginLogo .btnListUser {
+        width: 28%;
+        font-size: 18px;
+        border-radius: 2px;
+        margin-right: 0px !important;
+        padding: 12px 10px 12px 10px !important;
+        margin-bottom: 30px !important;
+        background-color: rgb(255 255 255);
+        border: 3px solid rgb(255 255 255 / 50%);
+        box-shadow: 0px 5px 6px 2px #00000087;
+    }
+    .input-group{
+        margin-bottom: 10px !important;
+        border-radius: 5px; 
+        border: 6px solid rgb(255 255 255 / 20%);
+    }
+    .btnConVPN:hover, .btnListUser:hover{
+        border: 3px solid; 
+        /* border-image-slice: 1;
+        border-image-source: linear-gradient(to left, #4e9cdf, #a63bae); */
+    }
+
+    /* =============== Login Screen Desgin End =============== */
+        
+}
+
+    /* =============== 1800 Screen Resolution =============== */
+
+@media only screen and  (min-width: 1800px) {
+
+    /* =============== Login Screen Desgin Start =============== */
+
+    .loginForm h1{
+        font-size: 34px;
+    }
+
+    .loginBtnLeft {
+        position: inherit;
+        top: 0px;
+        width: 100%;
+        left: 0px;
+    } 
+    .loginLogo {
+        padding-top: 5% !important;
+        width: 100%;
+        margin-left: 0% !important;
+    }
+    .loginForm{
+        padding-top: 0% !important;
+        position: inherit;
+        width: 80%;
+        top: 0%;
+        left: 0%;
+    }
+    .loginbody .row {
+        margin-top: 12% !important;
+    }
+    #input-portal{
+        width: 100%;
+        font-size: 27px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 15px 10px 15px 10px !important;
+        background-color: transparent;
+        color: #dfdde2;
+        border: none;
+    }
+    .loginForm input {
+        width: 100%;
+        font-size: 27px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 15px 10px 15px 10px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm input[type=Password] {
+        width: 90%;
+        font-size: 27px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 15px 10px 15px 10px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm input[type=texts] {
+        width: 90%;
+        font-size: 27px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 15px 10px 15px 10px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm label {
+        font-size: 30px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 19px 0px 14px 14px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm button {
+        width: 100%;
+        font-size: 30px;
+        border-radius: 3px;
+        font-weight: 700;
+        margin-bottom: 10px !important;
+        padding: 14px 10px 14px 10px !important;
+        background-color: rgb(255 255 255);
+        border: 1px solid rgb(255 255 255 / 50%);
+    }
+    .loginLogo .btnConVPN {
+        width: 29%;
+        font-size: 19px;
+        border-radius: 2px;
+        margin-right: 10px !important;
+        margin-bottom: 10px !important;
+        padding: 14px 10px 14px 10px !important;
+        background-color: rgb(255 255 255);
+        border: 3px solid rgb(255 255 255 / 50%);
+        box-shadow: 0px 5px 6px 2px #00000087;
+    }
+    .loginLogo .btnListUser {
+        width: 28%;
+        font-size: 19px;
+        border-radius: 2px;
+        margin-right: 0px !important;
+        padding: 14px 10px 14px 10px !important;
+        margin-bottom: 30px !important;
+        background-color: rgb(255 255 255);
+        border: 1px solid rgb(255 255 255 / 50%);
+        box-shadow: 0px 5px 6px 2px #00000087;
+    }
+    .input-group{
+        margin-bottom: 10px !important;
+        border-radius: 5px; 
+        border: 6px solid rgb(255 255 255 / 20%);
+    }
+    .btnConVPN:hover, .btnListUser:hover{
+        border: 3px solid; 
+        /* border-image-slice: 1;
+        border-image-source: linear-gradient(to left, #4e9cdf, #a63bae); */
+    }
+
+    /* =============== Login Screen Desgin End =============== */
+        
+}
+
+    /* =============== 1900 Screen Resolution =============== */
+
+@media only screen and  (min-width: 1900px) {
+
+    /* =============== Login Screen Desgin Start =============== */
+
+    .loginForm h1{
+        font-size: 34px;
+    }
+
+    .loginBtnLeft {
+        position: inherit;
+        top: 0px;
+        width: 100%;
+        left: 0px;
+    } 
+    .loginLogo {
+        padding-top: 7% !important;
+        width: 100%;
+        margin-left: 0% !important;
+    }
+    .loginForm{
+        padding-top: 0% !important;
+        position: inherit;
+        width: 80%;
+        top: 0%;
+        left: 0%;
+    }
+    .loginbody .row {
+        margin-top: 11% !important;
+    }
+    #input-portal{
+        width: 100%;
+        font-size: 30px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 18px 10px 18px 10px !important;
+        background-color: transparent;
+        color: #dfdde2;
+        border: none;
+    }
+    .loginForm input {
+        width: 100%;
+        font-size: 30px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 18px 10px 18px 18px !important;
+        background-color: transparent;
+        /* border: 6px solid rgb(255 255 255 / 20%); */
+        border: none;
+    }
+    .loginForm input[type=Password] {
+        width: 91.2%;
+        font-size: 30px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 18px 10px 18px 18px !important;
+        background-color: transparent;
+        /* border: 6px solid rgb(255 255 255 / 20%); */
+        border: none;
+        border-right: none;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    .loginForm input[type=texts] {
+        width: 91.2%;
+        font-size: 30px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 18px 10px 18px 18px !important;
+        background-color: transparent;
+        /* border: 6px solid rgb(255 255 255 / 20%); */
+        border: none;
+        border-right: none;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    .loginForm label {
+        font-size: 32px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        margin-left: 0px !important;
+        padding: 23px 0px 25px 16px !important;
+        background-color: transparent;
+        border: 6px solid rgb(255 255 255 / 20%);
+        border: none;
+        border-left: navajowhite;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+    .loginForm button {
+        width: 100%;
+        font-size: 30px;
+        border-radius: 3px;
+        font-weight: 700;
+        margin-bottom: 10px !important;
+        padding: 16px 10px 16px 10px !important;
+        background-color: rgb(255 255 255);
+        border: 6px solid rgb(255 255 255 / 20%);
+    }
+    .loginLogo .btnConVPN {
+        width: 30%;
+        font-size: 20px;
+        border-radius: 2px;
+        margin-right: 10px !important;
+        margin-bottom: 10px !important;
+        padding: 15px 10px 15px 10px !important;
+        background-color: rgb(255 255 255);
+        border: 3px solid rgb(255 255 255 / 50%);
+        box-shadow: 0px 5px 6px 2px #00000087;
+    }
+    .loginLogo .btnListUser {
+        width: 29%;
+        font-size: 20px;
+        border-radius: 2px;
+        margin-right: 10px !important;
+        margin-bottom: 10px !important;
+        padding: 15px 10px 15px 10px !important;
+        background-color: rgb(255 255 255);
+        border: 3px solid rgb(255 255 255 / 50%);
+        box-shadow: 0px 5px 6px 2px #00000087;
+    }
+    .input-group{
+        margin-bottom: 10px !important;
+        border-radius: 5px; 
+        border: 6px solid rgb(255 255 255 / 20%);
+    }
+    .btnConVPN:hover, .btnListUser:hover{
+        border: 3px solid; 
+        /* border-image-slice: 1;
+        border-image-source: linear-gradient(to left, #4e9cdf, #a63bae); */
+    }
+
+    /* =============== Login Screen Desgin End =============== */
+    
+}
+
+    /* =============== 2100 Screen Resolution =============== */
+
+@media only screen and  (min-width: 2100px) {
+
+    /* =============== Login Screen Desgin Start =============== */
+
+    .loginForm h1{
+        font-size: 40px;
+    }
+
+    .loginBtnLeft {
+        position: inherit;
+        top: 0px;
+        width: 100%;
+        left: 0px;
+    } 
+    .loginLogo {
+        padding-top: 6% !important;
+        width: 100%;
+        margin-left: 0% !important;
+    }
+    .loginForm{
+        padding-top: 0% !important;
+        position: inherit;
+        width: 80%;
+        top: 0%;
+        left: 0%;
+    }
+    .loginbody .row {
+        margin-top: 12% !important;
+    }
+    #input-portal{
+        width: 100%;
+        font-size: 34px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 22px 10px 22px 10px !important;
+        background-color: transparent;
+        color: #dfdde2;
+        border: none;
+    }
+    .loginForm input {
+        width: 100%;
+        font-size: 34px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 22px 10px 22px 18px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm input[type=Password] {
+        width: 92%;
+        font-size: 34px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 22px 10px 22px 18px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm input[type=texts] {
+        width: 92%;
+        font-size: 34px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 22px 10px 22px 18px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm label {
+        font-size: 34px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 30px 0px 30px 17px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm button {
+        width: 100%;
+        font-size: 34px;
+        border-radius: 3px;
+        font-weight: 700;
+        margin-bottom: 10px !important;
+        padding: 22px 10px 22px 18px !important;
+        background-color: rgb(255 255 255);
+        border: 1px solid rgb(255 255 255 / 50%);
+    }
+    .loginLogo .btnConVPN {
+        width: 30%;
+        font-size: 23px;
+        border-radius: 2px;
+        margin-right: 10px !important;
+        margin-bottom: 10px !important;
+        padding: 18px 10px 18px 10px !important;
+        background-color: rgb(255 255 255);
+        border: 3px solid rgb(255 255 255 / 50%);
+        box-shadow: 0px 5px 6px 2px #00000087;
+    }
+    .loginLogo .btnListUser {
+        width: 29%;
+        font-size: 23px;
+        border-radius: 2px;
+        margin-right: 10px !important;
+        margin-bottom: 10px !important;
+        padding: 18px 10px 18px 10px !important;
+        background-color: rgb(255 255 255);
+        border: 3px solid rgb(255 255 255 / 50%);
+        box-shadow: 0px 5px 6px 2px #00000087;
+    }
+    .input-group{
+        margin-bottom: 10px !important;
+        border-radius: 5px; 
+        border: 6px solid rgb(255 255 255 / 20%);
+    }
+    .btnConVPN:hover, .btnListUser:hover{
+        border: 3px solid; 
+        /* border-image-slice: 1;
+        border-image-source: linear-gradient(to left, #4e9cdf, #a63bae); */
+    }
+
+    /* =============== Login Screen Desgin End =============== */
+    
+}
+
+/* =============== 2800 Screen Resolution =============== */
+
+@media only screen and  (min-width: 2800px) {
+
+    /* =============== Login Screen Desgin Start =============== */
+
+    .loginForm h1{
+        font-size: 55px;
+    }
+
+    .loginBtnLeft {
+        position: inherit;
+        top: 0px;
+        width: 100%;
+        left: 0px;
+    } 
+    .loginLogo {
+        padding-top: 5% !important;
+        width: 100%;
+        margin-left: 0% !important;
+    }
+    .loginForm{
+        padding-top: 0% !important;
+        position: inherit;
+        width: 80%;
+        top: 0%;
+        left: 0%;
+    }
+    .loginbody .row {
+        margin-top: 12% !important;
+    }
+    #input-portal{
+        width: 100%;
+        font-size: 40px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 30px 10px 30px 18px !important;
+        background-color: transparent;
+        color: #dfdde2;
+        border: none;
+    }
+    .loginForm input {
+        width: 100%;
+        font-size: 40px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 30px 10px 30px 18px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm input[type=Password] {
+        width: 92%;
+        font-size: 40px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 30px 10px 30px 18px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm input[type=texts] {
+        width: 92%;
+        font-size: 40px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 30px 10px 30px 18px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm label {
+        font-size: 45px;
+        border-radius: 3px;
+        margin-bottom: 0px !important;
+        padding: 33px 0px 35px 17px !important;
+        background-color: transparent;
+        border: none;
+    }
+    .loginForm button {
+        width: 100%;
+        font-size: 40px;
+        border-radius: 3px;
+        font-weight: 700;
+        margin-bottom: 10px !important;
+        padding: 30px 10px 30px 18px !important;
+        background-color: rgb(255 255 255);
+        border: 1px solid rgb(255 255 255 / 50%);
+    }
+    .loginLogo .btnConVPN {
+        width: 30%;
+        font-size: 29px;
+        border-radius: 2px;
+        margin-right: 10px !important;
+        margin-bottom: 10px !important;
+        padding: 21px 10px 21px 10px !important;
+        background-color: rgb(255 255 255);
+        border: 3px solid rgb(255 255 255 / 50%);
+        box-shadow: 0px 5px 6px 2px #00000087;
+    }
+    .loginLogo .btnListUser {
+        width: 29%;
+        font-size: 29px;
+        border-radius: 2px;
+        margin-right: 10px !important;
+        margin-bottom: 10px !important;
+        padding: 21px 10px 21px 10px !important;
+        background-color: rgb(255 255 255);
+        border: 3px solid rgb(255 255 255 / 50%);
+        box-shadow: 0px 5px 6px 2px #00000087;
+    }
+    .input-group{
+        margin-bottom: 18px !important;
+        border-radius: 5px; 
+        border: 6px solid rgb(255 255 255 / 20%);
+    }
+    .btnConVPN:hover, .btnListUser:hover{
+        border: 3px solid; 
+        /* border-image-slice: 1;
+        border-image-source: linear-gradient(to left, #4e9cdf, #a63bae); */
+    }
+
+    /* =============== Login Screen Desgin End =============== */
+    
+}

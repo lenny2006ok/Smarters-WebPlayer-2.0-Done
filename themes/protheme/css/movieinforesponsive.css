@@ -1,0 +1,1598 @@
+/* =============== 700 Screen Resolution =============== */
+
+@media only screen and  (min-width: 700px) {
+
+    /* =============== Movie Info Screen Desgin Start =============== */
+
+    .movieInHeader .row {
+        padding: 10px 0px 10px 0px !important;
+    }
+    .movieInBack {
+        text-align: start;
+        padding-left: 10px !important;
+    }
+    .movieInBack img {
+        width: 42%;
+        margin-top: 8px !important;
+    }
+    /* .movieInLogo img {
+        width: 94%;
+        backdrop-filter: opacity(0.5);
+    } */
+    .movieInName span {
+        font-size: 12px;
+        line-height: 40px;
+        font-weight: 600;
+    }
+    .movieInlSet img {
+        width: 32%;
+        margin-top: 8px !important;
+    }
+    .movieInlSet{
+        text-align: end;
+    }
+    .movieInBodyScroll {
+        height: calc(100% - 60px);
+    }
+    .movieInBody .row {
+        padding: 0px 15px 0px 15px !important;
+    }
+    .movieInPic img {
+        width: 85%;
+        backdrop-filter: brightness(0.5);
+    }
+    .movieInPic i {
+        margin-top: 8px !important;
+        font-size: 12px;
+        color: #ffff1fdb;
+    }
+    .movieInInformation{
+        text-align: initial;
+    }
+    .movieInInformation .one {
+        padding: 0px 0px 10px 15px !important;
+        font-size: 12px;
+    }
+    .movieInInformation .two {
+        padding: 0px 0px 10px 0px !important;
+        font-size: 12px;
+    }
+    .movieInInformation .three button {
+        background: #b4b4b42e;
+        color: white;
+        width: 24%;
+        border: none;
+        border-radius: 6px;
+        font-size: 12px;
+        margin-right: 10px !important;
+        padding: 8px 0px !important;
+    }
+    .movieInFav{
+        text-align: initial;
+    }
+    .movieInFav .star img {
+        cursor: pointer;
+        width: 35%;
+    }
+    .movieInDescription {
+        text-align: left;
+        padding: 14px 22px 0px 20px !important;
+        font-size: 10px;
+        font-weight: 500;
+    }
+    .movieInStarCastScrolls {
+        width: 100%;
+        display: contents;
+    }
+    .movieInStarCast {
+        width: 88px;
+        flex: 0 0 auto;
+        margin-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .movieInStarCast .movieInActNam {
+        top: 92% !important;
+        position: relative;
+        font-size: 8px;
+        color: white;
+        background: rgb(0 0 0 / 20%);
+        font-weight: 700;
+        z-index: 1111;
+    }
+    .movieInActNam span{
+        white-space: nowrap;
+    }
+    .movieInStarCast img {
+        width: 100%;
+        height: 108px;
+    }
+
+    .movieInFav i {
+        font-size: 18px;
+        cursor: pointer;
+    }
+    .liveSet a{
+        display: initial !important;
+    }
+    .trailerWatcherClose{
+        background: #b4b4b42e;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        font-size: 8px;
+        margin-top: 3px !important;
+        /* margin-left: 26%; */
+        padding: 4px 7px !important;
+    }
+    .serieInBtn button{
+        background: #b4b4b42e;
+        color: white;
+        width: 13%;
+        border: none;
+        border-bottom: 3px solid #9313c800;
+        font-size: 12px;
+        margin-right: 0px !important;
+        padding: 6px !important;
+    }
+    .playernoti .alert {
+        width: 42%;
+        font-size: 7px;
+    }
+    #player-wrapper{
+        width: 65% !important;
+    }
+    .centerSeriePopSeason{
+        border: 2px solid white;
+        margin: 55px 0px 0px 0px !important;
+    }
+    .serieSeasPopHeader{
+        padding: 20px 0px 20px 0px !important;
+        font-size: 30px;
+        font-weight: bold;
+        border-bottom: 2px solid white;
+    }
+    .serieSeasPopBody{
+        padding: 15px 15px 0px 15px !important;
+        text-align: initial;
+    }
+    .serieSeasPopBody button{
+        padding: 10px 20px !important;
+        font-size: 14px;
+        border-radius: 4px;
+        margin: 0px 8px 18px 8px !important;
+    }
+    .serieSeasPopFooter button{
+        margin: 10px 20px 20px !important;
+        padding: 8px 30px !important;
+        font-size: 16px;
+        border-radius: 3px;
+    }
+
+    #seriesepicast{
+        margin-bottom: 12px !important;
+    }
+
+    /* =============== Movie Info Screen Desgin End =============== */
+        
+}
+
+/* =============== 762 Screen Resolution =============== */
+
+@media only screen and  (min-width: 762px) {
+
+    /* =============== Movie Info Screen Desgin Start =============== */
+
+    .movieInHeader .row {
+        padding: 10px 0px 4px 0px !important;
+    }
+    .movieInBack {
+        text-align: start;
+        padding-left: 10px !important;
+    }
+    .movieInBack img {
+        width: 42%;
+        margin-top: 8px !important;
+    }
+    /* .movieInLogo img {
+        width: 94%;
+        backdrop-filter: opacity(0.5);
+    } */
+    .movieInName span {
+        font-size: 12px;
+        line-height: 43px;
+        font-weight: 600;
+    }
+    .movieInlSet img {
+        width: 32%;
+        margin-top: 8px !important;
+    }
+    .movieInlSet{
+        text-align: end;
+    }
+    .movieInBodyScroll {
+        height: calc(100% - 57px);
+    }
+    .movieInBody .row {
+        padding: 0px 15px 0px 15px !important;
+    }
+    .movieInPic img {
+        width: 85%;
+        backdrop-filter: brightness(0.5);
+    }
+    .movieInPic i {
+        margin-top: 8px !important;
+        font-size: 12px;
+        color: #ffff1fdb;
+    }
+    .movieInInformation{
+        text-align: initial;
+    }
+    .movieInInformation .one {
+        padding: 0px 0px 10px 15px !important;
+        font-size: 12px;
+    }
+    .movieInInformation .two {
+        padding: 0px 0px 10px 0px !important;
+        font-size: 12px;
+    }
+    .movieInInformation .three button {
+        background: #b4b4b42e;
+        color: white;
+        width: 24%;
+        border: none;
+        border-radius: 6px;
+        font-size: 12px;
+        margin-right: 10px !important;
+        padding: 8px 0px !important;
+    }
+    .movieInFav{
+        text-align: initial;
+    }
+    .movieInFav .star img {
+        cursor: pointer;
+        width: 35%;
+    }
+    .movieInDescription {
+        text-align: left;
+        padding: 14px 22px 0px 20px !important;
+        font-size: 10px;
+        font-weight: 500;
+    }
+    .movieInStarCastScrolls {
+        width: 100%;
+        display: contents;
+    }
+    .movieInStarCast {
+        width: 94px;
+        flex: 0 0 auto;
+        margin-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .movieInStarCast .movieInActNam {
+        top: 92% !important;
+        position: relative;
+        font-size: 8px;
+        color: white;
+        background: rgb(0 0 0 / 20%);
+        font-weight: 700;
+        z-index: 1111;
+    }
+    .movieInActNam span{
+        white-space: nowrap;
+    }
+    .movieInStarCast img {
+        width: 100%;
+        height: 108px;
+    }
+
+    .movieInFav i {
+        font-size: 18px;
+        cursor: pointer;
+    }
+    .liveSet a{
+        display: initial !important;
+    }
+    .trailerWatcherClose{
+        background: #b4b4b42e;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        font-size: 8px;
+        margin-top: 3px !important;
+        /* margin-left: 26%; */
+        padding: 4px 7px !important;
+    }
+    .serieInBtn button{
+        background: #b4b4b42e;
+        color: white;
+        width: 13%;
+        border: none;
+        border-bottom: 3px solid #9313c800;
+        font-size: 12px;
+        margin-right: 0px !important;
+        padding: 6px !important;
+    }
+    .playernoti .alert {
+        width: 42%;
+        font-size: 7px;
+    }
+    #player-wrapper{
+        width: 65% !important;
+    }
+    .centerSeriePopSeason{
+        border: 2px solid white;
+        margin: 7px 0px 0px 0px !important;
+    }
+    .serieSeasPopHeader{
+        padding: 10px 0px 10px 0px !important;
+        font-size: 22px;
+        font-weight: bold;
+        border-bottom: 2px solid white;    
+    }
+    .serieSeasPopBody {
+        padding: 15px 15px 0px 15px !important;
+        height: 132px;
+    }
+    .serieSeasPopBody button{
+        padding: 8px 2px !important;
+        width: 21%;
+        font-size: 14px;
+        border-radius: 4px;
+        margin: 0px 8px 18px 8px !important;
+    }
+    .serieSeasPopFooter button{
+        margin: 10px 20px 10px !important;
+        width: 20%;
+        font-size: 14px;
+        border-radius: 3px;
+    }
+    /* =============== Movie Info Screen Desgin End =============== */
+        
+}
+
+
+/* =============== 700 Screen Resolution =============== */
+
+@media only screen and  (min-width: 800px) {
+
+    /* =============== Movie Info Screen Desgin Start =============== */
+
+    .movieInHeader .row {
+        padding: 10px 0px 10px 0px !important;
+    }
+    .movieInBack {
+        text-align: start;
+        padding-left: 10px !important;
+    }
+    .movieInBack img {
+        width: 42%;
+        margin-top: 8px !important;
+    }
+    /* .movieInLogo img {
+        width: 94%;
+        backdrop-filter: opacity(0.5);
+    } */
+    .movieInName span {
+        font-size: 12px;
+        line-height: 33px;
+        font-weight: 600;
+    }
+    .movieInlSet img {
+        width: 32%;
+        margin-top: 8px !important;
+    }
+    .movieInlSet{
+        text-align: end;
+    }
+    .movieInBodyScroll {
+        height: calc(100% - 58.71px);
+    }
+    .movieInBody .row {
+        padding: 20px 15px 0px 15px !important;
+    }
+    .movieInPic img {
+        width: 85%;
+        backdrop-filter: brightness(0.5);
+    }
+    .movieInPic i {
+        margin-top: 8px !important;
+        font-size: 12px;
+        color: #ffff1fdb;
+    }
+    .movieInInformation{
+        text-align: initial;
+    }
+    .movieInInformation .one {
+        padding: 0px 0px 10px 15px !important;
+        font-size: 12px;
+    }
+    .movieInInformation .two {
+        padding: 0px 0px 10px 0px !important;
+        font-size: 12px;
+    }
+    .movieInInformation .three button {
+        background: #b4b4b42e;
+        color: white;
+        width: 24%;
+        border: none;
+        border-radius: 6px;
+        font-size: 12px;
+        margin-right: 10px !important;
+        padding: 8px 0px !important;
+    }
+    .movieInFav{
+        text-align: initial;
+    }
+    .movieInFav .star img {
+        cursor: pointer;
+        width: 35%;
+    }
+    .movieInDescription {
+        text-align: left;
+        padding: 14px 22px 0px 20px !important;
+        font-size: 10px;
+        font-weight: 500;
+    }
+    .movieInStarCastScrolls {
+        width: 100%;
+        display: contents;
+    }
+    .movieInStarCast {
+        width: 102px;
+        flex: 0 0 auto;
+        margin-left: 12px !important;
+    }
+    .movieInStarCast .movieInActNam {
+        top: 90% !important;
+        position: relative;
+        font-size: 10px;
+        color: white;
+        background: rgb(0 0 0 / 20%);
+        font-weight: 700;
+        z-index: 1111;
+    }
+    .movieInActNam span{
+        white-space: nowrap;
+    }
+    .movieInStarCast img {
+        width: 100%;
+        height: 150px;
+    }
+
+    .movieInFav i {
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .liveSet a{
+        display: initial !important;
+    }
+    .trailerWatcherClose{
+        background: #b4b4b42e;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        font-size: 8px;
+        margin-top: 3px !important;
+        /* margin-left: 26%; */
+        padding: 4px 7px !important;
+    }
+    .serieInBtn button{
+        background: #b4b4b42e;
+        color: white;
+        width: 13%;
+        border: none;
+        border-bottom: 3px solid #9313c800;
+        font-size: 12px;
+        margin-right: 0px !important;
+        padding: 6px !important;
+    }
+    .playernoti .alert {
+        width: 41%;
+        font-size: 8px;
+    }
+    #player-wrapper{
+        width: 66% !important;
+    }
+    .centerSeriePopSeason{
+        border: 2px solid white;
+        margin: 55px 0px 0px 0px !important;
+    }
+    .serieSeasPopHeader{
+        padding: 20px 0px 20px 0px !important;
+        font-size: 30px;
+        font-weight: bold;
+        border-bottom: 2px solid white;
+    }
+    .serieSeasPopBody{
+        padding: 15px 15px 0px 15px !important;
+        text-align: initial;
+    }
+    .serieSeasPopBody button{
+        padding: 10px 20px !important;
+        font-size: 14px;
+        border-radius: 4px;
+        margin: 0px 8px 18px 8px !important;
+    }
+    .serieSeasPopFooter button{
+        margin: 10px 20px 20px !important;
+        padding: 8px 30px !important;
+        font-size: 16px;
+        border-radius: 3px;
+    }
+    /* =============== Movie Info Screen Desgin End =============== */
+        
+}
+
+/* =============== 1100 Screen Resolution =============== */
+
+@media only screen and  (min-width: 1100px) {
+
+    /* =============== Movie Info Screen Desgin Start =============== */
+
+    .movieInHeader .row {
+        padding: 10px 0px 10px 0px !important;
+    }
+    .movieInBack {
+        text-align: start;
+        padding-left: 10px !important;
+    }
+    .movieInBack img {
+        width: 42%;
+        margin-top: 8px !important;
+    }
+    /* .movieInLogo img {
+        width: 94%;
+        backdrop-filter: opacity(0.5);
+    } */
+    .movieInName span {
+        font-size: 24px;
+        line-height: 50px;
+        font-weight: 600;
+    }
+    .movieInlSet img {
+        width: 32%;
+        margin-top: 8px !important;
+    }
+    .movieInlSet{
+        text-align: end;
+    }
+    .movieInBodyScroll {
+        height: calc(100% - 73.97px);
+    }
+    .movieInBody .row {
+        padding: 20px 15px 0px 15px !important;
+    }
+    .movieInPic img {
+        width: 95%;
+        backdrop-filter: brightness(0.5);
+    }
+    .movieInPic i {
+        margin-top: 8px !important;
+        font-size: 18px;
+        color: #ffff1fdb;
+    }
+    .movieInInformation{
+        text-align: initial;
+    }
+    .movieInInformation .one {
+        padding: 0px 0px 10px 15px !important;
+        font-size: 20px;
+    }
+    .movieInInformation .two {
+        padding: 0px 0px 10px 0px !important;
+        font-size: 20px;
+    }
+    .movieInInformation .three button {
+        background: #b4b4b42e;
+        color: white;
+        width: 24%;
+        border: none;
+        border-radius: 6px;
+        font-size: 14px;
+        margin-right: 10px !important;
+        padding: 10px 0px !important;
+    }
+    .movieInFav{
+        text-align: initial;
+    }
+    .movieInFav .star img {
+        cursor: pointer;
+        width: 35%;
+    }
+    .movieInDescription {
+        text-align: left;
+        padding: 14px 22px 0px 20px !important;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .movieInStarCastScrolls {
+        width: 100%;
+        display: contents;
+    }
+    .movieInStarCast {
+        width: 102px;
+        flex: 0 0 auto;
+        margin-left: 12px !important;
+    }
+    .movieInStarCast .movieInActNam {
+        top: 90% !important;
+        position: relative;
+        font-size: 10px;
+        color: white;
+        background: rgb(0 0 0 / 20%);
+        font-weight: 700;
+        z-index: 1111;
+    }
+    .movieInActNam span{
+        white-space: nowrap;
+    }
+    .movieInStarCast img {
+        width: 100%;
+        height: 150px;
+    }
+
+    .serieInBtn button{
+        background: #b4b4b42e;
+        color: white;
+        width: 13%;
+        border: none;
+        border-bottom: 3px solid #9313c800;
+        font-size: 16px;
+        margin-right: 0px !important;
+        padding: 10px !important;
+    }
+    .movieInFav i {
+        font-size: 26px;
+        cursor: pointer;
+    }
+    .serieEpiName span {
+        font-size: 24px;
+    }
+    .serieEpiRate span {
+        font-size: 16px;
+        color: yellow;
+    }
+    .serieEpiDura label {
+        font-size: 14px;
+        background-color: #262525;
+        padding: 5px 10px !important;
+        border-radius: 8px;
+    }
+    .serieEpiDesc span {
+        font-size: 14px;
+    }
+    .serieEpiName, .serieEpiRate, .serieEpiDura, .serieEpiDesc {
+        padding: 0px 40px 10px 5px !important;
+    }
+    .liveSet a {
+        display: initial !important;
+    }
+    .trailerWatcherClose{
+        background: #b4b4b42e;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 11px;
+        margin-top: 7px !important;
+        /* margin-left: 29%; */
+        padding: 6px 10px !important;
+    }
+    .playernoti .alert {
+        width: 40%;
+        font-size: 12px;
+    }
+
+    /* =============== Movie Info Screen Desgin End =============== */
+        
+}
+
+/* =============== 1300 Screen Resolution =============== */
+
+@media only screen and  (min-width: 1300px) {
+
+    /* =============== Movie Info Screen Desgin Start =============== */
+
+    .movieInHeader .row {
+        padding: 10px 0px 10px 0px !important;
+    }
+    .movieInBack {
+        text-align: start;
+        padding-left: 10px !important;
+    }
+    .movieInBack img {
+        width: 32%;
+        margin-top: 11px !important;
+    }
+    /* .movieInLogo img {
+        width: 71%;
+        backdrop-filter: opacity(0.5);
+    } */
+    .movieInName span {
+        font-size: 22px;
+        line-height: 2.3;
+        font-weight: 600;
+    }
+    .movieInlSet img {
+        width: 32%;
+        margin-top: 11px !important;
+    }
+    .movieInlSet{
+        text-align: end;
+    }
+    .movieInBodyScroll {
+        height: calc(100% - 70.6px);
+    }
+    .movieInBody .row {
+        padding: 20px 15px 0px 15px !important;
+    }
+    .movieInPic img {
+        width: 85%;
+        backdrop-filter: brightness(0.5);
+    }
+    .movieInPic i {
+        margin-top: 10px !important;
+        font-size: 20px;
+        color: #ffff1fdb;
+    }
+    .movieInInformation{
+        text-align: initial;
+    }
+    .movieInInformation .one {
+        padding: 0px 0px 20px 20px !important;
+        font-size: 20px;
+    }
+    .movieInInformation .two {
+        padding: 0px 0px 20px 0px !important;
+        font-size: 20px;
+    }
+    .movieInInformation .three button {
+        background: #b4b4b42e;
+        color: white;
+        width: 18%;
+        border: none;
+        border-radius: 6px;
+        font-size: 18px;
+        margin-right: 10px !important;
+        padding: 8px 0px !important;
+    }
+    .movieInFav{
+        text-align: initial;
+    }
+    .movieInFav .star img {
+        cursor: pointer;
+        width: 35%;
+    }
+    .movieInDescription {
+        text-align: left;
+        padding: 20px 22px 0px 25px !important;
+        font-size: 17px;
+        font-weight: 500;
+    }
+    .movieInStarCastScrolls {
+        width: 100%;
+        display: contents;
+    }
+    .movieInStarCast {
+        width: 150px;
+        flex: 0 0 auto;
+        margin-left: 12px !important;
+    }
+    .movieInStarCast .movieInActNam {
+        top: 90% !important;
+        position: relative;
+        font-size: 18px;
+        color: white;
+        background: rgb(0 0 0 / 20%);
+        font-weight: 700;
+        z-index: 1111;
+    }
+    .movieInActNam span{
+        white-space: nowrap;
+    }
+    .movieInStarCast img {
+        width: 100%;
+        height: 202px;
+    }
+
+    .serieInBtn button{
+        background: #b4b4b42e;
+        color: white;
+        width: 13%;
+        border: none;
+        border-bottom: 3px solid #9313c800;
+        font-size: 20px;
+        margin-right: 0px !important;
+        padding: 10px !important;
+    }
+    .serieEpiName span{
+        font-size: 25px;
+    }
+    .movieInFav i {
+        font-size: 30px;
+        cursor: pointer;
+    }
+    .liveSet a {
+        display: block !important;
+    }
+    .trailerWatcherClose{
+        background: #b4b4b42e;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 14px;
+        margin-top: 12px !important;
+        /* margin-left: 27%; */
+        padding: 6px 14px !important;
+    }
+    .playernoti .alert {
+        width: 40%;
+        font-size: 14px;
+    }
+
+    /* =============== Movie Info Screen Desgin End =============== */
+        
+}
+   
+/* =============== 1400 Screen Resolution =============== */
+
+@media only screen and  (min-width: 1400px) {
+
+    /* =============== Movie Info Screen Desgin Start =============== */
+
+    .movieInHeader .row {
+        padding: 10px 0px 10px 0px !important;
+    }
+    .movieInBack {
+        text-align: start;
+        padding-left: 10px !important;
+    }
+    .movieInBack img {
+        width: 32%;
+        margin-top: 11px !important;
+    }
+    /* .movieInLogo img {
+        width: 71%;
+        backdrop-filter: opacity(0.5);
+    } */
+    .movieInName span {
+        font-size: 28px;
+        line-height: 2.3;
+        font-weight: 600;
+    }
+    .movieInlSet img {
+        width: 32%;
+        margin-top: 11px !important;
+    }
+    .movieInlSet{
+        text-align: end;
+    }
+    .movieInBodyScroll {
+        height: calc(100% - 84.39px);
+    }
+    .movieInBody .row {
+        padding: 20px 15px 0px 15px !important;
+    }
+    .movieInPic img {
+        width: 85%;
+        backdrop-filter: brightness(0.5);
+    }
+    .movieInPic i {
+        margin-top: 10px !important;
+        font-size: 24px;
+        color: #ffff1fdb;
+    }
+    .trailerWatcherClose{
+        background: #b4b4b42e;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 14px;
+        margin-top: 12px !important;
+        /* margin-left: 30%; */
+        padding: 6px 13px !important;
+    }
+
+    .movieInInformation{
+        text-align: initial;
+    }
+    .movieInInformation .one {
+        padding: 0px 0px 20px 20px !important;
+        font-size: 24px;
+    }
+    .movieInInformation .two {
+        padding: 0px 0px 20px 0px !important;
+        font-size: 24px;
+    }
+    .movieInInformation .three button {
+        background: #b4b4b42e;
+        color: white;
+        width: 18%;
+        border: none;
+        border-radius: 6px;
+        font-size: 20px;
+        margin-right: 10px !important;
+        padding: 8px 0px !important;
+    }
+    .movieInFav{
+        text-align: initial;
+    }
+    .movieInFav .star img {
+        cursor: pointer;
+        width: 35%;
+    }
+    .movieInDescription {
+        text-align: left;
+        padding: 20px 22px 0px 25px !important;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .movieInStarCastScrolls {
+        width: 100%;
+        display: contents;
+    }
+    .movieInStarCast {
+        width: 160px;
+        flex: 0 0 auto;
+        margin-left: 18px !important;
+    }
+    .movieInStarCast .movieInActNam {
+        top: 90% !important;
+        position: relative;
+        font-size: 18px;
+        color: white;
+        background: rgb(0 0 0 / 20%);
+        font-weight: 700;
+        z-index: 1111;
+    }
+    .movieInActNam span{
+        white-space: nowrap;
+    }
+    .movieInStarCast img {
+        width: 100%;
+        height: 222px;
+    }
+
+
+    .serieInBtn button{
+        background: #b4b4b42e;
+        color: white;
+        width: 13%;
+        border: none;
+        border-bottom: 3px solid #9313c800;
+        font-size: 20px;
+        margin-right: 0px !important;
+        padding: 10px !important;
+    }
+    .movieInFav i {
+        font-size: 26px;
+        cursor: pointer;
+    }
+
+    .liveSet a {
+        display: block !important;
+    }
+
+    .playernoti .alert {
+        width: 36%;
+        font-size: 14px;
+    }
+    /* =============== Movie Info Screen Desgin End =============== */
+        
+}
+
+/* =============== 1600 Screen Resolution =============== */
+
+@media only screen and  (min-width: 1600px) {
+
+    /* =============== Movie Info Screen Desgin Start =============== */
+
+    .movieInHeader .row {
+        padding: 10px 0px 10px 0px !important;
+    }
+    .movieInBack {
+        text-align: start;
+        padding-left: 10px !important;
+    }
+    .movieInBack img {
+        width: 32%;
+        margin-top: 11px !important;
+    }
+    /* .movieInLogo img {
+        width: 71%;
+        backdrop-filter: opacity(0.5);
+    } */
+    .movieInName span {
+        font-size: 28px;
+        line-height: 2.3;
+        font-weight: 600;
+    }
+    .movieInlSet img {
+        width: 32%;
+        margin-top: 11px !important;
+    }
+    .movieInlSet{
+        text-align: end;
+    }
+    .movieInBodyScroll {
+        height: calc(100% - 84.39px);
+    }
+    .movieInBody .row {
+        padding: 20px 15px 0px 15px !important;
+    }
+    .movieInPic img {
+        width: 85%;
+        backdrop-filter: brightness(0.5);
+    }
+    .movieInPic i {
+        margin-top: 10px !important;
+        font-size: 24px;
+        color: #ffff1fdb;
+    }
+    .trailerWatcherClose{
+        background: #b4b4b42e;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 14px;
+        margin-top: 12px !important;
+        /* margin-left: 31%; */
+        padding: 8px 15px !important;
+    }
+
+    .movieInInformation{
+        text-align: initial;
+    }
+    .movieInInformation .one {
+        padding: 0px 0px 20px 20px !important;
+        font-size: 26px;
+    }
+    .movieInInformation .two {
+        padding: 0px 0px 20px 0px !important;
+        font-size: 26px;
+    }
+    .movieInInformation .three button {
+        background: #b4b4b42e;
+        color: white;
+        width: 18%;
+        border: none;
+        border-radius: 6px;
+        font-size: 20px;
+        margin-right: 10px !important;
+        padding: 12px 0px !important;
+    }
+    .movieInFav{
+        text-align: initial;
+    }
+    .movieInFav .star img {
+        cursor: pointer;
+        width: 35%;
+    }
+    .movieInDescription {
+        text-align: left;
+        padding: 20px 22px 0px 25px !important;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .movieInStarCastScrolls {
+        width: 100%;
+        display: contents;
+    }
+    .movieInStarCast {
+        width: 163px;
+        flex: 0 0 auto;
+        margin-left: 12px !important;
+    }
+    .movieInStarCast .movieInActNam {
+        top: 90% !important;
+        position: relative;
+        font-size: 18px;
+        color: white;
+        background: rgb(0 0 0 / 20%);
+        font-weight: 700;
+        z-index: 1111;
+    }
+    .movieInActNam span{
+        white-space: nowrap;
+    }
+    .movieInStarCast img {
+        width: 100%;
+        height: 222px;
+    }
+
+
+    .serieInBtn button{
+        background: #b4b4b42e;
+        color: white;
+        width: 13%;
+        border: none;
+        border-bottom: 3px solid #9313c800;
+        font-size: 20px;
+        margin-right: 0px !important;
+        padding: 10px !important;
+    }
+
+    .movieInFav i {
+        font-size: 30px;
+        cursor: pointer;
+    }
+    .liveSet a {
+        display: block !important;
+    }
+    .playernoti .alert {
+        font-size: 15px;
+        width: 35%;
+    }
+
+    /* =============== Movie Info Screen Desgin End =============== */
+        
+}
+
+/* =============== 1800 Screen Resolution =============== */
+
+@media only screen and  (min-width: 1800px) {
+
+    /* =============== Movie Info Screen Desgin Start =============== */
+
+    .movieInHeader .row {
+        padding: 10px 0px 10px 0px !important;
+    }
+    .movieInBack {
+        text-align: start;
+        padding-left: 10px !important;
+    }
+    .movieInBack img {
+        width: 32%;
+        margin-top: 11px !important;
+    }
+    /* .movieInLogo img {
+        width: 71%;
+        backdrop-filter: opacity(0.5);
+    } */
+    .movieInName span {
+        font-size: 28px;
+        line-height: 2.3;
+        font-weight: 600;
+    }
+    .movieInlSet img {
+        width: 32%;
+        margin-top: 11px !important;
+    }
+    .movieInlSet{
+        text-align: end;
+    }
+    .movieInBodyScroll {
+        height: calc(100% - 84.41px);
+    }
+    .movieInBody .row {
+        padding: 20px 15px 0px 15px !important;
+    }
+    .movieInPic img {
+        width: 85%;
+        backdrop-filter: brightness(0.5);
+    }
+    .movieInPic i {
+        margin-top: 10px !important;
+        font-size: 24px;
+        color: #ffff1fdb;
+    }
+    .trailerWatcherClose{
+        background: #b4b4b42e; 
+        color: white; 
+        border: none; 
+        border-radius: 6px; 
+        font-size: 18px; 
+        margin-top: 12px !important; 
+        /* margin-left: 30%;  */
+        padding: 8px 15px !important;
+    }
+
+    .movieInInformation{
+        text-align: initial;
+    }
+    .movieInInformation .one {
+        padding: 0px 0px 20px 20px !important;
+        font-size: 28px;
+    }
+    .movieInInformation .two {
+        padding: 0px 0px 20px 0px !important;
+        font-size: 28px;
+    }
+    .movieInInformation .three button {
+        background: #b4b4b42e;
+        color: white;
+        width: 18%;
+        border: none;
+        border-radius: 6px;
+        font-size: 20px;
+        margin-right: 10px !important;
+        padding: 14px 0px !important;
+    }
+    .movieInFav i {
+        font-size: 34px;
+        cursor: pointer;
+    }
+    .movieInFav{
+        text-align: initial;
+    }
+    .movieInFav .star img {
+        cursor: pointer;
+        width: 35%;
+    }
+    .movieInDescription {
+        text-align: left;
+        padding: 20px 22px 0px 25px !important;
+        font-size: 21px;
+        font-weight: 500;
+    }
+    .movieInStarCastScrolls {
+        width: 100%;
+        display: contents;
+    }
+    .movieInStarCast {
+        width: 208px;
+        flex: 0 0 auto;
+        margin-left: 12px !important;
+    }
+    .movieInStarCast .movieInActNam {
+        top: 90% !important;
+        position: relative;
+        font-size: 18px;
+        color: white;
+        background: rgb(0 0 0 / 20%);
+        font-weight: 700;
+        z-index: 1111;
+    }
+    .movieInActNam span{
+        white-space: nowrap;
+    }
+    .movieInStarCast img {
+        width: 100%;
+        height: 290px;
+    }
+
+
+    .serieInBtn button{
+        background: #b4b4b42e;
+        color: white;
+        width: 13%;
+        border: none;
+        border-bottom: 3px solid #9313c800;
+        font-size: 20px;
+        margin-right: 5px !important;
+        padding: 14px !important;
+    }
+
+    .serieEpiName span {
+        font-size: 32px;
+    }
+    .liveSet a {
+        display: block !important;
+    }
+    .playernoti .alert {
+        width: 32%;
+        font-size: 16px;
+    }
+
+    /* =============== Movie Info Screen Desgin End =============== */
+        
+}
+
+/* =============== 1900 Screen Resolution =============== */
+
+@media only screen and  (min-width: 1900px) {
+
+    /* =============== Movie Info Screen Desgin Start =============== */
+
+    .movieInHeader .row {
+        padding: 10px 0px 10px 0px !important;
+    }
+    .movieInBack {
+        text-align: start;
+        padding-left: 6px !important;
+    }
+    .movieInBack img {
+        width: 31%;
+        margin-top: 20px !important;
+        margin-left: 9px !important;
+    }
+    /* .movieInLogo img {
+        width: 80%;
+        backdrop-filter: opacity(0.5);
+    } */
+    .movieInName span {
+        font-size: 30px;
+        line-height: 90px;
+        font-weight: 500;
+    }
+    .movieInlSet img {
+        width: 32%;
+        margin-top: 20px !important;
+    }
+    .movieInlSet{
+        text-align: end;
+    }
+    .movieInBodyScroll {
+        height: calc(100% - 110px);
+    }
+    .movieInBody .row {
+        padding: 20px 15px 0px 15px !important;
+    }
+    .movieInPic img {
+        width: 90%;
+        backdrop-filter: brightness(0.5);
+    }
+    .movieInPic i {
+        margin-top: 15px !important;
+        font-size: 30px;
+        color: #ffff1fdb;
+    }
+    .movieInInformation{
+        text-align: initial;
+    }
+    .movieInInformation .one {
+        padding: 0px 0px 20px 20px !important;
+        font-size: 30px;
+    }
+    .movieInInformation .two {
+        padding: 0px 0px 20px 0px !important;
+        font-size: 30px;
+    }
+    .movieInInformation .three button {
+        background: #b4b4b42e;
+        color: white;
+        width: 18%;
+        border: none;
+        border-radius: 6px;
+        font-size: 26px;
+        margin-right: 10px !important;
+        padding: 12px 0px !important;
+    }
+    .movieInFav{
+        text-align: initial;
+    }
+    .movieInFav .star img {
+        cursor: pointer;
+        width: 35%;
+    }
+    .movieInDescription {
+        text-align: left;
+        padding: 20px 22px 0px 25px !important;
+        font-size: 22px;
+        font-weight: 500;
+    }
+    .movieInStarCastScrolls {
+        width: 100%;
+        display: contents;
+    }
+    .movieInStarCast {
+        width: 222px;
+        flex: 0 0 auto;
+        margin-left: 18px !important;
+    }
+    .movieInStarCast .movieInActNam {
+        top: 90% !important;
+        position: relative;
+        font-size: 22px;
+        color: white;
+        background: rgb(0 0 0 / 20%);
+        font-weight: 700;
+        z-index: 1111;
+    }
+    .movieInActNam span{
+        white-space: nowrap;
+    }
+    .movieInStarCast img {
+        width: 100%;
+        height: 300px;
+    }
+    .movieInFav i{
+        font-size: 34px;
+        cursor: pointer;
+    }
+
+    .serieInBtn button{
+        background: #b4b4b42e;
+        color: white;
+        width: 12%;
+        border: none;
+        border-bottom: 3px solid #9313c800;
+        font-size: 24px;
+        margin-right: 0px !important;
+        padding: 14px !important;
+    }
+    .serieEpiName span{
+        font-size: 36px;
+    }
+    .trailerWatcherClose{
+        background: #b4b4b42e;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 18px;
+        margin-top: 12px !important;
+        /* margin-left: 31%; */
+        padding: 10px 18px !important;
+    }
+
+    #player-wrapper {
+        width: 70% !important;
+    }
+
+    .cwalldelbtn i{
+        font-size: 40px;
+        padding-top: 12px;
+        padding-right: 8px;
+    }
+    .playernoti .alert {
+        width: 30%;
+    }
+    .playernoti .alert {
+        width: 30%;
+        font-size: 16px;
+    }
+
+    .centerSeriePopSeason{
+        background: #000000;
+        border: 2px solid white;
+        margin: 150px 0px 0px 0px !important;
+    }
+    .serieSeasPopHeader{
+        padding: 20px 0px 20px 0px !important;
+        font-size: 30px;
+        font-weight: bold;
+        border-bottom: 2px solid white;
+    }
+    .serieSeasPopBody{
+        padding: 30px 20px 0px 60px !important;
+        text-align: initial;
+    }
+    .serieSeasPopBody button{
+        padding: 10px 20px !important;
+        font-size: 18px;
+        border-radius: 4px;
+        margin: 0px 30px 30px 10px !important;
+    }
+    .serieSeasPopFooter button{
+        margin: 10px 20px 20px !important;
+        padding: 8px 35px !important;
+        font-size: 18px;
+        border-radius: 2px;
+    }
+    /* =============== Movie Info Screen Desgin End =============== */
+    
+}
+
+/* =============== 2800 Screen Resolution =============== */
+
+@media only screen and  (min-width: 2800px) {
+
+    /* =============== Movie Info Screen Desgin Start =============== */
+
+    .movieInHeader .row {
+        padding: 10px 0px 10px 0px !important;
+    }
+    .movieInBack {
+        text-align: start;
+        padding-left: 10px !important;
+    }
+    .movieInBack img {
+        width: 30%;
+        margin-top: 20px !important;
+    }
+    /* .movieInLogo img {
+        width: 80%;
+        backdrop-filter: opacity(0.5);
+    } */
+    .movieInName span {
+        font-size: 30px;
+        line-height: 90px;
+        font-weight: 500;
+    }
+    .movieInlSet img {
+        width: 32%;
+        margin-top: 20px !important;
+    }
+    .movieInlSet{
+        text-align: end;
+    }
+    .movieInBodyScroll {
+        height: calc(100% - 134.13px);
+    }
+    .movieInBody .row {
+        padding: 20px 15px 0px 15px !important;
+    }
+    .movieInPic img {
+        width: 90%;
+        backdrop-filter: brightness(0.5);
+    }
+    .movieInPic i {
+        margin-top: 15px !important;
+        font-size: 28px;
+        color: #ffff1fdb;
+    }
+    .movieInInformation{
+        text-align: initial;
+    }
+    .movieInInformation .one {
+        padding: 0px 0px 20px 20px !important;
+        font-size: 30px;
+    }
+    .movieInInformation .two {
+        padding: 0px 0px 20px 0px !important;
+        font-size: 30px;
+    }
+    .movieInInformation .three button {
+        background: #b4b4b42e;
+        color: white;
+        width: 18%;
+        border: none;
+        border-radius: 6px;
+        font-size: 26px;
+        margin-right: 10px !important;
+        padding: 12px 0px !important;
+    }
+    .movieInFav{
+        text-align: initial;
+    }
+    .movieInFav .star img {
+        cursor: pointer;
+        width: 35%;
+    }
+    .movieInDescription {
+        text-align: left;
+        padding: 20px 22px 0px 25px !important;
+        font-size: 22px;
+        font-weight: 500;
+    }
+    .movieInStarCastScrolls {
+        width: 100%;
+        display: contents;
+    }
+    .movieInStarCast {
+        width: 222px;
+        flex: 0 0 auto;
+        margin-left: 12px !important;
+    }
+    .movieInStarCast .movieInActNam {
+        top: 90% !important;
+        position: relative;
+        font-size: 22px;
+        color: white;
+        background: rgb(0 0 0 / 20%);
+        font-weight: 700;
+        z-index: 1111;
+    }
+    .movieInActNam span{
+        white-space: nowrap;
+    }
+    .movieInStarCast img {
+        width: 100%;
+        height: 300px;
+    }
+    .trailerWatcherClose{
+        background: #b4b4b42e; 
+        color: white; 
+        border: none; 
+        border-radius: 6px; 
+        font-size: 18px; 
+        margin-top: 12px !important; 
+        /* margin-left: 30%;  */
+        padding: 8px 15px !important;
+    }
+    .playernoti .alert {
+        width: 30%;
+        font-size: 25px;
+    }
+    .cwalldelbtn i {
+        font-size: 50px;
+        padding-top: 30px;
+        padding-right: 14px;
+    }
+    .cwalldelbtn {
+        float: right;
+        margin-top: 0px;
+        margin-right: 0px;
+    }
+    /* =============== Movie Info Screen Desgin End =============== */
+    
+}

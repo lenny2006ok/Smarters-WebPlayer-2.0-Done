@@ -1,0 +1,599 @@
+ @media only screen and  (min-width: 1300px) {
+    /* .movieInHeader .row {
+        padding: 10px 0px 10px 0px !important;
+    }
+    .movieInBack {
+        text-align: start;
+        padding-left: 10px !important;
+    }
+    .movieInBack img {
+        width: 42%;
+        margin-top: 5px !important;
+    }
+    .movieInLogo img {
+        width: 71%;
+        backdrop-filter: blur(1px);
+    }
+    .movieInName span {
+        font-size: 24px;
+        line-height: 2.8;
+        font-weight: bold; 
+    }
+    .movieInlSet img {
+        width: 32%;
+        margin-top: 11px !important;
+    }
+    .movieInBodyScroll {
+        width: 100%;
+        height: 575px;
+        overflow-y: scroll;
+    }
+    .movieInBody .row {
+        padding: 20px 15px 0px 15px !important;
+    }
+    .movieInPic img {
+        width: 90%;
+        backdrop-filter: brightness(0.5);
+    }
+    .movieInPic i {
+        margin-top: 10px !important;
+        font-size: 20px;
+        color: #ffff1fdb;
+    }
+    .movieInInformation .one {
+        padding: 0px 0px 20px 20px !important;
+        font-size: 20px;
+    }
+    .movieInInformation .two {
+        padding: 0px 0px 20px 0px !important;
+        font-size: 20px;
+    }
+    .movieInInformation .threes button {
+        background: #b4b4b42e;
+        color: white;
+        width: 18%;
+        border: none;
+        border-radius: 6px;
+        font-size: 17px;
+        margin-right: 10px !important;
+        padding: 10px !important;
+    }
+    .leftArrow {
+        width: 3%;
+        position: relative;
+        top: 155px;
+        left: -8px;
+        z-index: 111;
+    }
+    .rightArrow {
+        width: 3%;
+        position: relative;
+        top: 155px;
+        left: 95%;
+        z-index: 111;
+    }
+    .leftArrow img, .rightArrow img{
+        width: 100%;
+     }
+    .movieInFav .star img {
+        cursor: pointer;
+        width: 35%;
+    } 
+    .movieInStarCastScroll .row{
+        padding: 0px 16px 20px 10px !important;
+    }
+    .movieInStarCastScrolls {
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
+    }
+    .movieInStarCast {
+        width: 13.3%;
+        /* width: 160px;
+        flex: 0 0 auto;
+        margin-left: 12px !important;
+    }
+    .movieInStarCast .movieInActNam {
+        top: 89% !important;
+        position: relative;
+        font-size: 18px;
+        color: white;
+        background: rgb(0 0 0 / 20%);
+        font-weight: 700;
+        z-index: 1111;
+    }
+    .movieInStarCast img {
+        width: 100%;
+        height: 222px;
+    } */
+
+    .serieInBtnTab{
+        text-align: initial;
+    }
+    
+    .serieInBtn{
+        padding: 20px 0px 0px 30px !important;
+    }
+    
+    .serieInBtnIn{
+        border-bottom: 3px solid #9313c8 !important;
+        background-color: #b4b4b44f !important;
+    }
+    .serieInBtn button:hover{
+        background-color: #b4b4b44f;
+    }
+    .serieInEpisode .row{
+        padding: 20px 0px 20px 30px !important;
+        text-align: initial;
+    }
+    .serieInEpisode{
+        height: 228px;
+    }
+    .serieInEpisode:hover{
+        background: #c1c1c12e;
+    }
+    .serieInEpisode:hover .serieEpiImg span img{
+        opacity: initial;
+    }
+    .serieInEpisode:hover .serieEpiImg img{
+        opacity: 0.4;
+    }
+    .serieEpiImg{
+        text-align: initial;
+    }
+    .serieEpiImg span img{
+        width: 14%;
+        height: auto;
+        position: relative;
+        top: 62px;
+        left: 132px;
+        z-index: 1;
+    }
+    .serieEpiImg img{
+        width: 100%;
+        height: 180px;
+        border-radius: 12px;
+        position: relative;
+        top: -40px;
+    }
+    .serieEpiName, .serieEpiRate, .serieEpiDura, .serieEpiDesc{
+        padding: 0px 40px 10px 30px !important;
+    }
+    .serieEpiName, .serieEpiDesc{
+        padding-bottom: 0px!important;
+    }
+    .serieEpiRate span{
+        font-size: 17px;
+        color: yellow;    
+    }
+    .serieEpiDura label{
+        font-size: 14px;
+        background-color: #262525;
+        padding: 5px 12px !important;
+        border-radius: 8px;
+    }
+    .serieEpiDesc span{
+        font-size: 16px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+
+
+.mainSeriePopSeason{
+    position: fixed;
+    top: 0px;
+    height: 100%;z-index: 111;
+    background: rgb(0 0 0 / 50%);
+}
+.centerSeriePopSeason{
+    background: #000000;
+    border: 2px solid white;
+    margin: 97px 0px 0px 0px !important;
+}
+
+.serieSeasPopHeader{
+    padding: 20px 0px 20px 0px !important;
+    font-size: 26px;
+    font-weight: bold;
+    border-bottom: 2px solid white;
+}
+.serieSeasPopBody{
+    padding: 30px 20px 0px 60px !important;
+    text-align: initial;
+}
+.serieSeasPopBody{
+    height: 300px;
+}
+.serieSeasPopBody button{
+    padding: 10px 17px !important;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    background: white;
+    margin: 0px 30px 30px 10px !important;
+}
+.serieSeasPopBody button:hover{
+    color: #ffff; 
+    background-color: #00f3ff; 
+    background-image: linear-gradient(to right, #2586ff , #00ffad);
+}
+.serieSeasPopFooter button{
+    margin: 10px 20px 20px !important;
+    padding: 8px 35px !important;
+    font-size: 18px;
+    border: none;
+    color: #ffff;
+    border-radius: 2px;
+    background-color: red;
+    background-image: linear-gradient(to right, #ff0862 , #ff8100);
+}
+}
+@media only screen and  (min-width: 1400px) {
+    /* .movieInHeader .row{
+        padding: 10px 0px 10px 0px !important;
+    }
+    .movieInBack{
+        text-align: start;
+        padding-left: 10px !important;
+    }
+    .movieInBack img{
+        width: 42%;
+        margin-top: 5px !important;
+    }
+    .movieInLogo img{
+        width: 71%;
+        backdrop-filter: blur(1px);
+    }
+    .movieInName span{
+        font-size: 24px;
+        line-height: 2.8;
+        font-weight: bold;
+    }
+    .movieInlSet{
+        text-align: end;
+    }
+    .movieInlSet img{
+        width: 32%;
+        margin-top: 11px !important;
+    }
+    .movieInBody .row{
+        padding: 20px 15px 0px 35px !important;
+    }
+    .movieInPic img{
+        width: 90%;
+        height: 280px;
+        backdrop-filter: brightness(0.5);
+    }
+    .movieInPic i{
+        margin-top: 10px !important;
+        font-size: 20px;
+        color: #ffff1fdb;
+    }
+    .movieInInformation, .movieInFav{
+        text-align: initial;
+    }
+    .movieInInformation .one{
+        padding: 0px 0px 20px 20px !important;
+        font-size: 20px;
+    }
+    .movieInInformation .two{
+        padding: 0px 0px 20px 0px !important;
+        font-size: 20px;
+    }
+    .movieInInformation .two span{
+        background: #262525;
+        padding: 2px 8px !important;
+        border-radius: 6px;
+    }
+    .movieInInformation .threess button{
+        background: #b4b4b42e;
+        color: white;
+        width: 18%;
+        border: none;
+        border-radius: 6px;
+        font-size: 18px;
+        margin-right: 10px !important;
+        padding: 16px !important;
+    }
+    .leftArrow{
+        width: 3%;
+        position: relative;
+        top: 155px;
+        left: -8px;
+        z-index: 111;
+    }
+    .rightArrow{
+        width: 3%;
+        position: relative;
+        top: 155px;
+        left: 95%;
+        z-index: 111;
+    }
+    .leftArrow img, .rightArrow img{
+       width: 100%;
+    }
+    .movieInFav .star img{
+        cursor: pointer;
+        width: 35%;
+    }
+    .movieInBodyScroll {
+        width: 100%;
+        height: 642px;
+        overflow-y: scroll;
+    }
+    .movieInStarCastScroll{
+        padding: 20px 0px 0px 0px !important;
+    }   
+    .movieInStarCastScrolls{
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
+    }
+    .movieInStarCast{
+        width: 13.2%;
+        
+    }   
+    .movieInStarCast img{
+        width: 94%;
+        height: 258px;
+    }
+    .movieInStarCast .movieInActNam{
+        top: 89% !important;
+        position: relative;
+        font-size: 18px;
+        color: white;
+        background: rgb(0 0 0 / 20%);
+        font-weight: 700;
+        z-index: 1111;
+    } */
+
+    .serieInBtnTab{
+        text-align: initial;
+    }
+    
+    .serieInBtn{
+        padding: 20px 0px 0px 30px !important;
+    }
+    
+    .serieInBtnIn{
+        border-bottom: 3px solid #9313c8 !important;
+        background-color: #b4b4b44f !important;
+    }
+    .serieInBtn button:hover{
+        background-color: #b4b4b44f;
+    }
+    .serieInEpisode .row{
+        padding: 20px 0px 20px 30px !important;
+        text-align: initial;
+    }
+    .serieInEpisode{
+        height: 270px;
+    }
+    .serieInEpisode:hover{
+        background: #c1c1c12e;
+    }
+    .serieInEpisode:hover .serieEpiImg span img{
+        opacity: initial;
+    }
+    .serieInEpisode:hover .serieEpiImg img{
+        opacity: 0.4;
+    }
+    .serieEpiImg{
+        text-align: initial;
+    }
+    .serieEpiImg span img{
+        width: 50px;
+        height: auto;
+        position: relative;
+        top: 90px;
+        left: 150px;    
+        z-index: 1;
+    }
+    .serieEpiImg img{
+        width: 100%;
+        height: 199px;
+        border-radius: 12px;
+        position: relative;
+        top: -35px;
+    }
+    .serieEpiName, .serieEpiRate, .serieEpiDura, .serieEpiDesc{
+        padding: 0px 40px 10px 30px !important;
+    }
+    .serieEpiName, .serieEpiDesc{
+        padding-bottom: 0px!important;
+    }
+    .serieEpiRate span{
+        font-size: 20px;
+        color: yellow;
+    }
+    .serieEpiDura label{
+        font-size: 20px;
+        background-color: #262525;
+        padding: 6px 14px !important;
+        border-radius: 8px;
+    }
+    .serieEpiDesc span{
+        font-size: 19px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+
+
+.mainSeriePopSeason{
+    position: fixed;
+    top: 0px;
+    height: 100%;z-index: 111;
+    background: rgb(0 0 0 / 50%);
+}
+.centerSeriePopSeason{
+    background: #000000;
+    border: 2px solid white;
+    margin: 80px 0px 0px 0px !important;
+}
+
+.serieSeasPopHeader{
+    padding: 20px 0px 20px 0px !important;
+    font-size: 30px;
+    font-weight: bold;
+    border-bottom: 2px solid white;
+}
+
+.serieSeasPopBody{
+    padding: 30px 20px 0px 60px !important;
+    text-align: initial;
+    height: 400px;
+    overflow: auto;
+}
+.serieSeasPopBody button{
+    /* padding: 10px 20px !important; */
+    width: 15%;
+    font-size: 18px;
+    border-radius: 4px;
+    border: none;
+    background: white;
+    margin: 0px 30px 30px 10px !important;
+}
+.serieSeasPopBody button:hover{
+    color: #ffff; 
+    background-color: #00f3ff; 
+    background-image: linear-gradient(to right, #2586ff , #00ffad);
+}
+.serieSeasPopFooter button{
+    margin: 10px 20px 20px !important;
+    padding: 8px 35px !important;
+    font-size: 18px;
+    border: none;
+    color: #ffff;
+    border-radius: 2px;
+    background-color: red;
+    background-image: linear-gradient(to right, #ff0862 , #ff8100);
+}
+}
+@media only screen and  (min-width: 1900px) {
+   
+
+    .serieInBtnTab{
+        text-align: initial;
+    }
+    
+    .serieInBtn{
+        padding: 20px 0px 0px 30px !important;
+    }
+    .serieInBtnIn{
+        border-bottom: 3px solid #9313c8 !important;
+        background-color: #b4b4b44f !important;
+    }
+    .serieInBtn button:hover{
+        background-color: #b4b4b44f;
+    }
+    .serieInEpisode .row{
+        padding: 20px 0px 20px 30px !important;
+        text-align: initial;
+    }
+    .serieInEpisode{
+        height: 320px;
+    }
+    .serieInEpisode:hover{
+        background: #c1c1c12e;
+    }
+    .serieInEpisode:hover .serieEpiImg span img{
+        opacity: initial;
+    }
+    .serieInEpisode:hover .serieEpiImg img{
+        opacity: 0.4;
+    }
+    .serieEpiImg{
+        text-align: initial;
+    }
+    .serieEpiImg span img{
+        width: 13%;
+        position: relative;
+        top: 100px;
+        left: 205px;
+        z-index: 1;
+    }
+    .serieEpiImg img{ 
+        width: 100%;
+        height: 265px;
+        border-radius: 12px;
+        position: relative;
+        top: -55px;
+    }
+    .serieEpiName, .serieEpiRate, .serieEpiDura, .serieEpiDesc{
+        padding: 0px 40px 10px 30px !important;
+    }
+    .serieEpiName, .serieEpiDesc{
+        padding-bottom: 0px!important;
+    }
+    .serieEpiRate span{
+        font-size: 28px;
+        color: yellow;
+    }
+    .serieEpiDura label{
+        font-size: 24px;
+        background-color: #262525;
+        padding: 6px 14px !important;
+        border-radius: 8px;
+    }
+    .serieEpiDesc span{
+        font-size: 24px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+
+.mainSeriePopSeason{
+    position: fixed;
+    top: 0px;
+    height: 100%;z-index: 111;
+    background: rgb(0 0 0 / 50%);
+}
+.centerSeriePopSeason{
+    background: #000000;
+    border: 2px solid white;
+    margin: 150px 0px 0px 0px !important;
+}
+
+.serieSeasPopHeader{
+    padding: 20px 0px 20px 0px !important;
+    font-size: 38px;
+    font-weight: bold;
+    border-bottom: 2px solid white;
+}
+.serieSeasPopBody{
+    padding: 30px 20px 0px 60px !important;
+    text-align: initial;
+    height: 500px;
+}
+.serieSeasPopBody button{
+    padding: 12px 23px !important;
+    font-size: 22px;
+    border-radius: 4px;
+    border: none;
+    background: white;
+    margin: 0px 30px 30px 10px !important;
+}
+.serieSeasPopBody button:hover{
+    color: #ffff; 
+    background-color: #00f3ff; 
+    background-image: linear-gradient(to right, #2586ff , #00ffad);
+}
+.serieSeasPopFooter button{
+    margin: 10px 20px 20px !important;
+    padding: 12px 42px !important;
+    font-size: 22px;
+    border: none;
+    color: #ffff;
+    border-radius: 2px;
+    background-color: red;
+    background-image: linear-gradient(to right, #ff0862 , #ff8100);
+}
+} 
